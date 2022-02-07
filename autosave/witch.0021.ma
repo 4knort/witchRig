@@ -1,27 +1,28 @@
 //Maya ASCII 2022 scene
-//Name: witch.ma
-//Last modified: Mon, Feb 07, 2022 12:12:08 PM
+//Name: witch.0021.ma
+//Last modified: Mon, Feb 07, 2022 04:03:06 PM
 //Codeset: 1251
 requires maya "2022";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
+fileInfo "exportedFrom" "D:/riggingProjects/Rig_Witch/scenes/RIG/witch/witch.ma";
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2022";
 fileInfo "version" "2022";
 fileInfo "cutIdentifier" "202108111415-612a77abf4";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 22000)";
-fileInfo "UUID" "273FD7EC-4BFA-E77D-59E5-1D8CE587923D";
+fileInfo "UUID" "3592D183-4548-4A2E-632D-A68E1CF2A23F";
 createNode transform -s -n "persp";
 	rename -uid "8921A69E-2A43-BAF9-3D7B-BA8A5FD3BF0E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 10.012292763015708 183.2531692010991 409.66527202743976 ;
-	setAttr ".r" -type "double3" -1812.9383527033719 -1798.9999999965792 0 ;
+	setAttr ".t" -type "double3" 206.40652921798824 89.011532870537962 2.0262060732980505 ;
+	setAttr ".r" -type "double3" -1808.1383527030923 -1353.3999999963169 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D0E31310-684C-6212-AFEE-BA9B0FA0EE33";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 415.64386100375168;
+	setAttr ".coi" 199.17754369319226;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -9325,7 +9326,7 @@ createNode mesh -n "body_geoShape" -p "body_geo";
 	setAttr ".clst[1].clsn" -type "string" "SculptMaskColorTemp";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 433 ".pt";
+	setAttr -s 63 ".pt";
 	setAttr ".pt[20]" -type "float3" 9.1269612e-08 -1.1920929e-07 -7.4505806e-08 ;
 	setAttr ".pt[27]" -type "float3" 0 -1.4901161e-08 0 ;
 	setAttr ".pt[33]" -type "float3" 0 -2.9802322e-08 -5.9604645e-08 ;
@@ -20305,24 +20306,24 @@ createNode mesh -n "body_geoShape" -p "body_geo";
 	setAttr ".ndt" 0;
 	setAttr ".dr" 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9214EE2A-4848-0C7E-93B4-7483B0C7798B";
+	rename -uid "4ACB7D6E-4D3B-5F03-E64D-4B93B946198D";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "1BFE32D2-4E55-D438-AEB6-75B6D96FE81B";
+	rename -uid "3556349D-4E8A-D5A3-3008-4BAA032602E5";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 createNode displayLayer -n "defaultLayer";
 	rename -uid "EFF77B84-984D-874A-123E-2EB234239149";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "56FF1517-43FF-CE96-06BD-DD8D1CEF76F3";
+	rename -uid "4490CA9B-4B04-CCCD-C6F5-ECB2C000ED7F";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "6669706A-DD46-6863-9F61-03ABB2B03D96";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "8F2E8959-4FFE-DA13-BE5E-50B125B20E06";
+	rename -uid "7DD39AD7-4D39-C946-FA8D-0FABE5F03BAA";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "1A08256E-4A91-2D1D-266E-7E985640A953";
+	rename -uid "BE19AB9D-4E27-8544-E581-6AACC20891A2";
 createNode renderLayerManager -n "renderLayerManager1";
 	rename -uid "51227922-0E4D-CE25-62F0-4DA24237C05D";
 createNode renderLayer -n "defaultRenderLayer1";
@@ -20591,4 +20592,4 @@ connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "defaultRenderLayer1.msg" ":defaultRenderingList1.r" -na;
 connectAttr "texmap0.msg" ":defaultTextureList1.tx" -na;
-// End of witch.ma
+// End of witch.0021.ma

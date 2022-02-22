@@ -1,6 +1,6 @@
 //Maya ASCII 2022 scene
 //Name: witch.ma
-//Last modified: Wed, Feb 16, 2022 05:32:54 PM
+//Last modified: Tue, Feb 22, 2022 06:24:01 AM
 //Codeset: 1251
 requires maya "2022";
 requires "stereoCamera" "10.0";
@@ -12,19 +12,19 @@ fileInfo "product" "Maya 2022";
 fileInfo "version" "2022";
 fileInfo "cutIdentifier" "202108111415-612a77abf4";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 22000)";
-fileInfo "UUID" "2A1332F4-423A-0993-C88C-D0AF5596EBD9";
+fileInfo "UUID" "1F7750DF-4EE5-EEE2-EA33-DDAA32354CB6";
 createNode transform -s -n "persp";
 	rename -uid "24915ABF-4C27-6DE5-31EE-3186470FC78F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1.5283097862407129 194.31764584757573 146.52220953303853 ;
-	setAttr ".r" -type "double3" -23.633784924281418 2519.2756521624997 2.4850069273572014e-17 ;
+	setAttr ".t" -type "double3" 11.434437473756077 186.01524372606829 163.21530156904379 ;
+	setAttr ".r" -type "double3" -29.033784925498058 2162.4756521590671 -5.9691111936098704e-16 ;
 	setAttr ".rp" -type "double3" -7.1054273576010019e-15 1.4210854715202004e-14 -2.8421709430404007e-14 ;
 	setAttr ".rpt" -type "double3" -2.9475340865078018e-14 -2.1026478126898257e-14 -1.7834243485849793e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4F3494DA-48E4-4EA1-DCFB-9798E3AE8E3C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 156.1104643406137;
+	setAttr ".coi" 170.54777478451604;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -19881,7 +19881,7 @@ createNode joint -n "neck_jnt1" -p "spine_jnt3";
 	setAttr ".bps" -type "matrix" 0 0.97568607755738113 0.21917271285607617 0 0 -0.2191727128560762 0.97568607755738113 0
 		 1 0 0 0 -7.1129446379547427e-06 134.67015454861087 -2.1896303603487119 1;
 	setAttr ".radi" 0.8673566129207585;
-createNode joint -n "neck_jnt2" -p "neck_jnt1";
+createNode joint -n "head_jnt" -p "neck_jnt1";
 	rename -uid "2C81C7A3-4459-BE5E-7068-D48C4C1D1E81";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 8.4218835472231888 -2.4868995751603507e-14 9.1607121465320934e-16 ;
@@ -19892,7 +19892,7 @@ createNode joint -n "neck_jnt2" -p "neck_jnt1";
 	setAttr ".bps" -type "matrix" 0 0.99995300877580817 -0.0096943406278347799 0 0 0.0096943406278347521 0.99995300877580817 0
 		 1 0 0 0 -7.1129446370386714e-06 142.88726907244612 -0.34378329594587598 1;
 	setAttr ".radi" 0.9374866218676754;
-createNode joint -n "lf_ear_ring_jnt" -p "neck_jnt2";
+createNode joint -n "lf_ear_ring_jnt" -p "head_jnt";
 	rename -uid "62726958-4235-56F8-38E9-51AD51BC3483";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 1.5429905742959988 2.6445008890619812 7.634264751770691 ;
@@ -19903,11 +19903,10 @@ createNode joint -n "lf_ear_ring_jnt" -p "neck_jnt2";
 		 -2.2204460492503126e-16 0.99995300877580817 -0.0096943406278347799 0 0 0.0096943406278347521 0.99995300877580817 0
 		 7.6342576388260541 144.45582383213528 2.2856350485691879 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "jaw_jnt" -p "neck_jnt2";
+createNode joint -n "jaw_jnt" -p "head_jnt";
 	rename -uid "00954F93-4FDC-6741-5981-05A4916F5CFB";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 2.4201030190524477 3.2560162813793614 1.6418304406985649e-15 ;
-	setAttr ".r" -type "double3" 0 0 0.89103610876106387 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 180 0 90.554749781544928 ;
@@ -19915,7 +19914,7 @@ createNode joint -n "jaw_jnt" -p "neck_jnt2";
 	setAttr ".bps" -type "matrix" 0 1.2282267654989062e-05 0.99999999992457289 0 1.2246467991473532e-16 0.99999999992457289 -1.2282267655016818e-05 0
 		 -1 1.2246467990549818e-16 -1.5041439770063205e-21 0 -7.1129446353968412e-06 145.33882329881649 2.888618678221289 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "rt_ear_ring_jnt" -p "neck_jnt2";
+createNode joint -n "rt_ear_ring_jnt" -p "head_jnt";
 	rename -uid "71BCE6ED-439E-224E-EEAB-84BE11E11D8A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 1.2318605326478576 2.5714262060206892 -7.634262887055363 ;
@@ -19926,11 +19925,12 @@ createNode joint -n "rt_ear_ring_jnt" -p "neck_jnt2";
 		 -2.2204460492503126e-16 0.99995300877580817 -0.0096943406278347799 0 0 0.0096943406278347521 0.99995300877580817 0
 		 -7.6342699999999999 144.14400000000001 2.2155799999999992 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "hat_jnt1" -p "neck_jnt2";
+createNode joint -n "hat_jnt1" -p "head_jnt";
 	rename -uid "341FF830-41A7-0008-47D8-1488F7318ED6";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".t" -type "double3" 15.361203122981209 0.71047274043948283 -0.37157854245353478 ;
+	setAttr ".r" -type "double3" 0 0 4.5296626081419058 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -38.812628096956729 -4.0812446360224062 -35.179863775916786 ;
@@ -20738,19 +20738,19 @@ createNode joint -n "broom_leaf_jnt9" -p "broom_leaf_jnt8";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "4EE080AE-4061-DB89-796A-6AB8F934F92D";
+	rename -uid "EB6B147B-4B29-2E8D-2828-FF9D618B7A0B";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "D9FBF00B-43F7-AD84-CA78-F4AA02C22CCB";
+	rename -uid "3AB09C4A-4EC3-9F5B-7084-7F983B9BAA90";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "07D94E53-435B-63C2-5A03-7C82B56B9886";
+	rename -uid "56DE508B-408D-879E-722E-2E8B0E03E8CE";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "625F0970-4CA7-6FA2-DC10-518EB2E4A5B0";
+	rename -uid "413C788E-4D44-1CAD-3CC4-40BE7C95A816";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E4776D33-4A6D-1184-D7AE-9682E5ABD45A";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7C3A49A3-4295-D0B2-0117-E1AAA4DCA041";
+	rename -uid "70814170-4A1B-4E3A-0424-69B89F29A94A";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "49F3F4FF-44F2-A407-251D-99888E8AC284";
 	setAttr ".g" yes;
@@ -20797,9 +20797,9 @@ createNode script -n "witch:uiConfigurationScriptNode";
 		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n"
 		+ "            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
 		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 0\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1118\n            -height 690\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
+		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
 		+ "            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n"
-		+ "            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n"
+		+ "            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n"
 		+ "            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n"
 		+ "                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n"
@@ -21393,9 +21393,9 @@ createNode skinCluster -n "skinCluster2";
 		1 13 1
 		1 11 1
 		1 11 1
-		1 12 1
-		1 12 1
-		1 12 1
+		2 11 0.33333333333333331 13 0.66666666666666663
+		2 11 0.33333333333333331 13 0.66666666666666663
+		2 11 0.5 13 0.5
 		1 13 1
 		1 13 1
 		1 13 1
@@ -21418,10 +21418,10 @@ createNode skinCluster -n "skinCluster2";
 		1 13 1
 		1 13 1
 		1 13 1
-		1 12 1
+		2 11 0.33333333333333331 13 0.66666666666666663
 		1 13 1
 		1 13 1
-		1 12 1
+		2 11 0.33333333333333331 13 0.66666666666666663
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22088,123 +22088,123 @@ createNode skinCluster -n "skinCluster3";
 		1 56 1
 		1 56 1
 		1 56 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 0.99999999999999989
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
 		1 26 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 0.99999999999999989
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
+		1 26 1
 		1 56 1
 		1 55 1
 		1 55 1
@@ -22499,34 +22499,21 @@ createNode groupParts -n "skinCluster3GroupParts";
 createNode skinCluster -n "skinCluster4";
 	rename -uid "88DB85AD-4ADA-7ECE-0D8A-918C98EEEC4B";
 	setAttr -s 2592 ".wl";
-	setAttr ".wl[0:499].w"
+	setAttr ".wl[0:498].w"
 		1 28 1
 		1 28 1
-		1 13 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 13 1
-		1 29 1
-		1 29 1
-		1 13 1
-		1 13 1
+		1 28 1
+		1 28 1
+		1 28 1
 		1 29 1
 		1 28 1
 		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
 		1 28 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
+		1 28 1
+		1 28 1
+		1 28 1
+		1 28 1
+		1 28 1
 		1 28 1
 		1 29 1
 		1 29 1
@@ -22534,30 +22521,43 @@ createNode skinCluster -n "skinCluster4";
 		1 29 1
 		1 29 1
 		1 28 1
+		1 28 1
+		1 28 1
+		1 29 1
+		1 29 1
+		1 29 1
+		1 29 1
+		1 28 1
+		2 28 0.96137756109237671 29 0.038622438907623291
+		1 28 1
+		1 29 1
+		1 29 1
+		1 29 1
+		1 28 1
+		1 28 1
+		1 28 1
+		1 28 1
+		1 29 1
+		1 29 1
+		1 29 1
+		1 28 1
+		1 13 1
+		1 28 1
+		1 29 1
+		1 29 1
+		1 29 1
+		1 29 1
 		1 29 1
 		1 13 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
 		1 13 1
+		1 28 1
 		1 29 1
 		1 29 1
 		1 29 1
 		1 29 1
 		1 29 1
-		1 29 1
-		1 13 1
-		1 13 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
+		1 28 1
+		1 28 1
 		1 29 1
 		1 29 1
 		1 29 1
@@ -22898,7 +22898,7 @@ createNode skinCluster -n "skinCluster4";
 		1 29 1
 		1 29 1
 		1 29 1
-		1 13 1
+		1 28 1
 		1 18 1
 		1 18 1
 		1 18 1
@@ -22992,15 +22992,15 @@ createNode skinCluster -n "skinCluster4";
 		1 16 1
 		1 16 1
 		1 16 1
-		1 15 1
-		1 15 1
+		1 16 1
 		1 15 1
 		1 15 1
 		1 15 1
 		1 15 1
 		1 15 1
 		1 15 1;
-	setAttr ".wl[500:962].w"
+	setAttr ".wl[499:953].w"
+		1 15 1
 		1 15 1
 		1 15 1
 		1 15 1
@@ -23017,47 +23017,47 @@ createNode skinCluster -n "skinCluster4";
 		2 15 0.99873625232527197 17 0.0012637476747280137
 		1 15 1
 		1 15 1
-		3 14 0.076551690767241762 15 0.24912196866460354 17 0.67432634056815477
+		2 15 0.30015642917609803 17 0.69984357082390203
 		1 17 1
 		1 17 1
 		2 15 0.0058448019220041988 17 0.99415519807799568
 		1 15 1
 		1 15 1
 		1 15 1
-		2 14 0.49052765990939146 17 0.50947234009060849
+		3 14 0.061211778006018146 15 0.28621058793558218 17 0.65257763405839952
 		1 17 1
 		1 17 1
+		2 15 0.99387737988610769 17 0.0061226201138923292
 		1 15 1
 		1 15 1
 		1 15 1
-		1 15 1
-		2 14 0.17806391879773006 17 0.82193608120226991
+		3 14 0.15265416299460752 15 0.016939837202081691 17 0.83040599980331076
 		1 17 1
 		1 17 0.99999999999999989
 		1 17 1
 		1 17 1
-		2 15 0.99495966732501984 17 0.0050403326749801636
+		1 17 1
 		2 14 0.0043034682663999728 17 0.99569653173360007
 		2 14 0.1748508702288526 17 0.8251491297711474
 		1 17 1
 		1 17 1
 		1 17 1
 		1 17 1
-		2 15 0.017585816300418382 17 0.98241418369958156
+		1 17 0.99999999999999989
 		1 17 1
 		1 17 1
 		1 17 1
 		1 17 1
 		1 17 1
-		1 15 1
-		1 17 1
-		2 15 2.5897919565213912e-05 17 0.9999741020804348
 		1 17 1
 		1 17 1
+		2 15 1.8194365645629374e-05 17 0.99998180563435446
 		1 17 1
 		1 17 1
 		1 17 1
-		2 15 0.4935646887501024 17 0.5064353112498976
+		1 17 1
+		1 17 1
+		2 15 0.34674972228088485 17 0.65325027771911515
 		1 17 1
 		1 17 1
 		1 17 1
@@ -23259,6 +23259,12 @@ createNode skinCluster -n "skinCluster4";
 		1 15 1
 		1 15 1
 		1 15 1
+		2 15 0.013094252617118763 17 0.98690574738288128
+		1 15 1
+		1 15 1
+		1 15 1
+		1 15 1
+		2 15 0.0060654842121652622 17 0.99393451578783476
 		1 15 1
 		1 15 1
 		1 15 1
@@ -23275,20 +23281,14 @@ createNode skinCluster -n "skinCluster4";
 		1 15 1
 		1 15 1
 		1 15 1
+		1 17 1
+		1 17 1
 		1 15 1
 		1 15 1
 		1 15 1
 		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
+		1 17 1
+		1 17 1
 		1 15 1
 		1 15 1
 		1 17 1
@@ -23301,15 +23301,15 @@ createNode skinCluster -n "skinCluster4";
 		1 17 1
 		1 17 0.99999999999999989
 		1 17 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		2 15 0.0067577232582490794 17 0.99324227674175092
-		1 15 1
-		2 15 0.042496323585510254 17 0.95750367641448975
-		1 15 1
+		1 17 1
+		1 17 1
+		1 17 1
+		1 17 1
+		1 17 1
+		1 17 1
+		1 17 1
+		1 17 1
+		1 17 1
 		1 15 1
 		1 15 1
 		1 15 1
@@ -23338,6 +23338,18 @@ createNode skinCluster -n "skinCluster4";
 		1 15 1
 		1 15 1
 		1 15 0.99999999999999989
+		2 15 0.011873148381710052 17 0.98812685161828995
+		2 15 0.026609957218170166 17 0.97339004278182983
+		1 15 1
+		1 15 1
+		1 15 1
+		1 15 1
+		1 15 1
+		1 17 1
+		1 17 1
+		1 15 1
+		1 17 1
+		1 17 1
 		1 15 1
 		1 15 1
 		1 15 1
@@ -23345,60 +23357,48 @@ createNode skinCluster -n "skinCluster4";
 		1 15 1
 		1 15 1
 		1 15 1
+		1 17 1
+		1 17 1
 		1 15 1
 		1 15 1
 		1 15 1
 		1 15 1
 		1 15 1
+		1 17 1
+		1 17 1
+		1 17 1
+		1 17 1
+		1 17 1
+		1 17 1
+		1 17 1
+		1 17 1
+		2 15 0.0032957177609205246 17 0.99670428223907948
+		1 17 1
+		1 17 1
+		1 15 1
+		2 15 0.0033684335649013519 17 0.99663156643509865
+		1 15 1
+		1 15 1
+		1 15 1
+		2 15 0.99440440908074379 17 0.0055955909192562103
+		2 15 0.0015624678926542401 17 0.99843753210734576
+		1 17 1
 		1 15 1
 		1 15 1
 		1 15 1
 		1 15 1
+		1 17 1
+		1 17 1
+		2 15 0.99772695754654706 17 0.0022730424534529448
+		2 15 0.018461942672729492 17 0.98153805732727051
+		2 15 0.019551865756511688 17 0.98044813424348831
 		1 15 1
 		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		2 14 0.76977194072332789 15 0.23022805927667206
+		2 14 0.2890737506865807 15 0.7109262493134193
+		1 14 1
 		1 14 1
 		1 15 1
-		1 14 1
-		1 14 1
-		2 14 0.69529879093170166 15 0.30470120906829834
-		2 14 0.92056133980297328 15 0.079438660197026667
+		1 15 1
 		1 15 1
 		1 15 1
 		1 18 1
@@ -23406,16 +23406,16 @@ createNode skinCluster -n "skinCluster4";
 		1 14 1
 		1 14 1
 		1 14 1
-		3 14 0.89828041872641373 15 0.047733313474628856 17 0.053986267798957432
-		1 14 1
-		2 13 3.8271383393562912e-08 14 0.9999999617286166
-		1 14 1
-		1 14 1
+		2 15 0.64658692595890466 17 0.35341307404109534
+		3 13 2.8751875514832511e-10 14 0.94177101641521088 15 0.058228983297270359
+		2 13 1.4507035594565747e-07 14 0.99999985492964405
 		1 14 1
 		1 14 1
 		1 14 1
-		2 13 6.6743462964847117e-05 14 0.99993325653703513
-		2 13 0.015706924047129384 14 0.98429307595287086
+		1 14 1
+		1 14 1
+		2 13 0.00012725931751458356 14 0.99987274068248544
+		2 13 0.020251964286155062 14 0.97974803571384528
 		1 13 1
 		1 13 1
 		1 13 1
@@ -23439,40 +23439,40 @@ createNode skinCluster -n "skinCluster4";
 		1 13 1
 		1 13 0.99999999999999989
 		1 13 1
-		1 13 1
-		1 13 1
+		2 13 0.98833111991374567 54 0.011668880086254241
+		1 54 1
 		1 54 1
 		1 13 1
-		2 14 0.9708718872592329 17 0.029128112740767112
+		3 14 0.93642923161111835 15 0.022961770432076374 17 0.040608997956805296
 		1 14 1
 		2 14 0.91525925923229323 17 0.084740740767706782
-		3 14 0.99759863556097605 15 0.0015580914913761144 17 0.00084327294764806673
-		3 14 0.90674958783606197 15 0.028804641355643146 17 0.06444577080829493
+		3 14 0.99543948697933038 15 0.0021591485816456562 17 0.0024013644390241812
+		3 14 0.88000756523522916 15 0.02674202260083278 17 0.093250412163938062
 		1 14 1
 		1 14 1
 		1 14 1
 		1 14 1
-		2 14 0.99999493177888255 15 5.0682211174673727e-06
+		3 14 0.99998083970013607 15 1.4092078746559158e-05 17 5.0682211174673727e-06
+		1 14 1
+		1 14 1;
+	setAttr ".wl[954:1404].w"
 		1 14 1
 		1 14 1
 		1 14 1
-		1 14 1
-		1 14 1
-		4 13 0.017389120819057125 14 0.98260955648609949 28 4.4986078636694375e-07 
+		4 13 0.022444842927417968 14 0.97755256376267607 28 1.7204758488879206e-06 
 		54 8.7283405694695002e-07
 		1 14 1
 		1 14 1
 		1 14 1
 		1 14 1
-		1 13 1;
-	setAttr ".wl[963:1423].w"
-		3 13 0.99976690827919668 28 7.7700674882574906e-05 54 0.00015539104592062272
+		1 13 1
+		3 13 0.99968838638999535 28 0.00015622256408383641 54 0.00015539104592062272
 		1 13 1
 		1 13 1
 		1 13 1
 		1 13 1
 		1 54 1
-		3 13 0.9985347995535816 28 0.00048840010991568761 54 0.00097680033650267978
+		3 13 0.99804687662961489 28 0.00097632303388234937 54 0.00097680033650267978
 		1 28 1
 		1 28 1
 		1 54 1
@@ -23484,92 +23484,92 @@ createNode skinCluster -n "skinCluster4";
 		1 54 1
 		1 54 1
 		1 54 1
-		2 53 1.1526144305662456e-07 54 0.99999988473855694
 		1 54 1
 		1 54 1
 		1 54 1
 		1 54 1
 		1 54 1
-		1 53 1
-		1 53 1
+		1 54 1
+		1 54 1
+		1 54 1
 		1 54 1
 		1 54 1
 		1 54 1
 		1 54 1
 		1 54 0.99999999999999989
-		2 53 0.10768187046051025 54 0.89231812953948975
+		1 54 1
+		1 54 1
 		1 54 1
 		1 54 1
 		1 54 1
 		1 54 1
 		1 13 1
 		1 13 1
-		1 13 1
 		1 54 1
 		1 54 1
-		2 53 0.16108161211013794 54 0.83891838788986206
-		1 53 1
+		1 54 1
+		2 53 0.98589992523193359 54 0.014100074768066406
 		1 53 1
 		1 53 1
 		1 53 1
 		1 53 1
 		1 53 0.99999999999999989
 		1 53 1
+		1 54 1
+		1 54 1
+		2 53 0.24056792774280328 54 0.75943207225719678
 		1 53 1
-		2 13 0.98340746760368347 54 0.016592532396316528
-		2 13 0.75943207225719678 53 0.24056792774280328
 		1 53 1
 		1 53 1
-		1 53 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
+		1 54 1
+		1 54 1
+		2 13 0.033697114919443674 54 0.9663028850805564
+		3 13 0.049301336417460616 53 0.033734330298413287 54 0.91696433328412619
 		1 53 1
 		1 53 0.99999999999999989
+		1 54 1
+		1 54 1
+		1 54 1
+		2 13 0.1410508774355618 54 0.85894912256443823
+		1 13 1
+		3 13 0.48869024912629871 53 0.25565487543685067 54 0.25565487543685067
+		1 54 1
+		1 54 1
+		2 13 0.19152047140251055 54 0.80847952859748939
 		1 13 1
 		1 13 1
 		1 13 1
 		1 13 1
-		1 13 1
-		1 13 1
-		1 55 1
-		1 13 1
-		1 13 1
-		2 12 0.10834643266015415 13 0.89165356733984591
-		2 12 0.08853146218021074 13 0.91146853781978932
-		2 12 0.051736295223236084 13 0.94826370477676392
-		2 12 0.015730679035186768 13 0.98426932096481323
 		1 53 1
 		1 55 1
 		1 55 1
+		2 13 0.18154246070586175 54 0.81845753929413834
 		1 13 1
-		2 12 0.019985266558558187 13 0.98001473344144174
-		1 12 1
-		1 12 0.99999999999999989
-		1 12 1
-		1 12 1
+		2 12 0.0084703496846666154 13 0.99152965031533347
+		2 12 0.048061712175242362 13 0.95193828782475765
+		2 12 0.039079795646881126 13 0.96092020435311887
+		2 12 0.019993364810943604 13 0.9800066351890564
 		1 55 1
+		2 13 0.23056024390922886 54 0.76943975609077109
 		1 13 1
 		1 13 1
 		1 13 1
 		1 12 1
 		1 12 1
-		1 12 1
-		1 55 1
+		1 54 1
 		1 13 1
 		1 13 1
 		1 13 1
-		1 12 1
+		1 13 1
 		1 12 1
 		2 11 0.00030654668807983398 12 0.99969345331192017
-		1 55 1
+		1 54 1
 		1 13 1
 		1 13 1
 		1 13 1
 		1 13 1
 		1 13 1
-		1 55 1
+		1 54 1
 		1 13 1
 		1 13 1
 		1 12 1
@@ -23780,17 +23780,11 @@ createNode skinCluster -n "skinCluster4";
 		1 12 1
 		1 12 1
 		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
 		1 13 1
 		1 13 1
 		1 13 1
 		1 13 1
-		1 13 1
+		1 12 1
 		1 12 1
 		1 13 1
 		1 13 1
@@ -23800,6 +23794,10 @@ createNode skinCluster -n "skinCluster4";
 		1 13 1
 		1 13 1
 		1 13 1
+		1 28 1
+		1 28 1
+		1 28 1
+		1 28 1
 		1 13 1
 		1 13 1
 		1 13 1
@@ -23807,31 +23805,33 @@ createNode skinCluster -n "skinCluster4";
 		1 13 1
 		1 13 1
 		1 13 1
+		1 28 1
 		1 13 1
 		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
+		1 28 1
+		1 28 1
+		1 28 1
+		2 28 0.5 52 0.5
 		1 28 1
 		1 52 1
 		1 52 1
 		1 52 1
 		1 52 1
 		1 28 1
-		1 28 1
 		1 52 1
 		1 52 1
 		1 52 1
-		1 28 1
+		1 52 1
 		1 28 1
 		1 28 1
 		1 28 1
 		1 52 1
+		1 52 1
+		1 28 1
+		1 28 1
+		1 28 1
+		1 28 1
+		1 28 1
 		1 28 1
 		1 28 1
 		1 28 1
@@ -23843,7 +23843,7 @@ createNode skinCluster -n "skinCluster4";
 		1 28 1
 		1 13 1
 		1 13 1
-		1 13 1
+		1 28 1
 		1 13 1
 		1 13 1
 		1 13 1
@@ -23868,7 +23868,7 @@ createNode skinCluster -n "skinCluster4";
 		1 15 1
 		1 15 1
 		1 28 1
-		1 52 1
+		1 28 1
 		1 52 1
 		1 52 1
 		1 13 1
@@ -23884,32 +23884,33 @@ createNode skinCluster -n "skinCluster4";
 		1 52 1
 		1 52 1
 		1 53 1
-		2 13 0.0095131279932938288 53 0.99048687200670615
+		2 13 0.0096737632355262133 53 0.99032623676447373
 		2 13 0.99081073648492746 53 0.0091892635150725033
 		1 13 1
 		1 53 1
 		1 53 1
-		2 13 0.00058226214761047132 53 0.99941773785238952
-		2 13 0.051532857166575519 53 0.94846714283342448
+		2 13 0.014478722227761368 53 0.98552127777223864
+		1 13 1
 		1 13 1
 		1 53 1
 		1 53 1
 		1 53 1
-		1 53 1
-		1 53 1
+		2 13 0.028269848694885902 53 0.97173015130511409
+		2 13 0.98555429445969844 53 0.014445705540301605
 		1 13 1
 		1 53 1
 		1 53 1
 		1 53 1
 		1 53 0.99999999999999989
 		1 53 1
-		1 53 0.99999999999999989
+		2 13 0.060597822879671678 53 0.93940217712032825
 		1 53 1
 		1 53 1
 		1 53 1
+		1 53 1;
+	setAttr ".wl[1405:1882].w"
 		1 53 1
-		1 53 1
-		1 53 1
+		2 13 0.073053312649086266 53 0.92694668735091379
 		1 53 1
 		1 53 1
 		1 53 1
@@ -23926,8 +23927,7 @@ createNode skinCluster -n "skinCluster4";
 		1 0 1
 		1 11 1
 		1 11 1
-		1 11 1;
-	setAttr ".wl[1424:1907].w"
+		1 11 1
 		1 0 1
 		1 0 1
 		1 11 1
@@ -23947,11 +23947,10 @@ createNode skinCluster -n "skinCluster4";
 		1 12 1
 		1 12 1
 		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 52 1
+		1 13 1
+		1 13 1
+		1 13 1
+		1 13 1
 		1 52 1
 		1 52 1
 		1 52 1
@@ -23986,51 +23985,52 @@ createNode skinCluster -n "skinCluster4";
 		1 52 1
 		1 52 1
 		1 13 1
-		1 52 1
+		1 13 1
 		1 52 1
 		1 52 1
 		1 52 1
 		1 52 1
 		1 13 1
-		1 52 1
-		1 52 1
 		1 13 1
-		2 13 0.028702385013365698 53 0.97129761498663425
-		2 13 0.10468575358390808 53 0.89531424641609192
+		1 13 1
+		1 13 1
+		1 13 1
+		1 13 1
+		1 13 1
 		2 13 0.050493855063820287 53 0.9495061449361798
 		1 13 1
 		1 13 1
 		1 52 1
-		2 13 0.048152028030814413 53 0.95184797196918558
-		1 53 1
-		3 12 0.17340516824012961 13 0.036328072500572128 53 0.79026675925929823
+		2 13 0.1359612414815973 53 0.86403875851840273
+		2 13 0.0036380476684268765 53 0.99636195233157321
+		2 12 0.0076682550811931153 13 0.99233174491880682
+		1 13 1
 		1 13 1
 		1 52 1
-		1 52 1
 		1 53 1
-		2 12 0.16281288177020811 53 0.83718711822979186
-		2 12 0.17501410226642566 53 0.82498589773357445
+		2 13 0.16281288177020811 53 0.83718711822979186
+		2 13 0.20666420180421258 53 0.79333579819578748
+		2 12 0.043294548988342285 13 0.95670545101165771
 		1 12 1
-		1 12 1
-		1 12 1
+		1 13 1
 		1 53 1
-		2 12 0.14291603901266831 53 0.85708396098733164
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 53 1
-		2 12 0.094416692108982514 53 0.90558330789101749
-		1 12 1
-		1 12 1
+		2 13 0.14291603901266831 53 0.85708396098733164
+		1 13 1
+		1 13 1
+		2 12 0.97552793034241969 13 0.024472069657580253
 		1 12 1
 		1 53 1
-		2 12 0.038428794009657208 53 0.96157120599034285
+		2 13 0.094416692108982514 53 0.90558330789101749
+		2 12 0.020587805658578873 13 0.97941219434142113
+		1 12 1
+		2 12 0.97088491949549771 13 0.029115080504502299
+		1 53 1
+		2 13 0.038428794009657208 53 0.96157120599034285
+		2 12 0.021409452542839824 13 0.97859054745716012
 		1 12 1
 		1 12 1
 		1 12 1
-		1 12 1
-		2 12 0.042411148548126221 53 0.95758885145187378
+		2 13 0.042411148548126221 53 0.95758885145187378
 		1 12 1
 		1 12 1
 		1 11 1
@@ -24039,33 +24039,33 @@ createNode skinCluster -n "skinCluster4";
 		1 11 1
 		2 0 0.99210973922163248 11 0.0078902607783675194
 		2 0 0.99979448318481445 11 0.00020551681518554688
+		1 54 1
+		1 55 1
+		1 55 1
+		1 54 1
+		1 54 1
+		1 54 1
 		1 55 1
 		1 55 1
 		1 55 1
 		1 55 1
+		1 54 1
+		1 54 1
+		1 55 1
+		1 55 1
+		1 55 1
+		2 54 0.96137756109237671 55 0.038622438907623291
+		1 54 1
+		1 55 1
+		1 55 1
+		1 54 1
+		1 54 1
 		1 55 1
 		1 55 1
 		1 55 1
 		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
+		1 54 1
+		1 54 1
 		1 55 1
 		1 55 1
 		1 55 1
@@ -24386,7 +24386,8 @@ createNode skinCluster -n "skinCluster4";
 		1 60 1
 		1 60 1
 		1 60 1
-		1 59 1
+		1 59 1;
+	setAttr ".wl[1883:2358].w"
 		1 59 1
 		1 60 1
 		1 60 1
@@ -24411,12 +24412,11 @@ createNode skinCluster -n "skinCluster4";
 		1 57 1
 		1 57 1
 		1 57 1
-		1 55 1;
-	setAttr ".wl[1908:2384].w"
 		1 55 1
 		1 55 1
 		1 55 1
 		1 55 1
+		1 54 1
 		2 0 1.7881393432617188e-07 6 0.99999982118606567
 		1 6 1
 		1 6 1
@@ -24497,17 +24497,17 @@ createNode skinCluster -n "skinCluster4";
 		1 7 1
 		1 7 1
 		1 7 1
-		2 7 0.0095709117904418002 8 0.99042908820955822
-		2 7 0.010362555057257602 8 0.98963744494274242
-		2 7 0.0086098909378051758 8 0.99139010906219482
-		2 7 0.0044760398349911043 8 0.99552396016500888
 		1 7 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1.0000000000000002
-		2 7 0.0021841056533552297 8 0.99781589434664486
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		2 7 0.0055000329040459772 8 0.99449996709595401
+		2 7 0.0041181207105530438 8 0.99588187928944705
+		2 7 0.0026641488075256348 8 0.99733585119247437
+		2 7 0.0020887544168863587 8 0.99791124558311373
+		1 7 1
 		1 8 1
 		1 8 1
 		1 8 0.99999999999999989
@@ -24549,7 +24549,7 @@ createNode skinCluster -n "skinCluster4";
 		1 9 1
 		2 8 0.99918544362299144 9 0.00081455637700855732
 		1 8 1
-		1 8 1
+		2 7 0.00091989431530237198 8 0.99908010568469763
 		1 9 0.99999999999999989
 		1 9 1
 		1 9 1
@@ -24615,15 +24615,15 @@ createNode skinCluster -n "skinCluster4";
 		1 8 0.99999999999999989
 		1 8 1
 		1 8 1
+		2 7 0.0073822901122029749 8 0.99261770988779696
+		2 7 0.0046894164469413434 8 0.99531058355305868
 		1 8 1
 		1 8 1
-		1 8 1
-		1 8 1
-		2 7 0.00155749419127944 8 0.99844250580872052
-		2 7 0.0020691243487831168 8 0.99793087565121696
 		1 7 1
 		1 7 1
-		1 8 1
+		1 7 1
+		1 7 1
+		2 7 0.0066574197262525558 8 0.99334258027374744
 		1 7 1
 		1 7 1
 		1 7 0.99999999999999989
@@ -24754,11 +24754,12 @@ createNode skinCluster -n "skinCluster4";
 		1 2 1
 		1 2 1
 		1 2 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
+		1 2 1
+		1 2 1
+		1 2 1
+		1 2 1
+		1 2 1
+		1 2 1
 		1 2 1
 		1 3 1
 		1 3 1
@@ -24785,7 +24786,6 @@ createNode skinCluster -n "skinCluster4";
 		1 3 1
 		1 3 1
 		1 3 1
-		1 3 1
 		1 4 1
 		1 3 1
 		1 4 1
@@ -24800,8 +24800,6 @@ createNode skinCluster -n "skinCluster4";
 		1 4 1
 		1 4 1
 		1 4 1
-		1 3 1
-		1 3 1
 		1 3 1
 		1 3 1
 		1 3 1
@@ -24852,6 +24850,8 @@ createNode skinCluster -n "skinCluster4";
 		1 2 1
 		1 2 1
 		1 2 1
+		1 2 1
+		1 2 1
 		1 3 1
 		1 3 1
 		1 4 1
@@ -24863,34 +24863,11 @@ createNode skinCluster -n "skinCluster4";
 		1 3 1
 		1 3 1
 		1 3 1
-		1 4 1
-		1 4 1
-		1 3 1
-		1 3 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
 		1 4 1;
-	setAttr ".wl[2385:2591].w"
+	setAttr ".wl[2359:2591].w"
+		1 4 1
+		1 3 1
+		1 3 1
 		1 4 1
 		1 4 1
 		1 4 1
@@ -24898,6 +24875,29 @@ createNode skinCluster -n "skinCluster4";
 		1 4 1
 		1 4 1
 		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
 		1 15 1
 		1 15 1
 		1 15 1
@@ -24911,20 +24911,20 @@ createNode skinCluster -n "skinCluster4";
 		1 15 1
 		1 15 1
 		1 15 1
-		2 14 0.14966647157645635 15 0.85033352842354359
+		2 14 0.17008314079174541 15 0.82991685920825453
 		1 15 1
 		1 15 1
-		1 15 1
-		1 15 1
-		2 14 0.0035816729311501801 15 0.99641832706884981
+		1 15 0.99999999999999989
 		1 15 1
 		1 15 1
 		1 15 1
 		1 15 1
 		1 15 1
 		1 15 1
+		2 14 0.82314428116397198 15 0.17685571883602802
 		1 15 1
-		1 15 1
+		1 14 1
+		2 14 0.90807312726974487 15 0.091926872730255127
 		1 15 1
 		1 15 1
 		1 15 1
@@ -25088,7 +25088,7 @@ createNode skinCluster -n "skinCluster4";
 		1 6 1
 		2 0 0.99904131016228348 6 0.00095868983771651983
 		1 0 1
-		3 0 0.99016564141836305 1 0.0032781076684180732 6 0.0065562509132189011
+		3 0 0.98690906118909116 1 0.0065346878976899536 6 0.0065562509132189011
 		1 0 1
 		1 0 1
 		1 0 1
@@ -25441,36 +25441,36 @@ createNode skinCluster -n "skinCluster5";
 		1 15 1
 		1 16 1
 		1 16 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 4 1
+		1 4 1
+		1 4 1
 		1 8 1
 		1 8 1
 		1 8 1
 		1 8 1
 		1 8 1
 		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
+		1 4 1
+		1 4 1
 		1 8 1
 		1 8 1
 		1 8 1
@@ -25549,158 +25549,158 @@ createNode skinCluster -n "skinCluster5";
 		1 8 1
 		1 8 1
 		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1;
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 8 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 8 1
+		1 8 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 8 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1;
 	setAttr -s 67 ".pm";
 	setAttr ".pm[0]" -type "matrix" 0 0 1 0 0.98968830985327783 0.14323773713572266 0 0
 		 -0.14323773713572263 0.98968830985327783 0 0 -99.061634450622236 -20.257108699783313 0 1;
@@ -26392,6 +26392,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "groupId1.id" "witch:hat_geoShape.iog.og[0].gid";
 connectAttr "witch:U3DMeshSG.mwc" "witch:hat_geoShape.iog.og[0].gco";
 connectAttr "skinCluster5.og[0]" "witch:hat_geoShape.i";
@@ -26417,11 +26419,11 @@ connectAttr "rt_ball_jnt.s" "rt_toe_jnt.is";
 connectAttr "spine_jnt1.s" "spine_jnt2.is";
 connectAttr "spine_jnt2.s" "spine_jnt3.is";
 connectAttr "spine_jnt3.s" "neck_jnt1.is";
-connectAttr "neck_jnt1.s" "neck_jnt2.is";
-connectAttr "neck_jnt2.s" "lf_ear_ring_jnt.is";
-connectAttr "neck_jnt2.s" "jaw_jnt.is";
-connectAttr "neck_jnt2.s" "rt_ear_ring_jnt.is";
-connectAttr "neck_jnt2.s" "hat_jnt1.is";
+connectAttr "neck_jnt1.s" "head_jnt.is";
+connectAttr "head_jnt.s" "lf_ear_ring_jnt.is";
+connectAttr "head_jnt.s" "jaw_jnt.is";
+connectAttr "head_jnt.s" "rt_ear_ring_jnt.is";
+connectAttr "head_jnt.s" "hat_jnt1.is";
 connectAttr "hat_jnt1.s" "hat_jnt2.is";
 connectAttr "hat_jnt2.s" "hat_jnt3.is";
 connectAttr "hat_jnt3.s" "hat_jnt4.is";
@@ -26589,7 +26591,7 @@ connectAttr "spine_jnt1.msg" "bindPose1.m[12]";
 connectAttr "spine_jnt2.msg" "bindPose1.m[13]";
 connectAttr "spine_jnt3.msg" "bindPose1.m[14]";
 connectAttr "neck_jnt1.msg" "bindPose1.m[15]";
-connectAttr "neck_jnt2.msg" "bindPose1.m[16]";
+connectAttr "head_jnt.msg" "bindPose1.m[16]";
 connectAttr "lf_ear_ring_jnt.msg" "bindPose1.m[17]";
 connectAttr "jaw_jnt.msg" "bindPose1.m[18]";
 connectAttr "rt_ear_ring_jnt.msg" "bindPose1.m[19]";
@@ -26746,7 +26748,7 @@ connectAttr "spine_jnt1.bps" "bindPose1.wm[12]";
 connectAttr "spine_jnt2.bps" "bindPose1.wm[13]";
 connectAttr "spine_jnt3.bps" "bindPose1.wm[14]";
 connectAttr "neck_jnt1.bps" "bindPose1.wm[15]";
-connectAttr "neck_jnt2.bps" "bindPose1.wm[16]";
+connectAttr "head_jnt.bps" "bindPose1.wm[16]";
 connectAttr "lf_ear_ring_jnt.bps" "bindPose1.wm[17]";
 connectAttr "jaw_jnt.bps" "bindPose1.wm[18]";
 connectAttr "rt_ear_ring_jnt.bps" "bindPose1.wm[19]";
@@ -26826,7 +26828,7 @@ connectAttr "spine_jnt1.wm" "skinCluster2.ma[11]";
 connectAttr "spine_jnt2.wm" "skinCluster2.ma[12]";
 connectAttr "spine_jnt3.wm" "skinCluster2.ma[13]";
 connectAttr "neck_jnt1.wm" "skinCluster2.ma[14]";
-connectAttr "neck_jnt2.wm" "skinCluster2.ma[15]";
+connectAttr "head_jnt.wm" "skinCluster2.ma[15]";
 connectAttr "lf_ear_ring_jnt.wm" "skinCluster2.ma[16]";
 connectAttr "jaw_jnt.wm" "skinCluster2.ma[17]";
 connectAttr "rt_ear_ring_jnt.wm" "skinCluster2.ma[18]";
@@ -26904,7 +26906,7 @@ connectAttr "spine_jnt1.liw" "skinCluster2.lw[11]";
 connectAttr "spine_jnt2.liw" "skinCluster2.lw[12]";
 connectAttr "spine_jnt3.liw" "skinCluster2.lw[13]";
 connectAttr "neck_jnt1.liw" "skinCluster2.lw[14]";
-connectAttr "neck_jnt2.liw" "skinCluster2.lw[15]";
+connectAttr "head_jnt.liw" "skinCluster2.lw[15]";
 connectAttr "lf_ear_ring_jnt.liw" "skinCluster2.lw[16]";
 connectAttr "jaw_jnt.liw" "skinCluster2.lw[17]";
 connectAttr "rt_ear_ring_jnt.liw" "skinCluster2.lw[18]";
@@ -26982,7 +26984,7 @@ connectAttr "spine_jnt1.obcc" "skinCluster2.ifcl[11]";
 connectAttr "spine_jnt2.obcc" "skinCluster2.ifcl[12]";
 connectAttr "spine_jnt3.obcc" "skinCluster2.ifcl[13]";
 connectAttr "neck_jnt1.obcc" "skinCluster2.ifcl[14]";
-connectAttr "neck_jnt2.obcc" "skinCluster2.ifcl[15]";
+connectAttr "head_jnt.obcc" "skinCluster2.ifcl[15]";
 connectAttr "lf_ear_ring_jnt.obcc" "skinCluster2.ifcl[16]";
 connectAttr "jaw_jnt.obcc" "skinCluster2.ifcl[17]";
 connectAttr "rt_ear_ring_jnt.obcc" "skinCluster2.ifcl[18]";
@@ -27046,7 +27048,7 @@ connectAttr "rt_ring_jnt2.obcc" "skinCluster2.ifcl[75]";
 connectAttr "rt_ring_jnt3.obcc" "skinCluster2.ifcl[76]";
 connectAttr "rt_ring_jnt4.obcc" "skinCluster2.ifcl[77]";
 connectAttr "bindPose1.msg" "skinCluster2.bp";
-connectAttr "pelvis_jnt.msg" "skinCluster2.ptt";
+connectAttr "head_jnt.msg" "skinCluster2.ptt";
 connectAttr "ribbons_geoShapeOrig.w" "skinCluster2GroupParts.ig";
 connectAttr "groupId2.id" "skinCluster2GroupParts.gi";
 connectAttr "skinCluster3GroupParts.og" "skinCluster3.ip[0].ig";
@@ -27066,7 +27068,7 @@ connectAttr "spine_jnt1.wm" "skinCluster3.ma[11]";
 connectAttr "spine_jnt2.wm" "skinCluster3.ma[12]";
 connectAttr "spine_jnt3.wm" "skinCluster3.ma[13]";
 connectAttr "neck_jnt1.wm" "skinCluster3.ma[14]";
-connectAttr "neck_jnt2.wm" "skinCluster3.ma[15]";
+connectAttr "head_jnt.wm" "skinCluster3.ma[15]";
 connectAttr "lf_ear_ring_jnt.wm" "skinCluster3.ma[16]";
 connectAttr "jaw_jnt.wm" "skinCluster3.ma[17]";
 connectAttr "rt_ear_ring_jnt.wm" "skinCluster3.ma[18]";
@@ -27144,7 +27146,7 @@ connectAttr "spine_jnt1.liw" "skinCluster3.lw[11]";
 connectAttr "spine_jnt2.liw" "skinCluster3.lw[12]";
 connectAttr "spine_jnt3.liw" "skinCluster3.lw[13]";
 connectAttr "neck_jnt1.liw" "skinCluster3.lw[14]";
-connectAttr "neck_jnt2.liw" "skinCluster3.lw[15]";
+connectAttr "head_jnt.liw" "skinCluster3.lw[15]";
 connectAttr "lf_ear_ring_jnt.liw" "skinCluster3.lw[16]";
 connectAttr "jaw_jnt.liw" "skinCluster3.lw[17]";
 connectAttr "rt_ear_ring_jnt.liw" "skinCluster3.lw[18]";
@@ -27222,7 +27224,7 @@ connectAttr "spine_jnt1.obcc" "skinCluster3.ifcl[11]";
 connectAttr "spine_jnt2.obcc" "skinCluster3.ifcl[12]";
 connectAttr "spine_jnt3.obcc" "skinCluster3.ifcl[13]";
 connectAttr "neck_jnt1.obcc" "skinCluster3.ifcl[14]";
-connectAttr "neck_jnt2.obcc" "skinCluster3.ifcl[15]";
+connectAttr "head_jnt.obcc" "skinCluster3.ifcl[15]";
 connectAttr "lf_ear_ring_jnt.obcc" "skinCluster3.ifcl[16]";
 connectAttr "jaw_jnt.obcc" "skinCluster3.ifcl[17]";
 connectAttr "rt_ear_ring_jnt.obcc" "skinCluster3.ifcl[18]";
@@ -27286,7 +27288,7 @@ connectAttr "rt_ring_jnt2.obcc" "skinCluster3.ifcl[75]";
 connectAttr "rt_ring_jnt3.obcc" "skinCluster3.ifcl[76]";
 connectAttr "rt_ring_jnt4.obcc" "skinCluster3.ifcl[77]";
 connectAttr "bindPose1.msg" "skinCluster3.bp";
-connectAttr "pelvis_jnt.msg" "skinCluster3.ptt";
+connectAttr "head_jnt.msg" "skinCluster3.ptt";
 connectAttr "broom_geoShapeOrig.w" "skinCluster3GroupParts.ig";
 connectAttr "groupId3.id" "skinCluster3GroupParts.gi";
 connectAttr "skinCluster4GroupParts.og" "skinCluster4.ip[0].ig";
@@ -27306,7 +27308,7 @@ connectAttr "spine_jnt1.wm" "skinCluster4.ma[11]";
 connectAttr "spine_jnt2.wm" "skinCluster4.ma[12]";
 connectAttr "spine_jnt3.wm" "skinCluster4.ma[13]";
 connectAttr "neck_jnt1.wm" "skinCluster4.ma[14]";
-connectAttr "neck_jnt2.wm" "skinCluster4.ma[15]";
+connectAttr "head_jnt.wm" "skinCluster4.ma[15]";
 connectAttr "lf_ear_ring_jnt.wm" "skinCluster4.ma[16]";
 connectAttr "jaw_jnt.wm" "skinCluster4.ma[17]";
 connectAttr "rt_ear_ring_jnt.wm" "skinCluster4.ma[18]";
@@ -27384,7 +27386,7 @@ connectAttr "spine_jnt1.liw" "skinCluster4.lw[11]";
 connectAttr "spine_jnt2.liw" "skinCluster4.lw[12]";
 connectAttr "spine_jnt3.liw" "skinCluster4.lw[13]";
 connectAttr "neck_jnt1.liw" "skinCluster4.lw[14]";
-connectAttr "neck_jnt2.liw" "skinCluster4.lw[15]";
+connectAttr "head_jnt.liw" "skinCluster4.lw[15]";
 connectAttr "lf_ear_ring_jnt.liw" "skinCluster4.lw[16]";
 connectAttr "jaw_jnt.liw" "skinCluster4.lw[17]";
 connectAttr "rt_ear_ring_jnt.liw" "skinCluster4.lw[18]";
@@ -27462,7 +27464,7 @@ connectAttr "spine_jnt1.obcc" "skinCluster4.ifcl[11]";
 connectAttr "spine_jnt2.obcc" "skinCluster4.ifcl[12]";
 connectAttr "spine_jnt3.obcc" "skinCluster4.ifcl[13]";
 connectAttr "neck_jnt1.obcc" "skinCluster4.ifcl[14]";
-connectAttr "neck_jnt2.obcc" "skinCluster4.ifcl[15]";
+connectAttr "head_jnt.obcc" "skinCluster4.ifcl[15]";
 connectAttr "lf_ear_ring_jnt.obcc" "skinCluster4.ifcl[16]";
 connectAttr "jaw_jnt.obcc" "skinCluster4.ifcl[17]";
 connectAttr "rt_ear_ring_jnt.obcc" "skinCluster4.ifcl[18]";
@@ -27526,7 +27528,7 @@ connectAttr "rt_ring_jnt2.obcc" "skinCluster4.ifcl[75]";
 connectAttr "rt_ring_jnt3.obcc" "skinCluster4.ifcl[76]";
 connectAttr "rt_ring_jnt4.obcc" "skinCluster4.ifcl[77]";
 connectAttr "bindPose1.msg" "skinCluster4.bp";
-connectAttr "spine_jnt3.msg" "skinCluster4.ptt";
+connectAttr "clavicle_jnt1.msg" "skinCluster4.ptt";
 connectAttr "body_geoShapeOrig.w" "skinCluster4GroupParts.ig";
 connectAttr "groupId4.id" "skinCluster4GroupParts.gi";
 connectAttr "skinCluster5GroupParts.og" "skinCluster5.ip[0].ig";
@@ -27536,7 +27538,7 @@ connectAttr "spine_jnt1.wm" "skinCluster5.ma[0]";
 connectAttr "spine_jnt2.wm" "skinCluster5.ma[1]";
 connectAttr "spine_jnt3.wm" "skinCluster5.ma[2]";
 connectAttr "neck_jnt1.wm" "skinCluster5.ma[3]";
-connectAttr "neck_jnt2.wm" "skinCluster5.ma[4]";
+connectAttr "head_jnt.wm" "skinCluster5.ma[4]";
 connectAttr "lf_ear_ring_jnt.wm" "skinCluster5.ma[5]";
 connectAttr "jaw_jnt.wm" "skinCluster5.ma[6]";
 connectAttr "rt_ear_ring_jnt.wm" "skinCluster5.ma[7]";
@@ -27603,7 +27605,7 @@ connectAttr "spine_jnt1.liw" "skinCluster5.lw[0]";
 connectAttr "spine_jnt2.liw" "skinCluster5.lw[1]";
 connectAttr "spine_jnt3.liw" "skinCluster5.lw[2]";
 connectAttr "neck_jnt1.liw" "skinCluster5.lw[3]";
-connectAttr "neck_jnt2.liw" "skinCluster5.lw[4]";
+connectAttr "head_jnt.liw" "skinCluster5.lw[4]";
 connectAttr "lf_ear_ring_jnt.liw" "skinCluster5.lw[5]";
 connectAttr "jaw_jnt.liw" "skinCluster5.lw[6]";
 connectAttr "rt_ear_ring_jnt.liw" "skinCluster5.lw[7]";
@@ -27670,7 +27672,7 @@ connectAttr "spine_jnt1.obcc" "skinCluster5.ifcl[0]";
 connectAttr "spine_jnt2.obcc" "skinCluster5.ifcl[1]";
 connectAttr "spine_jnt3.obcc" "skinCluster5.ifcl[2]";
 connectAttr "neck_jnt1.obcc" "skinCluster5.ifcl[3]";
-connectAttr "neck_jnt2.obcc" "skinCluster5.ifcl[4]";
+connectAttr "head_jnt.obcc" "skinCluster5.ifcl[4]";
 connectAttr "lf_ear_ring_jnt.obcc" "skinCluster5.ifcl[5]";
 connectAttr "jaw_jnt.obcc" "skinCluster5.ifcl[6]";
 connectAttr "rt_ear_ring_jnt.obcc" "skinCluster5.ifcl[7]";
@@ -27733,13 +27735,13 @@ connectAttr "rt_ring_jnt1.obcc" "skinCluster5.ifcl[63]";
 connectAttr "rt_ring_jnt2.obcc" "skinCluster5.ifcl[64]";
 connectAttr "rt_ring_jnt3.obcc" "skinCluster5.ifcl[65]";
 connectAttr "rt_ring_jnt4.obcc" "skinCluster5.ifcl[66]";
-connectAttr "feather_bot_jnt1.msg" "skinCluster5.ptt";
+connectAttr "head_jnt.msg" "skinCluster5.ptt";
 connectAttr "skeleton.msg" "bindPose2.m[0]";
 connectAttr "spine_jnt1.msg" "bindPose2.m[1]";
 connectAttr "spine_jnt2.msg" "bindPose2.m[2]";
 connectAttr "spine_jnt3.msg" "bindPose2.m[3]";
 connectAttr "neck_jnt1.msg" "bindPose2.m[4]";
-connectAttr "neck_jnt2.msg" "bindPose2.m[5]";
+connectAttr "head_jnt.msg" "bindPose2.m[5]";
 connectAttr "lf_ear_ring_jnt.msg" "bindPose2.m[6]";
 connectAttr "jaw_jnt.msg" "bindPose2.m[7]";
 connectAttr "rt_ear_ring_jnt.msg" "bindPose2.m[8]";

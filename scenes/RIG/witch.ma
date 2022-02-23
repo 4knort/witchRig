@@ -1,34 +1,33 @@
 //Maya ASCII 2022 scene
 //Name: witch.ma
-//Last modified: Tue, Feb 22, 2022 06:24:01 AM
+//Last modified: Wed, Feb 23, 2022 10:55:57 PM
 //Codeset: 1251
 requires maya "2022";
 requires "stereoCamera" "10.0";
 requires "mtoa" "4.2.4";
-requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2022";
 fileInfo "version" "2022";
 fileInfo "cutIdentifier" "202108111415-612a77abf4";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 22000)";
-fileInfo "UUID" "1F7750DF-4EE5-EEE2-EA33-DDAA32354CB6";
+fileInfo "UUID" "D48D9CFA-4EF9-859E-DD42-6F8E85A26937";
 createNode transform -s -n "persp";
 	rename -uid "24915ABF-4C27-6DE5-31EE-3186470FC78F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 11.434437473756077 186.01524372606829 163.21530156904379 ;
-	setAttr ".r" -type "double3" -29.033784925498058 2162.4756521590671 -5.9691111936098704e-16 ;
+	setAttr ".t" -type "double3" 6.7214246134306306 150.04569856058345 161.38125756158229 ;
+	setAttr ".r" -type "double3" -5.8337848805631722 2159.6757270237749 -6.212120353499298e-18 ;
 	setAttr ".rp" -type "double3" -7.1054273576010019e-15 1.4210854715202004e-14 -2.8421709430404007e-14 ;
 	setAttr ".rpt" -type "double3" -2.9475340865078018e-14 -2.1026478126898257e-14 -1.7834243485849793e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4F3494DA-48E4-4EA1-DCFB-9798E3AE8E3C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 170.54777478451604;
+	setAttr ".coi" 162.77925947922154;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 41.709165190004299 57.590596539177426 -38.093079906330331 ;
+	setAttr ".tp" -type "double3" 4.4480054829515652 126.79643953866392 -1.751926191870858 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "BAC6114C-42B6-2C82-6704-E6A8764F6F1B";
@@ -50,13 +49,13 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "E94EDB8B-4872-AE66-5950-249112CF1DAE";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.3730234127213823 85.624608351018935 1004.9531818075141 ;
+	setAttr ".t" -type "double3" 17.465581528661723 116.84029337109598 1004.9531818075141 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "39D0E1B3-41ED-679A-3069-5BA8A898B53C";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1002.4156562125928;
-	setAttr ".ow" 304.73517307673916;
+	setAttr ".ow" 109.67842967322325;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -67,14 +66,14 @@ createNode camera -s -n "frontShape" -p "front";
 createNode transform -s -n "side";
 	rename -uid "5B78BB91-4029-2472-5538-A29DD9503A45";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1011.326721233325 145.33881898672342 2.5375358649459505 ;
+	setAttr ".t" -type "double3" 1011.326721233325 111.12782478794954 0.41827073758828082 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "E7A40A0F-4B02-FA33-5F3E-B193BA1A2E11";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1011.3267283462696;
-	setAttr ".ow" 440.6998957915979;
+	setAttr ".ow" 112.82563868504194;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -86,6 +85,7 @@ createNode transform -n "witch:geometry";
 	rename -uid "ECA5BE0E-4A18-8F9C-0E21-8DB709318293";
 createNode transform -n "witch:hat_geo" -p "witch:geometry";
 	rename -uid "2314EE44-4696-B5C8-7774-599BA99331BF";
+	setAttr ".v" no;
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
@@ -2275,6 +2275,7 @@ createNode mesh -n "hat_geoShapeOrig" -p "witch:hat_geo";
 	setAttr ".ndt" 0;
 createNode transform -n "witch:ribbons_geo" -p "witch:geometry";
 	rename -uid "169C8A8C-4BAA-A439-EAD4-BD88D01437A2";
+	setAttr ".v" no;
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
@@ -3535,6 +3536,7 @@ createNode mesh -n "ribbons_geoShapeOrig" -p "witch:ribbons_geo";
 	setAttr ".ndt" 0;
 createNode transform -n "witch:broom_geo" -p "witch:geometry";
 	rename -uid "5D4B28B9-4061-0547-75AE-28BB0D22C6DB";
+	setAttr ".v" no;
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
@@ -19722,11 +19724,16 @@ createNode joint -n "pelvis_jnt" -p "skeleton";
 	setAttr ".bps" -type "matrix" 0 -1 0 0 -2.2204460492503126e-16 0 -1 0 1 0 -2.2204460492503131e-16 0
 		 0 98.867513899456881 6.3686283220559021 1;
 	setAttr ".radi" 2;
+	setAttr ".liw" yes;
 createNode joint -n "lf_hip_jnt1" -p "pelvis_jnt";
 	rename -uid "6FFC1BEA-4D81-3054-FBCF-FF9433BAED3D";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 1;
 	setAttr ".t" -type "double3" 4.7450902539230668 2.2015151361507304 10.620646804610775 ;
+	setAttr ".r" -type "double3" 0 0 0 ;
+	setAttr -av ".rx";
+	setAttr -av ".ry";
+	setAttr -av ".rz";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -0.83391660322992378 -4.1111952284184445 7.8595968233716151 ;
@@ -19734,11 +19741,16 @@ createNode joint -n "lf_hip_jnt1" -p "pelvis_jnt";
 		 -0.014516625913450766 0.13569793822002657 -0.99064390026634841 0 0.99732115011066313 0.073001558857332602 -0.0046147531183626019 0
 		 10.620646804610775 94.122423645533814 4.1671131859051691 1;
 	setAttr ".radi" 2;
+	setAttr ".liw" yes;
 createNode joint -n "lf_knee_jnt" -p "lf_hip_jnt1";
 	rename -uid "56801259-478D-027A-536F-D9BCB347A3C0";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 2;
 	setAttr ".t" -type "double3" 42.399644070391808 -3.5527136788005009e-15 1.4210854715202004e-14 ;
+	setAttr ".r" -type "double3" 0 0 0 ;
+	setAttr -av ".rx";
+	setAttr -av ".ry";
+	setAttr -av ".rz";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 0.58635772978294964 ;
@@ -19746,6 +19758,7 @@ createNode joint -n "lf_knee_jnt" -p "lf_hip_jnt1";
 		 -0.015249543199970409 0.14580230671643152 -0.98919620843812373 0 0.99732115011066313 0.073001558857332602 -0.0046147531183626019 0
 		 13.660376355141498 52.229154088913653 -1.615950657068038 1;
 	setAttr ".radi" 2;
+	setAttr ".liw" yes;
 createNode joint -n "lf_ankle_jnt" -p "lf_knee_jnt";
 	rename -uid "977A929C-43C4-A2EA-BC73-02A3FFF50697";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19759,6 +19772,7 @@ createNode joint -n "lf_ankle_jnt" -p "lf_knee_jnt";
 		 -0.21588261192262009 -0.02407566129173281 -0.97612246178583217 0 0.97641715676698482 -0.0074297068576413272 -0.21576453700060796 0
 		 16.001417896786371 19.943581595381609 -6.4107635737377331 1;
 	setAttr ".radi" 2;
+	setAttr ".liw" yes;
 createNode joint -n "lf_ball_jnt" -p "lf_ankle_jnt";
 	rename -uid "340C0548-4EEF-54ED-0DA9-9694556C9AE2";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19772,6 +19786,7 @@ createNode joint -n "lf_ball_jnt" -p "lf_ankle_jnt";
 		 -0.14549613352933177 -0.75694829525737983 -0.63707154498922769 0 0.97880522435790662 -0.016328309761778414 -0.20414141929062624 0
 		 17.630811495470265 7.5312281456532126 0.55041602367781817 1;
 	setAttr ".radi" 1.0493019462235624;
+	setAttr ".liw" yes;
 createNode joint -n "lf_toe_jnt" -p "lf_ball_jnt";
 	rename -uid "DE20346B-43C3-0EBE-B9B7-6682DEB2BF6A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19784,6 +19799,7 @@ createNode joint -n "lf_toe_jnt" -p "lf_ball_jnt";
 		 -0.041415333360544843 -0.75444631881362956 -0.6550538315216532 0 0.98869285537266427 0.063624581894841256 -0.13578788721294105 0
 		 19.383695908015852 -0.41416903365665547 9.5905575757064483 1;
 	setAttr ".radi" 1.0493019462235624;
+	setAttr ".liw" yes;
 createNode joint -n "rt_hip_jnt1" -p "pelvis_jnt";
 	rename -uid "36BB950F-4DF2-8397-BE64-3F80EF3E64D0";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19796,6 +19812,7 @@ createNode joint -n "rt_hip_jnt1" -p "pelvis_jnt";
 		 -0.01451662591344388 0.13569793822002654 -0.99064390026634852 0 0.99732115011066336 0.073001558857331353 -0.0046147531183558434 0
 		 -10.6206 94.122399999999999 4.1671099999999992 1;
 	setAttr ".radi" 2;
+	setAttr ".liw" yes;
 createNode joint -n "rt_knee_jnt" -p "rt_hip_jnt1";
 	rename -uid "6A775CF4-4E3E-73A2-AB91-3C8A16A46211";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19808,6 +19825,7 @@ createNode joint -n "rt_knee_jnt" -p "rt_hip_jnt1";
 		 -0.015249543199963168 0.14580230671642666 -0.9891962084381245 0 0.99732115011066336 0.073001558857331353 -0.0046147531183558434 0
 		 -13.660399999999996 52.229199999999956 -1.615950000000006 1;
 	setAttr ".radi" 2;
+	setAttr ".liw" yes;
 createNode joint -n "rt_ankle_jnt" -p "rt_knee_jnt";
 	rename -uid "8ECFDE86-417B-FE59-42BD-AB97449A7450";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19821,6 +19839,7 @@ createNode joint -n "rt_ankle_jnt" -p "rt_knee_jnt";
 		 -0.2158826119226194 -0.024075661291732109 -0.97612246178583228 0 0.97641715676698515 -0.0074297068576410635 -0.21576453700060727 0
 		 -16.001399999999993 19.94359999999994 -6.4107600000000042 1;
 	setAttr ".radi" 2;
+	setAttr ".liw" yes;
 createNode joint -n "rt_ball_jnt" -p "rt_ankle_jnt";
 	rename -uid "B208C707-4EAC-8931-EE02-0D9D46615394";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19834,6 +19853,7 @@ createNode joint -n "rt_ball_jnt" -p "rt_ankle_jnt";
 		 -0.14549613352931978 -0.75694829525738017 -0.63707154498923013 0 0.97880522435790851 -0.016328309761769078 -0.20414141929061849 0
 		 -17.630800000000008 7.5312299999999954 0.55041600000000468 1;
 	setAttr ".radi" 1.0493019462235624;
+	setAttr ".liw" yes;
 createNode joint -n "rt_toe_jnt" -p "rt_ball_jnt";
 	rename -uid "DC5F8310-4671-0321-85F0-EEBF68A5CBCB";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19846,6 +19866,7 @@ createNode joint -n "rt_toe_jnt" -p "rt_ball_jnt";
 		 -0.041415333360542331 -0.75444631881362945 -0.65505383152165353 0 0.98869285537266449 0.063624581894843227 -0.1357878872129395 0
 		 -19.383700000000008 -0.41416899999999846 9.59056 1;
 	setAttr ".radi" 1.0493019462235624;
+	setAttr ".liw" yes;
 createNode joint -n "spine_jnt1" -p "skeleton";
 	rename -uid "DCDA49F9-4F0B-3783-F814-EFB5C740726B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19856,6 +19877,7 @@ createNode joint -n "spine_jnt1" -p "skeleton";
 	setAttr ".bps" -type "matrix" 0 0.98968830985327783 -0.14323773713572266 0 0 0.14323773713572263 0.98968830985327783 0
 		 1 0 0 0 0 100.94172398180888 5.8588593159294007 1;
 	setAttr ".radi" 2;
+	setAttr ".liw" yes;
 createNode joint -n "spine_jnt2" -p "spine_jnt1";
 	rename -uid "FA423424-4339-7EC0-F18C-DAA4660D8AF1";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19863,6 +19885,7 @@ createNode joint -n "spine_jnt2" -p "spine_jnt1";
 	setAttr ".bps" -type "matrix" 0 0.98968830985327783 -0.14323773713572266 0 0 0.14323773713572263 0.98968830985327783 0
 		 1 0 0 0 -8.0786153557887985e-06 109.86813538309967 4.5670062485627358 1;
 	setAttr ".radi" 1.7792927620799435;
+	setAttr ".liw" yes;
 createNode joint -n "spine_jnt3" -p "spine_jnt2";
 	rename -uid "B37EBEF2-4A11-B14D-3746-7D8E620687A2";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19871,6 +19894,7 @@ createNode joint -n "spine_jnt3" -p "spine_jnt2";
 	setAttr ".bps" -type "matrix" 0 0.98968830985327783 -0.14323773713572266 0 0 0.14323773713572263 0.98968830985327783 0
 		 1 0 0 0 -7.1129446379547443e-06 117.07305192178686 3.5242347648824115 1;
 	setAttr ".radi" 1.7792927620799435;
+	setAttr ".liw" yes;
 createNode joint -n "neck_jnt1" -p "spine_jnt3";
 	rename -uid "62DF7169-4BBF-D510-3FA9-2CBB47B092BD";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19892,6 +19916,7 @@ createNode joint -n "head_jnt" -p "neck_jnt1";
 	setAttr ".bps" -type "matrix" 0 0.99995300877580817 -0.0096943406278347799 0 0 0.0096943406278347521 0.99995300877580817 0
 		 1 0 0 0 -7.1129446370386714e-06 142.88726907244612 -0.34378329594587598 1;
 	setAttr ".radi" 0.9374866218676754;
+	setAttr ".liw" yes;
 createNode joint -n "lf_ear_ring_jnt" -p "head_jnt";
 	rename -uid "62726958-4235-56F8-38E9-51AD51BC3483";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19903,6 +19928,7 @@ createNode joint -n "lf_ear_ring_jnt" -p "head_jnt";
 		 -2.2204460492503126e-16 0.99995300877580817 -0.0096943406278347799 0 0 0.0096943406278347521 0.99995300877580817 0
 		 7.6342576388260541 144.45582383213528 2.2856350485691879 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "jaw_jnt" -p "head_jnt";
 	rename -uid "00954F93-4FDC-6741-5981-05A4916F5CFB";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19914,6 +19940,7 @@ createNode joint -n "jaw_jnt" -p "head_jnt";
 	setAttr ".bps" -type "matrix" 0 1.2282267654989062e-05 0.99999999992457289 0 1.2246467991473532e-16 0.99999999992457289 -1.2282267655016818e-05 0
 		 -1 1.2246467990549818e-16 -1.5041439770063205e-21 0 -7.1129446353968412e-06 145.33882329881649 2.888618678221289 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_ear_ring_jnt" -p "head_jnt";
 	rename -uid "71BCE6ED-439E-224E-EEAB-84BE11E11D8A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19925,12 +19952,12 @@ createNode joint -n "rt_ear_ring_jnt" -p "head_jnt";
 		 -2.2204460492503126e-16 0.99995300877580817 -0.0096943406278347799 0 0 0.0096943406278347521 0.99995300877580817 0
 		 -7.6342699999999999 144.14400000000001 2.2155799999999992 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "hat_jnt1" -p "head_jnt";
 	rename -uid "341FF830-41A7-0008-47D8-1488F7318ED6";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".t" -type "double3" 15.361203122981209 0.71047274043948283 -0.37157854245353478 ;
-	setAttr ".r" -type "double3" 0 0 4.5296626081419058 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -38.812628096956729 -4.0812446360224062 -35.179863775916786 ;
@@ -19938,6 +19965,7 @@ createNode joint -n "hat_jnt1" -p "head_jnt";
 		 -0.62518614463935807 0.49129471206281228 0.60644191020253047 0 0.77722389470853381 0.32104778966459885 0.54115740246768629 0
 		 -0.37158565539817179 158.25463791844012 0.21773932298223941 1;
 	setAttr ".radi" 0.95173318615542024;
+	setAttr ".liw" yes;
 createNode joint -n "hat_jnt2" -p "hat_jnt1";
 	rename -uid "AB543999-41B8-757E-A0AA-FDB9FC83B132";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19951,6 +19979,7 @@ createNode joint -n "hat_jnt2" -p "hat_jnt1";
 		 -0.28512488977278028 0.77236096377811037 0.56759346266831534 0 0.92529614502259583 0.067306491699369198 0.37322497261229198 0
 		 0.32115723254968676 166.13552135536085 -5.4526192814414225 1;
 	setAttr ".radi" 1.0759283958138823;
+	setAttr ".liw" yes;
 createNode joint -n "hat_jnt3" -p "hat_jnt2";
 	rename -uid "5969686C-4E75-FDBE-2C0F-A59079F01379";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19964,6 +19993,7 @@ createNode joint -n "hat_jnt3" -p "hat_jnt2";
 		 -0.17137481000471355 0.91728043510269563 -0.3594819576469146 0 0.88770807212877423 0.30203203923669775 0.34749248330278593 0
 		 3.3555595464830805 173.79983891314998 -14.357647973257986 1;
 	setAttr ".radi" 0.84645935792781679;
+	setAttr ".liw" yes;
 createNode joint -n "hat_jnt4" -p "hat_jnt3";
 	rename -uid "2D356513-4D88-F39B-45FC-338929B6949C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -19976,13 +20006,13 @@ createNode joint -n "hat_jnt4" -p "hat_jnt3";
 		 -0.17137481000471355 0.91728043510269563 -0.3594819576469146 0 0.88770807212877423 0.30203203923669775 0.34749248330278593 0
 		 6.6451845182320444 171.80166288287413 -21.02459350974954 1;
 	setAttr ".radi" 0.84645935792781679;
+	setAttr ".liw" yes;
 createNode joint -n "feather_bot_jnt1" -p "hat_jnt1";
 	rename -uid "71DD317B-4499-792B-7E64-7E8E4D9D8D4E";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 1;
 	setAttr ".t" -type "double3" 2.6185603376502655 2.8885337018418937 -8.7408932980871938 ;
-	setAttr ".r" -type "double3" 0 0 -3.3092353254199409 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 33.483675349883242 36.816365190891126 -24.431922835415524 ;
@@ -19991,6 +20021,7 @@ createNode joint -n "feather_bot_jnt1" -p "hat_jnt1";
 		 3.8857805861880479e-16 0.97070521405795418 0.2402735678361258 0 0.97836922275427229 0.049704502741561518 -0.20080619107591069 0
 		 -8.7847226478644238 158.98767209819323 -4.286202025930586 1;
 	setAttr ".radi" 0.69125143054677718;
+	setAttr ".liw" yes;
 createNode joint -n "feather_bot_jnt2" -p "feather_bot_jnt1";
 	rename -uid "D6D8DE76-4BD5-CA87-020F-F88260C1831A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20004,6 +20035,7 @@ createNode joint -n "feather_bot_jnt2" -p "feather_bot_jnt1";
 		 -0.0031296419987435625 0.97415054509529675 0.22587811056296686 0 0.99928057411394533 -0.0054907994801037807 0.037525795388946737 0
 		 -10.228683476989026 160.62854315918332 -10.915321112331203 1;
 	setAttr ".radi" 0.93486622424308763;
+	setAttr ".liw" yes;
 createNode joint -n "feather_bot_jnt3" -p "feather_bot_jnt2";
 	rename -uid "71142E1C-4B4D-F19E-790D-269671486E8B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20016,6 +20048,7 @@ createNode joint -n "feather_bot_jnt3" -p "feather_bot_jnt2";
 		 -0.0031296419987435625 0.97415054509529675 0.22587811056296686 0 0.99928057411394533 -0.0054907994801037807 0.037525795388946737 0
 		 -9.9646403896305742 162.20621316888531 -17.715722159460199 1;
 	setAttr ".radi" 0.93486622424308763;
+	setAttr ".liw" yes;
 createNode joint -n "feather_top_jnt1" -p "hat_jnt1";
 	rename -uid "F9859ACB-425F-B7DA-166E-7B9160DCAE07";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20029,6 +20062,7 @@ createNode joint -n "feather_top_jnt1" -p "hat_jnt1";
 		 2.7755575615628914e-16 0.78935221737632699 0.61394061351491946 0 0.99914665603439667 0.025357752119021609 -0.032602824153028287 0
 		 -9.4424735119048009 160.16151149761507 -2.8866242804659419 1;
 	setAttr ".radi" 0.98078892688355535;
+	setAttr ".liw" yes;
 createNode joint -n "feather_top_jnt2" -p "feather_top_jnt1";
 	rename -uid "4CD73CC3-4663-864D-9E62-3F93BFEE6064";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20041,7 +20075,8 @@ createNode joint -n "feather_top_jnt2" -p "feather_top_jnt1";
 		 2.7755575615628914e-16 0.78935221737632699 0.61394061351491946 0 0.99914665603439667 0.025357752119021609 -0.032602824153028287 0
 		 -9.8677010621631176 166.47679147805883 -11.006269969607905 1;
 	setAttr ".radi" 0.98078892688355535;
-createNode joint -n "clavicle_jnt" -p "spine_jnt3";
+	setAttr ".liw" yes;
+createNode joint -n "lf_clavicle_jnt" -p "spine_jnt3";
 	rename -uid "080496B4-432A-4B9F-ECA6-6BABC2D9624F";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 14.237831006972954 1.5161985993803277 1.1258773734220064 ;
@@ -20052,7 +20087,7 @@ createNode joint -n "clavicle_jnt" -p "spine_jnt3";
 	setAttr ".bps" -type "matrix" 0.85729526059287509 -0.21372709155376851 -0.46836477931304921 0
 		 0.47944307489516047 -5.4123372450476381e-16 0.87757298154345753 0 -0.18756112097145228 -0.97689340786800627 0.10246997396293786 0
 		 1.1258702604773685 131.38124368347809 2.9854040989454016 1;
-createNode joint -n "lf_shld_jnt" -p "clavicle_jnt";
+createNode joint -n "lf_shld_jnt" -p "lf_clavicle_jnt";
 	rename -uid "0B6A21F0-4F25-E4DB-F409-45A5F658CAF2";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 10.534460209669653 0.010869486182646604 -0.46301603285007786 ;
@@ -20064,6 +20099,7 @@ createNode joint -n "lf_shld_jnt" -p "clavicle_jnt";
 		 0.20255823457911284 6.5225602696727947e-16 0.97927021888965515 0 -0.75056624241928094 -0.64229839112766152 0.15525170690017648 0
 		 10.249068177158442 129.58206145200492 -1.9864725057720434 1;
 	setAttr ".radi" 2;
+	setAttr ".liw" yes;
 createNode joint -n "lf_elbow_jnt" -p "lf_shld_jnt";
 	rename -uid "F40FFD0C-4F02-EDE2-4645-D992C9FF6955";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20072,10 +20108,12 @@ createNode joint -n "lf_elbow_jnt" -p "lf_shld_jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
 	setAttr ".jo" -type "double3" 0 0 18.328063082726239 ;
+	setAttr ".pa" -type "double3" 0 0 53.122707651809158 ;
 	setAttr ".bps" -type "matrix" 0.66077227667255667 -0.72757363941736175 0.18443589023273427 0
 		 -0.0055058261475642023 0.24101737692496839 0.97050518282935549 0 -0.75056624241928094 -0.64229839112766152 0.15525170690017648 0
 		 23.934940489160883 112.9049979318799 -4.8173419437680316 1;
 	setAttr ".radi" 2;
+	setAttr ".liw" yes;
 createNode joint -n "lf_wrist_jnt" -p "lf_elbow_jnt";
 	rename -uid "A90837B3-4BA8-579F-06C7-BCAEC8D4E0C8";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20088,6 +20126,7 @@ createNode joint -n "lf_wrist_jnt" -p "lf_elbow_jnt";
 		 -0.13827214626445022 -0.13977093650710518 0.98048197274368554 0 -0.72128833944478543 -0.66420521235872332 -0.19640409175087672 0
 		 41.729521045500803 93.311458380738287 0.14951187575598102 1;
 	setAttr ".radi" 2;
+	setAttr ".liw" yes;
 createNode joint -n "lf_thumb_jnt5" -p "lf_wrist_jnt";
 	rename -uid "96BA91B0-4F56-C5B5-51CA-F6BB9B95B0B9";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20100,6 +20139,7 @@ createNode joint -n "lf_thumb_jnt5" -p "lf_wrist_jnt";
 		 -0.94475661455931847 0.23895896240195824 0.22435140635662282 0 -0.32717080423560724 -0.72896069263422614 -0.60131154441774615 0
 		 42.986493412221499 89.611373243796365 2.5369944485933842 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_thumb_jnt2" -p "lf_thumb_jnt5";
 	rename -uid "F813801C-471D-8C57-881B-0796C3BEC3E3";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20112,6 +20152,7 @@ createNode joint -n "lf_thumb_jnt2" -p "lf_thumb_jnt5";
 		 -0.99906650930188923 0.00678496900421241 0.042662327491001989 0 -0.038781902880823282 -0.57589181777511234 -0.81660552179655199 0
 		 43.277028333335245 87.314439803187824 5.7499713810763673 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_thumb_jnt3" -p "lf_thumb_jnt2";
 	rename -uid "28E6762E-4FAF-5D71-8A3C-959CDABCAF06";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20124,6 +20165,7 @@ createNode joint -n "lf_thumb_jnt3" -p "lf_thumb_jnt2";
 		 -0.99837193299649163 -0.046225614239379334 -0.033416702306489007 0 0.052594791325009493 -0.51932663523535338 -0.85295582175198537 0
 		 43.354738136400002 84.091887703148828 7.9214381236881586 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_thumb_jnt4" -p "lf_thumb_jnt3";
 	rename -uid "7079E9C6-43A9-9014-AFC8-799301663144";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20134,6 +20176,7 @@ createNode joint -n "lf_thumb_jnt4" -p "lf_thumb_jnt3";
 		 -0.99837193299649163 -0.046225614239379334 -0.033416702306489007 0 0.052594791325009493 -0.51932663523535338 -0.85295582175198537 0
 		 43.427940572059015 81.262096338146264 9.6488852636891949 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_index_jnt1" -p "lf_wrist_jnt";
 	rename -uid "FC16D53A-4238-AC63-E1C7-B0846DA6125C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20146,6 +20189,7 @@ createNode joint -n "lf_index_jnt1" -p "lf_wrist_jnt";
 		 -0.20575404283156443 -3.920475055707584e-16 0.97860373689173441 0 -0.73676536947372084 -0.6581646057933529 -0.15490688178751649 0
 		 47.169078818259521 85.573512518435365 3.4544631159343355 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_index_jnt2" -p "lf_index_jnt1";
 	rename -uid "6BD1F483-490C-D01F-34D7-0E80641FA63F";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20158,6 +20202,7 @@ createNode joint -n "lf_index_jnt2" -p "lf_index_jnt1";
 		 -0.22366370529896212 0.01815842681666564 0.97449721316558058 0 -0.80725742973052406 -0.56372788848563982 -0.17477502650089824 0
 		 48.93999819184188 83.503467786561956 3.8268036322301695 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_index_jnt3" -p "lf_index_jnt2";
 	rename -uid "38288696-4167-9DA9-4173-CAA63190F46D";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20170,6 +20215,7 @@ createNode joint -n "lf_index_jnt3" -p "lf_index_jnt2";
 		 -0.23763381258430086 -0.013095376113562153 0.9712665351184987 0 -0.87080896983012912 -0.44015353017302344 -0.21898997223529282 0
 		 50.516559616934011 81.11987898106517 4.2330662541283779 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_index_jnt4" -p "lf_index_jnt3";
 	rename -uid "CAFE7E8C-4084-511D-8244-E8AA97952A00";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20180,6 +20226,7 @@ createNode joint -n "lf_index_jnt4" -p "lf_index_jnt3";
 		 -0.23763381258430086 -0.013095376113562153 0.9712665351184987 0 -0.87080896983012912 -0.44015353017302344 -0.21898997223529282 0
 		 51.779959539697849 78.484231362754258 4.5066386814622037 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_ltl_jnt1" -p "lf_wrist_jnt";
 	rename -uid "7644ED30-4A19-E3A4-27BC-A5A9B11320E9";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20192,6 +20239,7 @@ createNode joint -n "lf_ltl_jnt1" -p "lf_wrist_jnt";
 		 0.34897015493842942 -7.7715611723760958e-16 0.9371338383402068 0 -0.77863621464191479 -0.55646685261399165 0.28994876649157797 0
 		 46.153353566499781 86.165808223766703 -3.3286700713601651 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_ltl_jnt2" -p "lf_ltl_jnt1";
 	rename -uid "3DD33C28-45CE-1B3A-B0ED-8096C22A70B0";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20204,6 +20252,7 @@ createNode joint -n "lf_ltl_jnt2" -p "lf_ltl_jnt1";
 		 0.33062735646606461 0.024285452811987851 0.94344886874593192 0 -0.78324634174366992 -0.55063696861303646 0.28865913625209139 0
 		 47.416695853590809 84.152950431984308 -3.7991138176315542 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_ltl_jnt3" -p "lf_ltl_jnt2";
 	rename -uid "3E6626AB-4702-9D73-0007-F4903DBADC2D";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20216,6 +20265,7 @@ createNode joint -n "lf_ltl_jnt3" -p "lf_ltl_jnt2";
 		 0.29794488576250139 -0.0026778713168085257 0.95457931784277661 0 -0.84394726212128579 -0.46803413536527994 0.26210125312722188 0
 		 48.523686111409596 82.39863109278329 -4.1418953225549355 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_ltl_jnt4" -p "lf_ltl_jnt3";
 	rename -uid "3991C94D-436A-BD38-D0A5-5AB10D8AE9A3";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20226,6 +20276,7 @@ createNode joint -n "lf_ltl_jnt4" -p "lf_ltl_jnt3";
 		 0.29794488576250139 -0.0026778713168085257 0.95457931784277661 0 -0.84394726212128579 -0.46803413536527994 0.26210125312722188 0
 		 49.846865511174258 79.777311646564542 -4.5622418393537458 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_middle_jnt1" -p "lf_wrist_jnt";
 	rename -uid "CF4160DF-494C-15FB-F3C7-849F64C03073";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20238,6 +20289,7 @@ createNode joint -n "lf_middle_jnt1" -p "lf_wrist_jnt";
 		 -0.043698417371110423 -9.298117831235686e-16 0.99904476792547203 0 -0.79631002117078964 -0.6038850622445352 -0.034830759120211413 0
 		 47.47509900569635 85.474992637362391 1.1267955157796199 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_middle_jnt2" -p "lf_middle_jnt1";
 	rename -uid "03911DD9-4A60-0CE6-A9A9-22BC131E0EC0";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20250,6 +20302,7 @@ createNode joint -n "lf_middle_jnt2" -p "lf_middle_jnt1";
 		 -0.064522991964413606 0.022062490676898194 0.99767230592669665 0 -0.79476217563011364 -0.60572989453027393 -0.038004987304714286 0
 		 49.633527448199196 82.623346386228405 1.2212056062723797 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_middle_jnt3" -p "lf_middle_jnt2";
 	rename -uid "2B5BB0E5-4DFB-070B-15E1-F9B4F19EA914";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20262,6 +20315,7 @@ createNode joint -n "lf_middle_jnt3" -p "lf_middle_jnt2";
 		 -0.098527525300070001 0.0049392103059224188 0.99512206837141248 0 -0.8946092078020107 -0.43841700005684864 -0.086399649171810006 0
 		 51.598435435309305 80.033676293927954 1.4055510205313277 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_middle_jnt4" -p "lf_middle_jnt3";
 	rename -uid "97411487-4303-3DC8-A5B1-E693C609D5AB";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20272,6 +20326,7 @@ createNode joint -n "lf_middle_jnt4" -p "lf_middle_jnt3";
 		 -0.098527525300070001 0.0049392103059224188 0.99512206837141248 0 -0.8946092078020107 -0.43841700005684864 -0.086399649171810006 0
 		 53.050710067567152 77.038979601518392 1.5642053880272464 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_ring_jnt1" -p "lf_wrist_jnt";
 	rename -uid "64F4D707-4FEF-E31C-72A4-2D9441B7E3AD";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20284,6 +20339,7 @@ createNode joint -n "lf_ring_jnt1" -p "lf_wrist_jnt";
 		 0.14878634891842218 -0.010159660535238757 0.98881717403842373 0 -0.83320425679374621 -0.53982649858945653 0.1198249468242239 0
 		 47.211584055754734 85.787774686034851 -1.2900539240758451 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_ring_jnt2" -p "lf_ring_jnt1";
 	rename -uid "2123A5AB-4A15-3E0B-1810-64A04246DDA4";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20296,6 +20352,7 @@ createNode joint -n "lf_ring_jnt2" -p "lf_ring_jnt1";
 		 0.12975528972022782 0.013199047924799869 0.99145819373461164 0 -0.83921908608963702 -0.53107945389658295 0.11690140799742829 0
 		 48.958191011722327 83.027313474067 -1.5812266791285754 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_ring_jnt3" -p "lf_ring_jnt2";
 	rename -uid "357F7479-4D83-8B17-1D04-D0AC6AF804CC";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20308,6 +20365,7 @@ createNode joint -n "lf_ring_jnt3" -p "lf_ring_jnt2";
 		 0.10181173754289509 -0.021375556104708406 0.99457400715065503 0 -0.88370581545613691 -0.46105877564491987 0.080553318552440592 0
 		 50.068499078739393 81.246023653103123 -1.7028223409139005 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_ring_jnt4" -p "lf_ring_jnt3";
 	rename -uid "2D8B96FC-46CF-D01B-CC83-EA83AE5D31B1";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20318,6 +20376,7 @@ createNode joint -n "lf_ring_jnt4" -p "lf_ring_jnt3";
 		 0.10181173754289509 -0.021375556104708406 0.99457400715065503 0 -0.88370581545613691 -0.46105877564491987 0.080553318552440592 0
 		 51.633431712631413 78.207136368380006 -1.9283323729799633 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "lf_chest_jnt" -p "spine_jnt3";
 	rename -uid "0223C463-425B-1C43-1BF2-ACBA0233EAC7";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20329,6 +20388,7 @@ createNode joint -n "lf_chest_jnt" -p "spine_jnt3";
 		 0.0032562905967109539 -7.6731998360779485e-07 0.99999469827142629 0 0.99994937591756305 -0.0095206663201095141 -0.0032561503186100561 0
 		 7.1657329829365626 122.22574306493419 9.8826985310195141 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_chest_jnt" -p "spine_jnt3";
 	rename -uid "660FB417-431A-4982-9955-BD9E6C56F9F3";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20340,7 +20400,8 @@ createNode joint -n "rt_chest_jnt" -p "spine_jnt3";
 		 0.0032562905967128521 7.6731998263634971e-07 -0.99999469827142651 0 0.99994937591756305 0.0095206663201095783 0.0032561503186119447 0
 		 -7.1657500000000001 122.226 9.8826999999999998 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "clavicle_jnt1" -p "spine_jnt3";
+	setAttr ".liw" yes;
+createNode joint -n "rt_clavicle_jnt" -p "spine_jnt3";
 	rename -uid "497B3468-48CA-B561-B964-0B8769F7683B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 14.237590423407028 1.5161596380320006 -1.125872887055362 ;
@@ -20351,7 +20412,8 @@ createNode joint -n "clavicle_jnt1" -p "spine_jnt3";
 	setAttr ".bps" -type "matrix" 0.85729526059287486 -0.21372709155376873 -0.46836477931304915 0
 		 0.47944307489516053 -1.8041124150158794e-16 0.87757298154345742 0 -0.1875611209714525 -0.97689340786800627 0.10246997396293825 0
 		 -1.12588 131.381 2.9854000000000012 1;
-createNode joint -n "rt_shld_jnt" -p "clavicle_jnt1";
+	setAttr ".liw" yes;
+createNode joint -n "rt_shld_jnt" -p "rt_clavicle_jnt";
 	rename -uid "589D6BF1-42A9-3440-3110-FCAA2C5E3805";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -5.1081494343177276 -8.737243429491496 2.9591252213766097 ;
@@ -20363,6 +20425,7 @@ createNode joint -n "rt_shld_jnt" -p "clavicle_jnt1";
 		 0.20255823457911232 6.106226635438361e-16 0.97927021888965526 0 -0.75056624241928138 -0.64229839112766141 0.15525170690017609 0
 		 -10.249099999999999 129.58199999999999 -1.9864699999999997 1;
 	setAttr ".radi" 2;
+	setAttr ".liw" yes;
 createNode joint -n "rt_elbow_jnt" -p "rt_shld_jnt";
 	rename -uid "4C976A87-4809-F3AC-C6D1-508157E076D6";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20375,6 +20438,7 @@ createNode joint -n "rt_elbow_jnt" -p "rt_shld_jnt";
 		 -0.0055058261475645631 0.24101737692496841 0.97050518282935549 0 -0.75056624241928138 -0.64229839112766141 0.15525170690017609 0
 		 -23.934999999999992 112.905 -4.8173400000000015 1;
 	setAttr ".radi" 2;
+	setAttr ".liw" yes;
 createNode joint -n "rt_wrist_jnt" -p "rt_elbow_jnt";
 	rename -uid "4D16FDA0-4F40-12C6-0CA0-0FB782D879DB";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20387,6 +20451,7 @@ createNode joint -n "rt_wrist_jnt" -p "rt_elbow_jnt";
 		 -0.13827214626445067 -0.13977093650710465 0.98048197274368554 0 -0.72128833944478565 -0.66420521235872343 -0.19640409175087661 0
 		 -41.729500000000016 93.311499999999981 0.14951199999999965 1;
 	setAttr ".radi" 2;
+	setAttr ".liw" yes;
 createNode joint -n "rt_thumb_jnt5" -p "rt_wrist_jnt";
 	rename -uid "B5590C99-4C01-4CA8-63BD-AEB1523941D5";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20399,6 +20464,7 @@ createNode joint -n "rt_thumb_jnt5" -p "rt_wrist_jnt";
 		 -0.94475661455931847 0.23895896240195863 0.22435140635662265 0 -0.32717080423560724 -0.72896069263422669 -0.60131154441774559 0
 		 -42.986500000000007 89.611399999999989 2.5369899999999985 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_thumb_jnt2" -p "rt_thumb_jnt5";
 	rename -uid "3FF86AB5-4067-CDD3-CEE0-8EB742387AD8";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20411,6 +20477,7 @@ createNode joint -n "rt_thumb_jnt2" -p "rt_thumb_jnt5";
 		 -0.99906650930188934 0.0067849690042120492 0.04266232749100074 0 -0.038781902880821839 -0.575891817775113 -0.81660552179655166 0
 		 -43.277000000000029 87.314400000000006 5.7499699999999914 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_thumb_jnt3" -p "rt_thumb_jnt2";
 	rename -uid "2831BE38-47B4-6805-D56D-BDB61C21981C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20423,6 +20490,7 @@ createNode joint -n "rt_thumb_jnt3" -p "rt_thumb_jnt2";
 		 -0.99837193299649174 -0.046225614239378966 -0.033416702306489368 0 0.052594791325009854 -0.5193266352353556 -0.85295582175198403 0
 		 -43.354800000000012 84.09190000000001 7.9214399999999898 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_thumb_jnt4" -p "rt_thumb_jnt3";
 	rename -uid "DAAF1746-4052-7001-8AF8-0194F584DBBC";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20434,6 +20502,7 @@ createNode joint -n "rt_thumb_jnt4" -p "rt_thumb_jnt3";
 		 -0.99837193299649174 -0.046225614239378966 -0.033416702306489368 0 0.052594791325009854 -0.5193266352353556 -0.85295582175198403 0
 		 -43.428000000000019 81.26209999999999 9.6488899999999962 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_index_jnt1" -p "rt_wrist_jnt";
 	rename -uid "3B6EB6A7-481B-85DA-EDEE-5EA8B8CF6930";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20446,6 +20515,7 @@ createNode joint -n "rt_index_jnt1" -p "rt_wrist_jnt";
 		 -0.20575404283157289 -8.3405504724964885e-15 0.97860373689173252 0 -0.73676536947371851 -0.65816460579335301 -0.15490688178752796 0
 		 -47.1691 85.573499999999996 3.4544599999999992 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_index_jnt2" -p "rt_index_jnt1";
 	rename -uid "E3B5B30D-4E6D-A7AA-6BE1-0A94061A9742";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20458,6 +20528,7 @@ createNode joint -n "rt_index_jnt2" -p "rt_index_jnt1";
 		 -0.22366370529886689 0.018158426816732243 0.97449721316560101 0 -0.80725742973054981 -0.5637278884856386 -0.17477502650078305 0
 		 -48.940000000000019 83.503500000000031 3.8267999999999973 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_index_jnt3" -p "rt_index_jnt2";
 	rename -uid "21663473-49E0-D627-956B-02A659177105";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20470,6 +20541,7 @@ createNode joint -n "rt_index_jnt3" -p "rt_index_jnt2";
 		 -0.23763381258429767 -0.013095376113560068 0.97126653511849936 0 -0.87080896983012979 -0.44015353017302378 -0.21898997223528902 0
 		 -50.516600000000025 81.11990000000003 4.2330699999999899 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_index_jnt4" -p "rt_index_jnt3";
 	rename -uid "CFD4EA80-4D42-B8F4-D2CF-248CD56DFD2D";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20480,6 +20552,7 @@ createNode joint -n "rt_index_jnt4" -p "rt_index_jnt3";
 		 -0.23763381258429767 -0.013095376113560068 0.97126653511849936 0 -0.87080896983012979 -0.44015353017302378 -0.21898997223528902 0
 		 -51.780000000000001 78.484200000000016 4.5066399999999964 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_ltl_jnt1" -p "rt_wrist_jnt";
 	rename -uid "049FF931-482E-DE3F-3096-94ACDBE58F80";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20492,6 +20565,7 @@ createNode joint -n "rt_ltl_jnt1" -p "rt_wrist_jnt";
 		 0.34897015493842853 -9.4368957093138306e-16 0.93713383834020714 0 -0.77863621464191524 -0.55646685261399176 0.28994876649157714 0
 		 -46.153399999999998 86.165800000000004 -3.3286699999999998 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_ltl_jnt2" -p "rt_ltl_jnt1";
 	rename -uid "F22B4D50-4825-3E33-9986-019DF2B269FE";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20504,6 +20578,7 @@ createNode joint -n "rt_ltl_jnt2" -p "rt_ltl_jnt1";
 		 0.33062735646612806 0.024285452812032742 0.94344886874590872 0 -0.78324634174364349 -0.55063696861303446 0.28865913625216794 0
 		 -47.416700000000013 84.15300000000002 -3.7991100000000015 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_ltl_jnt3" -p "rt_ltl_jnt2";
 	rename -uid "8F9E7AFF-46F7-1353-AC30-F6BD7FB0F94F";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20516,6 +20591,7 @@ createNode joint -n "rt_ltl_jnt3" -p "rt_ltl_jnt2";
 		 0.29794488576249001 -0.0026778713168144654 0.95457931784278027 0 -0.8439472621212899 -0.46803413536527994 0.26210125312720911 0
 		 -48.523699999999998 82.398599999999988 -4.1419000000000104 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_ltl_jnt4" -p "rt_ltl_jnt3";
 	rename -uid "E905C498-4F67-9267-2D19-F98CE51629C8";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20527,6 +20603,7 @@ createNode joint -n "rt_ltl_jnt4" -p "rt_ltl_jnt3";
 		 0.29794488576249001 -0.0026778713168144654 0.95457931784278027 0 -0.8439472621212899 -0.46803413536527994 0.26210125312720911 0
 		 -49.846900000000012 79.777300000000011 -4.5622400000000072 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_middle_jnt1" -p "rt_wrist_jnt";
 	rename -uid "2583D8A5-4259-EFF6-109A-18A41550F01E";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20539,6 +20616,7 @@ createNode joint -n "rt_middle_jnt1" -p "rt_wrist_jnt";
 		 -0.043698417371113782 -3.1918911957973251e-15 0.99904476792547192 0 -0.79631002117078953 -0.60388506224453531 -0.034830759120215438 0
 		 -47.475100000000005 85.47499999999998 1.1267999999999989 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_middle_jnt2" -p "rt_middle_jnt1";
 	rename -uid "47B0CD30-43D0-82C7-898E-1A9546AA0BDC";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20551,6 +20629,7 @@ createNode joint -n "rt_middle_jnt2" -p "rt_middle_jnt1";
 		 -0.064522991964336085 0.022062490676957536 0.99767230592670042 0 -0.79476217563012008 -0.60572989453027182 -0.038004987304616808 0
 		 -49.633499999999984 82.623299999999972 1.2212099999999972 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_middle_jnt3" -p "rt_middle_jnt2";
 	rename -uid "90EE3599-4EFA-6EFE-FF57-919ED840F9DF";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20563,6 +20642,7 @@ createNode joint -n "rt_middle_jnt3" -p "rt_middle_jnt2";
 		 -0.098527525300060856 0.0049392103059273593 0.99512206837141337 0 -0.89460920780201181 -0.43841700005684864 -0.086399649171799625 0
 		 -51.598399999999991 80.033699999999982 1.4055499999999983 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_middle_jnt4" -p "rt_middle_jnt3";
 	rename -uid "5CCC7D3D-42A7-60BA-346F-369A1AC2862F";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20573,6 +20653,7 @@ createNode joint -n "rt_middle_jnt4" -p "rt_middle_jnt3";
 		 -0.098527525300060856 0.0049392103059273593 0.99512206837141337 0 -0.89460920780201181 -0.43841700005684864 -0.086399649171799625 0
 		 -53.05070000000002 77.039000000000016 1.564209999999997 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_ring_jnt1" -p "rt_wrist_jnt";
 	rename -uid "072AB906-4C64-3D99-4A79-2E885D7244D7";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20585,6 +20666,7 @@ createNode joint -n "rt_ring_jnt1" -p "rt_wrist_jnt";
 		 0.14878634891842124 -0.010159660535238924 0.98881717403842395 0 -0.83320425679374654 -0.53982649858945653 0.11982494682422304 0
 		 -47.211599999999997 85.78779999999999 -1.2900500000000004 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_ring_jnt2" -p "rt_ring_jnt1";
 	rename -uid "C6F6111C-4E13-BBD0-2A3A-6EA59349E8A6";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20597,6 +20679,7 @@ createNode joint -n "rt_ring_jnt2" -p "rt_ring_jnt1";
 		 0.12975528972025363 0.013199047924812845 0.9914581937346082 0 -0.8392190860896328 -0.53107945389658373 0.11690140799745694 0
 		 -48.958200000000026 83.027300000000011 -1.5812299999999961 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_ring_jnt3" -p "rt_ring_jnt2";
 	rename -uid "46C78421-4008-402D-CCB5-D3B0F68401F4";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20609,6 +20692,7 @@ createNode joint -n "rt_ring_jnt3" -p "rt_ring_jnt2";
 		 0.10181173754290156 -0.021375556104704138 0.99457400715065458 0 -0.88370581545613558 -0.4610587756449217 0.080553318552448169 0
 		 -50.068500000000014 81.246000000000009 -1.7028200000000011 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode joint -n "rt_ring_jnt4" -p "rt_ring_jnt3";
 	rename -uid "AE031441-46F5-CA31-D272-E8973508372A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -20619,6 +20703,7 @@ createNode joint -n "rt_ring_jnt4" -p "rt_ring_jnt3";
 		 0.10181173754290156 -0.021375556104704138 0.99457400715065458 0 -0.88370581545613558 -0.4610587756449217 0.080553318552448169 0
 		 -51.633399999999995 78.207099999999997 -1.9283300000000043 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode transform -n "left";
 	rename -uid "2EF43514-4A95-ADDF-0947-728CBE341766";
 	setAttr ".v" no;
@@ -20738,19 +20823,19 @@ createNode joint -n "broom_leaf_jnt9" -p "broom_leaf_jnt8";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "EB6B147B-4B29-2E8D-2828-FF9D618B7A0B";
+	rename -uid "8FEE7764-4F8E-6000-93F3-67A240A18748";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "3AB09C4A-4EC3-9F5B-7084-7F983B9BAA90";
+	rename -uid "32E6B68A-40A5-C7F5-DDA0-BEB5F92073D3";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "56DE508B-408D-879E-722E-2E8B0E03E8CE";
+	rename -uid "741309CC-4A96-AF99-7897-2BBD0B0FD96B";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "413C788E-4D44-1CAD-3CC4-40BE7C95A816";
+	rename -uid "1693A2E7-4C85-E2D7-755A-8F8E4BE11107";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E4776D33-4A6D-1184-D7AE-9682E5ABD45A";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "70814170-4A1B-4E3A-0424-69B89F29A94A";
+	rename -uid "381374F9-4B40-22C9-2FAF-50AF9F91DC75";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "49F3F4FF-44F2-A407-251D-99888E8AC284";
 	setAttr ".g" yes;
@@ -20794,7 +20879,7 @@ createNode script -n "witch:uiConfigurationScriptNode";
 		+ "            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n"
 		+ "            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n"
 		+ "            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp|perspShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
-		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n"
+		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n"
 		+ "            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
 		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 0\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1118\n            -height 690\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
@@ -20825,8 +20910,8 @@ createNode script -n "witch:uiConfigurationScriptNode";
 		+ "\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n"
 		+ "            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n"
 		+ "            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1118\\n    -height 690\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1118\\n    -height 690\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1118\\n    -height 690\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1118\\n    -height 690\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "witch:sceneConfigurationScriptNode";
@@ -21779,476 +21864,6 @@ createNode groupParts -n "skinCluster2GroupParts";
 createNode skinCluster -n "skinCluster3";
 	rename -uid "730B2EA3-42E0-43ED-573B-3F8045A16ACB";
 	setAttr -s 469 ".wl";
-	setAttr ".wl[0:468].w"
-		1 64 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 64 1
-		1 64 1
-		1 64 1
-		1 64 1
-		1 60 1
-		1 64 1
-		1 60 1
-		1 64 1
-		1 64 1
-		1 64 1
-		1 64 1
-		1 64 1
-		1 72 1
-		1 64 1
-		1 64 1
-		1 64 1
-		1 7 1
-		1 7 1
-		1 64 1
-		1 64 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 64 1
-		1 72 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 72 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 72 1
-		1 72 1
-		1 72 1
-		1 72 1
-		1 7 1
-		1 7 1
-		1 72 1
-		1 72 1
-		1 72 1
-		1 72 1
-		1 72 1
-		1 64 1
-		1 72 1
-		1 72 1
-		1 72 1
-		1 64 1
-		1 72 1
-		1 64 1
-		1 64 1
-		1 64 1
-		1 64 1
-		1 64 1
-		1 64 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 8 1
-		1 8 1
-		1 9 1
-		1 9 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 8 1
-		1 8 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 8 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 7 1
-		1 7 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 8 1
-		1 7 1
-		1 7 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 8 1
-		1 7 1
-		1 9 1
-		1 7 1
-		1 7 1
-		1 7 1
-		1 56 1
-		1 56 1
-		1 57 1
-		1 58 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 60 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 56 1
-		1 55 1
-		1 55 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 56 1
-		1 56 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 56 1
-		1 56 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 55 1
-		1 55 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 55 1
-		1 55 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 0.99999999999999989
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 26 1
-		1 56 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 56 1
-		1 56 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 55 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 55 1
-		1 55 1
-		1 56 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 56 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 55 1
-		1 56 1
-		1 56 1
-		1 55 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1
-		1 56 1;
 	setAttr -s 78 ".pm";
 	setAttr ".pm[0]" -type "matrix" 0 -2.2204460492503131e-16 1 0 -1 0 0 0 0 -1 -2.2204460492503126e-16 0
 		 98.867513899456881 6.3686283220559021 1.4141195596852674e-15 1;
@@ -22499,50 +22114,58 @@ createNode groupParts -n "skinCluster3GroupParts";
 createNode skinCluster -n "skinCluster4";
 	rename -uid "88DB85AD-4ADA-7ECE-0D8A-918C98EEEC4B";
 	setAttr -s 2592 ".wl";
-	setAttr ".wl[0:498].w"
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
+	setAttr ".wl[0:404].w"
+		4 13 0.26709166089893532 28 0.62945752319692416 29 0.00094144396781921402 
+		52 0.10250937193632126
+		5 12 7.4311757195465373e-05 13 0.17103418350817173 28 0.71941950029240487 
+		29 0.077211536467075348 52 0.032260467975152578
+		5 12 0.00037155878597732687 13 0.27733024470306566 28 0.46092464658119925 
+		29 0.093228489390512106 52 0.16814506053924561
+		3 13 0.31539654731750488 28 0.28006815910339355 29 0.40453529357910156
+		3 13 0.097000002861022949 28 0.84469999745488167 29 0.058299999684095383
+		3 13 0.077600002288818359 29 0.72839999198913574 52 0.1940000057220459
+		4 13 0.27644628366400315 28 0.26926553593288882 29 0.45005404949188232 
+		52 0.0042341309112256887
+		3 13 0.077600002288818359 29 0.72839999198913574 52 0.1940000057220459
+		3 13 0.03880000114440918 28 0.034734189510345459 29 0.92646580934524536
+		4 13 0.22824061426947159 28 0.31151383605172589 29 0.41174554824829102 
+		52 0.048500001430511475
+		3 13 0.33697556456652339 28 0.23311784863471985 29 0.42990658679875682
+		2 28 0.071170911192893982 29 0.92882908880710602
+		5 12 1.4862351439093075e-05 13 0.040266425963549339 28 0.9345587397189602 
+		29 0.0038239719577510579 52 0.021336000008300309
+		2 28 0.942254438996315 29 0.057745561003684998
+		2 28 0.65932378172874451 29 0.34067621827125549
 		1 29 1
-		1 28 1
-		1 29 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 28 1
-		2 28 0.96137756109237671 29 0.038622438907623291
-		1 28 1
+		2 29 0.90299999713897705 52 0.097000002861022949
+		2 29 0.90725444257259369 52 0.092745557427406311
 		1 29 1
 		1 29 1
-		1 29 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 29 1
+		6 12 4.2473121402653817e-06 13 0.019891608088949478 14 0.0028672957860096547 
+		28 0.94375612274975029 29 0.024008969221817864 52 0.0094717568413324911
+		2 28 0.47530001401901245 29 0.52469998598098755
+		2 28 0.36065089702606201 29 0.63934910297393799
 		1 29 1
 		1 29 1
-		1 28 1
+		2 29 0.95149999856948853 52 0.048500001430511475
+		2 29 0.95073921233415604 52 0.049260787665843964
+		6 12 1.2744052810237059e-06 13 0.020923183453513718 14 0.0015292423951656139 
+		28 0.93142728438729816 29 0.042489796916541742 52 0.003629218442199779
+		2 28 0.61157757043838501 29 0.38842242956161499
+		2 28 0.42280429601669312 29 0.57719570398330688
+		1 29 1
+		1 29 1
+		1 29 1
+		2 28 0.95149999856948853 29 0.048500001430511475
+		2 28 0.82740733027458191 29 0.17259266972541809
+		2 28 0.70899999141693115 29 0.29100000858306885
+		2 28 0.66666666666666663 29 0.33333333333333331
+		1 29 1
+		1 29 1
+		1 29 1
+		3 13 0.5 28 0.41666666666666663 29 0.083333333333333329
 		1 13 1
-		1 28 1
+		2 28 0.66666666666666663 29 0.33333333333333331
 		1 29 1
 		1 29 1
 		1 29 1
@@ -22550,39 +22173,34 @@ createNode skinCluster -n "skinCluster4";
 		1 29 1
 		1 13 1
 		1 13 1
-		1 28 1
+		2 28 0.35925441980361938 29 0.64074558019638062
 		1 29 1
 		1 29 1
 		1 29 1
 		1 29 1
 		1 29 1
-		1 28 1
-		1 28 1
+		2 28 0.3586999773979187 29 0.6413000226020813
+		2 28 0.36156177520751953 29 0.63843822479248047
+		1 29 1
+		1 29 1
+		1 29 1
+		1 29 1
+		3 13 0.3069593608379364 28 0.1131884753704071 29 0.57985216379165649
+		3 13 0.0767398402094841 28 0.041593594849109655 29 0.88166656494140627
 		1 29 1
 		1 29 1
 		1 29 1
 		1 29 1
 		1 29 1
+		3 13 0.3239151308468991 28 0.11659999936819077 29 0.55948486978491019
+		2 28 0.11659999936819077 29 0.88340000063180923
 		1 29 1
 		1 29 1
 		1 29 1
 		1 29 1
 		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
+		3 13 0.39346829056739807 28 0.073198884725570679 29 0.53333282470703125
+		2 28 0.11659999936819077 29 0.88340000063180923
 		1 29 1
 		1 29 1
 		1 29 1
@@ -22601,11 +22219,9 @@ createNode skinCluster -n "skinCluster4";
 		1 29 1
 		1 29 1
 		1 29 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 30 1
+		1 29 1
+		1 29 1
+		1 29 1
 		1 29 1
 		1 29 1
 		1 30 1
@@ -22613,15 +22229,16 @@ createNode skinCluster -n "skinCluster4";
 		1 30 1
 		1 30 1
 		1 30 1
-		1 30 1
-		1 30 1
+		1 29 1
 		1 29 1
 		1 30 1
 		1 30 1
 		1 30 1
 		1 30 1
 		1 30 1
+		2 29 0.058299999684095383 30 0.94170000031590462
 		1 30 1
+		2 29 0.65485677123069763 30 0.34514322876930237
 		1 30 1
 		1 30 1
 		1 30 1
@@ -22643,25 +22260,31 @@ createNode skinCluster -n "skinCluster4";
 		1 30 1
 		1 30 1
 		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		1 30 1
+		2 30 0.58047205209732056 31 0.41952794790267944
+		2 30 0.46754306554794312 31 0.53245693445205688
+		1 30 1
+		2 30 0.40809997916221619 31 0.59190002083778381
+		2 30 0.58300000429153442 31 0.41699999570846558
+		2 30 0.46128585934638977 31 0.53871414065361023
 		1 30 1
 		1 30 1
 		1 30 1
 		1 31 1
 		1 31 1
 		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		1 30 1
-		1 30 1
-		1 30 1
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
-		1 31 1
+		2 30 0.058299999684095383 31 0.94170000031590462
+		2 30 0.17489999532699585 31 0.82510000467300415
+		2 30 0.11659999936819077 31 0.88340000063180923
+		2 30 0.64710438251495361 31 0.35289561748504639
 		1 31 1
 		1 31 1
 		1 31 1
@@ -22824,15 +22447,16 @@ createNode skinCluster -n "skinCluster4";
 		1 29 1
 		1 29 1
 		1 29 1
+		2 29 0.94170000031590462 30 0.058299999684095383
+		2 29 0.76680000126361847 30 0.23319999873638153
+		1 29 1
+		2 29 0.82510000467300415 30 0.17489999532699585
 		1 29 1
 		1 29 1
+		2 29 0.59222590923309326 30 0.40777409076690674
+		2 29 0.65020003914833069 30 0.34979996085166931
 		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
-		1 29 1
+		2 29 0.058299999684095383 30 0.94170000031590462
 		1 30 1
 		1 30 1
 		1 30 1
@@ -22843,8 +22467,7 @@ createNode skinCluster -n "skinCluster4";
 		1 30 1
 		1 30 1
 		1 30 1
-		1 30 1
-		1 31 1
+		2 30 0.57388067245483398 31 0.42611932754516602
 		1 31 1
 		1 31 1
 		1 32 1
@@ -22897,8 +22520,15 @@ createNode skinCluster -n "skinCluster4";
 		1 31 1
 		1 29 1
 		1 29 1
-		1 29 1
-		1 28 1
+		2 28 0.11079572141170502 29 0.88920427858829498
+		3 13 0.31401483331130681 28 0.23319999873638153 29 0.45278516795231161
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1;
+	setAttr ".wl[405:880].w"
 		1 18 1
 		1 18 1
 		1 18 1
@@ -22908,30 +22538,7 @@ createNode skinCluster -n "skinCluster4";
 		1 18 1
 		1 18 1
 		1 18 1
-		1 18 0.99999999999999989
 		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 0.99999999999999989
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 15 1
-		1 18 1
-		1 18 1
-		1 18 1
-		1 15 1
-		1 18 1
-		1 18 0.99999999999999989
 		1 18 1
 		1 18 1
 		1 18 1
@@ -22946,10 +22553,27 @@ createNode skinCluster -n "skinCluster4";
 		1 18 1
 		1 18 1
 		1 18 1
+		1 15 1
 		1 18 1
 		1 18 1
 		1 18 1
 		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 15 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
+		1 18 1
 		1 16 1
 		1 16 1
 		1 16 1
@@ -22998,8 +22622,7 @@ createNode skinCluster -n "skinCluster4";
 		1 15 1
 		1 15 1
 		1 15 1
-		1 15 1;
-	setAttr ".wl[499:953].w"
+		1 15 1
 		1 15 1
 		1 15 1
 		1 15 1
@@ -23008,9 +22631,9 @@ createNode skinCluster -n "skinCluster4";
 		2 15 0.99874317646026611 17 0.0012568235397338867
 		2 15 0.99856300410971577 17 0.001436995890284246
 		1 15 1
-		1 15 0.99999999999999989
 		1 15 1
-		1 15 0.99999999999999989
+		1 15 1
+		1 15 1
 		2 15 0.99826704204912353 17 0.0017329579508765641
 		2 15 0.0023335836443161341 17 0.99766641635568387
 		1 17 1
@@ -23020,11 +22643,11 @@ createNode skinCluster -n "skinCluster4";
 		2 15 0.30015642917609803 17 0.69984357082390203
 		1 17 1
 		1 17 1
-		2 15 0.0058448019220041988 17 0.99415519807799568
+		2 15 0.0058448019220041997 17 0.99415519807799591
 		1 15 1
 		1 15 1
 		1 15 1
-		3 14 0.061211778006018146 15 0.28621058793558218 17 0.65257763405839952
+		3 14 0.06121177800601816 15 0.28621058793558224 17 0.65257763405839964
 		1 17 1
 		1 17 1
 		2 15 0.99387737988610769 17 0.0061226201138923292
@@ -23033,7 +22656,7 @@ createNode skinCluster -n "skinCluster4";
 		1 15 1
 		3 14 0.15265416299460752 15 0.016939837202081691 17 0.83040599980331076
 		1 17 1
-		1 17 0.99999999999999989
+		1 17 1
 		1 17 1
 		1 17 1
 		1 17 1
@@ -23043,7 +22666,7 @@ createNode skinCluster -n "skinCluster4";
 		1 17 1
 		1 17 1
 		1 17 1
-		1 17 0.99999999999999989
+		1 17 1
 		1 17 1
 		1 17 1
 		1 17 1
@@ -23179,11 +22802,6 @@ createNode skinCluster -n "skinCluster4";
 		1 15 1
 		1 15 1
 		1 15 1
-		1 15 0.99999999999999989
-		1 15 1
-		1 15 0.99999999999999989
-		1 15 1
-		1 15 0.99999999999999989
 		1 15 1
 		1 15 1
 		1 15 1
@@ -23220,8 +22838,6 @@ createNode skinCluster -n "skinCluster4";
 		1 15 1
 		1 15 1
 		1 15 1
-		1 15 0.99999999999999989
-		1 15 0.99999999999999989
 		1 15 1
 		1 15 1
 		1 15 1
@@ -23233,7 +22849,14 @@ createNode skinCluster -n "skinCluster4";
 		1 15 1
 		1 15 1
 		1 15 1
-		1 15 0.99999999999999989
+		1 15 1
+		1 15 1
+		1 15 1
+		1 15 1
+		1 15 1
+		1 15 1
+		1 15 1
+		1 15 1
 		1 15 1
 		1 15 1
 		1 15 1
@@ -23299,7 +22922,6 @@ createNode skinCluster -n "skinCluster4";
 		1 17 1
 		1 17 1
 		1 17 1
-		1 17 0.99999999999999989
 		1 17 1
 		1 17 1
 		1 17 1
@@ -23310,6 +22932,7 @@ createNode skinCluster -n "skinCluster4";
 		1 17 1
 		1 17 1
 		1 17 1
+		1 17 1
 		1 15 1
 		1 15 1
 		1 15 1
@@ -23337,7 +22960,7 @@ createNode skinCluster -n "skinCluster4";
 		1 15 1
 		1 15 1
 		1 15 1
-		1 15 0.99999999999999989
+		1 15 1
 		2 15 0.011873148381710052 17 0.98812685161828995
 		2 15 0.026609957218170166 17 0.97339004278182983
 		1 15 1
@@ -23381,7 +23004,9 @@ createNode skinCluster -n "skinCluster4";
 		1 15 1
 		1 15 1
 		2 15 0.99440440908074379 17 0.0055955909192562103
-		2 15 0.0015624678926542401 17 0.99843753210734576
+		1 15 0.0015624678926542401;
+	setAttr ".wl[880:1262].w"
+		1 17 0.99843753210734576
 		1 17 1
 		1 15 1
 		1 15 1
@@ -23415,7 +23040,7 @@ createNode skinCluster -n "skinCluster4";
 		1 14 1
 		1 14 1
 		2 13 0.00012725931751458356 14 0.99987274068248544
-		2 13 0.020251964286155062 14 0.97974803571384528
+		2 13 0.020251964286155055 14 0.97974803571384506
 		1 13 1
 		1 13 1
 		1 13 1
@@ -23427,52 +23052,52 @@ createNode skinCluster -n "skinCluster4";
 		1 13 1
 		1 13 1
 		1 13 1
-		1 13 1
-		1 14 1
-		1 13 1
-		1 13 1
+		2 13 0.70903003215789795 14 0.29096996784210205
+		2 13 0.058299999684095383 14 0.94170000031590462
 		1 13 1
 		1 13 1
 		1 13 1
 		1 13 1
 		1 13 1
 		1 13 1
-		1 13 0.99999999999999989
 		1 13 1
-		2 13 0.98833111991374567 54 0.011668880086254241
+		1 13 1
+		1 13 1
+		1 13 1
+		2 13 0.98833111991374589 54 0.011668880086254243
 		1 54 1
 		1 54 1
 		1 13 1
 		3 14 0.93642923161111835 15 0.022961770432076374 17 0.040608997956805296
 		1 14 1
 		2 14 0.91525925923229323 17 0.084740740767706782
-		3 14 0.99543948697933038 15 0.0021591485816456562 17 0.0024013644390241812
+		3 14 0.99543948697933016 15 0.0021591485816456557 17 0.0024013644390241807
 		3 14 0.88000756523522916 15 0.02674202260083278 17 0.093250412163938062
 		1 14 1
 		1 14 1
 		1 14 1
 		1 14 1
-		3 14 0.99998083970013607 15 1.4092078746559158e-05 17 5.0682211174673727e-06
-		1 14 1
-		1 14 1;
-	setAttr ".wl[954:1404].w"
+		4 13 0.059214510023593903 14 0.94076632967654206 15 1.4092078746559154e-05 
+		17 5.0682211174673719e-06
 		1 14 1
 		1 14 1
 		1 14 1
-		4 13 0.022444842927417968 14 0.97755256376267607 28 1.7204758488879206e-06 
-		54 8.7283405694695002e-07
-		1 14 1
-		1 14 1
-		1 14 1
-		1 14 1
-		1 13 1
-		3 13 0.99968838638999535 28 0.00015622256408383641 54 0.00015539104592062272
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
+		2 14 0.92239999771118164 28 0.077600002288818359
+		2 13 0.058299999684095383 14 0.94170000031590462
+		3 13 0.14453193545341492 14 0.85546719171252816 54 8.7283405694695023e-07
+		2 13 0.11705724895000458 14 0.88294275104999542
+		2 13 0.1690957248210907 14 0.8309042751789093
+		3 13 0.058299999684095383 14 0.70869999006390572 28 0.2330000102519989
+		2 14 0.80579999089241028 28 0.19420000910758972
+		2 13 0.65075445175170898 14 0.34924554824829102
+		3 13 0.82494461536407471 14 0.17489999359000466 54 0.00015539104592062275
+		2 13 0.6502000093460083 14 0.3497999906539917
+		2 13 0.65075445175170898 14 0.34924554824829102
+		3 13 0.76715215295553207 14 0.22954195737838745 28 0.0033058896660804749
+		2 13 0.53590735793113708 14 0.46409264206886292
 		1 54 1
-		3 13 0.99804687662961489 28 0.00097632303388234937 54 0.00097680033650267978
+		4 13 0.93974687694551962 14 0.058299999684095383 28 0.00097632303388234937 
+		54 0.00097680033650267978
 		1 28 1
 		1 28 1
 		1 54 1
@@ -23496,7 +23121,7 @@ createNode skinCluster -n "skinCluster4";
 		1 54 1
 		1 54 1
 		1 54 1
-		1 54 0.99999999999999989
+		1 54 1
 		1 54 1
 		1 54 1
 		1 54 1
@@ -23513,7 +23138,7 @@ createNode skinCluster -n "skinCluster4";
 		1 53 1
 		1 53 1
 		1 53 1
-		1 53 0.99999999999999989
+		1 53 1
 		1 53 1
 		1 54 1
 		1 54 1
@@ -23526,7 +23151,7 @@ createNode skinCluster -n "skinCluster4";
 		2 13 0.033697114919443674 54 0.9663028850805564
 		3 13 0.049301336417460616 53 0.033734330298413287 54 0.91696433328412619
 		1 53 1
-		1 53 0.99999999999999989
+		1 53 1
 		1 54 1
 		1 54 1
 		1 54 1
@@ -23552,60 +23177,62 @@ createNode skinCluster -n "skinCluster4";
 		1 55 1
 		2 13 0.23056024390922886 54 0.76943975609077109
 		1 13 1
+		2 12 0.048404654064235032 13 0.951595345935765
+		2 12 0.19361861625694013 13 0.8063813837430599
+		4 0 0.01191228348761797 11 0.065005006268620491 12 0.62077750875150861 
+		13 0.30230520149225304
+		1 12 1
+		1 54 1
+		2 13 0.75 54 0.25
 		1 13 1
 		1 13 1
-		1 12 1
-		1 12 1
+		2 12 0.19294705986976624 13 0.80705294013023376
+		2 12 0.59716057777404785 13 0.40283942222595215
+		3 0 0.047649133950471878 11 0.26002002507448196 12 0.69233084097504616
 		1 54 1
 		1 13 1
 		1 13 1
 		1 13 1
 		1 13 1
-		1 12 1
-		2 11 0.00030654668807983398 12 0.99969345331192017
-		1 54 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
 		1 13 1
 		1 54 1
+		2 13 0.5 54 0.5
 		1 13 1
-		1 13 1
-		1 12 1
-		1 11 1
-		1 12 1
-		1 12 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
+		2 11 0.23067663609981537 12 0.76932336390018463
+		2 0 0.19059653580188751 11 0.80940346419811249
 		1 12 1
 		1 12 1
+		4 0 0.15037365928292273 11 0.56633917614817619 12 0.28197725243415178 
+		13 0.0013099121347492902
+		2 0 0.30441665649414062 11 0.69558334350585938
+		2 0 0.45385304093360901 11 0.54614695906639099
+		2 0 0.1940000057220459 11 0.8059999942779541
 		1 12 1
+		1 12 1
+		2 12 0.5501822829246521 13 0.44981771707534796
 		1 0 1
-		1 0 1
-		1 11 1
-		1 11 1
-		1 11 1
+		2 0 0.75999459624290466 11 0.24000540375709534
+		2 0 0.34553414583206177 11 0.65446585416793823
+		2 0 0.34776273369789124 11 0.65223726630210876
+		2 0 0.079558953642845154 11 0.92044104635715485
 		1 0 1
 		2 0 0.99969817628152668 6 0.00030182371847331524
 		2 0 0.99976623000111431 6 0.00023376999888569117
-		1 0 1
-		1 0 1
+		2 0 0.91866091638803482 11 0.081339083611965179
+		2 0 0.66392180323600769 11 0.33607819676399231
 		1 0 1
 		1 0 1
 		1 6 1
-		2 0 0.0014133336770101377 6 0.99858666632298987
-		1 0 1
-		2 0 0.99986485732370056 11 0.00013514267629943788
+		2 6 0.99858666632298987 11 0.0014133336770101312
+		2 0 0.84895087778568268 11 0.15104912221431732
+		2 0 0.60097506642341614 11 0.39902493357658386
 		1 0 1
 		1 0 1
 		2 0 0.99787037150235847 6 0.0021296284976415336
 		1 6 1
 		1 6 1
 		1 6 1
-		2 0 0.00031581323128193617 6 0.99968418676871806
+		2 6 0.99968418676871806 11 0.00031581323128193617
 		2 0 0.99740268211462535 6 0.0025973178853746504
 		1 6 1
 		1 6 1
@@ -23615,12 +23242,11 @@ createNode skinCluster -n "skinCluster4";
 		2 0 0.99729091278277338 6 0.0027090872172266245
 		1 6 1
 		1 6 1
-		1 6 0.99999999999999989
+		1 6 1
 		1 0 1
 		1 0 1
 		1 0 1
 		2 0 0.99656250664663792 6 0.0034374933533621119
-		1 6 0.99999999999999989
 		1 6 1
 		1 6 1
 		1 6 1
@@ -23634,33 +23260,34 @@ createNode skinCluster -n "skinCluster4";
 		1 6 1
 		1 6 1
 		1 6 1
-		2 0 0.0055720564866523761 6 0.99442794351334762
+		1 6 1
+		2 6 0.99442794351334762 11 0.005572056486652377
 		1 6 1
 		1 6 1
 		1 6 1
 		1 6 1
-		1 6 0.99999999999999989
-		1 6 0.99999999999999989
-		1 6 0.99999999999999989
 		1 6 1
 		1 6 1
-		1 6 0.99999999999999989
 		1 6 1
-		1 6 0.99999999999999989
 		1 6 1
-		1 6 0.99999999999999989
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
 		1 6 1
 		2 0 0.0051173854411541968 6 0.99488261455884586
-		1 0 1
+		2 0 0.84866644442081451 11 0.15133355557918549
 		1 6 1
 		1 6 1
 		1 6 1
 		1 6 1
 		2 0 0.0067859176737727457 6 0.99321408232622732
-		2 0 0.99554235954621462 6 0.0044576404537853068
-		1 0 1
-		1 6 0.99999999999999989
-		1 6 0.99999999999999989
+		2 0 0.99554235954621484 6 0.0044576404537853076
+		2 0 0.88884984701871872 11 0.11115015298128128
+		1 6 1
+		1 6 1
 		1 6 1
 		1 6 1
 		2 0 0.0077237600001518122 6 0.99227623999984826
@@ -23668,7 +23295,7 @@ createNode skinCluster -n "skinCluster4";
 		1 0 1
 		1 0 1
 		1 6 1
-		1 6 0.99999999999999989
+		1 6 1
 		1 6 1
 		2 0 0.013674676418304443 6 0.98632532358169556
 		1 0 1
@@ -23703,7 +23330,7 @@ createNode skinCluster -n "skinCluster4";
 		1 1 1
 		1 1 1
 		1 1 1
-		1 0 1
+		2 0 0.90557845681905746 11 0.094421543180942535
 		1 1 1
 		1 1 1
 		1 1 1
@@ -23711,19 +23338,14 @@ createNode skinCluster -n "skinCluster4";
 		1 1 1
 		1 1 1
 		1 1 1
-		1 0 1
-		1 0 1
+		2 0 0.86162325739860535 11 0.13837674260139465
+		2 0 0.87965155392885208 11 0.12034844607114792
 		1 1 1
 		1 1 1
 		1 1 1
 		1 1 1
 		1 1 1
-		1 0 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
+		2 0 0.77571356296539307 11 0.22428643703460693
 		1 1 1
 		1 1 1
 		1 1 1
@@ -23737,15 +23359,20 @@ createNode skinCluster -n "skinCluster4";
 		1 1 1
 		1 1 1
 		1 1 1
-		1 0 1
-		1 0 1
+		1 1 1
 		1 1 1
 		1 1 1
 		1 1 1
 		1 1 1
 		1 0 1
+		2 0 0.82439999282360077 11 0.17560000717639923
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
 		1 0 1
 		1 0 1
+		2 0 0.96158095449209213 11 0.038419045507907867
 		1 1 1
 		1 1 1
 		1 1 1
@@ -23762,127 +23389,163 @@ createNode skinCluster -n "skinCluster4";
 		1 0 1
 		1 0 1
 		1 0 1
-		1 11 1
-		1 11 1
-		1 0 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 0 1
-		1 0 1
+		2 0 0.31639999151229858 11 0.68360000848770142
+		2 0 0.50319796800613403 11 0.49680203199386597
+		2 0 0.64299136400222778 11 0.35700863599777222
+		3 0 0.10648144483566284 11 0.52969326078891754 12 0.35858564583642244;
+	setAttr ".wl[1262:1482].w"
+		1 13 0.0052396485389971607
+		4 0 0.10952578783035279 11 0.51277303695678711 12 0.35674258105687146 
+		13 0.020958594155988643
+		2 0 0.25922715663909912 11 0.74077284336090088
+		2 0 0.55123448371887207 11 0.44876551628112793
+		2 0 0.63749387860298157 11 0.36250612139701843
 		1 12 1
-		1 12 1
-		1 12 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
+		4 0 0.027381446957588196 11 0.2145501310005784 12 0.69462877178622251 
+		13 0.063439650255610935
+		4 0 0.054283643513917929 11 0.49237463382846397 12 0.35909298062324524 
+		13 0.094248742034372834
+		4 0 0.044430971145629883 11 0.65098714828491211 12 0.23359641432762146 
+		13 0.070985466241836548
+		3 0 0.19162768125534058 11 0.66080766916275024 12 0.14756464958190918
+		2 0 0.48621302843093872 11 0.51378697156906128
+		2 12 0.61673665046691895 13 0.38326334953308105
+		3 11 0.038430932909250259 12 0.46672898530960083 13 0.49484008178114891
+		3 11 0.23150157928466797 12 0.34948712587356567 13 0.41901129484176636
+		3 11 0.30699655413627625 12 0.46020343899726868 13 0.23280000686645508
+		2 12 0.24208411201834679 13 0.75791588798165321
+		2 12 0.15865273773670197 13 0.84134726226329803
+		2 12 0.14509634673595428 13 0.85490365326404572
+		2 12 0.12195194512605667 13 0.87804805487394333
+		3 11 0.26065384321542895 12 0.43689998984336853 13 0.30244616694120252
+		3 11 0.37502614898764175 12 0.41330322623252869 13 0.21167062477982956
+		2 12 0.060521028004586697 13 0.9394789719954133
+		1 13 1
+		1 13 1
+		2 12 0.028142547234892845 13 0.97185745276510715
+		2 12 0.045444902032613754 13 0.95455509796738625
+		2 12 0.10817533731460571 13 0.89182466268539429
+		1 13 1
+		1 13 1
+		3 13 0.53350001573562622 28 0.17499998211860657 29 0.29150000214576721
+		3 13 0.76500965427037615 28 0.0017196707856999005 29 0.23327067494392395
+		3 13 0.68676885962486267 28 0.25493114069104195 29 0.058299999684095383
+		2 13 0.81188412010669708 28 0.18811587989330292
+		1 13 1
+		3 13 0.75 28 0.19238588213920593 29 0.057614117860794067
 		1 13 1
 		1 13 1
 		1 13 1
 		1 13 1
-		1 12 1
-		1 12 1
 		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 28 1
-		1 13 1
-		1 13 1
-		1 28 1
-		1 28 1
-		1 28 1
-		2 28 0.5 52 0.5
-		1 28 1
+		5 12 0.0032998262150934895 13 0.16881042718887329 28 0.55065136497534151 
+		29 0.028069940859476727 52 0.24916844076121497
+		4 12 0.016117724450471736 13 0.7172694206237793 28 0.18084184070665821 
+		52 0.085771014219090766
+		2 12 0.045962009578943253 13 0.95403799042105675
+		5 12 0.0013414337471858028 13 0.20339486115992766 28 0.31741444512031425 
+		29 0.16913981735706329 52 0.30870944261550903
+		5 12 0.0016945417638149062 13 0.15258682826590458 28 0.16862903566571896 
+		29 0.098411701619625092 52 0.57867789268493652
+		5 12 0.0047564989423182994 13 0.75403904914855957 28 0.10696817256594926 
+		29 0.012397520015491239 52 0.12183875932768162
+		5 12 0.015726169554179707 13 0.81306600570678711 28 0.06915600785934832 
+		29 0.0048537268489725997 52 0.097198090030712281
+		5 12 0.00051636018270083146 13 0.33503499016380717 28 0.24235612995296485 
+		29 0.091840915381908417 52 0.33025160431861877
+		2 28 0.33524566888809204 52 0.66475433111190796
+		5 12 0.00016401817686133443 13 0.81865870952606201 28 0.065037553536060111 
+		29 0.010477615358870632 52 0.10566210340214588
+		5 12 0.00082008618652993899 13 0.075418323278427124 28 0.16408681593805666 
+		29 0.0025769121317458549 52 0.75709786246524047
 		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
+		4 13 0.023815334533940601 28 0.58662199974060059 29 0.00029633902942554518 
+		52 0.38926632669603328
+		2 28 0.1940000057220459 52 0.8059999942779541
+		3 13 0.69108616023890135 28 0.085858263075351715 52 0.22305557668574694
+		2 28 0.15685884654521942 52 0.84314115345478058
+		3 13 0.15353916585445404 28 0.069625258756375749 52 0.77683557538917025
+		4 13 0.24146817624568939 28 0.74022846900502126 29 0.00029721421480178841 
+		52 0.018006140534487576
+		5 12 2.322242412358293e-07 13 0.074708331743936401 28 0.68544464729529186 
+		29 0.00025080533654733112 52 0.23959598339998317
+		5 12 1.2005419878704142e-07 13 0.020030906061788232 28 0.44465207521197736 
+		29 0.00011842840403239472 52 0.53519847026800327
+		3 13 0.0088774046572179938 28 0.1625477522611618 52 0.82857484308162022
+		2 28 0.048500001430511475 52 0.95149999856948853
+		5 12 3.7155878597732688e-06 13 0.07617812934368072 28 0.87847145466923382 
+		29 0.0010724026034173305 52 0.044274297795808382
+		6 12 1.5738569933731498e-06 13 0.048517776824899127 14 0.00037456129583812443 
+		28 0.82872008539199959 29 0.0018896440648063172 52 0.12049635856546353
+		5 12 4.8810095148641914e-07 13 0.012784365435634409 28 0.86241440834764316 
+		29 0.00016342605822149204 52 0.12463731205754952
 		1 28 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 52 1
-		1 52 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
-		1 28 1
+		2 28 0.17688363790512085 52 0.82311636209487915
+		5 12 4.6444848247165867e-06 13 0.03081741993014504 28 0.93657504277922299 
+		29 0.0012369804640746523 52 0.031365912341732749
+		4 12 1.8595149209970817e-06 28 0.84892029718774753 29 0.077600002288818359 
+		52 0.073477841008513067
+		6 12 9.977343829378264e-07 13 0.030317649106146198 14 0.064292982220649719 
+		28 0.83241641425210688 29 0.043008188735795941 52 0.029963767950918312
+		6 12 3.7145883360606141e-07 13 0.030175504207649743 14 0.059798244386911392 
+		28 0.86058270624598399 29 0.010792903698504358 52 0.03865027000211696
+		6 12 2.1269600703139565e-06 13 0.039299430218927997 14 0.011468927781492739 
+		28 0.8901085210113916 29 0.04257017683200557 52 0.016550817196111865
+		6 12 8.5034133783441561e-07 13 0.063797854597376413 14 0.0032495425441645882 
+		28 0.8690802119142973 29 0.058826531693245948 52 0.0050450089095779114
+		6 12 9.4343591630257265e-07 13 0.10928089941674009 14 0.070537766597713006 
+		28 0.77107535164956897 29 0.033580280180853357 52 0.015524758719208357
+		6 12 2.3525714928951939e-07 13 0.21661406688294815 14 0.10408303216099739 
+		28 0.65231594873896537 29 0.016326376958633999 52 0.010660340001305783
+		2 28 0.95149999856948853 29 0.048500001430511475
+		6 12 4.6333379083213426e-07 13 0.14934505782077315 14 0.10419335027831876 
+		28 0.71173172884759961 29 0.028912262522862126 52 0.0058171371966556076
+		6 12 5.9557909191548789e-08 13 0.1702722032821597 14 0.22638610005378729 
+		28 0.57740061773095863 29 0.023242238217349189 52 0.0026987811578361655
+		2 28 0.90299999713897705 29 0.097000002861022949
+		6 12 1.27524561866404e-07 13 0.26651702251064313 14 0.063528553521629866 
+		28 0.64603062128516719 29 0.022192532516990583 52 0.001731142641007368
+		6 12 4.6770617764488193e-08 13 0.41648324513829083 14 0.14991427300027529 
+		28 0.42113626145752031 29 0.011358692683584942 52 0.0011074809497108834
+		2 13 0.61160820722579956 14 0.38839179277420044
+		6 12 1.5820069629005145e-08 13 0.41510552465024586 14 0.41239930157587756 
+		28 0.16560457468227338 29 0.006173719526483378 52 0.00071686374505023145
 		1 13 1
-		1 13 1
-		1 28 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
-		1 13 1
+		2 13 0.50022834539413452 28 0.49977165460586548
+		3 13 0.61753554753456108 14 0.037950648744964621 28 0.34451380372047424
+		3 13 0.75418531000614175 14 0.2 28 0.045814689993858342
+		2 14 0.99984929015045054 28 0.00015070984954945743
+		6 12 3.7223693244717985e-09 13 0.11138953513749206 14 0.80527735609713513 
+		28 0.081711791332054418 29 0.0014526398885843241 52 0.00016867382236476032
 		1 13 1
 		1 13 1
 		1 13 1
 		1 14 1
 		1 14 1
-		1 13 1
-		1 13 1
-		1 13 1
+		1 14 1
+		2 14 0.90630355477333069 28 0.093696445226669312
 		1 14 1
 		1 14 1
-		1 14 1
-		1 14 1
-		1 14 1
-		1 14 1
-		1 14 1
+		2 14 0.96119999885559082 28 0.03880000114440918
 		1 15 1
 		1 15 1
 		1 15 1
-		1 28 1
-		1 28 1
-		1 52 1
-		1 52 1
-		1 13 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
+		2 28 0.32617682218551636 52 0.67382317781448364
+		2 28 0.1211581826210022 52 0.8788418173789978
+		3 13 0.20772245460156546 28 0.20370000600814819 52 0.58857753939028634
+		3 13 0.032128573708563549 28 0.14226627349853516 52 0.82560515279290125
+		2 13 0.96119999885559082 28 0.03880000114440918
+		2 28 0.15520000457763672 52 0.84479999542236328
+		2 28 0.23211269080638885 52 0.76788730919361115
+		2 28 0.11604727804660797 52 0.88395272195339203
+		2 28 0.14002695679664612 52 0.85997304320335388
+		2 28 0.15483100712299347 52 0.84516899287700653
 		1 53 1
+		2 13 0.92239999771118164 28 0.077600002288818359
 		1 13 1
-		1 13 1
-		1 52 1
-		1 52 1
-		1 52 1
+		2 28 0.058299999684095383 52 0.94170000031590462
+		2 28 0.19363100826740265 52 0.80636899173259735
+		2 28 0.14673927426338196 52 0.85326072573661804
 		1 53 1
 		2 13 0.0096737632355262133 53 0.99032623676447373
 		2 13 0.99081073648492746 53 0.0091892635150725033
@@ -23901,14 +23564,13 @@ createNode skinCluster -n "skinCluster4";
 		1 53 1
 		1 53 1
 		1 53 1
-		1 53 0.99999999999999989
-		1 53 1
-		2 13 0.060597822879671678 53 0.93940217712032825
 		1 53 1
 		1 53 1
+		2 13 0.060597822879671692 53 0.93940217712032847
 		1 53 1
-		1 53 1;
-	setAttr ".wl[1405:1882].w"
+		1 53 1
+		1 53 1
+		1 53 1
 		1 53 1
 		2 13 0.073053312649086266 53 0.92694668735091379
 		1 53 1
@@ -23921,75 +23583,82 @@ createNode skinCluster -n "skinCluster4";
 		1 53 1
 		1 53 1
 		1 53 1
-		1 53 0.99999999999999989
+		1 53 1
+		2 0 0.6802198588848114 11 0.3197801411151886
+		2 0 0.70360326766967773 11 0.29639673233032227
+		2 0 0.737760990858078 11 0.262239009141922
+		2 0 0.39600524306297302 11 0.60399475693702698
+		2 0 0.40533572435379028 11 0.59466427564620972
+		3 0 0.54552710056304932 11 0.37687289714813232 13 0.077600002288818359
+		2 0 0.75016394257545471 11 0.24983605742454529
 		1 0 1
-		1 0 1
-		1 0 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 0 1
-		1 0 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 0 1
-		1 12 1
-		1 12 1
-		1 12 1
-		2 11 0.99999983730006647 12 1.6269993352580059e-07
-		1 11 1
-		1 0 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
+		3 0 0.26159203052520752 11 0.46860355138778687 12 0.26980441808700562
+		4 0 0.17530345916748047 11 0.61277843218290207 12 0.13772157628095746 
+		13 0.074196532368659973
+		4 0 0.24390725791454315 11 0.50766649775873751 12 0.10472022063363459 
+		13 0.14370602369308472
+		3 0 0.60171806812286377 11 0.28188192844390869 13 0.11640000343322754
+		2 0 0.72970438003540039 11 0.27029561996459961
+		4 0 0.061083579063415529 11 0.38785735651033548 12 0.31903776526451111 
+		13 0.23202129916173786
+		4 0 0.043825864791870117 11 0.46062903027621038 12 0.28562095761299133 
+		13 0.20992414731892817
+		3 11 0.52861314049801367 12 0.24100148677825928 13 0.23038537272372706
+		3 0 0.25479847192764282 11 0.5124015212059021 13 0.23280000686645508
+		2 0 0.43786585330963135 11 0.56213414669036865
+		2 0 0.69731378555297852 11 0.30268621444702148
+		4 0 0.063177815079689031 11 0.49874179593588042 12 0.3129112720489502 
+		13 0.12516911693548038
+		3 11 0.2674584686756134 12 0.43689998984336853 13 0.29564154148101807
+		3 11 0.15520000457763672 12 0.2428850531578064 13 0.60191494226455688
+		4 0 0.015270894765853882 11 0.18426434170250452 12 0.30512845516204834 
+		13 0.49533630836959325
+		3 11 0.1940000057220459 12 0.2822626531124115 13 0.5237373411655426
+		3 11 0.05055030401113423 12 0.43689998984336853 13 0.51254970614549722
+		2 12 0.11679019778966904 13 0.88320980221033096
+		2 12 0.1484740823507309 13 0.8515259176492691
+		2 12 0.17824266850948334 13 0.82175733149051666
+		2 12 0.099594771862030029 13 0.90040522813796997
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		3 13 0.0057410364130290456 28 0.015694105150386481 52 0.97856485843658447
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		1 52 1
+		2 28 0.11640000343322754 52 0.88359999656677246
+		2 28 0.11640000343322754 52 0.88359999656677246
+		2 28 0.11640000343322754 52 0.88359999656677246
+		2 28 0.11640000343322754 52 0.88359999656677246
+		1 52 1
+		1 52 1
+		2 28 0.077600002288818359 52 0.92239999771118164
+		2 28 0.07723100483417511 52 0.92276899516582489
+		1 52 1
 		1 13 1
 		1 13 1
-		1 13 1
-		1 13 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 13 1
-		1 13 1
-		1 52 1
-		1 52 1
-		1 52 1
-		1 52 1
+		1 52 1;
+	setAttr ".wl[1483:1937].w"
+		2 28 0.058299999684095383 52 0.94170000031590462
+		2 28 0.052495498210191727 52 0.94750450178980827
+		2 28 0.058299999684095383 52 0.94170000031590462
 		1 13 1
 		1 13 1
 		1 13 1
@@ -24003,42 +23672,42 @@ createNode skinCluster -n "skinCluster4";
 		1 52 1
 		2 13 0.1359612414815973 53 0.86403875851840273
 		2 13 0.0036380476684268765 53 0.99636195233157321
-		2 12 0.0076682550811931153 13 0.99233174491880682
-		1 13 1
-		1 13 1
+		2 12 0.010232564061880112 13 0.98976743593811989
+		2 12 0.026831567287445068 13 0.97316843271255493
+		2 12 0.044882535934448242 13 0.95511746406555176
 		1 52 1
 		1 53 1
 		2 13 0.16281288177020811 53 0.83718711822979186
 		2 13 0.20666420180421258 53 0.79333579819578748
-		2 12 0.043294548988342285 13 0.95670545101165771
-		1 12 1
-		1 13 1
+		2 12 0.11797122657299042 13 0.88202877342700958
+		2 12 0.14321653544902802 13 0.85678346455097198
+		2 12 0.17269736528396606 13 0.82730263471603394
 		1 53 1
 		2 13 0.14291603901266831 53 0.85708396098733164
 		1 13 1
-		1 13 1
-		2 12 0.97552793034241969 13 0.024472069657580253
-		1 12 1
+		2 12 0.10811357945203781 13 0.89188642054796219
+		3 11 0.27153533697128296 12 0.24587899446487427 13 0.48258566856384277
+		3 11 0.2261422872543335 12 0.23766833543777466 13 0.53618937730789185
 		1 53 1
 		2 13 0.094416692108982514 53 0.90558330789101749
 		2 12 0.020587805658578873 13 0.97941219434142113
-		1 12 1
-		2 12 0.97088491949549771 13 0.029115080504502299
+		3 11 0.15520000457763672 12 0.32119554281234741 13 0.52360445261001587
+		3 11 0.18976812064647675 12 0.2640565037727356 13 0.54617537558078766
 		1 53 1
 		2 13 0.038428794009657208 53 0.96157120599034285
 		2 12 0.021409452542839824 13 0.97859054745716012
-		1 12 1
-		1 12 1
-		1 12 1
+		2 12 0.29909536242485046 13 0.70090463757514954
+		3 11 0.45786312222480774 12 0.50382417440414429 13 0.038312703371047974
+		2 11 0.68513542413711548 12 0.31486457586288452
 		2 13 0.042411148548126221 53 0.95758885145187378
-		1 12 1
-		1 12 1
+		2 11 0.15520000457763672 12 0.84479999542236328
+		2 11 0.077600002288818359 12 0.92239999771118164
 		1 11 1
-		1 11 1
-		2 11 0.00019938009791076183 12 0.99980061990208924
-		1 11 1
-		2 0 0.99210973922163248 11 0.0078902607783675194
-		2 0 0.99979448318481445 11 0.00020551681518554688
+		2 0 0.21561384201049805 11 0.78438615798950195
+		3 11 0.65234005451202393 12 0.22481796145439148 13 0.12284198403358459
+		2 0 0.2513468861579895 11 0.7486531138420105
+		2 0 0.60682979226112366 11 0.39317020773887634
+		2 0 0.65964579582214355 11 0.34035420417785645
 		1 54 1
 		1 55 1
 		1 55 1
@@ -24116,13 +23785,13 @@ createNode skinCluster -n "skinCluster4";
 		1 55 1
 		1 55 1
 		1 56 1
-		1 56 1
+		2 55 0.26666259765625 56 0.73333740234375
 		1 56 1
 		1 56 1
 		1 56 1
 		1 55 1
 		1 56 1
-		1 56 1
+		2 55 0.0666656494140625 56 0.9333343505859375
 		1 56 1
 		1 56 1
 		1 56 1
@@ -24386,8 +24055,7 @@ createNode skinCluster -n "skinCluster4";
 		1 60 1
 		1 60 1
 		1 60 1
-		1 59 1;
-	setAttr ".wl[1883:2358].w"
+		1 59 1
 		1 59 1
 		1 60 1
 		1 60 1
@@ -24435,7 +24103,15 @@ createNode skinCluster -n "skinCluster4";
 		1 6 1
 		1 6 1
 		1 6 1
-		1 6 0.99999999999999989
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1;
+	setAttr ".wl[1938:2385].w"
 		1 6 1
 		1 6 1
 		1 6 1
@@ -24446,21 +24122,12 @@ createNode skinCluster -n "skinCluster4";
 		1 6 1
 		1 6 1
 		1 6 1
-		1 6 1
-		1 6 1
-		1 6 1
-		1 6 1
-		1 6 1
-		1 6 1
-		1 6 1
-		2 6 0.0041471521329536016 7 0.99585284786704631
+		2 6 0.0041471521329536024 7 0.99585284786704653
 		2 6 0.0049228677732347948 7 0.99507713222676519
 		2 6 0.0019312579636898541 7 0.99806874203631013
 		2 6 0.0013927407562732697 7 0.99860725924372673
 		1 7 1
-		2 6 0.0010021162083653659 7 0.99899788379163457
-		1 7 1
-		1 7 0.99999999999999989
+		2 6 0.0010021162083653661 7 0.99899788379163479
 		1 7 1
 		1 7 1
 		1 7 1
@@ -24486,7 +24153,9 @@ createNode skinCluster -n "skinCluster4";
 		1 7 1
 		1 7 1
 		1 7 1
-		1 7 0.99999999999999989
+		1 7 1
+		1 7 1
+		1 7 1
 		1 7 1
 		1 7 1
 		1 7 1
@@ -24510,7 +24179,6 @@ createNode skinCluster -n "skinCluster4";
 		1 7 1
 		1 8 1
 		1 8 1
-		1 8 0.99999999999999989
 		1 8 1
 		1 8 1
 		1 8 1
@@ -24527,7 +24195,8 @@ createNode skinCluster -n "skinCluster4";
 		1 8 1
 		1 8 1
 		1 8 1
-		1 8 0.99999999999999989
+		1 8 1
+		1 8 1
 		1 8 1
 		1 8 1
 		1 8 1
@@ -24550,7 +24219,7 @@ createNode skinCluster -n "skinCluster4";
 		2 8 0.99918544362299144 9 0.00081455637700855732
 		1 8 1
 		2 7 0.00091989431530237198 8 0.99908010568469763
-		1 9 0.99999999999999989
+		1 9 1
 		1 9 1
 		1 9 1
 		2 8 0.99422332862094787 9 0.0057766713790522181
@@ -24612,10 +24281,10 @@ createNode skinCluster -n "skinCluster4";
 		1 8 1
 		1 8 1
 		1 8 1
-		1 8 0.99999999999999989
 		1 8 1
 		1 8 1
-		2 7 0.0073822901122029749 8 0.99261770988779696
+		1 8 1
+		2 7 0.0073822901122029766 8 0.99261770988779718
 		2 7 0.0046894164469413434 8 0.99531058355305868
 		1 8 1
 		1 8 1
@@ -24626,10 +24295,10 @@ createNode skinCluster -n "skinCluster4";
 		2 7 0.0066574197262525558 8 0.99334258027374744
 		1 7 1
 		1 7 1
-		1 7 0.99999999999999989
 		1 7 1
 		1 7 1
-		1 7 0.99999999999999989
+		1 7 1
+		1 7 1
 		1 7 1
 		1 7 1
 		1 7 1
@@ -24651,8 +24320,8 @@ createNode skinCluster -n "skinCluster4";
 		1 6 1
 		2 0 0.0023962684755668164 6 0.99760373152443316
 		2 0 0.0014331148363434221 6 0.99856688516365655
-		2 0 0.00011828174710516452 6 0.99988171825289496
-		1 6 0.99999999999999989
+		2 0 0.00011828174710516449 6 0.99988171825289474
+		1 6 1
 		1 6 1
 		1 8 1
 		1 8 1
@@ -24678,6 +24347,33 @@ createNode skinCluster -n "skinCluster4";
 		1 1 1
 		1 1 1
 		1 1 1
+		2 1 0.94213777780532837 2 0.057862222194671631
+		1 1 1
+		2 1 0.70849999785423279 2 0.29150000214576721
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		2 1 0.79269406199455261 2 0.20730593800544739
+		2 1 0.69273385405540466 2 0.30726614594459534
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		2 1 0.93196301162242889 2 0.068036988377571106
+		2 1 0.83984997868537903 2 0.16015002131462097
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		2 1 0.93342094123363495 2 0.066579058766365051
+		2 1 0.67063650488853455 2 0.32936349511146545
 		1 1 1
 		1 1 1
 		1 1 1
@@ -24685,35 +24381,26 @@ createNode skinCluster -n "skinCluster4";
 		1 1 1
 		1 1 1
 		1 1 1
+		2 1 0.68800774216651917 2 0.31199225783348083
 		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
+		2 1 0.53027397394180298 2 0.46972602605819702
+		2 1 0.46451592445373535 2 0.53548407554626465
+		2 1 0.44039535522460938 2 0.55960464477539062
+		2 1 0.49198466539382935 2 0.50801533460617065
+		2 1 0.34955912828445435 2 0.65044087171554565
 		1 2 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
+		2 1 0.15995556116104126 2 0.84004443883895874
+		2 1 0.21005505323410034 2 0.78994494676589966
+		2 1 0.21207064390182495 2 0.78792935609817505
+		2 1 0.16057795286178589 2 0.83942204713821411
+		2 1 0.35692214965820312 2 0.64307785034179688
 		1 2 1
-		1 1 1
+		1 2 1
+		2 1 0.039840877056121826 2 0.96015912294387817
+		2 1 0.040620326995849609 2 0.95937967300415039
+		1 2 1
+		1 2 1
+		2 1 0.018580973148345947 2 0.98141902685165405
 		1 2 1
 		1 2 1
 		1 2 1
@@ -24736,35 +24423,17 @@ createNode skinCluster -n "skinCluster4";
 		1 2 1
 		1 2 1
 		1 2 1
+		2 2 0.58259999752044678 3 0.41740000247955322
+		2 2 0.44424045085906982 3 0.55575954914093018
+		2 2 0.45879775285720825 3 0.54120224714279175
+		2 2 0.66131988167762756 3 0.33868011832237244
 		1 2 1
 		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
-		1 2 1
+		2 2 0.65999996662139893 4 0.34000003337860107
 		1 3 1
 		1 3 1
-		1 3 1
-		1 3 1
+		2 2 0.26851850748062134 3 0.73148149251937866
+		2 2 0.10185182094573975 3 0.89814817905426025
 		1 3 1
 		1 3 1
 		1 3 1
@@ -24863,35 +24532,35 @@ createNode skinCluster -n "skinCluster4";
 		1 3 1
 		1 3 1
 		1 3 1
+		1 4 1
+		1 4 1
+		1 3 1
+		1 3 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
+		1 4 1
 		1 4 1;
-	setAttr ".wl[2359:2591].w"
-		1 4 1
-		1 3 1
-		1 3 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
-		1 4 1
+	setAttr ".wl[2386:2591].w"
 		1 4 1
 		1 4 1
 		1 4 1
@@ -24914,7 +24583,7 @@ createNode skinCluster -n "skinCluster4";
 		2 14 0.17008314079174541 15 0.82991685920825453
 		1 15 1
 		1 15 1
-		1 15 0.99999999999999989
+		1 15 1
 		1 15 1
 		1 15 1
 		1 15 1
@@ -24968,7 +24637,7 @@ createNode skinCluster -n "skinCluster4";
 		1 15 1
 		1 15 1
 		1 15 1
-		1 18 0.99999999999999989
+		1 18 1
 		1 15 1
 		1 15 1
 		1 15 1
@@ -24980,7 +24649,7 @@ createNode skinCluster -n "skinCluster4";
 		1 15 1
 		1 15 1
 		1 15 1
-		1 15 0.99999999999999989
+		1 15 1
 		1 15 1
 		1 15 1
 		1 15 1
@@ -26303,13 +25972,43 @@ createNode dagPose -n "bindPose2";
 		no no no no no no no no no no no no no no no no no no no no no no no no no no no 
 		no no no no no no no no no no no no no no no no no no no no no no no no no no no;
 	setAttr ".bp" yes;
+createNode animCurveTA -n "lf_hip_jnt1_rotateX";
+	rename -uid "85510A9E-4C3D-F25D-7AC2-D285286F96AF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 5 0;
+createNode animCurveTA -n "lf_hip_jnt1_rotateY";
+	rename -uid "4336DC26-49C8-71AE-704F-ABB22B6C15ED";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 5 0;
+createNode animCurveTA -n "lf_hip_jnt1_rotateZ";
+	rename -uid "A609D6B5-4424-8C02-90A6-71BD1B5AC544";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 5 -96.643445814581497;
+createNode animCurveTA -n "lf_knee_jnt_rotateX";
+	rename -uid "66DCC985-4E9E-5DFC-4499-9FA9AFB48C46";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 5 0;
+createNode animCurveTA -n "lf_knee_jnt_rotateY";
+	rename -uid "6A9699F6-4867-D3B2-0297-2E9B74947D76";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 5 0;
+createNode animCurveTA -n "lf_knee_jnt_rotateZ";
+	rename -uid "BBDF0B35-49CE-B7DD-6077-E7B76B2B9700";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 5 82.325371925742516;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -av -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 1;
-	setAttr -av ".unw" 1;
+	setAttr ".o" 5;
+	setAttr -av ".unw" 5;
 	setAttr -k on ".etw";
 	setAttr -k on ".tps";
 	setAttr -av -k on ".tms";
@@ -26407,7 +26106,13 @@ connectAttr "groupId4.id" "witch:body_geoShape.iog.og[1].gid";
 connectAttr "witch:U3DMeshSG.mwc" "witch:body_geoShape.iog.og[1].gco";
 connectAttr "skinCluster4.og[0]" "witch:body_geoShape.i";
 connectAttr "pelvis_jnt.s" "lf_hip_jnt1.is";
+connectAttr "lf_hip_jnt1_rotateX.o" "lf_hip_jnt1.rx";
+connectAttr "lf_hip_jnt1_rotateY.o" "lf_hip_jnt1.ry";
+connectAttr "lf_hip_jnt1_rotateZ.o" "lf_hip_jnt1.rz";
 connectAttr "lf_hip_jnt1.s" "lf_knee_jnt.is";
+connectAttr "lf_knee_jnt_rotateX.o" "lf_knee_jnt.rx";
+connectAttr "lf_knee_jnt_rotateY.o" "lf_knee_jnt.ry";
+connectAttr "lf_knee_jnt_rotateZ.o" "lf_knee_jnt.rz";
 connectAttr "lf_knee_jnt.s" "lf_ankle_jnt.is";
 connectAttr "lf_ankle_jnt.s" "lf_ball_jnt.is";
 connectAttr "lf_ball_jnt.s" "lf_toe_jnt.is";
@@ -26432,8 +26137,8 @@ connectAttr "feather_bot_jnt1.s" "feather_bot_jnt2.is";
 connectAttr "feather_bot_jnt2.s" "feather_bot_jnt3.is";
 connectAttr "hat_jnt1.s" "feather_top_jnt1.is";
 connectAttr "feather_top_jnt1.s" "feather_top_jnt2.is";
-connectAttr "spine_jnt3.s" "clavicle_jnt.is";
-connectAttr "clavicle_jnt.s" "lf_shld_jnt.is";
+connectAttr "spine_jnt3.s" "lf_clavicle_jnt.is";
+connectAttr "lf_clavicle_jnt.s" "lf_shld_jnt.is";
 connectAttr "lf_shld_jnt.s" "lf_elbow_jnt.is";
 connectAttr "lf_elbow_jnt.s" "lf_wrist_jnt.is";
 connectAttr "lf_wrist_jnt.s" "lf_thumb_jnt5.is";
@@ -26458,8 +26163,8 @@ connectAttr "lf_ring_jnt2.s" "lf_ring_jnt3.is";
 connectAttr "lf_ring_jnt3.s" "lf_ring_jnt4.is";
 connectAttr "spine_jnt3.s" "lf_chest_jnt.is";
 connectAttr "spine_jnt3.s" "rt_chest_jnt.is";
-connectAttr "spine_jnt3.s" "clavicle_jnt1.is";
-connectAttr "clavicle_jnt1.s" "rt_shld_jnt.is";
+connectAttr "spine_jnt3.s" "rt_clavicle_jnt.is";
+connectAttr "rt_clavicle_jnt.s" "rt_shld_jnt.is";
 connectAttr "rt_shld_jnt.s" "rt_elbow_jnt.is";
 connectAttr "rt_elbow_jnt.s" "rt_wrist_jnt.is";
 connectAttr "rt_wrist_jnt.s" "rt_thumb_jnt5.is";
@@ -26604,7 +26309,7 @@ connectAttr "feather_bot_jnt2.msg" "bindPose1.m[25]";
 connectAttr "feather_bot_jnt3.msg" "bindPose1.m[26]";
 connectAttr "feather_top_jnt1.msg" "bindPose1.m[27]";
 connectAttr "feather_top_jnt2.msg" "bindPose1.m[28]";
-connectAttr "clavicle_jnt.msg" "bindPose1.m[29]";
+connectAttr "lf_clavicle_jnt.msg" "bindPose1.m[29]";
 connectAttr "lf_shld_jnt.msg" "bindPose1.m[30]";
 connectAttr "lf_elbow_jnt.msg" "bindPose1.m[31]";
 connectAttr "lf_wrist_jnt.msg" "bindPose1.m[32]";
@@ -26630,7 +26335,7 @@ connectAttr "lf_ring_jnt3.msg" "bindPose1.m[51]";
 connectAttr "lf_ring_jnt4.msg" "bindPose1.m[52]";
 connectAttr "lf_chest_jnt.msg" "bindPose1.m[53]";
 connectAttr "rt_chest_jnt.msg" "bindPose1.m[54]";
-connectAttr "clavicle_jnt1.msg" "bindPose1.m[55]";
+connectAttr "rt_clavicle_jnt.msg" "bindPose1.m[55]";
 connectAttr "rt_shld_jnt.msg" "bindPose1.m[56]";
 connectAttr "rt_elbow_jnt.msg" "bindPose1.m[57]";
 connectAttr "rt_wrist_jnt.msg" "bindPose1.m[58]";
@@ -26761,7 +26466,7 @@ connectAttr "feather_bot_jnt2.bps" "bindPose1.wm[25]";
 connectAttr "feather_bot_jnt3.bps" "bindPose1.wm[26]";
 connectAttr "feather_top_jnt1.bps" "bindPose1.wm[27]";
 connectAttr "feather_top_jnt2.bps" "bindPose1.wm[28]";
-connectAttr "clavicle_jnt.bps" "bindPose1.wm[29]";
+connectAttr "lf_clavicle_jnt.bps" "bindPose1.wm[29]";
 connectAttr "lf_shld_jnt.bps" "bindPose1.wm[30]";
 connectAttr "lf_elbow_jnt.bps" "bindPose1.wm[31]";
 connectAttr "lf_wrist_jnt.bps" "bindPose1.wm[32]";
@@ -26787,7 +26492,7 @@ connectAttr "lf_ring_jnt3.bps" "bindPose1.wm[51]";
 connectAttr "lf_ring_jnt4.bps" "bindPose1.wm[52]";
 connectAttr "lf_chest_jnt.bps" "bindPose1.wm[53]";
 connectAttr "rt_chest_jnt.bps" "bindPose1.wm[54]";
-connectAttr "clavicle_jnt1.bps" "bindPose1.wm[55]";
+connectAttr "rt_clavicle_jnt.bps" "bindPose1.wm[55]";
 connectAttr "rt_shld_jnt.bps" "bindPose1.wm[56]";
 connectAttr "rt_elbow_jnt.bps" "bindPose1.wm[57]";
 connectAttr "rt_wrist_jnt.bps" "bindPose1.wm[58]";
@@ -26841,7 +26546,7 @@ connectAttr "feather_bot_jnt2.wm" "skinCluster2.ma[24]";
 connectAttr "feather_bot_jnt3.wm" "skinCluster2.ma[25]";
 connectAttr "feather_top_jnt1.wm" "skinCluster2.ma[26]";
 connectAttr "feather_top_jnt2.wm" "skinCluster2.ma[27]";
-connectAttr "clavicle_jnt.wm" "skinCluster2.ma[28]";
+connectAttr "lf_clavicle_jnt.wm" "skinCluster2.ma[28]";
 connectAttr "lf_shld_jnt.wm" "skinCluster2.ma[29]";
 connectAttr "lf_elbow_jnt.wm" "skinCluster2.ma[30]";
 connectAttr "lf_wrist_jnt.wm" "skinCluster2.ma[31]";
@@ -26867,7 +26572,7 @@ connectAttr "lf_ring_jnt3.wm" "skinCluster2.ma[50]";
 connectAttr "lf_ring_jnt4.wm" "skinCluster2.ma[51]";
 connectAttr "lf_chest_jnt.wm" "skinCluster2.ma[52]";
 connectAttr "rt_chest_jnt.wm" "skinCluster2.ma[53]";
-connectAttr "clavicle_jnt1.wm" "skinCluster2.ma[54]";
+connectAttr "rt_clavicle_jnt.wm" "skinCluster2.ma[54]";
 connectAttr "rt_shld_jnt.wm" "skinCluster2.ma[55]";
 connectAttr "rt_elbow_jnt.wm" "skinCluster2.ma[56]";
 connectAttr "rt_wrist_jnt.wm" "skinCluster2.ma[57]";
@@ -26919,7 +26624,7 @@ connectAttr "feather_bot_jnt2.liw" "skinCluster2.lw[24]";
 connectAttr "feather_bot_jnt3.liw" "skinCluster2.lw[25]";
 connectAttr "feather_top_jnt1.liw" "skinCluster2.lw[26]";
 connectAttr "feather_top_jnt2.liw" "skinCluster2.lw[27]";
-connectAttr "clavicle_jnt.liw" "skinCluster2.lw[28]";
+connectAttr "lf_clavicle_jnt.liw" "skinCluster2.lw[28]";
 connectAttr "lf_shld_jnt.liw" "skinCluster2.lw[29]";
 connectAttr "lf_elbow_jnt.liw" "skinCluster2.lw[30]";
 connectAttr "lf_wrist_jnt.liw" "skinCluster2.lw[31]";
@@ -26945,7 +26650,7 @@ connectAttr "lf_ring_jnt3.liw" "skinCluster2.lw[50]";
 connectAttr "lf_ring_jnt4.liw" "skinCluster2.lw[51]";
 connectAttr "lf_chest_jnt.liw" "skinCluster2.lw[52]";
 connectAttr "rt_chest_jnt.liw" "skinCluster2.lw[53]";
-connectAttr "clavicle_jnt1.liw" "skinCluster2.lw[54]";
+connectAttr "rt_clavicle_jnt.liw" "skinCluster2.lw[54]";
 connectAttr "rt_shld_jnt.liw" "skinCluster2.lw[55]";
 connectAttr "rt_elbow_jnt.liw" "skinCluster2.lw[56]";
 connectAttr "rt_wrist_jnt.liw" "skinCluster2.lw[57]";
@@ -26997,7 +26702,7 @@ connectAttr "feather_bot_jnt2.obcc" "skinCluster2.ifcl[24]";
 connectAttr "feather_bot_jnt3.obcc" "skinCluster2.ifcl[25]";
 connectAttr "feather_top_jnt1.obcc" "skinCluster2.ifcl[26]";
 connectAttr "feather_top_jnt2.obcc" "skinCluster2.ifcl[27]";
-connectAttr "clavicle_jnt.obcc" "skinCluster2.ifcl[28]";
+connectAttr "lf_clavicle_jnt.obcc" "skinCluster2.ifcl[28]";
 connectAttr "lf_shld_jnt.obcc" "skinCluster2.ifcl[29]";
 connectAttr "lf_elbow_jnt.obcc" "skinCluster2.ifcl[30]";
 connectAttr "lf_wrist_jnt.obcc" "skinCluster2.ifcl[31]";
@@ -27023,7 +26728,7 @@ connectAttr "lf_ring_jnt3.obcc" "skinCluster2.ifcl[50]";
 connectAttr "lf_ring_jnt4.obcc" "skinCluster2.ifcl[51]";
 connectAttr "lf_chest_jnt.obcc" "skinCluster2.ifcl[52]";
 connectAttr "rt_chest_jnt.obcc" "skinCluster2.ifcl[53]";
-connectAttr "clavicle_jnt1.obcc" "skinCluster2.ifcl[54]";
+connectAttr "rt_clavicle_jnt.obcc" "skinCluster2.ifcl[54]";
 connectAttr "rt_shld_jnt.obcc" "skinCluster2.ifcl[55]";
 connectAttr "rt_elbow_jnt.obcc" "skinCluster2.ifcl[56]";
 connectAttr "rt_wrist_jnt.obcc" "skinCluster2.ifcl[57]";
@@ -27048,7 +26753,7 @@ connectAttr "rt_ring_jnt2.obcc" "skinCluster2.ifcl[75]";
 connectAttr "rt_ring_jnt3.obcc" "skinCluster2.ifcl[76]";
 connectAttr "rt_ring_jnt4.obcc" "skinCluster2.ifcl[77]";
 connectAttr "bindPose1.msg" "skinCluster2.bp";
-connectAttr "head_jnt.msg" "skinCluster2.ptt";
+connectAttr "lf_knee_jnt.msg" "skinCluster2.ptt";
 connectAttr "ribbons_geoShapeOrig.w" "skinCluster2GroupParts.ig";
 connectAttr "groupId2.id" "skinCluster2GroupParts.gi";
 connectAttr "skinCluster3GroupParts.og" "skinCluster3.ip[0].ig";
@@ -27081,7 +26786,7 @@ connectAttr "feather_bot_jnt2.wm" "skinCluster3.ma[24]";
 connectAttr "feather_bot_jnt3.wm" "skinCluster3.ma[25]";
 connectAttr "feather_top_jnt1.wm" "skinCluster3.ma[26]";
 connectAttr "feather_top_jnt2.wm" "skinCluster3.ma[27]";
-connectAttr "clavicle_jnt.wm" "skinCluster3.ma[28]";
+connectAttr "lf_clavicle_jnt.wm" "skinCluster3.ma[28]";
 connectAttr "lf_shld_jnt.wm" "skinCluster3.ma[29]";
 connectAttr "lf_elbow_jnt.wm" "skinCluster3.ma[30]";
 connectAttr "lf_wrist_jnt.wm" "skinCluster3.ma[31]";
@@ -27107,7 +26812,7 @@ connectAttr "lf_ring_jnt3.wm" "skinCluster3.ma[50]";
 connectAttr "lf_ring_jnt4.wm" "skinCluster3.ma[51]";
 connectAttr "lf_chest_jnt.wm" "skinCluster3.ma[52]";
 connectAttr "rt_chest_jnt.wm" "skinCluster3.ma[53]";
-connectAttr "clavicle_jnt1.wm" "skinCluster3.ma[54]";
+connectAttr "rt_clavicle_jnt.wm" "skinCluster3.ma[54]";
 connectAttr "rt_shld_jnt.wm" "skinCluster3.ma[55]";
 connectAttr "rt_elbow_jnt.wm" "skinCluster3.ma[56]";
 connectAttr "rt_wrist_jnt.wm" "skinCluster3.ma[57]";
@@ -27159,7 +26864,7 @@ connectAttr "feather_bot_jnt2.liw" "skinCluster3.lw[24]";
 connectAttr "feather_bot_jnt3.liw" "skinCluster3.lw[25]";
 connectAttr "feather_top_jnt1.liw" "skinCluster3.lw[26]";
 connectAttr "feather_top_jnt2.liw" "skinCluster3.lw[27]";
-connectAttr "clavicle_jnt.liw" "skinCluster3.lw[28]";
+connectAttr "lf_clavicle_jnt.liw" "skinCluster3.lw[28]";
 connectAttr "lf_shld_jnt.liw" "skinCluster3.lw[29]";
 connectAttr "lf_elbow_jnt.liw" "skinCluster3.lw[30]";
 connectAttr "lf_wrist_jnt.liw" "skinCluster3.lw[31]";
@@ -27185,7 +26890,7 @@ connectAttr "lf_ring_jnt3.liw" "skinCluster3.lw[50]";
 connectAttr "lf_ring_jnt4.liw" "skinCluster3.lw[51]";
 connectAttr "lf_chest_jnt.liw" "skinCluster3.lw[52]";
 connectAttr "rt_chest_jnt.liw" "skinCluster3.lw[53]";
-connectAttr "clavicle_jnt1.liw" "skinCluster3.lw[54]";
+connectAttr "rt_clavicle_jnt.liw" "skinCluster3.lw[54]";
 connectAttr "rt_shld_jnt.liw" "skinCluster3.lw[55]";
 connectAttr "rt_elbow_jnt.liw" "skinCluster3.lw[56]";
 connectAttr "rt_wrist_jnt.liw" "skinCluster3.lw[57]";
@@ -27237,7 +26942,7 @@ connectAttr "feather_bot_jnt2.obcc" "skinCluster3.ifcl[24]";
 connectAttr "feather_bot_jnt3.obcc" "skinCluster3.ifcl[25]";
 connectAttr "feather_top_jnt1.obcc" "skinCluster3.ifcl[26]";
 connectAttr "feather_top_jnt2.obcc" "skinCluster3.ifcl[27]";
-connectAttr "clavicle_jnt.obcc" "skinCluster3.ifcl[28]";
+connectAttr "lf_clavicle_jnt.obcc" "skinCluster3.ifcl[28]";
 connectAttr "lf_shld_jnt.obcc" "skinCluster3.ifcl[29]";
 connectAttr "lf_elbow_jnt.obcc" "skinCluster3.ifcl[30]";
 connectAttr "lf_wrist_jnt.obcc" "skinCluster3.ifcl[31]";
@@ -27263,7 +26968,7 @@ connectAttr "lf_ring_jnt3.obcc" "skinCluster3.ifcl[50]";
 connectAttr "lf_ring_jnt4.obcc" "skinCluster3.ifcl[51]";
 connectAttr "lf_chest_jnt.obcc" "skinCluster3.ifcl[52]";
 connectAttr "rt_chest_jnt.obcc" "skinCluster3.ifcl[53]";
-connectAttr "clavicle_jnt1.obcc" "skinCluster3.ifcl[54]";
+connectAttr "rt_clavicle_jnt.obcc" "skinCluster3.ifcl[54]";
 connectAttr "rt_shld_jnt.obcc" "skinCluster3.ifcl[55]";
 connectAttr "rt_elbow_jnt.obcc" "skinCluster3.ifcl[56]";
 connectAttr "rt_wrist_jnt.obcc" "skinCluster3.ifcl[57]";
@@ -27288,7 +26993,7 @@ connectAttr "rt_ring_jnt2.obcc" "skinCluster3.ifcl[75]";
 connectAttr "rt_ring_jnt3.obcc" "skinCluster3.ifcl[76]";
 connectAttr "rt_ring_jnt4.obcc" "skinCluster3.ifcl[77]";
 connectAttr "bindPose1.msg" "skinCluster3.bp";
-connectAttr "head_jnt.msg" "skinCluster3.ptt";
+connectAttr "lf_clavicle_jnt.msg" "skinCluster3.ptt";
 connectAttr "broom_geoShapeOrig.w" "skinCluster3GroupParts.ig";
 connectAttr "groupId3.id" "skinCluster3GroupParts.gi";
 connectAttr "skinCluster4GroupParts.og" "skinCluster4.ip[0].ig";
@@ -27321,7 +27026,7 @@ connectAttr "feather_bot_jnt2.wm" "skinCluster4.ma[24]";
 connectAttr "feather_bot_jnt3.wm" "skinCluster4.ma[25]";
 connectAttr "feather_top_jnt1.wm" "skinCluster4.ma[26]";
 connectAttr "feather_top_jnt2.wm" "skinCluster4.ma[27]";
-connectAttr "clavicle_jnt.wm" "skinCluster4.ma[28]";
+connectAttr "lf_clavicle_jnt.wm" "skinCluster4.ma[28]";
 connectAttr "lf_shld_jnt.wm" "skinCluster4.ma[29]";
 connectAttr "lf_elbow_jnt.wm" "skinCluster4.ma[30]";
 connectAttr "lf_wrist_jnt.wm" "skinCluster4.ma[31]";
@@ -27347,7 +27052,7 @@ connectAttr "lf_ring_jnt3.wm" "skinCluster4.ma[50]";
 connectAttr "lf_ring_jnt4.wm" "skinCluster4.ma[51]";
 connectAttr "lf_chest_jnt.wm" "skinCluster4.ma[52]";
 connectAttr "rt_chest_jnt.wm" "skinCluster4.ma[53]";
-connectAttr "clavicle_jnt1.wm" "skinCluster4.ma[54]";
+connectAttr "rt_clavicle_jnt.wm" "skinCluster4.ma[54]";
 connectAttr "rt_shld_jnt.wm" "skinCluster4.ma[55]";
 connectAttr "rt_elbow_jnt.wm" "skinCluster4.ma[56]";
 connectAttr "rt_wrist_jnt.wm" "skinCluster4.ma[57]";
@@ -27399,7 +27104,7 @@ connectAttr "feather_bot_jnt2.liw" "skinCluster4.lw[24]";
 connectAttr "feather_bot_jnt3.liw" "skinCluster4.lw[25]";
 connectAttr "feather_top_jnt1.liw" "skinCluster4.lw[26]";
 connectAttr "feather_top_jnt2.liw" "skinCluster4.lw[27]";
-connectAttr "clavicle_jnt.liw" "skinCluster4.lw[28]";
+connectAttr "lf_clavicle_jnt.liw" "skinCluster4.lw[28]";
 connectAttr "lf_shld_jnt.liw" "skinCluster4.lw[29]";
 connectAttr "lf_elbow_jnt.liw" "skinCluster4.lw[30]";
 connectAttr "lf_wrist_jnt.liw" "skinCluster4.lw[31]";
@@ -27425,7 +27130,7 @@ connectAttr "lf_ring_jnt3.liw" "skinCluster4.lw[50]";
 connectAttr "lf_ring_jnt4.liw" "skinCluster4.lw[51]";
 connectAttr "lf_chest_jnt.liw" "skinCluster4.lw[52]";
 connectAttr "rt_chest_jnt.liw" "skinCluster4.lw[53]";
-connectAttr "clavicle_jnt1.liw" "skinCluster4.lw[54]";
+connectAttr "rt_clavicle_jnt.liw" "skinCluster4.lw[54]";
 connectAttr "rt_shld_jnt.liw" "skinCluster4.lw[55]";
 connectAttr "rt_elbow_jnt.liw" "skinCluster4.lw[56]";
 connectAttr "rt_wrist_jnt.liw" "skinCluster4.lw[57]";
@@ -27477,7 +27182,7 @@ connectAttr "feather_bot_jnt2.obcc" "skinCluster4.ifcl[24]";
 connectAttr "feather_bot_jnt3.obcc" "skinCluster4.ifcl[25]";
 connectAttr "feather_top_jnt1.obcc" "skinCluster4.ifcl[26]";
 connectAttr "feather_top_jnt2.obcc" "skinCluster4.ifcl[27]";
-connectAttr "clavicle_jnt.obcc" "skinCluster4.ifcl[28]";
+connectAttr "lf_clavicle_jnt.obcc" "skinCluster4.ifcl[28]";
 connectAttr "lf_shld_jnt.obcc" "skinCluster4.ifcl[29]";
 connectAttr "lf_elbow_jnt.obcc" "skinCluster4.ifcl[30]";
 connectAttr "lf_wrist_jnt.obcc" "skinCluster4.ifcl[31]";
@@ -27503,7 +27208,7 @@ connectAttr "lf_ring_jnt3.obcc" "skinCluster4.ifcl[50]";
 connectAttr "lf_ring_jnt4.obcc" "skinCluster4.ifcl[51]";
 connectAttr "lf_chest_jnt.obcc" "skinCluster4.ifcl[52]";
 connectAttr "rt_chest_jnt.obcc" "skinCluster4.ifcl[53]";
-connectAttr "clavicle_jnt1.obcc" "skinCluster4.ifcl[54]";
+connectAttr "rt_clavicle_jnt.obcc" "skinCluster4.ifcl[54]";
 connectAttr "rt_shld_jnt.obcc" "skinCluster4.ifcl[55]";
 connectAttr "rt_elbow_jnt.obcc" "skinCluster4.ifcl[56]";
 connectAttr "rt_wrist_jnt.obcc" "skinCluster4.ifcl[57]";
@@ -27528,7 +27233,7 @@ connectAttr "rt_ring_jnt2.obcc" "skinCluster4.ifcl[75]";
 connectAttr "rt_ring_jnt3.obcc" "skinCluster4.ifcl[76]";
 connectAttr "rt_ring_jnt4.obcc" "skinCluster4.ifcl[77]";
 connectAttr "bindPose1.msg" "skinCluster4.bp";
-connectAttr "clavicle_jnt1.msg" "skinCluster4.ptt";
+connectAttr "lf_clavicle_jnt.msg" "skinCluster4.ptt";
 connectAttr "body_geoShapeOrig.w" "skinCluster4GroupParts.ig";
 connectAttr "groupId4.id" "skinCluster4GroupParts.gi";
 connectAttr "skinCluster5GroupParts.og" "skinCluster5.ip[0].ig";
@@ -27551,7 +27256,7 @@ connectAttr "feather_bot_jnt2.wm" "skinCluster5.ma[13]";
 connectAttr "feather_bot_jnt3.wm" "skinCluster5.ma[14]";
 connectAttr "feather_top_jnt1.wm" "skinCluster5.ma[15]";
 connectAttr "feather_top_jnt2.wm" "skinCluster5.ma[16]";
-connectAttr "clavicle_jnt.wm" "skinCluster5.ma[17]";
+connectAttr "lf_clavicle_jnt.wm" "skinCluster5.ma[17]";
 connectAttr "lf_shld_jnt.wm" "skinCluster5.ma[18]";
 connectAttr "lf_elbow_jnt.wm" "skinCluster5.ma[19]";
 connectAttr "lf_wrist_jnt.wm" "skinCluster5.ma[20]";
@@ -27577,7 +27282,7 @@ connectAttr "lf_ring_jnt3.wm" "skinCluster5.ma[39]";
 connectAttr "lf_ring_jnt4.wm" "skinCluster5.ma[40]";
 connectAttr "lf_chest_jnt.wm" "skinCluster5.ma[41]";
 connectAttr "rt_chest_jnt.wm" "skinCluster5.ma[42]";
-connectAttr "clavicle_jnt1.wm" "skinCluster5.ma[43]";
+connectAttr "rt_clavicle_jnt.wm" "skinCluster5.ma[43]";
 connectAttr "rt_shld_jnt.wm" "skinCluster5.ma[44]";
 connectAttr "rt_elbow_jnt.wm" "skinCluster5.ma[45]";
 connectAttr "rt_wrist_jnt.wm" "skinCluster5.ma[46]";
@@ -27618,7 +27323,7 @@ connectAttr "feather_bot_jnt2.liw" "skinCluster5.lw[13]";
 connectAttr "feather_bot_jnt3.liw" "skinCluster5.lw[14]";
 connectAttr "feather_top_jnt1.liw" "skinCluster5.lw[15]";
 connectAttr "feather_top_jnt2.liw" "skinCluster5.lw[16]";
-connectAttr "clavicle_jnt.liw" "skinCluster5.lw[17]";
+connectAttr "lf_clavicle_jnt.liw" "skinCluster5.lw[17]";
 connectAttr "lf_shld_jnt.liw" "skinCluster5.lw[18]";
 connectAttr "lf_elbow_jnt.liw" "skinCluster5.lw[19]";
 connectAttr "lf_wrist_jnt.liw" "skinCluster5.lw[20]";
@@ -27644,7 +27349,7 @@ connectAttr "lf_ring_jnt3.liw" "skinCluster5.lw[39]";
 connectAttr "lf_ring_jnt4.liw" "skinCluster5.lw[40]";
 connectAttr "lf_chest_jnt.liw" "skinCluster5.lw[41]";
 connectAttr "rt_chest_jnt.liw" "skinCluster5.lw[42]";
-connectAttr "clavicle_jnt1.liw" "skinCluster5.lw[43]";
+connectAttr "rt_clavicle_jnt.liw" "skinCluster5.lw[43]";
 connectAttr "rt_shld_jnt.liw" "skinCluster5.lw[44]";
 connectAttr "rt_elbow_jnt.liw" "skinCluster5.lw[45]";
 connectAttr "rt_wrist_jnt.liw" "skinCluster5.lw[46]";
@@ -27685,7 +27390,7 @@ connectAttr "feather_bot_jnt2.obcc" "skinCluster5.ifcl[13]";
 connectAttr "feather_bot_jnt3.obcc" "skinCluster5.ifcl[14]";
 connectAttr "feather_top_jnt1.obcc" "skinCluster5.ifcl[15]";
 connectAttr "feather_top_jnt2.obcc" "skinCluster5.ifcl[16]";
-connectAttr "clavicle_jnt.obcc" "skinCluster5.ifcl[17]";
+connectAttr "lf_clavicle_jnt.obcc" "skinCluster5.ifcl[17]";
 connectAttr "lf_shld_jnt.obcc" "skinCluster5.ifcl[18]";
 connectAttr "lf_elbow_jnt.obcc" "skinCluster5.ifcl[19]";
 connectAttr "lf_wrist_jnt.obcc" "skinCluster5.ifcl[20]";
@@ -27711,7 +27416,7 @@ connectAttr "lf_ring_jnt3.obcc" "skinCluster5.ifcl[39]";
 connectAttr "lf_ring_jnt4.obcc" "skinCluster5.ifcl[40]";
 connectAttr "lf_chest_jnt.obcc" "skinCluster5.ifcl[41]";
 connectAttr "rt_chest_jnt.obcc" "skinCluster5.ifcl[42]";
-connectAttr "clavicle_jnt1.obcc" "skinCluster5.ifcl[43]";
+connectAttr "rt_clavicle_jnt.obcc" "skinCluster5.ifcl[43]";
 connectAttr "rt_shld_jnt.obcc" "skinCluster5.ifcl[44]";
 connectAttr "rt_elbow_jnt.obcc" "skinCluster5.ifcl[45]";
 connectAttr "rt_wrist_jnt.obcc" "skinCluster5.ifcl[46]";
@@ -27735,7 +27440,7 @@ connectAttr "rt_ring_jnt1.obcc" "skinCluster5.ifcl[63]";
 connectAttr "rt_ring_jnt2.obcc" "skinCluster5.ifcl[64]";
 connectAttr "rt_ring_jnt3.obcc" "skinCluster5.ifcl[65]";
 connectAttr "rt_ring_jnt4.obcc" "skinCluster5.ifcl[66]";
-connectAttr "head_jnt.msg" "skinCluster5.ptt";
+connectAttr "lf_clavicle_jnt.msg" "skinCluster5.ptt";
 connectAttr "skeleton.msg" "bindPose2.m[0]";
 connectAttr "spine_jnt1.msg" "bindPose2.m[1]";
 connectAttr "spine_jnt2.msg" "bindPose2.m[2]";
@@ -27754,7 +27459,7 @@ connectAttr "feather_bot_jnt2.msg" "bindPose2.m[14]";
 connectAttr "feather_bot_jnt3.msg" "bindPose2.m[15]";
 connectAttr "feather_top_jnt1.msg" "bindPose2.m[16]";
 connectAttr "feather_top_jnt2.msg" "bindPose2.m[17]";
-connectAttr "clavicle_jnt.msg" "bindPose2.m[18]";
+connectAttr "lf_clavicle_jnt.msg" "bindPose2.m[18]";
 connectAttr "lf_shld_jnt.msg" "bindPose2.m[19]";
 connectAttr "lf_elbow_jnt.msg" "bindPose2.m[20]";
 connectAttr "lf_wrist_jnt.msg" "bindPose2.m[21]";
@@ -27780,7 +27485,7 @@ connectAttr "lf_ring_jnt3.msg" "bindPose2.m[40]";
 connectAttr "lf_ring_jnt4.msg" "bindPose2.m[41]";
 connectAttr "lf_chest_jnt.msg" "bindPose2.m[42]";
 connectAttr "rt_chest_jnt.msg" "bindPose2.m[43]";
-connectAttr "clavicle_jnt1.msg" "bindPose2.m[44]";
+connectAttr "rt_clavicle_jnt.msg" "bindPose2.m[44]";
 connectAttr "rt_shld_jnt.msg" "bindPose2.m[45]";
 connectAttr "rt_elbow_jnt.msg" "bindPose2.m[46]";
 connectAttr "rt_wrist_jnt.msg" "bindPose2.m[47]";

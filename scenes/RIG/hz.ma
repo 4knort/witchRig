@@ -1,6 +1,6 @@
 //Maya ASCII 2022 scene
-//Name: witch.ma
-//Last modified: Tue, Mar 15, 2022 08:43:41 PM
+//Name: hz.ma
+//Last modified: Tue, Mar 15, 2022 04:08:37 PM
 //Codeset: 1251
 requires maya "2022";
 requires "stereoCamera" "10.0";
@@ -11,29 +11,28 @@ fileInfo "product" "Maya 2022";
 fileInfo "version" "2022";
 fileInfo "cutIdentifier" "202108111415-612a77abf4";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 22000)";
-fileInfo "UUID" "D32B6D90-43A4-B9DA-5B69-848F60B60484";
+fileInfo "UUID" "7B41E7DB-4BCB-3226-6326-2B9732FB8BF4";
 createNode transform -s -n "persp";
-	rename -uid "F358F4C2-40DA-8932-9F70-E1BF7E1003F2";
+	rename -uid "94075DE1-4EBF-FB48-E28F-9286938D08C6";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 256.75460589520719 157.48711928474819 -15.397291875201681 ;
-	setAttr ".r" -type "double3" -16.538352729122945 448.59999999971717 6.5089462366982169e-14 ;
+	setAttr ".t" -type "double3" 0.95880559953898103 80.036541531149169 85.543825590344142 ;
+	setAttr ".r" -type "double3" -27.338352729602779 -2.1999999999999558 -9.9465648292798417e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
-	rename -uid "D1D96CBC-4A56-7AD5-A807-65B446576A43";
+	rename -uid "6E4E5222-497B-2816-A9E8-A1B5C5D8C56E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 269.84354948372771;
+	setAttr ".coi" 105.94391586844044;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.066637275734604262 22.988357928363698 1.8946173497395176 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
-	rename -uid "DDBBB7DB-494E-128B-9FED-1086504E38B8";
+	rename -uid "16A2A66C-4A97-421F-23C8-78BCC130F450";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 1000.1 0 ;
 	setAttr ".r" -type "double3" -90 0 0 ;
 createNode camera -s -n "topShape" -p "top";
-	rename -uid "19B5194E-44A6-2336-12A7-DEAD3BF76708";
+	rename -uid "4E630E5D-431A-7563-A42A-A695FEB4B144";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
@@ -45,11 +44,11 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "front";
-	rename -uid "7F05E545-4595-1C1D-B474-EFA666050BFA";
+	rename -uid "075F48AC-472A-480B-6D72-ADB0E4274FBC";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 0 1000.1 ;
 createNode camera -s -n "frontShape" -p "front";
-	rename -uid "AE13B8F6-48F4-D743-BBD8-A2AC3D116850";
+	rename -uid "C9DCBE27-454A-7199-E9CF-168D2A39C146";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
@@ -61,12 +60,12 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "side";
-	rename -uid "CA4CCD05-4788-AB15-3D50-E2B1D2AD0EE5";
+	rename -uid "9F43D463-4DA8-2904-A05B-D5BB5F75399C";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 1000.1 0 0 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
-	rename -uid "62D9F123-4DC4-3E20-6286-F9A9FABEFB57";
+	rename -uid "39C96BA8-43E6-8EDB-FDC2-A6B80E1FD1F4";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
@@ -77,10 +76,10 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "geometry";
-	rename -uid "C5303C31-4B45-7E52-C36B-528B7E757C78";
-createNode transform -n "hat_geo" -p "geometry";
-	rename -uid "6680E7EF-4A90-12AF-5745-D5A6BDD6AF5B";
+createNode transform -n "witch:witch:geometry";
+	rename -uid "F5A626E4-497D-3E5B-99B9-C4B84245136B";
+createNode transform -n "witch:witch:hat_geo" -p "witch:witch:geometry";
+	rename -uid "FED9F074-44C4-B87F-0CE5-2B8956CCB353";
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
@@ -90,8 +89,8 @@ createNode transform -n "hat_geo" -p "geometry";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode mesh -n "hat_geoShape" -p "hat_geo";
-	rename -uid "6A948A97-4334-4A7D-534E-B68573F92AE4";
+createNode mesh -n "witch:witch:hat_geoShape" -p "witch:witch:hat_geo";
+	rename -uid "C174D35E-4EF5-AB7C-16DE-A59E1092AE8C";
 	setAttr -k off ".v";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
@@ -108,8 +107,8 @@ createNode mesh -n "hat_geoShape" -p "hat_geo";
 	setAttr ".dr" 2;
 	setAttr ".dsm" 1;
 	setAttr ".vcs" 2;
-createNode mesh -n "hat_geoShapeOrig" -p "hat_geo";
-	rename -uid "1188EBC8-4503-61B6-2C0D-A8B2DBAC9864";
+createNode mesh -n "witch:hat_geoShapeOrig" -p "witch:witch:hat_geo";
+	rename -uid "FCB6BCFA-4367-7B60-B58B-4194CBB0B775";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -2268,8 +2267,8 @@ createNode mesh -n "hat_geoShapeOrig" -p "hat_geo";
 	setAttr ".pd[1]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ndt" 0;
-createNode transform -n "ribbons_geo" -p "geometry";
-	rename -uid "80F09566-4F3A-73CF-44D3-C0A0DDE6ABC6";
+createNode transform -n "witch:witch:ribbons_geo" -p "witch:witch:geometry";
+	rename -uid "40C1B692-49E1-D436-02D3-C7B0AEB5227D";
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
@@ -2279,8 +2278,8 @@ createNode transform -n "ribbons_geo" -p "geometry";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode mesh -n "ribbons_geoShape" -p "ribbons_geo";
-	rename -uid "F0982CDD-4D97-1C06-9112-F5AE395AD076";
+createNode mesh -n "witch:witch:ribbons_geoShape" -p "witch:witch:ribbons_geo";
+	rename -uid "8913C771-4C05-9254-837F-C088ED5A43D8";
 	setAttr -k off ".v";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
@@ -2294,8 +2293,8 @@ createNode mesh -n "ribbons_geoShape" -p "ribbons_geo";
 	setAttr ".ndt" 0;
 	setAttr ".dr" 1;
 	setAttr ".vcs" 2;
-createNode mesh -n "ribbons_geoShapeOrig" -p "ribbons_geo";
-	rename -uid "5216F525-4A76-0D55-F3DC-7A8D3C2262AB";
+createNode mesh -n "witch:ribbons_geoShapeOrig" -p "witch:witch:ribbons_geo";
+	rename -uid "706A8B48-4B73-D18D-717B-DF808162B2F7";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -3530,8 +3529,8 @@ createNode mesh -n "ribbons_geoShapeOrig" -p "ribbons_geo";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ndt" 0;
-createNode transform -n "broom_geo" -p "geometry";
-	rename -uid "986D8FE5-4798-73E1-955B-D8A59187C202";
+createNode transform -n "witch:witch:broom_geo" -p "witch:witch:geometry";
+	rename -uid "A4C59DFE-4672-DB50-6473-81A4304872B6";
 	setAttr ".v" no;
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
@@ -3544,8 +3543,8 @@ createNode transform -n "broom_geo" -p "geometry";
 	setAttr -l on ".sz";
 	setAttr ".rp" -type "double3" -46.976403788112442 0 14.657879138297773 ;
 	setAttr ".sp" -type "double3" -46.976403788112442 0 14.657879138297773 ;
-createNode mesh -n "broom_geoShape" -p "broom_geo";
-	rename -uid "146FF2D5-44EC-DB72-FF53-3EA24E761910";
+createNode mesh -n "witch:witch:broom_geoShape" -p "witch:witch:broom_geo";
+	rename -uid "1D77B4DC-4424-732C-4FD6-B3B8D142A49F";
 	setAttr -k off ".v";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
@@ -3558,8 +3557,8 @@ createNode mesh -n "broom_geoShape" -p "broom_geo";
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ndt" 0;
 	setAttr ".vcs" 2;
-createNode mesh -n "broom_geoShapeOrig" -p "broom_geo";
-	rename -uid "15FD5CDB-473B-A2DF-BECF-EF8FB3B33DAF";
+createNode mesh -n "witch:broom_geoShapeOrig" -p "witch:witch:broom_geo";
+	rename -uid "FDAAEA2D-473F-FA15-2C0A-398A4BB78969";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -5442,8 +5441,8 @@ createNode mesh -n "broom_geoShapeOrig" -p "broom_geo";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ndt" 0;
-createNode transform -n "body_geo" -p "geometry";
-	rename -uid "4BDFBE0E-42A2-D85D-7B61-4C82BF6AF3B9";
+createNode transform -n "witch:witch:body_geo" -p "witch:witch:geometry";
+	rename -uid "09D67503-4DE8-B084-9798-1B93A4C7D3BD";
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
@@ -5453,8 +5452,8 @@ createNode transform -n "body_geo" -p "geometry";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode mesh -n "body_geoShape" -p "body_geo";
-	rename -uid "9E5E0C13-4C08-19BB-A535-C198A29C3213";
+createNode mesh -n "witch:witch:body_geoShape" -p "witch:witch:body_geo";
+	rename -uid "5D41F667-43EC-E87D-16F7-37A5C6F6C032";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -5472,8 +5471,8 @@ createNode mesh -n "body_geoShape" -p "body_geo";
 	setAttr ".ndt" 0;
 	setAttr ".dr" 1;
 	setAttr ".vcs" 2;
-createNode mesh -n "body_geoShapeOrig" -p "body_geo";
-	rename -uid "75D9FD27-4D78-BC44-F0AF-7181E84EB72C";
+createNode mesh -n "witch:body_geoShapeOrig" -p "witch:witch:body_geo";
+	rename -uid "506938A3-4517-75F0-9E6C-9DB7832E6FD8";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -19626,13 +19625,13 @@ createNode mesh -n "body_geoShapeOrig" -p "body_geo";
 	setAttr ".pd[1]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ndt" 0;
-createNode transform -n "bottom";
-	rename -uid "0FBBCC78-4D7C-B603-1AAA-9390E6FDD640";
+createNode transform -n "witch:bottom";
+	rename -uid "84AB1161-4CC5-2F1C-6964-6DA70B79782C";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 -1000.1 0 ;
 	setAttr ".r" -type "double3" 90 0 0 ;
-createNode camera -n "bottomShape" -p "bottom";
-	rename -uid "0B1AD685-4577-1A7F-B478-F28C8BC89EE2";
+createNode camera -n "witch:bottomShape" -p "witch:bottom";
+	rename -uid "AC0B005D-465F-9803-F4E2-138B27915F69";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
@@ -19643,11 +19642,11 @@ createNode camera -n "bottomShape" -p "bottom";
 	setAttr ".hc" -type "string" "viewSet -bo %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "skeleton";
-	rename -uid "953EFC4C-4C54-5485-AE79-7B8C93A51125";
+createNode transform -n "witch:skeleton";
+	rename -uid "E303A274-48E5-1F8D-E91F-DE8AC0792CA4";
 	setAttr ".dla" yes;
-createNode joint -n "pelvis_jnt" -p "skeleton";
-	rename -uid "3E7C6DA5-4092-A89D-64C8-6A96AB46A8BC";
+createNode joint -n "witch:pelvis_jnt" -p "witch:skeleton";
+	rename -uid "53A575E7-4338-41B4-DCF3-6FA443816F31";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".t" -type "double3" 0 98.867513899456881 6.3686283220559021 ;
@@ -19658,8 +19657,8 @@ createNode joint -n "pelvis_jnt" -p "skeleton";
 		 0 98.867513899456881 6.3686283220559021 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "lf_hip_jnt" -p "pelvis_jnt";
-	rename -uid "55F433CE-4DEA-70E7-B48E-54A9CC52E1FA";
+createNode joint -n "witch:lf_hip_jnt" -p "witch:pelvis_jnt";
+	rename -uid "6DA7231F-4A5C-00AB-4EBA-5A81FBDFE975";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 1;
@@ -19672,8 +19671,8 @@ createNode joint -n "lf_hip_jnt" -p "pelvis_jnt";
 		 10.620646804610775 94.122423645533814 4.1671131859051691 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "lf_knee_jnt" -p "lf_hip_jnt";
-	rename -uid "4D2F87C4-43B9-B6D7-4B04-759F61F4C2CB";
+createNode joint -n "witch:lf_knee_jnt" -p "witch:lf_hip_jnt";
+	rename -uid "F3569724-4EE2-EE68-65D2-E9B1EF442A36";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
@@ -19687,8 +19686,8 @@ createNode joint -n "lf_knee_jnt" -p "lf_hip_jnt";
 		 13.660376355141498 52.229154088913653 -1.615950657068038 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ankle_jnt" -p "lf_knee_jnt";
-	rename -uid "F91F79A4-46BA-FEF2-EA34-04AF09795174";
+createNode joint -n "witch:lf_ankle_jnt" -p "witch:lf_knee_jnt";
+	rename -uid "F4090275-4206-93A5-FDDC-7BB493D16D59";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
@@ -19703,8 +19702,8 @@ createNode joint -n "lf_ankle_jnt" -p "lf_knee_jnt";
 		 16.001417896786371 19.943581595381609 -6.4107635737377331 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ball_jnt" -p "lf_ankle_jnt";
-	rename -uid "3AC0E489-4CA6-E778-585B-7D8ED930240E";
+createNode joint -n "witch:lf_ball_jnt" -p "witch:lf_ankle_jnt";
+	rename -uid "E6249FD5-435C-C793-C752-65889AB43647";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 4;
@@ -19718,8 +19717,8 @@ createNode joint -n "lf_ball_jnt" -p "lf_ankle_jnt";
 		 17.630811495470265 7.5312281456532126 0.55041602367781817 1;
 	setAttr ".radi" 1.0493019462235624;
 	setAttr ".liw" yes;
-createNode joint -n "lf_toe_jnt" -p "lf_ball_jnt";
-	rename -uid "077A1A09-4E4C-981D-96EE-7C9D615AA512";
+createNode joint -n "witch:lf_toe_jnt" -p "witch:lf_ball_jnt";
+	rename -uid "DA549D90-490C-F792-D664-998698A3F879";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 5;
@@ -19732,8 +19731,8 @@ createNode joint -n "lf_toe_jnt" -p "lf_ball_jnt";
 		 19.383695908015852 -0.41416903365665547 9.5905575757064483 1;
 	setAttr ".radi" 1.0493019462235624;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ball_add_jnt" -p "lf_ball_jnt";
-	rename -uid "6E18769A-480B-3DD3-7781-01876434ADDB";
+createNode joint -n "witch:lf_ball_add_jnt" -p "witch:lf_ball_jnt";
+	rename -uid "7F7D0A3A-4E17-54D4-79D3-3D96B5CCB60A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 5;
@@ -19747,8 +19746,8 @@ createNode joint -n "lf_ball_add_jnt" -p "lf_ball_jnt";
 		 -0.14549613352933177 -0.75694829525737983 -0.63707154498922769 0 0.97880522435790651 -0.01632830976177841 -0.20414141929062621 0
 		 17.630811495470265 7.5312281456532126 0.55041602367781772 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ball_add_u_jnt" -p "lf_ball_add_jnt";
-	rename -uid "14C660D7-4571-D693-63B7-F1BCDEEFA9A9";
+createNode joint -n "witch:lf_ball_add_u_jnt" -p "witch:lf_ball_add_jnt";
+	rename -uid "E02322E2-4424-E9B5-B226-7D9A8C9699E5";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 6;
@@ -19759,8 +19758,8 @@ createNode joint -n "lf_ball_add_u_jnt" -p "lf_ball_add_jnt";
 		 -0.14549613352933177 -0.75694829525737983 -0.63707154498922769 0 0.97880522435790673 -0.016328309761778414 -0.20414141929062626 0
 		 18.067299896058262 9.8020730314253512 2.4616306586455003 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ball_add_d_jnt" -p "lf_ball_add_jnt";
-	rename -uid "54D1BCB2-4F19-7BCD-039F-52BA75A99C94";
+createNode joint -n "witch:lf_ball_add_d_jnt" -p "witch:lf_ball_add_jnt";
+	rename -uid "9E766E69-4219-DA58-BE1B-409BCD9FBF88";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 6;
@@ -19771,8 +19770,8 @@ createNode joint -n "lf_ball_add_d_jnt" -p "lf_ball_add_jnt";
 		 -0.14549613352933177 -0.75694829525737983 -0.63707154498922769 0 0.97880522435790673 -0.016328309761778414 -0.20414141929062626 0
 		 17.194323094882268 5.2603832598810722 -1.3607986112898665 1;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "lf_ball_add_jnt_orientConstraint1" -p "lf_ball_add_jnt";
-	rename -uid "293725A4-4E9E-BC62-9DAA-48BAD09C5C5A";
+createNode orientConstraint -n "witch:lf_ball_add_jnt_orientConstraint1" -p "witch:lf_ball_add_jnt";
+	rename -uid "DBC745F0-4777-90B7-1FD4-D5A38C4B55BF";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_ankle_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "lf_ball_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -19794,8 +19793,8 @@ createNode orientConstraint -n "lf_ball_add_jnt_orientConstraint1" -p "lf_ball_a
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode joint -n "lf_ankle_add_jnt" -p "lf_ankle_jnt";
-	rename -uid "84B8B286-4844-A799-23DD-60B67FF8BC10";
+createNode joint -n "witch:lf_ankle_add_jnt" -p "witch:lf_ankle_jnt";
+	rename -uid "6C0F3399-4B46-E434-14C2-1C935A3F3F28";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 4;
@@ -19808,8 +19807,8 @@ createNode joint -n "lf_ankle_add_jnt" -p "lf_ankle_jnt";
 		 -0.21588261192262009 -0.02407566129173281 -0.97612246178583217 0 0.97641715676698482 -0.0074297068576413272 -0.21576453700060796 0
 		 16.001417896786371 19.943581595381612 -6.4107635737377322 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ankle_add_f_jnt" -p "lf_ankle_add_jnt";
-	rename -uid "84E2D294-4827-6D76-2385-4C9EA6AA90F1";
+createNode joint -n "witch:lf_ankle_add_f_jnt" -p "witch:lf_ankle_add_jnt";
+	rename -uid "82D3EA76-43D6-E77F-2BBC-E0A9A072158B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 5;
@@ -19820,8 +19819,8 @@ createNode joint -n "lf_ankle_add_f_jnt" -p "lf_ankle_add_jnt";
 		 -0.21588261192262009 -0.02407566129173281 -0.97612246178583217 0 0.97641715676698482 -0.0074297068576413272 -0.21576453700060796 0
 		 16.649065732554231 20.01580857925682 -3.4823961883802355 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ankle_add_r_jnt" -p "lf_ankle_add_jnt";
-	rename -uid "ED51B84B-413B-A71F-9FAE-87B189E987A2";
+createNode joint -n "witch:lf_ankle_add_r_jnt" -p "witch:lf_ankle_add_jnt";
+	rename -uid "C2D7E17F-43A1-1034-1009-3EAE77F69E95";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 5;
@@ -19832,8 +19831,8 @@ createNode joint -n "lf_ankle_add_r_jnt" -p "lf_ankle_add_jnt";
 		 -0.21588261192262009 -0.02407566129173281 -0.97612246178583217 0 0.97641715676698482 -0.0074297068576413272 -0.21576453700060796 0
 		 13.072166426485417 19.965870715954537 -5.7634699627359085 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ankle_add_b_jnt" -p "lf_ankle_add_jnt";
-	rename -uid "8943C86F-4513-B565-3E0E-8BB0D8994642";
+createNode joint -n "witch:lf_ankle_add_b_jnt" -p "witch:lf_ankle_add_jnt";
+	rename -uid "1F2B2B40-4ABB-ADC7-6DFD-CC86A3272693";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 5;
@@ -19844,8 +19843,8 @@ createNode joint -n "lf_ankle_add_b_jnt" -p "lf_ankle_add_jnt";
 		 -0.21588261192262009 -0.02407566129173281 -0.97612246178583217 0 0.97641715676698482 -0.0074297068576413272 -0.21576453700060796 0
 		 15.353770061018512 19.871354611506412 -9.3391309590952289 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ankle_add_l_jnt" -p "lf_ankle_add_jnt";
-	rename -uid "91572351-412B-FB2D-2AF6-CEA9FE40DEB7";
+createNode joint -n "witch:lf_ankle_add_l_jnt" -p "witch:lf_ankle_add_jnt";
+	rename -uid "B59ADC82-4D98-F5E5-CDE8-53A828DEDF17";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 5;
@@ -19856,8 +19855,8 @@ createNode joint -n "lf_ankle_add_l_jnt" -p "lf_ankle_add_jnt";
 		 -0.21588261192262009 -0.02407566129173281 -0.97612246178583217 0 0.97641715676698482 -0.0074297068576413272 -0.21576453700060796 0
 		 18.930669367087326 19.921292474808684 -7.0580571847395559 1;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "lf_ankle_add_jnt_orientConstraint1" -p "lf_ankle_add_jnt";
-	rename -uid "D63B8E4B-4813-0E4F-F3C5-A8ACAE399EE4";
+createNode orientConstraint -n "witch:lf_ankle_add_jnt_orientConstraint1" -p "witch:lf_ankle_add_jnt";
+	rename -uid "0E68B663-4084-62F0-0E76-8CB3764C2544";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_knee_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "lf_ankle_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -19879,8 +19878,8 @@ createNode orientConstraint -n "lf_ankle_add_jnt_orientConstraint1" -p "lf_ankle
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode joint -n "lf_knee_add_jnt" -p "lf_knee_jnt";
-	rename -uid "23D0B438-4FB8-F0A9-FFAB-939BA472BD3E";
+createNode joint -n "witch:lf_knee_add_jnt" -p "witch:lf_knee_jnt";
+	rename -uid "D9B339EF-474A-08FC-A148-4DB3EDBD0550";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
@@ -19893,8 +19892,8 @@ createNode joint -n "lf_knee_add_jnt" -p "lf_knee_jnt";
 		 -0.015249543199970409 0.14580230671643152 -0.98919620843812373 0 0.99732115011066313 0.073001558857332602 -0.0046147531183626019 0
 		 13.660376355141501 52.229154088913653 -1.615950657068038 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_knee_add_f_jnt" -p "lf_knee_add_jnt";
-	rename -uid "CAD98041-4DFF-5E5C-F673-17BDE3E1666C";
+createNode joint -n "witch:lf_knee_add_f_jnt" -p "witch:lf_knee_add_jnt";
+	rename -uid "7887BA81-4329-CC49-5FAE-2F8C209696AA";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 4;
@@ -19905,8 +19904,8 @@ createNode joint -n "lf_knee_add_f_jnt" -p "lf_knee_add_jnt";
 		 -0.015249543199970409 0.14580230671643152 -0.98919620843812373 0 0.99732115011066313 0.073001558857332602 -0.0046147531183626019 0
 		 13.706124984741413 51.791747168764353 1.3516379682463309 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_knee_add_b_jnt" -p "lf_knee_add_jnt";
-	rename -uid "07F1D620-4F9F-136E-DAD7-6185F592A42C";
+createNode joint -n "witch:lf_knee_add_b_jnt" -p "witch:lf_knee_add_jnt";
+	rename -uid "D4370C31-49A1-CD8A-0C77-149519E86D1D";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 4;
@@ -19917,8 +19916,8 @@ createNode joint -n "lf_knee_add_b_jnt" -p "lf_knee_add_jnt";
 		 -0.015249543199970409 0.14580230671643152 -0.98919620843812373 0 0.99732115011066313 0.073001558857332602 -0.0046147531183626019 0
 		 13.614627725541592 52.666561009062953 -4.5835392823824099 1;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "lf_knee_add_jnt_orientConstraint1" -p "lf_knee_add_jnt";
-	rename -uid "6BAD32F6-4627-BC6C-3979-68BFE3B2270C";
+createNode orientConstraint -n "witch:lf_knee_add_jnt_orientConstraint1" -p "witch:lf_knee_add_jnt";
+	rename -uid "697C550A-4F96-CD49-9656-83BD8B0CB660";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_hip_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "lf_knee_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -19939,8 +19938,8 @@ createNode orientConstraint -n "lf_knee_add_jnt_orientConstraint1" -p "lf_knee_a
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode joint -n "lf_hip_add_jnt" -p "lf_hip_jnt";
-	rename -uid "404FCA4D-4D28-4FD6-7106-66B6ECFB33C6";
+createNode joint -n "witch:lf_hip_add_jnt" -p "witch:lf_hip_jnt";
+	rename -uid "0684E845-4A1F-6214-60D0-91A3E0D6B0AD";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
@@ -19952,8 +19951,8 @@ createNode joint -n "lf_hip_add_jnt" -p "lf_hip_jnt";
 		 -0.014516625913450766 0.13569793822002657 -0.99064390026634841 0 0.99732115011066313 0.073001558857332602 -0.0046147531183626019 0
 		 10.620646804610773 94.122423645533843 4.1671131859051691 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_hip_add_f_jnt" -p "lf_hip_add_jnt";
-	rename -uid "02518ED1-41EF-FFCC-34F6-7A8B9E081C52";
+createNode joint -n "witch:lf_hip_add_f_jnt" -p "witch:lf_hip_add_jnt";
+	rename -uid "8CE54784-49B7-3549-7B82-96BA1660B053";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
@@ -19964,8 +19963,8 @@ createNode joint -n "lf_hip_add_f_jnt" -p "lf_hip_add_jnt";
 		 -0.014516625913450766 0.13569793822002657 -0.99064390026634841 0 0.99732115011066313 0.073001558857332602 -0.0046147531183626019 0
 		 10.664196682351127 93.715329830873756 7.1390448867042124 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_hip_add_b_jnt" -p "lf_hip_add_jnt";
-	rename -uid "C9F90895-441D-828E-4074-F58EF78DD271";
+createNode joint -n "witch:lf_hip_add_b_jnt" -p "witch:lf_hip_add_jnt";
+	rename -uid "D5A09158-4AD0-662B-BEFD-2299A6BC8811";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
@@ -19976,8 +19975,8 @@ createNode joint -n "lf_hip_add_b_jnt" -p "lf_hip_add_jnt";
 		 -0.014516625913450766 0.13569793822002657 -0.99064390026634841 0 0.99732115011066313 0.073001558857332602 -0.0046147531183626019 0
 		 10.577096926870427 94.529517460193944 1.1951814851061249 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_hip_add_l_jnt" -p "lf_hip_add_jnt";
-	rename -uid "968E40A8-4BFF-DF3A-3E43-CBBA1216325B";
+createNode joint -n "witch:lf_hip_add_l_jnt" -p "witch:lf_hip_add_jnt";
+	rename -uid "2C79FC41-4AEB-DD3D-05A4-09B9DCE9061E";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
@@ -19988,8 +19987,8 @@ createNode joint -n "lf_hip_add_l_jnt" -p "lf_hip_add_jnt";
 		 -0.014516625913450766 0.13569793822002657 -0.99064390026634841 0 0.99732115011066313 0.073001558857332602 -0.0046147531183626019 0
 		 13.612610254942767 94.341428322105827 4.1532689265500808 1;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "lf_hip_add_jnt_orientConstraint1" -p "lf_hip_add_jnt";
-	rename -uid "A86532CB-4B25-6F4F-3DD3-AC8AD4DB696C";
+createNode orientConstraint -n "witch:lf_hip_add_jnt_orientConstraint1" -p "witch:lf_hip_add_jnt";
+	rename -uid "21826EEC-4E69-690D-EE38-73ADDA05FACE";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_hip_locatorW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "lf_hip_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -20010,8 +20009,8 @@ createNode orientConstraint -n "lf_hip_add_jnt_orientConstraint1" -p "lf_hip_add
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode joint -n "rt_hip_jnt" -p "pelvis_jnt";
-	rename -uid "4BF2F77D-4DD4-FD03-688B-D3B772E1D372";
+createNode joint -n "witch:rt_hip_jnt" -p "witch:pelvis_jnt";
+	rename -uid "6D38A37D-48E4-3558-4E88-42A3D7EE64EF";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 1;
@@ -20024,8 +20023,8 @@ createNode joint -n "rt_hip_jnt" -p "pelvis_jnt";
 		 -10.6206 94.122399999999999 4.1671099999999992 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "rt_knee_jnt" -p "rt_hip_jnt";
-	rename -uid "3C59320B-4E39-B8D0-6799-7DA5EDBF85D2";
+createNode joint -n "witch:rt_knee_jnt" -p "witch:rt_hip_jnt";
+	rename -uid "BB58E104-4AFE-6F6A-9D02-1B8444F5E78D";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
@@ -20038,8 +20037,8 @@ createNode joint -n "rt_knee_jnt" -p "rt_hip_jnt";
 		 -13.660399999999999 52.22920000000002 -1.6159499999999971 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ankle_jnt" -p "rt_knee_jnt";
-	rename -uid "6D554057-4B76-D8A5-E41D-79B41D6799F7";
+createNode joint -n "witch:rt_ankle_jnt" -p "witch:rt_knee_jnt";
+	rename -uid "BE9EBFEF-481A-E879-CE19-DB821CC59794";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
@@ -20053,8 +20052,8 @@ createNode joint -n "rt_ankle_jnt" -p "rt_knee_jnt";
 		 -16.001400000000004 19.943600000000004 -6.4107600000000016 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ball_jnt" -p "rt_ankle_jnt";
-	rename -uid "61896F52-4E7F-3397-974E-2591099D7FB8";
+createNode joint -n "witch:rt_ball_jnt" -p "witch:rt_ankle_jnt";
+	rename -uid "41D02018-4D73-8532-AC06-3886B034A61B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 4;
@@ -20068,8 +20067,8 @@ createNode joint -n "rt_ball_jnt" -p "rt_ankle_jnt";
 		 -17.630799999999997 7.5312299999999954 0.55041600000000024 1;
 	setAttr ".radi" 1.0493019462235624;
 	setAttr ".liw" yes;
-createNode joint -n "rt_toe_jnt" -p "rt_ball_jnt";
-	rename -uid "40C42425-4FED-3F5A-69E9-129F308F9A08";
+createNode joint -n "witch:rt_toe_jnt" -p "witch:rt_ball_jnt";
+	rename -uid "505B95D7-4F18-00B9-318D-DBBDADBD7D1B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 5;
@@ -20082,8 +20081,8 @@ createNode joint -n "rt_toe_jnt" -p "rt_ball_jnt";
 		 -19.383700000000001 -0.41416899999999757 9.5905599999999964 1;
 	setAttr ".radi" 1.0493019462235624;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ball_add_jnt" -p "rt_ball_jnt";
-	rename -uid "7162AD36-4250-3820-126C-0EB8DCC8D7E0";
+createNode joint -n "witch:rt_ball_add_jnt" -p "witch:rt_ball_jnt";
+	rename -uid "FB5A7724-480B-ACB3-2775-0499EE0F0697";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 5;
@@ -20096,8 +20095,8 @@ createNode joint -n "rt_ball_add_jnt" -p "rt_ball_jnt";
 		 -0.14549613352934807 0.7569482952573795 0.63707154498922403 0 0.97880522435790407 0.016328309761790984 0.20414141929063678 0
 		 -17.630799999999997 7.5312300000000008 0.55041600000000201 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ball_add_u_jnt" -p "rt_ball_add_jnt";
-	rename -uid "CB0F8A42-487A-798C-476A-858071A2A312";
+createNode joint -n "witch:rt_ball_add_u_jnt" -p "witch:rt_ball_add_jnt";
+	rename -uid "54E899F4-4CD7-975D-954D-5B82F7846DF8";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 6;
@@ -20108,8 +20107,8 @@ createNode joint -n "rt_ball_add_u_jnt" -p "rt_ball_add_jnt";
 		 -0.14549613352934807 0.7569482952573795 0.63707154498922403 0 0.97880522435790429 0.016328309761790987 0.20414141929063684 0
 		 -18.067300000000042 9.8020700000000005 2.4616299999999911 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ball_add_d_jnt" -p "rt_ball_add_jnt";
-	rename -uid "777C1477-4695-AB2C-7DB0-5E98A81E232C";
+createNode joint -n "witch:rt_ball_add_d_jnt" -p "witch:rt_ball_add_jnt";
+	rename -uid "5AF500CA-4F20-89C3-C663-85B82614871A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 6;
@@ -20120,8 +20119,8 @@ createNode joint -n "rt_ball_add_d_jnt" -p "rt_ball_add_jnt";
 		 -0.14549613352934807 0.7569482952573795 0.63707154498922403 0 0.97880522435790429 0.016328309761790987 0.20414141929063687 0
 		 -17.194299999999949 5.2603800000000014 -1.3607999999999887 1;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "rt_ball_add_jnt_orientConstraint1" -p "rt_ball_add_jnt";
-	rename -uid "0D030FF8-41C9-9048-F483-1B89ACCDDBC1";
+createNode orientConstraint -n "witch:rt_ball_add_jnt_orientConstraint1" -p "witch:rt_ball_add_jnt";
+	rename -uid "6B1D4565-4765-3DEA-153A-109D3B34DDDE";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_ankle_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "rt_ball_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -20143,8 +20142,8 @@ createNode orientConstraint -n "rt_ball_add_jnt_orientConstraint1" -p "rt_ball_a
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode joint -n "rt_ankle_add_jnt" -p "rt_ankle_jnt";
-	rename -uid "13F21110-4DD5-A789-83E9-D79DCDDC630D";
+createNode joint -n "witch:rt_ankle_add_jnt" -p "witch:rt_ankle_jnt";
+	rename -uid "A2D59FCD-46BC-2928-C4EC-538463F48615";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 4;
@@ -20156,8 +20155,8 @@ createNode joint -n "rt_ankle_add_jnt" -p "rt_ankle_jnt";
 		 -0.21588261192261887 0.02407566129173231 0.97612246178583206 0 0.97641715676698515 0.0074297068576411607 0.21576453700060674 0
 		 -16.001400000000004 19.9436 -6.4107600000000016 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ankle_add_f_jnt" -p "rt_ankle_add_jnt";
-	rename -uid "DD16E3EF-45CC-245C-4646-29A1768E9A4A";
+createNode joint -n "witch:rt_ankle_add_f_jnt" -p "witch:rt_ankle_add_jnt";
+	rename -uid "FFBA1776-43A9-26FC-1474-E7AEE20F32AA";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 5;
@@ -20169,8 +20168,8 @@ createNode joint -n "rt_ankle_add_f_jnt" -p "rt_ankle_add_jnt";
 		 -0.21588261192261887 0.02407566129173231 0.97612246178583206 0 0.97641715676698515 0.0074297068576411607 0.21576453700060674 0
 		 -16.649099999999997 20.015799999999999 -3.4824000000000011 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ankle_add_r_jnt" -p "rt_ankle_add_jnt";
-	rename -uid "36D9C6DA-4100-1718-5966-998E009AD4B7";
+createNode joint -n "witch:rt_ankle_add_r_jnt" -p "witch:rt_ankle_add_jnt";
+	rename -uid "D71E9ADF-42E4-B89A-5A21-12B5C5AD4AC6";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 5;
@@ -20182,8 +20181,8 @@ createNode joint -n "rt_ankle_add_r_jnt" -p "rt_ankle_add_jnt";
 		 -0.21588261192261887 0.02407566129173231 0.97612246178583206 0 0.97641715676698515 0.0074297068576411607 0.21576453700060674 0
 		 -13.072150246878495 19.965900378579079 -5.7634590057654691 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ankle_add_b_jnt" -p "rt_ankle_add_jnt";
-	rename -uid "98CF01B9-4911-8CA2-9433-889BA53D8EEE";
+createNode joint -n "witch:rt_ankle_add_b_jnt" -p "witch:rt_ankle_add_jnt";
+	rename -uid "D9B12F03-4D70-C088-C45D-CE870F086744";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 5;
@@ -20195,8 +20194,8 @@ createNode joint -n "rt_ankle_add_b_jnt" -p "rt_ankle_add_jnt";
 		 -0.21588261192261887 0.02407566129173231 0.97612246178583206 0 0.97641715676698515 0.0074297068576411607 0.21576453700060674 0
 		 -15.353798181328489 19.871399797178114 -9.3391382232010418 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ankle_add_l_jnt" -p "rt_ankle_add_jnt";
-	rename -uid "88464DF5-4285-0E52-BF10-B596A7F9C769";
+createNode joint -n "witch:rt_ankle_add_l_jnt" -p "witch:rt_ankle_add_jnt";
+	rename -uid "5355533B-4328-21AB-140A-2E84A6496C18";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 5;
@@ -20208,8 +20207,8 @@ createNode joint -n "rt_ankle_add_l_jnt" -p "rt_ankle_add_jnt";
 		 -0.21588261192261887 0.02407566129173231 0.97612246178583206 0 0.97641715676698515 0.0074297068576411607 0.21576453700060674 0
 		 -18.930652307313153 19.921300362900919 -7.0580494610716045 1;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "rt_ankle_add_jnt_orientConstraint1" -p "rt_ankle_add_jnt";
-	rename -uid "A7E8470C-4A1B-BF0A-C167-3085553E9790";
+createNode orientConstraint -n "witch:rt_ankle_add_jnt_orientConstraint1" -p "witch:rt_ankle_add_jnt";
+	rename -uid "F161BA0D-449C-953F-9B29-CDA9CFD021D3";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_knee_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "rt_ankle_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -20231,8 +20230,8 @@ createNode orientConstraint -n "rt_ankle_add_jnt_orientConstraint1" -p "rt_ankle
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode joint -n "rt_knee_add_jnt" -p "rt_knee_jnt";
-	rename -uid "C41C4FFD-49FF-CB48-DD30-D99079858559";
+createNode joint -n "witch:rt_knee_add_jnt" -p "witch:rt_knee_jnt";
+	rename -uid "8CBCA748-4EEA-C086-0CB0-02BEC40F5DBB";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
@@ -20244,8 +20243,8 @@ createNode joint -n "rt_knee_add_jnt" -p "rt_knee_jnt";
 		 0.015249543199964223 0.14580230671634273 -0.98919620843813671 0 0.99732115011066313 -0.073001558857332852 0.0046147531183628196 0
 		 -13.660400000000001 52.229199999999992 -1.6159500000000013 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_knee_add_b_jnt" -p "rt_knee_add_jnt";
-	rename -uid "1429E643-42C7-9F43-7A18-2A8906CEC622";
+createNode joint -n "witch:rt_knee_add_b_jnt" -p "witch:rt_knee_add_jnt";
+	rename -uid "F702E12D-42A7-B314-8663-EF82804DA88C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 4;
@@ -20256,8 +20255,8 @@ createNode joint -n "rt_knee_add_b_jnt" -p "rt_knee_add_jnt";
 		 0.015249543199964223 0.14580230671634273 -0.98919620843813671 0 0.99732115011066313 -0.073001558857332852 0.0046147531183628196 0
 		 -13.614589911374756 52.666689857069407 -4.5835254533913341 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_knee_add_f_jnt1" -p "rt_knee_add_jnt";
-	rename -uid "421BD4F0-4752-BFD3-E7B4-A090F89F8874";
+createNode joint -n "witch:rt_knee_add_f_jnt1" -p "witch:rt_knee_add_jnt";
+	rename -uid "836BB578-4D62-EBB8-9DF8-43955427A81C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 4;
@@ -20268,8 +20267,8 @@ createNode joint -n "rt_knee_add_f_jnt1" -p "rt_knee_add_jnt";
 		 0.015249543199964223 0.14580230671634273 -0.98919620843813671 0 0.99732115011066313 -0.073001558857332852 0.0046147531183628196 0
 		 -13.706148389660321 51.791796388885146 1.3516391167475359 1;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "rt_knee_add_jnt_orientConstraint1" -p "rt_knee_add_jnt";
-	rename -uid "644F3FF5-4F1A-54DB-77DE-4AA9F925ECF3";
+createNode orientConstraint -n "witch:rt_knee_add_jnt_orientConstraint1" -p "witch:rt_knee_add_jnt";
+	rename -uid "D4856863-49FD-10FD-A058-77B52D992E0E";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_hip_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "rt_knee_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -20290,8 +20289,8 @@ createNode orientConstraint -n "rt_knee_add_jnt_orientConstraint1" -p "rt_knee_a
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode joint -n "rt_hip_add_jnt" -p "rt_hip_jnt";
-	rename -uid "F579A48C-4047-27B4-19AC-0482F15BE146";
+createNode joint -n "witch:rt_hip_add_jnt" -p "witch:rt_hip_jnt";
+	rename -uid "2FB8B2DE-45F1-F234-6C68-F597033E75C2";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
@@ -20303,8 +20302,8 @@ createNode joint -n "rt_hip_add_jnt" -p "rt_hip_jnt";
 		 -0.014516625913450988 -0.13569793822002618 0.9906439002663483 0 0.99732115011066313 -0.073001558857332852 0.0046147531183628196 0
 		 -10.620599999999998 94.122400000000027 4.1671100000000045 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_hip_add_f_jnt" -p "rt_hip_add_jnt";
-	rename -uid "DB07BCD0-4AD8-98D1-91E7-13BE463B5F09";
+createNode joint -n "witch:rt_hip_add_f_jnt" -p "witch:rt_hip_add_jnt";
+	rename -uid "3213516B-432A-F747-27C6-15BB0CD17198";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
@@ -20316,8 +20315,8 @@ createNode joint -n "rt_hip_add_f_jnt" -p "rt_hip_add_jnt";
 		 -0.014516625913450988 -0.13569793822002618 0.9906439002663483 0 0.99732115011066313 -0.073001558857332852 0.0046147531183628196 0
 		 -10.664150590134911 93.715296367184479 7.1390403454734681 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_hip_add_b_jnt" -p "rt_hip_add_jnt";
-	rename -uid "4282110D-45E3-C16C-3200-D38DD49B049C";
+createNode joint -n "witch:rt_hip_add_b_jnt" -p "witch:rt_hip_add_jnt";
+	rename -uid "2331399A-4F31-F0B7-1949-B3AA5AD3438C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
@@ -20329,8 +20328,8 @@ createNode joint -n "rt_hip_add_b_jnt" -p "rt_hip_add_jnt";
 		 -0.014516625913450988 -0.13569793822002618 0.9906439002663483 0 0.99732115011066313 -0.073001558857332852 0.0046147531183628196 0
 		 -10.57709997721463 94.529500212992176 1.1951784450805616 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_hip_add_r_jnt" -p "rt_hip_add_jnt";
-	rename -uid "2412248E-43F2-A7DE-D1E4-9B88FF334E6C";
+createNode joint -n "witch:rt_hip_add_r_jnt" -p "witch:rt_hip_add_jnt";
+	rename -uid "A0908BBD-4918-0B6E-5ABA-BCB4125EC9BF";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
@@ -20342,8 +20341,8 @@ createNode joint -n "rt_hip_add_r_jnt" -p "rt_hip_add_jnt";
 		 -0.014516625913450988 -0.13569793822002618 0.9906439002663483 0 0.99732115011066313 -0.073001558857332852 0.0046147531183628196 0
 		 -13.612564005977557 94.341397365322393 4.1532701665496958 1;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "rt_hip_add_jnt_orientConstraint1" -p "rt_hip_add_jnt";
-	rename -uid "F3126092-46D7-1E33-BEA3-4BA44AC145E1";
+createNode orientConstraint -n "witch:rt_hip_add_jnt_orientConstraint1" -p "witch:rt_hip_add_jnt";
+	rename -uid "CF256E6A-40C7-59A7-AAC7-C4A316CD507E";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_hip_locatorW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "rt_hip_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -20364,8 +20363,8 @@ createNode orientConstraint -n "rt_hip_add_jnt_orientConstraint1" -p "rt_hip_add
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode joint -n "spine_jnt1" -p "skeleton";
-	rename -uid "EEE7EC54-4819-4276-9115-3AA1F2E1EB29";
+createNode joint -n "witch:spine_jnt1" -p "witch:skeleton";
+	rename -uid "3ECEDCCD-4A28-F825-2DBF-3A93E9C2A872";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 0 100.94172398180888 5.8588593159294007 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20375,16 +20374,16 @@ createNode joint -n "spine_jnt1" -p "skeleton";
 		 1 0 0 0 0 100.94172398180888 5.8588593159294007 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "spine_jnt2" -p "spine_jnt1";
-	rename -uid "56F1E15F-4294-46D8-DA1C-9DAFC0A060CB";
+createNode joint -n "witch:spine_jnt2" -p "witch:spine_jnt1";
+	rename -uid "34CF3F93-4E72-C8AF-2CB3-BA8D0941B5BE";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 9.0194071228799544 6.7091042520672772e-05 -8.0786153557887985e-06 ;
 	setAttr ".bps" -type "matrix" 0 0.98968830985327783 -0.14323773713572266 0 0 0.14323773713572263 0.98968830985327783 0
 		 1 0 0 0 -8.0786153557887985e-06 109.86813538309967 4.5670062485627358 1;
 	setAttr ".radi" 1.7792927620799435;
 	setAttr ".liw" yes;
-createNode joint -n "spine_jnt3" -p "spine_jnt2";
-	rename -uid "FC7A5D2B-4D3C-F8B0-A5EE-3C9312EF00CF";
+createNode joint -n "witch:spine_jnt3" -p "witch:spine_jnt2";
+	rename -uid "BE660D5D-4566-BEC5-BA48-099BDFA34154";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 7.2799858994792856 -2.8059934784607776e-06 9.6567071783405418e-07 ;
 	setAttr ".jo" -type "double3" 9.6162082947373547e-15 -1.7580019040120614e-15 3.1805546814635176e-15 ;
@@ -20392,8 +20391,8 @@ createNode joint -n "spine_jnt3" -p "spine_jnt2";
 		 1 0 0 0 -7.1129446379547443e-06 117.07305192178686 3.5242347648824115 1;
 	setAttr ".radi" 1.7792927620799435;
 	setAttr ".liw" yes;
-createNode joint -n "neck_jnt1" -p "spine_jnt3";
-	rename -uid "26C72E57-4BD7-9ED1-AF20-FC92CA6F5435";
+createNode joint -n "witch:neck_jnt1" -p "witch:spine_jnt3";
+	rename -uid "04AE4946-4941-25B4-E114-058B87BA3D8B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 18.234087867892953 -3.1343763581082271 1.6940658945086007e-21 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20403,8 +20402,8 @@ createNode joint -n "neck_jnt1" -p "spine_jnt3";
 		 1 0 0 0 -7.1129446379547427e-06 134.67015454861087 -2.1896303603487119 1;
 	setAttr ".radi" 0.8673566129207585;
 	setAttr ".liw" yes;
-createNode joint -n "head_jnt" -p "neck_jnt1";
-	rename -uid "64F16CA1-4FD1-E920-E799-B5B27EE90AC5";
+createNode joint -n "witch:head_jnt" -p "witch:neck_jnt1";
+	rename -uid "2F724FB3-485C-7E2C-F9BA-BFBB36EB6A76";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 8.4218835472231888 -2.4868995751603507e-14 9.1607121465320934e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20415,8 +20414,8 @@ createNode joint -n "head_jnt" -p "neck_jnt1";
 		 1 0 0 0 -7.1129446370386714e-06 142.88726907244612 -0.34378329594587598 1;
 	setAttr ".radi" 0.9374866218676754;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ear_ring_jnt" -p "head_jnt";
-	rename -uid "4C626E42-4CCE-8DCA-6A1D-96875BEBB5A5";
+createNode joint -n "witch:lf_ear_ring_jnt" -p "witch:head_jnt";
+	rename -uid "00335F96-490C-8894-4176-039D6FBC912C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 1.5429905742959988 2.6445008890619812 7.634264751770691 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20427,8 +20426,8 @@ createNode joint -n "lf_ear_ring_jnt" -p "head_jnt";
 		 7.6342576388260541 144.45582383213528 2.2856350485691879 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "jaw_jnt" -p "head_jnt";
-	rename -uid "1C5B327A-495C-8F35-17B7-EFAA8EBA4386";
+createNode joint -n "witch:jaw_jnt" -p "witch:head_jnt";
+	rename -uid "47FF0CCA-4D21-78AB-AE48-8795337FAA24";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 2.4201030190524477 3.2560162813793614 1.6418304406985649e-15 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20438,8 +20437,8 @@ createNode joint -n "jaw_jnt" -p "head_jnt";
 		 -1 1.2246467990549818e-16 -1.5041439770063205e-21 0 -7.1129446353968412e-06 145.33882329881649 2.888618678221289 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ear_ring_jnt" -p "head_jnt";
-	rename -uid "11306F17-4791-88E2-37CF-A0A5D36A7F8B";
+createNode joint -n "witch:rt_ear_ring_jnt" -p "witch:head_jnt";
+	rename -uid "28CD423B-43B5-375B-F8A2-C38A3F5B19B6";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 1.2318605326478576 2.5714262060206892 -7.634262887055363 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20450,8 +20449,8 @@ createNode joint -n "rt_ear_ring_jnt" -p "head_jnt";
 		 -7.6342699999999999 144.14400000000001 2.2155799999999992 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "hat_jnt1" -p "head_jnt";
-	rename -uid "A8C0B2F4-438D-11F0-8D04-A3B61AAB4931";
+createNode joint -n "witch:hat_jnt1" -p "witch:head_jnt";
+	rename -uid "ADFFACB0-4F61-B999-9B47-56A73F129856";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 15.361203122981209 0.71047274043948283 -0.37157854245353478 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20462,8 +20461,8 @@ createNode joint -n "hat_jnt1" -p "head_jnt";
 		 -0.37158565539817179 158.25463791844012 0.21773932298223941 1;
 	setAttr ".radi" 0.95173318615542024;
 	setAttr ".liw" yes;
-createNode joint -n "hat_jnt2" -p "hat_jnt1";
-	rename -uid "CAC76C66-4CAC-559A-6C3A-7296E1F0E354";
+createNode joint -n "witch:hat_jnt2" -p "witch:hat_jnt1";
+	rename -uid "CA0D4391-45AE-F2B2-7924-FC8B2E9EAB5C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 1;
 	setAttr ".t" -type "double3" 9.7335082656714889 5.6843418860808015e-14 1.4210854715202004e-14 ;
@@ -20475,8 +20474,8 @@ createNode joint -n "hat_jnt2" -p "hat_jnt1";
 		 0.32115723254968676 166.13552135536085 -5.4526192814414225 1;
 	setAttr ".radi" 1.0759283958138823;
 	setAttr ".liw" yes;
-createNode joint -n "hat_jnt3" -p "hat_jnt2";
-	rename -uid "8D0B5F3F-4401-E69E-3D03-B8A0BB5018A3";
+createNode joint -n "witch:hat_jnt3" -p "witch:hat_jnt2";
+	rename -uid "E62B2717-4A2D-563D-45B5-5ABA9B3148C7";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 2;
 	setAttr ".t" -type "double3" 12.13461565240182 1.1368683772161603e-13 -3.3750779948604759e-14 ;
@@ -20488,8 +20487,8 @@ createNode joint -n "hat_jnt3" -p "hat_jnt2";
 		 3.3555595464830805 173.79983891314998 -14.357647973257986 1;
 	setAttr ".radi" 0.84645935792781679;
 	setAttr ".liw" yes;
-createNode joint -n "hat_jnt4" -p "hat_jnt3";
-	rename -uid "B91AEB2C-4780-1BBD-020D-96A4826293E6";
+createNode joint -n "witch:hat_jnt4" -p "witch:hat_jnt3";
+	rename -uid "AC5D3DB9-4D00-EE71-C251-358AFA33D954";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 3;
 	setAttr ".t" -type "double3" 7.6982142532712103 -1.1368683772161603e-13 -3.5527136788005009e-14 ;
@@ -20500,8 +20499,8 @@ createNode joint -n "hat_jnt4" -p "hat_jnt3";
 		 6.6451845182320444 171.80166288287413 -21.02459350974954 1;
 	setAttr ".radi" 0.84645935792781679;
 	setAttr ".liw" yes;
-createNode joint -n "feather_bot_jnt1" -p "hat_jnt1";
-	rename -uid "48673977-4259-BCA3-C169-16B6D7CB1726";
+createNode joint -n "witch:feather_bot_jnt1" -p "witch:hat_jnt1";
+	rename -uid "EBDBD4B6-4390-7F0F-B53C-F99D9BD8D35F";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 1;
 	setAttr ".t" -type "double3" 2.6185603376502655 2.8885337018418937 -8.7408932980871938 ;
@@ -20514,8 +20513,8 @@ createNode joint -n "feather_bot_jnt1" -p "hat_jnt1";
 		 -8.7847226478644238 158.98767209819323 -4.286202025930586 1;
 	setAttr ".radi" 0.69125143054677718;
 	setAttr ".liw" yes;
-createNode joint -n "feather_bot_jnt2" -p "feather_bot_jnt1";
-	rename -uid "497452F5-44B3-A298-BAA7-64979F584ACD";
+createNode joint -n "witch:feather_bot_jnt2" -p "witch:feather_bot_jnt1";
+	rename -uid "D9445344-42F1-D286-8B1F-41BD04399A12";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 2;
 	setAttr ".t" -type "double3" 6.9801647957997304 -1.4210854715202004e-13 7.0776717819853729e-15 ;
@@ -20527,8 +20526,8 @@ createNode joint -n "feather_bot_jnt2" -p "feather_bot_jnt1";
 		 -10.228683476989026 160.62854315918332 -10.915321112331203 1;
 	setAttr ".radi" 0.93486622424308763;
 	setAttr ".liw" yes;
-createNode joint -n "feather_bot_jnt3" -p "feather_bot_jnt2";
-	rename -uid "8F688E91-42ED-99DC-0056-41B88C099665";
+createNode joint -n "witch:feather_bot_jnt3" -p "witch:feather_bot_jnt2";
+	rename -uid "07179020-4055-49C3-0219-27A9EDF9799C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 3;
 	setAttr ".t" -type "double3" 6.9860014180708561 1.1368683772161603e-13 -1.5987211554602254e-14 ;
@@ -20539,8 +20538,8 @@ createNode joint -n "feather_bot_jnt3" -p "feather_bot_jnt2";
 		 -9.9646403896305742 162.20621316888531 -17.715722159460199 1;
 	setAttr ".radi" 0.93486622424308763;
 	setAttr ".liw" yes;
-createNode joint -n "feather_top_jnt1" -p "hat_jnt1";
-	rename -uid "9CD77BC6-439E-076E-10E2-CAB29BA7F6DF";
+createNode joint -n "witch:feather_top_jnt1" -p "witch:hat_jnt1";
+	rename -uid "AEE312A1-4C72-DE0C-2DA3-D1A5F4E81EF6";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 1;
 	setAttr ".t" -type "double3" 2.7068256899156466 4.725214119847962 -8.117862584491732 ;
@@ -20552,8 +20551,8 @@ createNode joint -n "feather_top_jnt1" -p "hat_jnt1";
 		 -9.4424735119048009 160.16151149761507 -2.8866242804659419 1;
 	setAttr ".radi" 0.98078892688355535;
 	setAttr ".liw" yes;
-createNode joint -n "feather_top_jnt2" -p "feather_top_jnt1";
-	rename -uid "BA5004C4-4DE6-2848-34B4-21A1A3A18B8A";
+createNode joint -n "witch:feather_top_jnt2" -p "witch:feather_top_jnt1";
+	rename -uid "28F46B85-4173-A093-2317-ADA2519BFD66";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 2;
 	setAttr ".t" -type "double3" 10.295252586415458 2.8421709430404007e-14 7.1054273576010019e-15 ;
@@ -20564,8 +20563,8 @@ createNode joint -n "feather_top_jnt2" -p "feather_top_jnt1";
 		 -9.8677010621631176 166.47679147805883 -11.006269969607905 1;
 	setAttr ".radi" 0.98078892688355535;
 	setAttr ".liw" yes;
-createNode joint -n "lf_clavicle_jnt" -p "spine_jnt3";
-	rename -uid "82C79D4B-485B-4B8D-C1B1-B8A3517965DE";
+createNode joint -n "witch:lf_clavicle_jnt" -p "witch:spine_jnt3";
+	rename -uid "732E3DE1-4202-82F9-6B22-0AAFC217802C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 14.237831006972954 1.5161985993803277 1.1258773734220064 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20576,8 +20575,8 @@ createNode joint -n "lf_clavicle_jnt" -p "spine_jnt3";
 		 0.47944307489516047 -5.4123372450476381e-16 0.87757298154345753 0 -0.18756112097145228 -0.97689340786800627 0.10246997396293786 0
 		 1.1258702604773685 131.38124368347809 2.9854040989454016 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_shld_jnt" -p "lf_clavicle_jnt";
-	rename -uid "A3420F72-4CC4-067B-5384-A7B0DDBCFFE1";
+createNode joint -n "witch:lf_shld_jnt" -p "witch:lf_clavicle_jnt";
+	rename -uid "1E673C57-4C8B-822E-A9CF-BD8EE1FEB9ED";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 10.534460209669657 0.010869486182641275 -0.46301603285007786 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20589,8 +20588,8 @@ createNode joint -n "lf_shld_jnt" -p "lf_clavicle_jnt";
 		 10.249068177158442 129.58206145200492 -1.9864725057720496 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "lf_elbow_jnt" -p "lf_shld_jnt";
-	rename -uid "184E17D7-4B99-A488-1A1A-8683C2FE8214";
+createNode joint -n "witch:lf_elbow_jnt" -p "witch:lf_shld_jnt";
+	rename -uid "9B63A780-4DF8-F6BF-2CB4-DD813C314E71";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 21.758707920501607 -2.6922908347160046e-15 -5.6843418860808015e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20602,8 +20601,8 @@ createNode joint -n "lf_elbow_jnt" -p "lf_shld_jnt";
 		 23.934940489160883 112.9049979318799 -4.8173419437680316 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "lf_wrist_jnt" -p "lf_elbow_jnt";
-	rename -uid "20AEF8C3-4CA2-155D-EC24-7F8FA01A4999";
+createNode joint -n "witch:lf_wrist_jnt" -p "witch:lf_elbow_jnt";
+	rename -uid "836CCF48-4984-4CA4-775D-02A84E48FE59";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 26.929974492797825 2.4868995751603507e-14 -2.8421709430404007e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20615,8 +20614,8 @@ createNode joint -n "lf_wrist_jnt" -p "lf_elbow_jnt";
 		 41.729521045500803 93.311458380738287 0.14951187575598102 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "lf_thumb_jnt5" -p "lf_wrist_jnt";
-	rename -uid "A38EC96D-4CA6-4D99-D478-F18E8E9CCA1D";
+createNode joint -n "witch:lf_thumb_jnt5" -p "witch:lf_wrist_jnt";
+	rename -uid "5ABB6092-4FA6-C07F-E3F5-658EBBB67A15";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 3.5488947041155328 2.6842437207116046 1.0820649767187405 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20628,8 +20627,8 @@ createNode joint -n "lf_thumb_jnt5" -p "lf_wrist_jnt";
 		 42.986493412221499 89.611373243796365 2.5369944485933842 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_thumb_jnt2" -p "lf_thumb_jnt5";
-	rename -uid "CB14170B-4B98-960F-548C-0CBA231DCA48";
+createNode joint -n "witch:lf_thumb_jnt2" -p "witch:lf_thumb_jnt5";
+	rename -uid "294CD0EB-4A04-608F-96A9-0CBBA6374539";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 3.94317642501953 -0.10252172676291238 -0.3526804734485296 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20641,8 +20640,8 @@ createNode joint -n "lf_thumb_jnt2" -p "lf_thumb_jnt5";
 		 43.277028333335245 87.314439803187824 5.7499713810763673 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_thumb_jnt3" -p "lf_thumb_jnt2";
-	rename -uid "FB0545D2-4C0B-2F34-7B10-A78B68F5A364";
+createNode joint -n "witch:lf_thumb_jnt3" -p "witch:lf_thumb_jnt2";
+	rename -uid "532D1924-4C50-FC16-CF04-348B91DC92D0";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 3.8858417444376698 -0.0068623524905433442 0.079595920316755553 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20654,8 +20653,8 @@ createNode joint -n "lf_thumb_jnt3" -p "lf_thumb_jnt2";
 		 43.354738136400002 84.091887703148828 7.9214381236881586 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_thumb_jnt4" -p "lf_thumb_jnt3";
-	rename -uid "C211D92B-482A-B772-43BF-F8BD5BC68D77";
+createNode joint -n "witch:lf_thumb_jnt4" -p "witch:lf_thumb_jnt3";
+	rename -uid "22D70C3E-4BB5-E8EE-8D76-04AF6CB63AD6";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 3.3161953180606289 -1.4210854715202004e-14 1.0658141036401503e-13 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20665,8 +20664,8 @@ createNode joint -n "lf_thumb_jnt4" -p "lf_thumb_jnt3";
 		 43.427940572059015 81.262096338146264 9.6488852636891949 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_index_jnt1" -p "lf_wrist_jnt";
-	rename -uid "A8330153-45DB-6F7B-4634-53ADCF5EE344";
+createNode joint -n "witch:lf_index_jnt1" -p "witch:lf_wrist_jnt";
+	rename -uid "B5A7CDB2-4A8E-6884-1EAE-63BEB10A4B46";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 9.3446253673022177 3.5698457236383003 0.56698843485594352 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20678,8 +20677,8 @@ createNode joint -n "lf_index_jnt1" -p "lf_wrist_jnt";
 		 47.169078818259521 85.573512518435365 3.4544631159343355 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_index_jnt2" -p "lf_index_jnt1";
-	rename -uid "1A34C2A8-49AE-380D-1026-32B33067A6C0";
+createNode joint -n "witch:lf_index_jnt2" -p "witch:lf_index_jnt1";
+	rename -uid "6031E6F2-4457-4DAB-C2E9-4C9AB1E64FC2";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 2.7495232459031236 -9.7699626167013776e-15 -4.2632564145606011e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20691,8 +20690,8 @@ createNode joint -n "lf_index_jnt2" -p "lf_index_jnt1";
 		 48.93999819184188 83.503467786561956 3.8268036322301695 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_index_jnt3" -p "lf_index_jnt2";
-	rename -uid "FF9A4865-4836-9FBF-FA48-63B79A257579";
+createNode joint -n "witch:lf_index_jnt3" -p "witch:lf_index_jnt2";
+	rename -uid "90681A43-4C49-605F-D6FA-E481780D8122";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 2.8865361315475866 -9.7699626167013776e-15 -4.2632564145606011e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20704,8 +20703,8 @@ createNode joint -n "lf_index_jnt3" -p "lf_index_jnt2";
 		 50.516559616934011 81.11987898106517 4.2330662541283779 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_index_jnt4" -p "lf_index_jnt3";
-	rename -uid "ED74BF8B-4EFE-944B-32B9-2B89DFED0F91";
+createNode joint -n "witch:lf_index_jnt4" -p "witch:lf_index_jnt3";
+	rename -uid "1C204901-40C2-6DDB-1309-CF8876DC4465";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 2.9355850533999188 -3.5527136788005009e-15 5.6843418860808015e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20715,8 +20714,8 @@ createNode joint -n "lf_index_jnt4" -p "lf_index_jnt3";
 		 51.779959539697849 78.484231362754258 4.5066386814622037 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ltl_jnt1" -p "lf_wrist_jnt";
-	rename -uid "58BCC3FD-4CC6-3289-3D69-FE84CB73A4DA";
+createNode joint -n "witch:lf_ltl_jnt1" -p "witch:lf_wrist_jnt";
+	rename -uid "2BFBC3E5-4813-7B3D-1A23-079698E27891";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 8.2811695443527888 -3.0232333000708529 2.2384484331669086 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20728,8 +20727,8 @@ createNode joint -n "lf_ltl_jnt1" -p "lf_wrist_jnt";
 		 46.153353566499781 86.165808223766703 -3.3286700713601651 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ltl_jnt2" -p "lf_ltl_jnt1";
-	rename -uid "7D2B11C1-4098-67AB-F85C-E4B92C0CA109";
+createNode joint -n "witch:lf_ltl_jnt2" -p "witch:lf_ltl_jnt1";
+	rename -uid "16D40C46-42F7-A644-DBC1-F096DC7A0135";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 2.4225910803718733 -2.4868995751603507e-14 1.4210854715202004e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20741,8 +20740,8 @@ createNode joint -n "lf_ltl_jnt2" -p "lf_ltl_jnt1";
 		 47.416695853590809 84.152950431984308 -3.7991138176315542 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ltl_jnt3" -p "lf_ltl_jnt2";
-	rename -uid "16A435C3-46F9-E0A4-2A87-11B3C1A24135";
+createNode joint -n "witch:lf_ltl_jnt3" -p "witch:lf_ltl_jnt2";
+	rename -uid "CC36560B-4C65-1745-5DA2-D082732A819D";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 2.102513480317775 -3.5527136788005009e-15 5.6843418860808015e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20754,8 +20753,8 @@ createNode joint -n "lf_ltl_jnt3" -p "lf_ltl_jnt2";
 		 48.523686111409596 82.39863109278329 -4.1418953225549355 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ltl_jnt4" -p "lf_ltl_jnt3";
-	rename -uid "EA088065-4AEE-F021-992C-9CB3728FF0BD";
+createNode joint -n "witch:lf_ltl_jnt4" -p "witch:lf_ltl_jnt3";
+	rename -uid "FD87B0C7-4775-85B6-9E32-6E96110EE27E";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 2.9662789075323062 3.5527136788005009e-15 -1.1368683772161603e-13 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20765,8 +20764,8 @@ createNode joint -n "lf_ltl_jnt4" -p "lf_ltl_jnt3";
 		 49.846865511174258 79.777311646564542 -4.5622418393537458 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_middle_jnt1" -p "lf_wrist_jnt";
-	rename -uid "622DD4B2-4A5E-3ABE-3A7D-E2BFBB2E783B";
+createNode joint -n "witch:lf_middle_jnt1" -p "witch:lf_wrist_jnt";
+	rename -uid "AE5FEC24-449B-6F24-1003-1FBB8CF4917F";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 9.6455575069732653 1.2590657510720433 0.86886050145901095 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20778,8 +20777,8 @@ createNode joint -n "lf_middle_jnt1" -p "lf_wrist_jnt";
 		 47.47509900569635 85.474992637362391 1.1267955157796199 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_middle_jnt2" -p "lf_middle_jnt1";
-	rename -uid "7AC51184-4355-9547-499D-CC83B2560877";
+createNode joint -n "witch:lf_middle_jnt2" -p "witch:lf_middle_jnt1";
+	rename -uid "4CD5BB40-438A-195D-8107-038DA2515CE6";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 3.5776546714570756 -6.6613381477509392e-16 -9.9475983006414026e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20791,8 +20790,8 @@ createNode joint -n "lf_middle_jnt2" -p "lf_middle_jnt1";
 		 49.633527448199196 82.623346386228405 1.2212056062723797 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_middle_jnt3" -p "lf_middle_jnt2";
-	rename -uid "A185CE62-4B0F-3FA0-A9B5-B1B2DD345A7C";
+createNode joint -n "witch:lf_middle_jnt3" -p "witch:lf_middle_jnt2";
+	rename -uid "ED8CFA11-4A2C-EA48-6153-A0872E54FFE9";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 3.2559542098320122 -1.7763568394002505e-15 1.4210854715202004e-13 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20804,8 +20803,8 @@ createNode joint -n "lf_middle_jnt3" -p "lf_middle_jnt2";
 		 51.598435435309305 80.033676293927954 1.4055510205313277 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_middle_jnt4" -p "lf_middle_jnt3";
-	rename -uid "870E0DEE-4985-C0B4-3EF5-5487683BE283";
+createNode joint -n "witch:lf_middle_jnt4" -p "witch:lf_middle_jnt3";
+	rename -uid "91EC959C-4310-ABD9-55B5-F39389F102A4";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 3.3320385795116465 8.8817841970012523e-16 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20815,8 +20814,8 @@ createNode joint -n "lf_middle_jnt4" -p "lf_middle_jnt3";
 		 53.050710067567152 77.038979601518392 1.5642053880272464 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ring_jnt1" -p "lf_wrist_jnt";
-	rename -uid "A1B7FC07-4541-A93C-0FEC-FCA62E861CE2";
+createNode joint -n "witch:lf_ring_jnt1" -p "witch:lf_wrist_jnt";
+	rename -uid "CB3C419E-445D-6229-8CE5-BF82BCFC9C84";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 9.2587038206853975 -1.1178926177062785 1.3258584141942151 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20828,8 +20827,8 @@ createNode joint -n "lf_ring_jnt1" -p "lf_wrist_jnt";
 		 47.211584055754734 85.787774686034851 -1.2900539240758451 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ring_jnt2" -p "lf_ring_jnt1";
-	rename -uid "EA24C91E-443B-DF97-6F6E-959DB8880980";
+createNode joint -n "witch:lf_ring_jnt2" -p "witch:lf_ring_jnt1";
+	rename -uid "EF61BD6D-47D0-15DD-05A6-E2B3DA9078FC";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 3.2795675834930407 1.7763568394002505e-15 -1.4210854715202004e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20841,8 +20840,8 @@ createNode joint -n "lf_ring_jnt2" -p "lf_ring_jnt1";
 		 48.958191011722327 83.027313474067 -1.5812266791285754 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ring_jnt3" -p "lf_ring_jnt2";
-	rename -uid "880487D2-4F7D-243D-0882-5A9C1D35F993";
+createNode joint -n "witch:lf_ring_jnt3" -p "witch:lf_ring_jnt2";
+	rename -uid "16A37C3E-4C13-A8BC-0A36-3AA6309592FF";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 2.1025134803177181 1.7763568394002505e-15 -5.6843418860808015e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20854,8 +20853,8 @@ createNode joint -n "lf_ring_jnt3" -p "lf_ring_jnt2";
 		 50.068499078739393 81.246023653103123 -1.7028223409139005 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_ring_jnt4" -p "lf_ring_jnt3";
-	rename -uid "F3E00984-4887-82DD-64D1-63A9D2D9C0D9";
+createNode joint -n "witch:lf_ring_jnt4" -p "witch:lf_ring_jnt3";
+	rename -uid "3D7FE43D-4B58-E9F8-7503-21B13B54DC3F";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 3.4255955471179718 -7.3274719625260332e-15 9.9475983006414026e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20865,8 +20864,8 @@ createNode joint -n "lf_ring_jnt4" -p "lf_ring_jnt3";
 		 51.633431712631413 78.207136368380006 -1.9283323729799633 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "lf_wrist_add_jnt" -p "lf_wrist_jnt";
-	rename -uid "F81AE3BA-4961-6350-9AA2-978A1DCD7826";
+createNode joint -n "witch:lf_wrist_add_jnt" -p "witch:lf_wrist_jnt";
+	rename -uid "8CBFF03B-4922-94F4-7921-74B04E92C8FD";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 7.1054273576010019e-15 0 -1.4210854715202004e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20877,8 +20876,8 @@ createNode joint -n "lf_wrist_add_jnt" -p "lf_wrist_jnt";
 		 -0.13827214626445022 -0.13977093650710518 0.98048197274368554 0 -0.80537574502882836 -0.5603091335459276 -0.19345176190531593 0
 		 41.729521045500817 93.311458380738287 0.14951187575598374 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_wrist_add_b_jnt" -p "lf_wrist_add_jnt";
-	rename -uid "342F26D1-4664-7178-8931-269A78520115";
+createNode joint -n "witch:lf_wrist_add_b_jnt" -p "witch:lf_wrist_add_jnt";
+	rename -uid "DCAF644A-4D92-8160-C46B-F0B0770A70A3";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -20886,8 +20885,8 @@ createNode joint -n "lf_wrist_add_b_jnt" -p "lf_wrist_add_jnt";
 		 -0.13827214626445034 -0.13977093650710512 0.98048197274368565 0 -0.80537574502882858 -0.56030913354592748 -0.19345176190531593 0
 		 42.144337484294155 93.730771190259603 -2.7919340424750696 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_wrist_add_u_jnt" -p "lf_wrist_add_jnt";
-	rename -uid "DF476F1B-45BE-DEC2-AF88-828344E4FAB0";
+createNode joint -n "witch:lf_wrist_add_u_jnt" -p "witch:lf_wrist_add_jnt";
+	rename -uid "5F137ADD-4215-1612-1119-0BA27CFEF4D2";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 2.3502901014271771e-14 -5.6760152133961128e-15 -3 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20896,8 +20895,8 @@ createNode joint -n "lf_wrist_add_u_jnt" -p "lf_wrist_add_jnt";
 		 -0.13827214626445034 -0.13977093650710512 0.98048197274368565 0 -0.80537574502882858 -0.56030913354592748 -0.19345176190531593 0
 		 44.145648280587302 94.992385781376058 0.72986716147191966 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_wrist_add_f_jnt" -p "lf_wrist_add_jnt";
-	rename -uid "EEA7E6FD-4585-489D-EC99-06B4FD78FC70";
+createNode joint -n "witch:lf_wrist_add_f_jnt" -p "witch:lf_wrist_add_jnt";
+	rename -uid "81EFC6FD-46D0-102E-6747-5FBD99DE6EC5";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -7.1054273576010019e-15 3 1.4210854715202004e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20906,8 +20905,8 @@ createNode joint -n "lf_wrist_add_f_jnt" -p "lf_wrist_add_jnt";
 		 -0.13827214626445034 -0.13977093650710512 0.98048197274368565 0 -0.80537574502882858 -0.56030913354592748 -0.19345176190531593 0
 		 41.314704606707437 92.892145571216972 3.090957793987033 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_wrist_add_d_jnt" -p "lf_wrist_add_jnt";
-	rename -uid "B4273E57-42AE-2088-F479-AD98E8AE59F1";
+createNode joint -n "witch:lf_wrist_add_d_jnt" -p "witch:lf_wrist_add_jnt";
+	rename -uid "EB38389E-48DA-538E-62BF-0D8CD737720B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -2.1316282072803006e-14 3.5527136788005009e-15 3 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20916,8 +20915,8 @@ createNode joint -n "lf_wrist_add_d_jnt" -p "lf_wrist_add_jnt";
 		 -0.13827214626445034 -0.13977093650710512 0.98048197274368565 0 -0.80537574502882858 -0.56030913354592748 -0.19345176190531593 0
 		 39.313393810414304 91.630530980100517 -0.43084340995996512 1;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "lf_wrist_add_jnt_orientConstraint1" -p "lf_wrist_add_jnt";
-	rename -uid "8F26BA89-4361-60B3-362F-6D8C017C8663";
+createNode orientConstraint -n "witch:lf_wrist_add_jnt_orientConstraint1" -p "witch:lf_wrist_add_jnt";
+	rename -uid "880C6CC5-4869-AD87-0EAB-39AF8A39582A";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_elbow_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "lf_wrist_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -20939,8 +20938,8 @@ createNode orientConstraint -n "lf_wrist_add_jnt_orientConstraint1" -p "lf_wrist
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode orientConstraint -n "lf_wrist_jnt_orientConstraint1" -p "lf_wrist_jnt";
-	rename -uid "8376F324-41B5-2D37-300C-D1950B980AC1";
+createNode orientConstraint -n "witch:lf_wrist_jnt_orientConstraint1" -p "witch:lf_wrist_jnt";
+	rename -uid "DAE06A7E-47E5-2F38-D3B0-A69EAD1C0CF9";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_wrist_IK_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "lf_wrist_FK_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -20959,8 +20958,8 @@ createNode orientConstraint -n "lf_wrist_jnt_orientConstraint1" -p "lf_wrist_jnt
 	setAttr ".rsrr" -type "double3" 3.1060104311167156e-18 0 0 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode joint -n "lf_elbow_add_jnt" -p "lf_elbow_jnt";
-	rename -uid "7BD62235-4572-81FE-F7DF-589274B36069";
+createNode joint -n "witch:lf_elbow_add_jnt" -p "witch:lf_elbow_jnt";
+	rename -uid "D3D037BE-4456-E823-4B97-40B0D2B5E874";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -1.4210854715202004e-14 0 2.8421709430404007e-14 ;
 	setAttr ".s" -type "double3" 1 1 0.99999999999999978 ;
@@ -20971,8 +20970,8 @@ createNode joint -n "lf_elbow_add_jnt" -p "lf_elbow_jnt";
 		 -0.0055058261475642023 0.24101737692496839 0.97050518282935549 0 -0.75056624241928072 -0.64229839112766141 0.15525170690017645 0
 		 23.934940489160851 112.90499793187989 -4.8173419437680298 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_elbow_add_b_jnt" -p "lf_elbow_add_jnt";
-	rename -uid "C9FDC4D0-44EA-6165-80AE-72B9A6AF9E74";
+createNode joint -n "witch:lf_elbow_add_b_jnt" -p "witch:lf_elbow_add_jnt";
+	rename -uid "511FAF82-466B-8B63-4FEB-3CB0874D4854";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -1.4210854715202004e-14 -2.9999999999999929 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20981,8 +20980,8 @@ createNode joint -n "lf_elbow_add_b_jnt" -p "lf_elbow_add_jnt";
 		 -0.0055058261475641745 0.24101737692496844 0.97050518282935561 0 -0.75056624241928116 -0.64229839112766141 0.15525170690017653 0
 		 23.951457967603531 112.181945801105 -7.7288574922560977 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_elbow_add_f_jnt" -p "lf_elbow_add_jnt";
-	rename -uid "869A8544-4316-201C-314D-29ABED3D6144";
+createNode joint -n "witch:lf_elbow_add_f_jnt" -p "witch:lf_elbow_add_jnt";
+	rename -uid "2CD74148-4EDD-4AEA-0B61-F488580E0835";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -5.9952043329758453e-15 3.0000000000000036 1.3161347012236067e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -20991,8 +20990,8 @@ createNode joint -n "lf_elbow_add_f_jnt" -p "lf_elbow_add_jnt";
 		 -0.0055058261475641745 0.24101737692496844 0.97050518282935561 0 -0.75056624241928116 -0.64229839112766141 0.15525170690017653 0
 		 23.91842301071814 113.62805006265479 -1.9058263952799637 1;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "lf_elbow_add_jnt_orientConstraint1" -p "lf_elbow_add_jnt";
-	rename -uid "24BBFABC-453C-29A6-7A46-6BB877FAB02E";
+createNode orientConstraint -n "witch:lf_elbow_add_jnt_orientConstraint1" -p "witch:lf_elbow_add_jnt";
+	rename -uid "43CB4CC8-4E3A-AE8B-8A47-B59AA75AD9D7";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_shld_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "lf_elbow_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -21013,8 +21012,8 @@ createNode orientConstraint -n "lf_elbow_add_jnt_orientConstraint1" -p "lf_elbow
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode orientConstraint -n "lf_elbow_jnt_orientConstraint1" -p "lf_elbow_jnt";
-	rename -uid "AB407EEE-4FBE-B9C7-3C03-16AE2C946A09";
+createNode orientConstraint -n "witch:lf_elbow_jnt_orientConstraint1" -p "witch:lf_elbow_jnt";
+	rename -uid "E572A482-4658-2D9F-8EE0-BA84330DD927";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_elbow_IK_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "lf_elbow_FK_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -21032,8 +21031,8 @@ createNode orientConstraint -n "lf_elbow_jnt_orientConstraint1" -p "lf_elbow_jnt
 	setAttr -s 2 ".tg";
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode joint -n "lf_shld_add_jnt" -p "lf_shld_jnt";
-	rename -uid "BD1DAAD9-49AC-1D18-39FB-DB99DF12ED11";
+createNode joint -n "witch:lf_shld_add_jnt" -p "witch:lf_shld_jnt";
+	rename -uid "D2A9CEA6-4E78-743B-FEF1-77B7C4AACDA7";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 0 4.4408920985006262e-16 -1.4210854715202004e-14 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 1 0.99999999999999989 ;
@@ -21044,8 +21043,8 @@ createNode joint -n "lf_shld_add_jnt" -p "lf_shld_jnt";
 		 0.20255823457911284 6.5225602696727947e-16 0.97927021888965515 0 -0.32488616618293176 -0.94336257375775823 0.067201439390047371 0
 		 10.249068177158453 129.58206145200492 -1.9864725057720451 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_shld_add_u_jnt" -p "lf_shld_add_jnt";
-	rename -uid "F6428E8A-4D24-FC46-F9DE-35BBA8905F6E";
+createNode joint -n "witch:lf_shld_add_u_jnt" -p "witch:lf_shld_add_jnt";
+	rename -uid "0364E45A-4FDD-461F-E0C5-03A5FB967DAC";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -7.1054273576010019e-15 3.8857805861880479e-16 -3.0000000000000142 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21054,8 +21053,8 @@ createNode joint -n "lf_shld_add_u_jnt" -p "lf_shld_add_jnt";
 		 0.20255823457911282 6.3837823915946501e-16 0.97927021888965526 0 -0.32488616618293215 -0.94336257375775845 0.067201439390047454 0
 		 11.223726675707248 132.41214917327821 -2.1880768239421928 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_shld_add_f_jnt" -p "lf_shld_add_jnt";
-	rename -uid "FB5F2CF1-4990-F83A-8EC9-719EC14F103F";
+createNode joint -n "witch:lf_shld_add_f_jnt" -p "witch:lf_shld_add_jnt";
+	rename -uid "81DF462A-496F-8439-B043-E78D760C9C10";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -7.1054273576010019e-15 2.9999999999999996 -5.6843418860808015e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21064,8 +21063,8 @@ createNode joint -n "lf_shld_add_f_jnt" -p "lf_shld_add_jnt";
 		 0.20255823457911298 1.1102230246251565e-15 0.97927021888965504 0 -0.32488616618293237 -0.94336257375775823 0.067201439390047968 0
 		 10.856742880895792 129.58206145200498 0.95133815089691875 1;
 	setAttr ".liw" yes;
-createNode joint -n "lf_shld_add_d_jnt" -p "lf_shld_add_jnt";
-	rename -uid "B3991E3A-4D39-FE0D-F1FC-A98F7C5418C6";
+createNode joint -n "witch:lf_shld_add_d_jnt" -p "witch:lf_shld_add_jnt";
+	rename -uid "6CEED834-4371-1008-C2A7-FBB99B4E6C05";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -5.7454041524351914e-15 -4.163336342344337e-15 2.9999999999999716 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21074,8 +21073,8 @@ createNode joint -n "lf_shld_add_d_jnt" -p "lf_shld_add_jnt";
 		 0.20255823457911282 6.3837823915946501e-16 0.97927021888965526 0 -0.32488616618293215 -0.94336257375775845 0.067201439390047454 0
 		 9.2744096786096595 126.75197373073168 -1.7848681876019139 1;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "lf_shld_add_jnt_orientConstraint1" -p "lf_shld_add_jnt";
-	rename -uid "BBBB12FB-4918-3F9C-6BEF-67BB857D99BE";
+createNode orientConstraint -n "witch:lf_shld_add_jnt_orientConstraint1" -p "witch:lf_shld_add_jnt";
+	rename -uid "DCA409AF-4E65-06EE-FB39-7793B3AE02CC";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_clavicle_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "lf_shld_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -21097,8 +21096,8 @@ createNode orientConstraint -n "lf_shld_add_jnt_orientConstraint1" -p "lf_shld_a
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode orientConstraint -n "lf_shld_jnt_orientConstraint1" -p "lf_shld_jnt";
-	rename -uid "4F0D69F1-4E5A-E5F6-2437-90B2A0243F70";
+createNode orientConstraint -n "witch:lf_shld_jnt_orientConstraint1" -p "witch:lf_shld_jnt";
+	rename -uid "818C1663-4EA4-EF76-AF8E-97953468166D";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_shld_IK_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "lf_shld_FK_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -21118,8 +21117,8 @@ createNode orientConstraint -n "lf_shld_jnt_orientConstraint1" -p "lf_shld_jnt";
 	setAttr ".rsrr" -type "double3" 1.5902773407317584e-15 -6.3611093629270335e-15 3.1805546814635168e-15 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode joint -n "lf_shld_FK_jnt" -p "lf_clavicle_jnt";
-	rename -uid "035900EC-4DF4-5B0F-266B-A7A56560369E";
+createNode joint -n "witch:lf_shld_FK_jnt" -p "witch:lf_clavicle_jnt";
+	rename -uid "7B0C7A7E-4AAA-473A-0695-3EB5D89331BD";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 10.534460209669657 0.010869486182641275 -0.46301603285007786 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21131,8 +21130,8 @@ createNode joint -n "lf_shld_FK_jnt" -p "lf_clavicle_jnt";
 		 10.249068177158442 129.58206145200492 -1.9864725057720434 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "lf_elbow_FK_jnt" -p "lf_shld_FK_jnt";
-	rename -uid "497A637C-439C-D367-C9CC-AB82B5257F8B";
+createNode joint -n "witch:lf_elbow_FK_jnt" -p "witch:lf_shld_FK_jnt";
+	rename -uid "30441B7E-4B79-626B-63B7-EDAFF93C4AA4";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 21.758707920501607 -2.6922908347160046e-15 -5.6843418860808015e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21143,8 +21142,8 @@ createNode joint -n "lf_elbow_FK_jnt" -p "lf_shld_FK_jnt";
 		 -0.0055058261475641745 0.24101737692496844 0.97050518282935561 0 -0.75056624241928116 -0.64229839112766141 0.15525170690017653 0
 		 23.93494048916088 112.9049979318799 -4.8173419437680316 1;
 	setAttr ".radi" 2;
-createNode joint -n "lf_wrist_FK_jnt" -p "lf_elbow_FK_jnt";
-	rename -uid "A7A8B493-45FE-35BC-EC02-D4BD4EDA99F4";
+createNode joint -n "witch:lf_wrist_FK_jnt" -p "witch:lf_elbow_FK_jnt";
+	rename -uid "AAF526FE-4AD0-7EDA-73D7-C8ABDFEFF40D";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 26.929974492797825 2.4868995751603507e-14 -2.8421709430404007e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21156,8 +21155,8 @@ createNode joint -n "lf_wrist_FK_jnt" -p "lf_elbow_FK_jnt";
 		 41.729521045500789 93.311458380738287 0.14951187575598102 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "lf_wrist_FK_jnt_orientConstraint1" -p "lf_wrist_FK_jnt";
-	rename -uid "141A73D7-437C-0DA5-ABD1-D1B84742B68D";
+createNode orientConstraint -n "witch:lf_wrist_FK_jnt_orientConstraint1" -p "witch:lf_wrist_FK_jnt";
+	rename -uid "6195203C-4152-17DE-491C-E497476D4CB0";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_wrist_FK_ctrlW0" -dv 1 -min 0 
 		-at "double";
 	setAttr -k on ".nds";
@@ -21175,8 +21174,8 @@ createNode orientConstraint -n "lf_wrist_FK_jnt_orientConstraint1" -p "lf_wrist_
 	setAttr ".lr" -type "double3" 3.6911827963391051e-14 -1.7890620083232277e-14 -9.1875788552432511e-15 ;
 	setAttr ".rsrr" -type "double3" 3.488360315187183e-14 1.1927080055488259e-15 -2.2456455416973857e-14 ;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "lf_elbow_FK_jnt_orientConstraint1" -p "lf_elbow_FK_jnt";
-	rename -uid "38AB2381-44AD-20DF-6B8E-6D8AF0F817F1";
+createNode orientConstraint -n "witch:lf_elbow_FK_jnt_orientConstraint1" -p "witch:lf_elbow_FK_jnt";
+	rename -uid "D102096A-4538-FF74-685E-9FB72C97132F";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_elbow_FK_ctrlW0" -dv 1 -min 0 
 		-at "double";
 	setAttr -k on ".nds";
@@ -21193,8 +21192,8 @@ createNode orientConstraint -n "lf_elbow_FK_jnt_orientConstraint1" -p "lf_elbow_
 	setAttr ".erp" yes;
 	setAttr ".lr" -type "double3" 0 0 1.5902773407317584e-14 ;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "lf_shld_FK_jnt_orientConstraint1" -p "lf_shld_FK_jnt";
-	rename -uid "9F1C81C1-498B-F2A2-01BE-379C9FAB4C1A";
+createNode orientConstraint -n "witch:lf_shld_FK_jnt_orientConstraint1" -p "witch:lf_shld_FK_jnt";
+	rename -uid "BE447347-44B0-8640-D5DE-749E0E9A368B";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_shld_FK_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -21211,11 +21210,11 @@ createNode orientConstraint -n "lf_shld_FK_jnt_orientConstraint1" -p "lf_shld_FK
 	setAttr ".lr" -type "double3" 1.4312496066585827e-14 -8.1501713712502651e-15 -2.7829853462805787e-15 ;
 	setAttr ".rsrr" -type "double3" 1.4312496066585827e-14 -8.1501713712502651e-15 -2.7829853462805787e-15 ;
 	setAttr -k on ".w0";
-createNode joint -n "lf_shld_IK_jnt" -p "lf_clavicle_jnt";
-	rename -uid "CE69EA9C-4EDE-1E96-6658-81B927A0040F";
+createNode joint -n "witch:lf_shld_IK_jnt" -p "witch:lf_clavicle_jnt";
+	rename -uid "DF28CB34-4D31-7EF2-8667-BDB36B87FC55";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 10.534460209669657 0.010869486182641275 -0.46301603285007786 ;
-	setAttr ".r" -type "double3" -8.4042335024980053e-07 -1.5039300300003703e-07 1.102995421576376e-15 ;
+	setAttr ".r" -type "double3" -1.3813980474485543e-14 -2.4719993873614422e-15 2.5187832340055072e-29 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -21225,8 +21224,8 @@ createNode joint -n "lf_shld_IK_jnt" -p "lf_clavicle_jnt";
 		 10.249068177158442 129.58206145200492 -1.9864725057720434 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "lf_elbow_IK_jnt" -p "lf_shld_IK_jnt";
-	rename -uid "F3476513-4E2F-DAEE-7497-06934232690D";
+createNode joint -n "witch:lf_elbow_IK_jnt" -p "witch:lf_shld_IK_jnt";
+	rename -uid "FEB586E7-4A15-7A12-CEDE-4B917294E4AF";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 21.758707920501607 -2.6922908347160046e-15 -5.6843418860808015e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21237,8 +21236,8 @@ createNode joint -n "lf_elbow_IK_jnt" -p "lf_shld_IK_jnt";
 		 -0.0055058261475641745 0.24101737692496844 0.97050518282935561 0 -0.75056624241928116 -0.64229839112766141 0.15525170690017653 0
 		 23.93494048916088 112.9049979318799 -4.8173419437680316 1;
 	setAttr ".radi" 2;
-createNode joint -n "lf_wrist_IK_jnt" -p "lf_elbow_IK_jnt";
-	rename -uid "DE1BBA61-45B2-22C8-BB90-9D8302116F9F";
+createNode joint -n "witch:lf_wrist_IK_jnt" -p "witch:lf_elbow_IK_jnt";
+	rename -uid "1533B681-40C2-F54F-D272-91A7578AA7C8";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 26.929974492797825 2.4868995751603507e-14 -2.8421709430404007e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21250,11 +21249,10 @@ createNode joint -n "lf_wrist_IK_jnt" -p "lf_elbow_IK_jnt";
 		 41.729521045500789 93.311458380738287 0.14951187575598102 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "lf_wrist_IK_jnt_orientConstraint1" -p "lf_wrist_IK_jnt";
-	rename -uid "AE009D54-4D38-47A8-F594-2FBD682347CF";
+createNode orientConstraint -n "witch:lf_wrist_IK_jnt_orientConstraint1" -p "witch:lf_wrist_IK_jnt";
+	rename -uid "70CEFEAC-489E-70DB-11D8-598FFE9B922A";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_wrist_FK_ctrlW0" -dv 1 -min 0 
 		-at "double";
-	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "lf_arm_IK_ctrlW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
 	setAttr -k off ".tx";
@@ -21267,17 +21265,15 @@ createNode orientConstraint -n "lf_wrist_IK_jnt_orientConstraint1" -p "lf_wrist_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 6.2317802575148349e-14 -6.5258321330038309e-14 4.4035762342456781 ;
-	setAttr ".o" -type "double3" 0 0 -4.4035762342456781 ;
+	setAttr ".lr" -type "double3" 3.6911827963391051e-14 -1.7890620083232277e-14 -9.1875788552432511e-15 ;
+	setAttr ".rsrr" -type "double3" 3.6911827963391051e-14 -1.7890620083232277e-14 -9.1875788552432511e-15 ;
 	setAttr -k on ".w0";
-	setAttr -k on ".w1";
-createNode ikEffector -n "effector1" -p "lf_elbow_IK_jnt";
-	rename -uid "889B5F14-40F0-B9AA-5D62-BD834AFB4E41";
+createNode ikEffector -n "witch:effector1" -p "witch:lf_elbow_IK_jnt";
+	rename -uid "D6C9C8A7-43DD-0770-EFF5-4F9CAA9B3525";
 	setAttr ".v" no;
 	setAttr ".hd" yes;
-createNode orientConstraint -n "lf_elbow_IK_jnt_orientConstraint1" -p "lf_elbow_IK_jnt";
-	rename -uid "F94226DE-49C4-768C-9F3B-2A809D2BF9EC";
+createNode orientConstraint -n "witch:lf_elbow_IK_jnt_orientConstraint1" -p "witch:lf_elbow_IK_jnt";
+	rename -uid "9C9CFE9A-4EC2-B985-225D-1A808C1BD2B2";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_elbow_FK_ctrlW0" -dv 1 -min 0 
 		-at "double";
 	setAttr -k on ".nds";
@@ -21292,11 +21288,11 @@ createNode orientConstraint -n "lf_elbow_IK_jnt_orientConstraint1" -p "lf_elbow_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 4.8473910168582623 -0.69613634912500655 -0.029465527632325947 ;
+	setAttr ".lr" -type "double3" 0 0 1.5902773407317584e-14 ;
 	setAttr ".rsrr" -type "double3" 0 0 1.5902773407317584e-14 ;
 	setAttr -k on ".w0";
-createNode joint -n "lf_chest_jnt" -p "spine_jnt3";
-	rename -uid "860081E5-429E-A3D1-6615-06AB48A76927";
+createNode joint -n "witch:lf_chest_jnt" -p "witch:spine_jnt3";
+	rename -uid "73579A0C-4FA0-1980-8298-2DBA3074D02D";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 4.1887862271364753 7.0309570774752395 7.1657400958812003 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21307,8 +21303,8 @@ createNode joint -n "lf_chest_jnt" -p "spine_jnt3";
 		 7.1657329829365626 122.22574306493419 9.8826985310195141 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_chest_jnt" -p "spine_jnt3";
-	rename -uid "18007CA1-48BC-FB17-CE27-E3B6628F82B8";
+createNode joint -n "witch:rt_chest_jnt" -p "witch:spine_jnt3";
+	rename -uid "A265E596-4B90-C065-0137-EFBA6973E636";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 4.1890403023540586 7.0309953341054729 -7.1657428870553623 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21319,8 +21315,8 @@ createNode joint -n "rt_chest_jnt" -p "spine_jnt3";
 		 -7.1657500000000001 122.226 9.8826999999999998 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "front_ribbon" -p "spine_jnt3";
-	rename -uid "F88DCCEC-40E4-D3AC-28AA-949C4FDA3F8A";
+createNode joint -n "witch:front_ribbon" -p "witch:spine_jnt3";
+	rename -uid "DF7E827E-447E-2698-C67F-8094BF1E8975";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -1.3558567147682794 12.688957358108322 -0.35204283384033519 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21328,8 +21324,8 @@ createNode joint -n "front_ribbon" -p "spine_jnt3";
 	setAttr ".jo" -type "double3" -81.764756260810913 -90 0 ;
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.35204994678497314 117.54871391993174 16.276557374132636 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_clavicle_jnt" -p "spine_jnt3";
-	rename -uid "6098988E-42B5-31CA-2ABF-1BB71F99449A";
+createNode joint -n "witch:rt_clavicle_jnt" -p "witch:spine_jnt3";
+	rename -uid "CA532F35-44FC-4E7B-B6B5-9482704D66E8";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 14.237590423407028 1.5161596380320006 -1.125872887055362 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21340,8 +21336,8 @@ createNode joint -n "rt_clavicle_jnt" -p "spine_jnt3";
 		 0.47944307489516069 1.0963452368173421e-15 -0.87757298154345742 0 -0.18756112097145294 0.97689340786800638 -0.10246997396293757 0
 		 -1.12588 131.381 2.9854000000000012 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_shld_jnt" -p "rt_clavicle_jnt";
-	rename -uid "F7563D17-4F9C-35F2-F130-11B803F6068A";
+createNode joint -n "witch:rt_shld_jnt" -p "witch:rt_clavicle_jnt";
+	rename -uid "E9B67621-49AE-A787-B094-6D85C55E2DB5";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -10.534437100374529 -0.010885869998557673 0.46319751876174564 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21353,8 +21349,8 @@ createNode joint -n "rt_shld_jnt" -p "rt_clavicle_jnt";
 		 -10.249099999999997 129.58199999999999 -1.9864700000000006 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "rt_elbow_jnt" -p "rt_shld_jnt";
-	rename -uid "43281D77-4D83-F196-3791-3A8E4483BE80";
+createNode joint -n "witch:rt_elbow_jnt" -p "witch:rt_shld_jnt";
+	rename -uid "F51EF612-4644-2A52-6910-46B2F78D1FDA";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -21.758676723621562 -5.0580781074394121e-06 6.1667802540910088e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21366,8 +21362,8 @@ createNode joint -n "rt_elbow_jnt" -p "rt_shld_jnt";
 		 -23.934999999999988 112.90500000000002 -4.8173399999999997 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "rt_wrist_jnt" -p "rt_elbow_jnt";
-	rename -uid "E2F18C3D-49EB-C64D-87B7-F09DC9789425";
+createNode joint -n "witch:rt_wrist_jnt" -p "witch:rt_elbow_jnt";
+	rename -uid "1C39096D-4364-5C61-E95A-BBBE77C5C587";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -26.929892151448158 -8.2101841307746781e-06 -3.4776750482023999e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21378,8 +21374,9 @@ createNode joint -n "rt_wrist_jnt" -p "rt_elbow_jnt";
 		 -0.13827214626445011 0.13977093650710454 -0.98048197274368565 0 -0.72128833944478576 0.66420521235872343 0.19640409175087609 0
 		 -41.729500000000016 93.311499999999995 0.14951200000000231 1;
 	setAttr ".radi" 2;
-createNode joint -n "rt_thumb_jnt5" -p "rt_wrist_jnt";
-	rename -uid "27C4C3AA-46F8-D16C-1201-3089B4446171";
+	setAttr ".liw" yes;
+createNode joint -n "witch:rt_thumb_jnt5" -p "witch:rt_wrist_jnt";
+	rename -uid "E5C719DF-42AF-0D59-2D8B-56AFE89F9ADE";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -3.5489244146064962 -2.6842374936376707 -1.082055815401219 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21391,8 +21388,8 @@ createNode joint -n "rt_thumb_jnt5" -p "rt_wrist_jnt";
 		 -42.986500000000007 89.611400000000003 2.5369900000000007 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_thumb_jnt2" -p "rt_thumb_jnt5";
-	rename -uid "0F3298A9-433D-5A22-3071-FE9DD7A328A2";
+createNode joint -n "witch:rt_thumb_jnt2" -p "witch:rt_thumb_jnt5";
+	rename -uid "F8C3A47E-4F29-0964-A371-34A949819BD3";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -3.943220781534535 0.10250395157107306 0.35262237363293991 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21404,8 +21401,8 @@ createNode joint -n "rt_thumb_jnt2" -p "rt_thumb_jnt5";
 		 -43.276999999999994 87.314399999999992 5.7499699999999976 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_thumb_jnt3" -p "rt_thumb_jnt2";
-	rename -uid "33ACA7AE-4EFB-06E3-0732-7CA41D6B8361";
+createNode joint -n "witch:rt_thumb_jnt3" -p "witch:rt_thumb_jnt2";
+	rename -uid "B0CF4A3B-4F81-8BA1-9798-0A8A388F5F4C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -3.8858027440711354 0.0069519727628701844 -0.079559758320613128 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21417,8 +21414,8 @@ createNode joint -n "rt_thumb_jnt3" -p "rt_thumb_jnt2";
 		 -43.35479999999999 84.091899999999981 7.9214400000000076 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_thumb_jnt4" -p "rt_thumb_jnt3";
-	rename -uid "4FFB9691-4F98-052D-D132-6D87D6113396";
+createNode joint -n "witch:rt_thumb_jnt4" -p "witch:rt_thumb_jnt3";
+	rename -uid "6A221F31-46DB-0CAC-DD26-008DF056F127";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -3.3162041225607197 -2.7352798923629962e-06 -1.916828530568182e-06 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21429,8 +21426,8 @@ createNode joint -n "rt_thumb_jnt4" -p "rt_thumb_jnt3";
 		 43.427940572059015 81.262096338146264 9.6488852636891949 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_index_jnt1" -p "rt_wrist_jnt";
-	rename -uid "748647E9-4182-CCCA-A99D-5580E9C25DCE";
+createNode joint -n "witch:rt_index_jnt1" -p "witch:rt_wrist_jnt";
+	rename -uid "245326A5-41D0-96E2-30E8-BBB476C31BCE";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -9.3446938126667192 -3.5698442747271706 -0.5669945717640843 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21442,8 +21439,8 @@ createNode joint -n "rt_index_jnt1" -p "rt_wrist_jnt";
 		 -47.1691 85.573499999999996 3.454460000000001 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_index_jnt2" -p "rt_index_jnt1";
-	rename -uid "4D03001C-4EDF-E61A-F66A-CE83FA746C41";
+createNode joint -n "witch:rt_index_jnt2" -p "witch:rt_index_jnt1";
+	rename -uid "14523378-4656-7D42-CBC2-D3AE15BE4B22";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -2.749477020336812 -3.4809438522742653e-06 1.5087173537153831e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21455,8 +21452,8 @@ createNode joint -n "rt_index_jnt2" -p "rt_index_jnt1";
 		 -48.939999999999991 83.503500000000003 3.8268000000000022 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_index_jnt3" -p "rt_index_jnt2";
-	rename -uid "34C82581-4A96-D6E1-DAAF-CA9F26E22BE0";
+createNode joint -n "witch:rt_index_jnt3" -p "witch:rt_index_jnt2";
+	rename -uid "C92B1B73-4798-6FCB-36AE-D79D62E7EB5A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -2.8865674827059209 1.6411417718131815e-06 2.6118735306113194e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21468,8 +21465,8 @@ createNode joint -n "rt_index_jnt3" -p "rt_index_jnt2";
 		 -50.516600000000011 81.119900000000001 4.2330700000000032 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_index_jnt4" -p "rt_index_jnt3";
-	rename -uid "5AB0C07C-47B5-E1D0-7529-8FA42F48E214";
+createNode joint -n "witch:rt_index_jnt4" -p "witch:rt_index_jnt3";
+	rename -uid "50716C7F-4D86-9BBB-940C-F6BA5571B10C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -2.9356318901292724 1.6899841259743198e-06 -2.3520289246903303e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21479,8 +21476,8 @@ createNode joint -n "rt_index_jnt4" -p "rt_index_jnt3";
 		 51.779959539697849 78.484231362754258 4.5066386814622037 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ltl_jnt1" -p "rt_wrist_jnt";
-	rename -uid "4C79E137-490D-B580-5A36-E498E717B361";
+createNode joint -n "witch:rt_ltl_jnt1" -p "witch:rt_wrist_jnt";
+	rename -uid "32F3CB1C-4A4A-705C-7319-EA88D5256B6C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -8.2812519454375533 3.0232357157820644 -2.2384328777362015 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21492,8 +21489,8 @@ createNode joint -n "rt_ltl_jnt1" -p "rt_wrist_jnt";
 		 -46.153399999999998 86.16579999999999 -3.3286700000000029 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ltl_jnt2" -p "rt_ltl_jnt1";
-	rename -uid "8AD6499A-4C80-44D3-941B-B28079BF3F5E";
+createNode joint -n "witch:rt_ltl_jnt2" -p "witch:rt_ltl_jnt1";
+	rename -uid "1E4A5E29-4784-5353-C15C-C6BB6189764B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -2.4225202833970343 1.1246175050771967e-05 -1.8532759753497885e-06 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21505,8 +21502,8 @@ createNode joint -n "rt_ltl_jnt2" -p "rt_ltl_jnt1";
 		 -47.41670000000002 84.15300000000002 -3.799110000000014 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ltl_jnt3" -p "rt_ltl_jnt2";
-	rename -uid "CF441527-45C7-03D9-C903-098110732AE8";
+createNode joint -n "witch:rt_ltl_jnt3" -p "witch:rt_ltl_jnt2";
+	rename -uid "2EDD41EF-4918-E4B0-57D5-C7B0A0A24DFC";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -2.1025872973257691 6.7525228324427644e-06 -3.4332108640455772e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21518,8 +21515,8 @@ createNode joint -n "rt_ltl_jnt3" -p "rt_ltl_jnt2";
 		 -48.523699999999998 82.398600000000016 -4.1419000000000015 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ltl_jnt4" -p "rt_ltl_jnt3";
-	rename -uid "2D2DF1DA-4B19-0275-9A64-8F94F966FB1E";
+createNode joint -n "witch:rt_ltl_jnt4" -p "witch:rt_ltl_jnt3";
+	rename -uid "F1C4D76E-4A8A-C198-07BC-C898F7DEE72F";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -2.9662699885267827 -1.2306461663058599e-05 2.4778945373782335e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21529,8 +21526,8 @@ createNode joint -n "rt_ltl_jnt4" -p "rt_ltl_jnt3";
 		 49.846865511174258 79.777311646564542 -4.5622418393537458 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_middle_jnt1" -p "rt_wrist_jnt";
-	rename -uid "9A913DB9-475F-B8DC-69AE-12BE1940361A";
+createNode joint -n "witch:rt_middle_jnt1" -p "witch:rt_wrist_jnt";
+	rename -uid "D5B61E2F-4693-0847-2009-3D8AB655088C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -9.6455975830525844 -1.2590717665396305 -0.86886650151616607 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21542,8 +21539,8 @@ createNode joint -n "rt_middle_jnt1" -p "rt_wrist_jnt";
 		 -47.475099999999998 85.47499999999998 1.126799999999998 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_middle_jnt2" -p "rt_middle_jnt1";
-	rename -uid "6C4CB464-4D30-9AED-1127-5AB37AB2CE51";
+createNode joint -n "witch:rt_middle_jnt2" -p "witch:rt_middle_jnt1";
+	rename -uid "4712A2E3-4815-76FF-DB1F-15AE86688133";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -3.5776803511579232 -1.1524860428213657e-06 -5.5110339175712397e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21555,8 +21552,8 @@ createNode joint -n "rt_middle_jnt2" -p "rt_middle_jnt1";
 		 -49.633499999999991 82.623299999999986 1.2212099999999992 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_middle_jnt3" -p "rt_middle_jnt2";
-	rename -uid "3BA2D9C3-42BC-1E6B-CF24-F68A29D3D979";
+createNode joint -n "witch:rt_middle_jnt3" -p "witch:rt_middle_jnt2";
+	rename -uid "6A074C4A-461B-F63B-000E-C6B3E5D94087";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -3.2558933342939582 3.3398932448580609e-06 3.5903379782098455e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21568,8 +21565,8 @@ createNode joint -n "rt_middle_jnt3" -p "rt_middle_jnt2";
 		 -51.598400000000005 80.033699999999996 1.4055500000000005 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_middle_jnt4" -p "rt_middle_jnt3";
-	rename -uid "0A12710D-4B35-65A3-E689-F9804C65F1BA";
+createNode joint -n "witch:rt_middle_jnt4" -p "witch:rt_middle_jnt3";
+	rename -uid "A8A5D9ED-4186-6FB7-23E4-F7BF14FD0B2B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -3.3320528769991355 -3.0892713693830842e-06 2.1730758206217615e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21579,8 +21576,8 @@ createNode joint -n "rt_middle_jnt4" -p "rt_middle_jnt3";
 		 53.050710067567152 77.038979601518392 1.5642053880272464 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ring_jnt1" -p "rt_wrist_jnt";
-	rename -uid "3A44EFA8-4509-1B84-1286-7DA01EDB68C8";
+createNode joint -n "witch:rt_ring_jnt1" -p "witch:rt_wrist_jnt";
+	rename -uid "EEE82B19-418B-84CE-9CFB-AB84E76D3436";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -9.2587408653392629 1.1178917276846896 -1.3258418176821607 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21592,8 +21589,8 @@ createNode joint -n "rt_ring_jnt1" -p "rt_wrist_jnt";
 		 -47.21159999999999 85.78779999999999 -1.2900500000000052 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ring_jnt2" -p "rt_ring_jnt1";
-	rename -uid "7F374DDE-4E7A-15EA-7C5F-3A8CD281AD86";
+createNode joint -n "witch:rt_ring_jnt2" -p "witch:rt_ring_jnt1";
+	rename -uid "BCB4540B-4ACD-876D-0A80-0D9049029890";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -3.2795971706400238 7.8048080611736737e-06 -2.586642395385752e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21605,8 +21602,8 @@ createNode joint -n "rt_ring_jnt2" -p "rt_ring_jnt1";
 		 -48.958199999999998 83.027299999999983 -1.5812300000000006 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ring_jnt3" -p "rt_ring_jnt2";
-	rename -uid "06ED19CA-48D1-EEE8-C0DE-7F8B81F50F52";
+createNode joint -n "witch:rt_ring_jnt3" -p "witch:rt_ring_jnt2";
+	rename -uid "5D018FFF-41D2-13F2-6195-CEADFA7BFF9E";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -2.1025175166726839 -4.4323317371919302e-06 -1.2837742247029382e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21618,8 +21615,8 @@ createNode joint -n "rt_ring_jnt3" -p "rt_ring_jnt2";
 		 -50.068499999999993 81.245999999999995 -1.7028200000000004 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ring_jnt4" -p "rt_ring_jnt3";
-	rename -uid "07B04161-44BC-388B-F2D9-74AA7B868FA8";
+createNode joint -n "witch:rt_ring_jnt4" -p "witch:rt_ring_jnt3";
+	rename -uid "15BEA407-41E0-352A-2903-50ADCEBF4D1E";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -3.4255919165724578 3.0188250699225705e-06 -3.4703833264870809e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21629,8 +21626,8 @@ createNode joint -n "rt_ring_jnt4" -p "rt_ring_jnt3";
 		 51.633431712631413 78.207136368380006 -1.9283323729799633 1;
 	setAttr ".radi" 0.5;
 	setAttr ".liw" yes;
-createNode joint -n "rt_wrist_add_jnt" -p "rt_wrist_jnt";
-	rename -uid "F70353C7-4872-90D2-D2A7-3C89F729B871";
+createNode joint -n "witch:rt_wrist_add_jnt" -p "witch:rt_wrist_jnt";
+	rename -uid "DE38BBE4-42F6-B6E1-99DE-FAA0AD9D5855";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -1.4210854715202004e-14 -3.5527136788005009e-15 -2.8421709430404007e-14 ;
 	setAttr ".s" -type "double3" 1 1 0.99999999999999978 ;
@@ -21641,47 +21638,48 @@ createNode joint -n "rt_wrist_add_jnt" -p "rt_wrist_jnt";
 		 -0.13826697448296668 0.13976937961842048 -0.98048292401673609 0 -0.80537577892080803 0.56031083795559333 0.19344668412046295 0
 		 -41.729500000000002 93.311499999999967 0.14951200000000009 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_wrist_add_b_jnt" -p "rt_wrist_add_jnt";
-	rename -uid "8BCBB798-4F46-6954-6973-F9AA9D321498";
+createNode joint -n "witch:rt_wrist_add_b_jnt" -p "witch:rt_wrist_add_jnt";
+	rename -uid "37D647D4-47D6-79DA-B692-6796E1D81C4C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".t" -type "double3" -8.4474312700422161e-07 2.9999982534490797 -1.9658708524161739e-05 ;
+	setAttr ".t" -type "double3" -8.4474312700422161e-07 3 -1.9658708524161739e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".bps" -type "matrix" 0.57641193853587158 0.81640538960306908 0.03509297565581676 0
 		 -0.13827214626445086 0.1397709365071052 -0.98048197274368543 0 -0.80537574502882858 0.56030913354592748 0.19345176190531618 0
 		 -42.144301093066346 93.730801104914519 -2.7919377508874081 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_wrist_add_u_jnt" -p "rt_wrist_add_jnt";
-	rename -uid "06515A41-44FC-7168-9CEB-F29714C494BD";
+createNode joint -n "witch:rt_wrist_add_u_jnt" -p "witch:rt_wrist_add_jnt";
+	rename -uid "0F0635C9-4AEA-0762-BF31-D68F1352CE5F";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".t" -type "double3" -6.6814259866987413e-06 -7.3155273234704055e-06 3.000006297284771 ;
+	setAttr ".t" -type "double3" -6.6814259866987413e-06 -7.3155273234704055e-06 3 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".bps" -type "matrix" 0.5764131317857254 0.8164044863856289 0.035094388645327754 0
 		 -0.13826697448296668 0.13976937961842048 -0.98048292401673609 0 -0.80537577892080825 0.56031083795559344 0.19344668412046301 0
 		 -44.145630176528272 94.992426036633887 0.72985899063044946 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_wrist_add_f_jnt" -p "rt_wrist_add_jnt";
-	rename -uid "838485AF-4637-BC5E-87F0-0CB71F61925B";
+createNode joint -n "witch:rt_wrist_add_f_jnt" -p "witch:rt_wrist_add_jnt";
+	rename -uid "B28B770F-43AA-D2EC-FE22-4AA49D7E120B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".t" -type "double3" -8.0585238002583992e-05 -3.0000019960605746 0 ;
+	setAttr ".t" -type "double3" -8.0585238002583992e-05 -3 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".bps" -type "matrix" 0.5764131317857254 0.8164044863856289 0.035094388645327754 0
 		 -0.13826697448296668 0.13976937961842048 -0.98048292401673609 0 -0.80537577892080825 0.56031083795559344 0.19344668412046301 0
 		 -41.314745526940513 92.892126070994863 3.0909579439605461 1;
-createNode joint -n "rt_wrist_add_d_jnt" -p "rt_wrist_add_jnt";
-	rename -uid "2E0C1492-4B68-6F20-B819-F2A59FE0AEBD";
+	setAttr ".liw" yes;
+createNode joint -n "witch:rt_wrist_add_d_jnt" -p "witch:rt_wrist_add_jnt";
+	rename -uid "C1A8E0D4-467F-7711-CD76-3AAB123FB1A9";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".t" -type "double3" -7.4959112978945086e-05 -6.6615663207869602e-06 -2.9999958018199115 ;
+	setAttr ".t" -type "double3" -7.4959112978945086e-05 -6.6615663207869602e-06 -3 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".bps" -type "matrix" 0.5764131317857254 0.8164044863856289 0.035094388645327754 0
 		 -0.13826697448296668 0.13976937961842048 -0.98048292401673609 0 -0.80537577892080825 0.56031083795559344 0.19344668412046301 0
 		 -39.313414949580029 91.630505358094069 -0.4308241514536072 1;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "rt_wrist_add_jnt_orientConstraint1" -p "rt_wrist_add_jnt";
-	rename -uid "3D0E6165-40C9-987B-31D6-5DA857EEA1EB";
+createNode orientConstraint -n "witch:rt_wrist_add_jnt_orientConstraint1" -p "witch:rt_wrist_add_jnt";
+	rename -uid "0B85CE9A-4490-726C-716F-5DB1B0372351";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_elbow_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "rt_wrist_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -21697,14 +21695,14 @@ createNode orientConstraint -n "rt_wrist_add_jnt_orientConstraint1" -p "rt_wrist
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -9.4375318095069769 7.9866719831975521 5.6423655463422957 ;
+	setAttr ".lr" -type "double3" -9.4367233722416248 7.9865991322928256 5.6423892913020985 ;
 	setAttr ".o" -type "double3" 10.249 -6.908 -6.923 ;
 	setAttr ".rsrr" -type "double3" -9.436723372241655 7.9865991322928158 5.642389291302095 ;
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode orientConstraint -n "rt_wrist_jnt_orientConstraint1" -p "rt_wrist_jnt";
-	rename -uid "DE78782C-4835-5E8D-3DD6-DE8B6A4EFA72";
+createNode orientConstraint -n "witch:rt_wrist_jnt_orientConstraint1" -p "witch:rt_wrist_jnt";
+	rename -uid "2CE4CEC6-44D4-81C4-5688-F998075171AB";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_wrist_IK_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "rt_wrist_FK_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -21720,12 +21718,12 @@ createNode orientConstraint -n "rt_wrist_jnt_orientConstraint1" -p "rt_wrist_jnt
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 0.001612347230671487 9.4458992734831849e-05 3.2435948172374854e-05 ;
+	setAttr ".lr" -type "double3" 2.0499668845370331e-16 -2.7829853462805776e-15 -4.4167468330479696e-15 ;
 	setAttr ".rsrr" -type "double3" 3.506685776730772e-15 -3.975693351829396e-15 -5.7958154644637911e-15 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode joint -n "rt_elbow_add_jnt" -p "rt_elbow_jnt";
-	rename -uid "94912FFC-4902-D4DC-4841-729C48F33266";
+createNode joint -n "witch:rt_elbow_add_jnt" -p "witch:rt_elbow_jnt";
+	rename -uid "202A3E53-453F-7C9C-0605-F08364CB087A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 6.6077227629079971e-05 -5.5058261949625376e-07 -7.505662424023285e-05 ;
 	setAttr ".s" -type "double3" 1 1 0.99999999999999978 ;
@@ -21737,8 +21735,8 @@ createNode joint -n "rt_elbow_add_jnt" -p "rt_elbow_jnt";
 		 -0.0055054623920043578 -0.24101697639517994 -0.97050528436128336 0 -0.75056624241928105 0.64229839112766129 -0.15525170690017623 0
 		 -23.934900000000013 112.90499999999999 -4.8173399999999882 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_elbow_add_b_jnt" -p "rt_elbow_add_jnt";
-	rename -uid "E02AD4A1-4008-85FF-4351-8D8E89D12A7F";
+createNode joint -n "witch:rt_elbow_add_b_jnt" -p "witch:rt_elbow_add_jnt";
+	rename -uid "415C2D47-4B61-D199-9E4A-178FCBBB67AF";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -1.5777961095864157e-05 3 9.6112512864010569e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21747,8 +21745,8 @@ createNode joint -n "rt_elbow_add_b_jnt" -p "rt_elbow_add_jnt";
 		 -0.0055054623920043578 -0.24101697639517994 -0.97050528436128336 0 -0.75056624241928127 0.64229839112766141 -0.15525170690017626 0
 		 -23.951498908736209 112.18200120158414 -7.7288603046034119 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_elbow_add_f_jnt" -p "rt_elbow_add_jnt";
-	rename -uid "CF1101A8-4012-5261-6165-898848271B48";
+createNode joint -n "witch:rt_elbow_add_f_jnt" -p "witch:rt_elbow_add_jnt";
+	rename -uid "F14D1021-4FE3-7D20-B5C0-849D80C3883E";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -4.8454907656036994e-05 -3 -1.9503371547102688e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21757,8 +21755,8 @@ createNode joint -n "rt_elbow_add_f_jnt" -p "rt_elbow_add_jnt";
 		 -0.0055054623920043578 -0.24101697639517994 -0.97050528436128336 0 -0.75056624241928127 0.64229839112766141 -0.15525170690017626 0
 		 -23.918400991911497 113.62800314768143 -1.9058121821862728 1;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "rt_elbow_add_jnt_orientConstraint1" -p "rt_elbow_add_jnt";
-	rename -uid "2F883674-4169-84CC-C076-5AB43D0109E6";
+createNode orientConstraint -n "witch:rt_elbow_add_jnt_orientConstraint1" -p "witch:rt_elbow_add_jnt";
+	rename -uid "B1794533-447E-C71C-F864-049FE0D63F4E";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_shld_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "rt_elbow_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -21774,14 +21772,14 @@ createNode orientConstraint -n "rt_elbow_add_jnt_orientConstraint1" -p "rt_elbow
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 7.931472907487614e-16 8.8572231196703764e-17 -9.1640315413631406 ;
+	setAttr ".lr" -type "double3" -4.2814661768032954e-16 5.3423379415207514e-15 -9.1640315413631352 ;
 	setAttr ".o" -type "double3" 0 0 9.164 ;
 	setAttr ".rsrr" -type "double3" 5.3134377997438194e-14 1.3830561926243016e-14 -9.1640315413630962 ;
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode orientConstraint -n "rt_elbow_jnt_orientConstraint1" -p "rt_elbow_jnt";
-	rename -uid "657B0752-4C2D-A6C7-F9D9-1599381E8E43";
+createNode orientConstraint -n "witch:rt_elbow_jnt_orientConstraint1" -p "witch:rt_elbow_jnt";
+	rename -uid "28A2AAC2-49C8-10AE-1EF6-9385DD8F72FE";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_elbow_IK_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "rt_elbow_FK_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -21797,12 +21795,12 @@ createNode orientConstraint -n "rt_elbow_jnt_orientConstraint1" -p "rt_elbow_jnt
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 0 0 2.2263882770244617e-14 ;
+	setAttr ".lr" -type "double3" 0 0 1.2722218725854067e-14 ;
 	setAttr ".rsrr" -type "double3" 0 0 1.5902773407317578e-14 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode joint -n "rt_shld_add_jnt" -p "rt_shld_jnt";
-	rename -uid "794247AE-462E-3848-28AB-E6BF974808F4";
+createNode joint -n "witch:rt_shld_add_jnt" -p "witch:rt_shld_jnt";
+	rename -uid "FCE68E57-4795-15F1-9773-9ABDFA0C255A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 2.8421709430404007e-14 2.4702462297909733e-15 -1.4210854715202004e-14 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 1 0.99999999999999989 ;
@@ -21813,8 +21811,8 @@ createNode joint -n "rt_shld_add_jnt" -p "rt_shld_jnt";
 		 0.20256086194679362 1.690719571960491e-06 -0.97926967542373811 0 -0.32488120579460239 0.94336440642281483 -0.067199693570545657 0
 		 -10.249099999999968 129.58199999999999 -1.9864699999999971 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_shld_add_u_jnt" -p "rt_shld_add_jnt";
-	rename -uid "6C46403A-4530-2A18-4322-598F862B80FB";
+createNode joint -n "witch:rt_shld_add_u_jnt" -p "witch:rt_shld_add_jnt";
+	rename -uid "8C5674ED-450B-1664-EFFC-03A9D2460AB3";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 2.3852922986122849e-05 1.7413409537925251e-05 3 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21823,8 +21821,8 @@ createNode joint -n "rt_shld_add_u_jnt" -p "rt_shld_add_jnt";
 		 0.20256086194679362 1.690719571960491e-06 -0.97926967542373811 0 -0.32488120579460245 0.94336440642281505 -0.067199693570545671 0
 		 -11.223685119264207 132.41200549771452 -2.1880747626279318 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_shld_add_f_jnt" -p "rt_shld_add_jnt";
-	rename -uid "7460ED58-4382-F23F-B59B-EE9C2C137A36";
+createNode joint -n "witch:rt_shld_add_f_jnt" -p "witch:rt_shld_add_jnt";
+	rename -uid "880AF3FF-4A8F-3A7F-DC39-858244FCEA22";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 6.8504174222994152e-05 -2.9999822665460485 -2.4091678852755649e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21833,8 +21831,8 @@ createNode joint -n "rt_shld_add_f_jnt" -p "rt_shld_add_jnt";
 		 0.19949567076561728 -0.036485379628618864 -0.97921922694518826 0 -0.25236376916200853 0.96368442221850314 -0.087320458013768976 0
 		 -10.847512531900241 129.691450397159 0.95118495882182774 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_shld_add_d_jnt" -p "rt_shld_add_jnt";
-	rename -uid "34A4AF3D-45CF-B9AB-40D4-4BBFBF138494";
+createNode joint -n "witch:rt_shld_add_d_jnt" -p "witch:rt_shld_add_jnt";
+	rename -uid "AFFEDC3A-4498-EBF7-B19D-0B93D9374D72";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 5.737883714829195e-05 1.0609533764471824e-05 -3 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21843,8 +21841,8 @@ createNode joint -n "rt_shld_add_d_jnt" -p "rt_shld_add_jnt";
 		 0.20256086194679362 1.690719571960491e-06 -0.97926967542373811 0 -0.32488120579460245 0.94336440642281505 -0.067199693570545671 0
 		 -9.2744248807088638 126.7519945018572 -1.7848752371305887 1;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "rt_shld_add_jnt_orientConstraint1" -p "rt_shld_add_jnt";
-	rename -uid "C30AA557-4909-B1C8-7BA4-6898967270F7";
+createNode orientConstraint -n "witch:rt_shld_add_jnt_orientConstraint1" -p "witch:rt_shld_add_jnt";
+	rename -uid "FC46459F-4165-4768-B676-C3BF6027776F";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_clavicle_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -21858,13 +21856,13 @@ createNode orientConstraint -n "rt_shld_add_jnt_orientConstraint1" -p "rt_shld_a
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -5.5861462547529621 6.2223733804437664 -16.659074597496669 ;
+	setAttr ".lr" -type "double3" -5.5873824126604879 6.2217086167317994 -16.660019494204224 ;
 	setAttr ".o" -type "double3" 3.252 11.677 8.648 ;
 	setAttr ".rsrr" -type "double3" 47.353154093633606 178.48751162317055 14.798186844398005 ;
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "rt_shld_jnt_orientConstraint1" -p "rt_shld_jnt";
-	rename -uid "57D39730-4185-DE4D-7A07-F9A0EA503D96";
+createNode orientConstraint -n "witch:rt_shld_jnt_orientConstraint1" -p "witch:rt_shld_jnt";
+	rename -uid "3CB49BF8-4601-82B2-C0F1-0BB9AB94DB30";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_shld_IK_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "rt_shld_FK_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -21880,12 +21878,12 @@ createNode orientConstraint -n "rt_shld_jnt_orientConstraint1" -p "rt_shld_jnt";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -0.0015901770778923535 -0.00028456099342740463 7.6582669294530893e-15 ;
-	setAttr ".rsrr" -type "double3" 1.2722218725854064e-14 -1.3517357396219944e-14 4.7708320221952728e-15 ;
+	setAttr ".lr" -type "double3" 8.7465253740246703e-15 -1.3716142063811415e-14 1.1927080055488178e-15 ;
+	setAttr ".rsrr" -type "double3" 1.1927080055488186e-14 -1.3716142063811414e-14 1.5902773407317566e-15 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode joint -n "rt_shld_FK_jnt" -p "rt_clavicle_jnt";
-	rename -uid "0DE459B0-4521-E15C-08A9-32A64A9F7C9A";
+createNode joint -n "witch:rt_shld_FK_jnt" -p "witch:rt_clavicle_jnt";
+	rename -uid "0958BDB2-40C5-C262-D64D-D2AF554D54A6";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -10.534437100374529 -0.010885869998557673 0.46319751876174564 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21897,8 +21895,8 @@ createNode joint -n "rt_shld_FK_jnt" -p "rt_clavicle_jnt";
 		 -10.249099999999997 129.58199999999999 -1.9864700000000006 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "rt_elbow_FK_jnt" -p "rt_shld_FK_jnt";
-	rename -uid "2ED2F557-4206-8C05-CD4E-919AD065BFE2";
+createNode joint -n "witch:rt_elbow_FK_jnt" -p "witch:rt_shld_FK_jnt";
+	rename -uid "E92F71C9-4664-9DE6-6E4F-5081D806B933";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -21.758676723621562 -5.0580781074394121e-06 6.1667802540910088e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21910,8 +21908,8 @@ createNode joint -n "rt_elbow_FK_jnt" -p "rt_shld_FK_jnt";
 		 -23.934999999999988 112.90500000000002 -4.8173399999999997 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "rt_wrist_FK_jnt" -p "rt_elbow_FK_jnt";
-	rename -uid "EDD1E8C8-468D-5BC6-376E-8096A541912F";
+createNode joint -n "witch:rt_wrist_FK_jnt" -p "witch:rt_elbow_FK_jnt";
+	rename -uid "BEBA2DDD-4C08-8573-14E3-9982162214CE";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -26.929892151448158 -8.2101841307746781e-06 -3.4776750482023999e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -21923,8 +21921,8 @@ createNode joint -n "rt_wrist_FK_jnt" -p "rt_elbow_FK_jnt";
 		 -41.729500000000016 93.311499999999995 0.14951200000000231 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "rt_wrist_FK_jnt_orientConstraint1" -p "rt_wrist_FK_jnt";
-	rename -uid "7C18BE7A-47EC-6077-770E-4FB3A37BF63B";
+createNode orientConstraint -n "witch:rt_wrist_FK_jnt_orientConstraint1" -p "witch:rt_wrist_FK_jnt";
+	rename -uid "D3CA5686-43B3-2F64-DF91-818FA2EF4903";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_wrist_FK_ctrlW0" -dv 1 -min 0 
 		-at "double";
 	setAttr -k on ".nds";
@@ -21943,8 +21941,8 @@ createNode orientConstraint -n "rt_wrist_FK_jnt_orientConstraint1" -p "rt_wrist_
 	setAttr ".rsrr" -type "double3" -1.1995412284972755e-14 -1.0734372049939372e-14 
 		-1.1492238595131847e-14 ;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "rt_elbow_FK_jnt_orientConstraint1" -p "rt_elbow_FK_jnt";
-	rename -uid "8E5F294C-4843-E880-CE82-04B950BBBDF8";
+createNode orientConstraint -n "witch:rt_elbow_FK_jnt_orientConstraint1" -p "witch:rt_elbow_FK_jnt";
+	rename -uid "CCBA9616-425A-44EF-02E9-80BF82796501";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_elbow_FK_ctrlW0" -dv 1 -min 0 
 		-at "double";
 	setAttr -k on ".nds";
@@ -21960,8 +21958,8 @@ createNode orientConstraint -n "rt_elbow_FK_jnt_orientConstraint1" -p "rt_elbow_
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "rt_shld_FK_jnt_orientConstraint1" -p "rt_shld_FK_jnt";
-	rename -uid "E2629024-461B-5813-4CA0-339AC4F11AAD";
+createNode orientConstraint -n "witch:rt_shld_FK_jnt_orientConstraint1" -p "witch:rt_shld_FK_jnt";
+	rename -uid "8E118251-4E3E-F43B-6321-F7B0CF0DAE26";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_shld_FK_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -21979,25 +21977,25 @@ createNode orientConstraint -n "rt_shld_FK_jnt_orientConstraint1" -p "rt_shld_FK
 	setAttr ".rsrr" -type "double3" -1.8288189418415221e-14 -1.8288189418415221e-14 
 		-5.565970692561152e-15 ;
 	setAttr -k on ".w0";
-createNode joint -n "rt_shld_IK_jnt" -p "rt_clavicle_jnt";
-	rename -uid "47DE8B00-48D6-37C7-0086-DC9D4E701ACA";
+createNode joint -n "witch:rt_shld_IK_jnt" -p "witch:rt_clavicle_jnt";
+	rename -uid "F681CC14-417C-7163-449C-D0AF727BEE71";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -10.534437100374529 -0.010885869998557673 0.46319751876174564 ;
-	setAttr ".r" -type "double3" -0.0015901770779116111 -0.00028456099341568749 4.8524484784589902e-09 ;
+	setAttr ".r" -type "double3" 1.3813980120623037e-14 2.4720013647959798e-15 -7.849813728163562e-21 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
-	setAttr ".jo" -type "double3" 4.5464996867452321 -38.129430191332318 13.781432975903362 ;
+	setAttr ".jo" -type "double3" 4.5464996867452312 -38.129430191332325 13.781432975903357 ;
 	setAttr ".bps" -type "matrix" 0.62898368607205835 0.76645468017020923 0.13010282817982294 0
 		 0.20255823457911257 -5.4817261840867104e-16 -0.97927021888965515 0 -0.75056624241928127 0.64229839112766141 -0.15525170690017626 0
 		 -10.249099999999997 129.58199999999999 -1.9864700000000006 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "rt_elbow_IK_jnt" -p "rt_shld_IK_jnt";
-	rename -uid "6E7D77BB-4A69-F8F7-5E12-4D8AB6B34B60";
+createNode joint -n "witch:rt_elbow_IK_jnt" -p "witch:rt_shld_IK_jnt";
+	rename -uid "CACBD7D6-40DD-28D9-AF1B-1B8C5B4439CF";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -21.758676723621562 -5.0580781074394121e-06 6.1667802540910088e-05 ;
-	setAttr ".r" -type "double3" 1.8102210322883449e-18 1.7041801334857125e-17 -1.4017755040441599e-12 ;
+	setAttr ".r" -type "double3" 9.0511051614419094e-19 8.5209006674270246e-18 -7.0088775202209467e-13 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -22007,8 +22005,8 @@ createNode joint -n "rt_elbow_IK_jnt" -p "rt_shld_IK_jnt";
 		 -23.934999999999988 112.90500000000002 -4.8173399999999997 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode joint -n "rt_wrist_IK_jnt" -p "rt_elbow_IK_jnt";
-	rename -uid "8BFEA352-4368-17B2-6481-72A16648D8AE";
+createNode joint -n "witch:rt_wrist_IK_jnt" -p "witch:rt_elbow_IK_jnt";
+	rename -uid "C84545AA-49F8-497B-196A-E3AE0A634330";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" -26.929892151448158 -8.2101841307746781e-06 -3.4776750482023999e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -22020,31 +22018,12 @@ createNode joint -n "rt_wrist_IK_jnt" -p "rt_elbow_IK_jnt";
 		 -41.729500000000016 93.311499999999995 0.14951200000000231 1;
 	setAttr ".radi" 2;
 	setAttr ".liw" yes;
-createNode orientConstraint -n "rt_wrist_IK_jnt_orientConstraint1" -p "rt_wrist_IK_jnt";
-	rename -uid "8F56B361-4E53-FC34-E15C-D08F1E898E78";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_arm_IK_ctrlW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -4.9540484684517923 12.15895196730334 -167.39508027905183 ;
-	setAttr ".o" -type "double3" -7.6052981983578238 10.715735027110696 166.15267905281522 ;
-	setAttr ".rsrr" -type "double3" -3.1805546814635168e-15 3.1805546814635168e-15 6.1623246953355643e-15 ;
-	setAttr -k on ".w0";
-createNode ikEffector -n "effector2" -p "rt_elbow_IK_jnt";
-	rename -uid "A747ABF1-49D6-05DE-5D32-F380E9CD5415";
+createNode ikEffector -n "witch:effector2" -p "witch:rt_elbow_IK_jnt";
+	rename -uid "1439B991-4A0A-CEE1-F597-3CB6B14D47C3";
 	setAttr ".v" no;
 	setAttr ".hd" yes;
-createNode joint -n "lf_ribbon_tape" -p "spine_jnt1";
-	rename -uid "2FEB3C52-4C61-FB99-9E9F-CF8E1235C33B";
+createNode joint -n "witch:lf_ribbon_tape" -p "witch:spine_jnt1";
+	rename -uid "1BDA2DD1-48CA-F49F-77B7-D5BFE91E9C0A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 4.1316361407499045 -11.0237117518076 0.42352017760276794 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -22054,8 +22033,8 @@ createNode joint -n "lf_ribbon_tape" -p "spine_jnt1";
 		 0.029855583861925938 -0.5544791186634157 0.831661921142543 0 -0.90786412453610421 -0.36315390262001912 -0.20952797997437678 0
 		 0.42352017760276794 103.45174444471097 -5.6429855474959645 1;
 	setAttr ".liw" yes;
-createNode joint -n "rt_ribbon_tape" -p "spine_jnt1";
-	rename -uid "5AD65BEA-44E8-2AB4-0A5F-1CB6FBC57B53";
+createNode joint -n "witch:rt_ribbon_tape" -p "witch:spine_jnt1";
+	rename -uid "E3ABFC42-4CF1-E0D9-3B83-5EACA508A04E";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 4.7653249064825189 -10.413910652187063 -1.6150496740247497 ;
 	setAttr ".r" -type "double3" 0 0 0 ;
@@ -22067,13 +22046,13 @@ createNode joint -n "rt_ribbon_tape" -p "spine_jnt1";
 		 0.19458542949751106 -0.36633527373505492 0.9099093239684557 0 -0.89843842556096409 0.30569897620025627 0.31520871089748015 0
 		 -1.6150496740247497 104.16624533785442 -5.130240672717715 1;
 	setAttr ".liw" yes;
-createNode transform -n "left";
-	rename -uid "B48A4A3F-4DCE-4FE4-BBC9-59BB2A65853E";
+createNode transform -n "witch:left";
+	rename -uid "03D750C9-475B-AA6A-77C9-71B7B8E17C4C";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" -1000.1 85.920448115223508 7.8738688365203284 ;
 	setAttr ".r" -type "double3" 0 -90 0 ;
-createNode camera -n "leftShape" -p "left";
-	rename -uid "8C8D9E54-4675-6567-06FF-92B596FA457D";
+createNode camera -n "witch:leftShape" -p "witch:left";
+	rename -uid "7F722C6C-471C-9D92-D591-5D94BF6B9A18";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
@@ -22084,11 +22063,11 @@ createNode camera -n "leftShape" -p "left";
 	setAttr ".hc" -type "string" "viewSet -ls %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "broom_skeleton";
-	rename -uid "E1B60A06-4FEB-6467-C877-CC8DAE3A79C3";
+createNode transform -n "witch:broom_skeleton";
+	rename -uid "1DBF3756-4DDC-A090-FCC0-889CD128C48B";
 	setAttr ".v" no;
-createNode joint -n "broom_jnt1" -p "broom_skeleton";
-	rename -uid "FCC545FE-4E21-BD04-3F5A-AA8ECD9F6304";
+createNode joint -n "witch:broom_jnt1" -p "witch:broom_skeleton";
+	rename -uid "60AF93D7-405C-672E-428E-68B3D346DA58";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".t" -type "double3" -46.985458282323854 137.77767041407259 15.434404189506658 ;
@@ -22098,8 +22077,8 @@ createNode joint -n "broom_jnt1" -p "broom_skeleton";
 	setAttr ".bps" -type "matrix" 0.0019055494098670911 -0.99999818443907518 0 0 0.99999818443907518 0.0019055494098670911 0 0
 		 0 0 1 0 -46.985458282323854 137.77767041407259 15.434404189506658 1;
 	setAttr ".liw" yes;
-createNode joint -n "broom_leaf_jnt1" -p "broom_jnt1";
-	rename -uid "BAF65AD1-47A1-8AC6-5111-0081899B0E43";
+createNode joint -n "witch:broom_leaf_jnt1" -p "witch:broom_jnt1";
+	rename -uid "505DEB0A-46CD-F054-08B9-DE8079AE00FC";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 1;
@@ -22111,8 +22090,8 @@ createNode joint -n "broom_leaf_jnt1" -p "broom_jnt1";
 		 0.97495781920030955 0.22119490246223214 0.023023160184900027 0 -0.045418049928292424 0.096698823143227891 0.99427689219021176 0
 		 -44.251389954200121 138.13211234917023 16.522511001826079 1;
 	setAttr ".liw" yes;
-createNode joint -n "broom_leaf_jnt2" -p "broom_leaf_jnt1";
-	rename -uid "B23B8898-4D15-2821-B022-1C9A166B8134";
+createNode joint -n "witch:broom_leaf_jnt2" -p "witch:broom_leaf_jnt1";
+	rename -uid "A616974A-40F9-C61C-7391-79B805D0055F";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
@@ -22125,8 +22104,8 @@ createNode joint -n "broom_leaf_jnt2" -p "broom_leaf_jnt1";
 		 -0.063124853677692397 0.17215438153390919 0.98304533047405673 -1.7577881263098702e-19
 		 -42.267429322102181 129.28847973432218 17.473228550062544 0.99999999999999989;
 	setAttr ".liw" yes;
-createNode joint -n "broom_leaf_jnt23" -p "broom_leaf_jnt2";
-	rename -uid "C2C9412E-40A8-71A0-1AE4-7BBA3AFCDB07";
+createNode joint -n "witch:broom_leaf_jnt23" -p "witch:broom_leaf_jnt2";
+	rename -uid "9ED00F9A-4A0C-59E0-6C56-979802FD1E6B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
@@ -22138,8 +22117,8 @@ createNode joint -n "broom_leaf_jnt23" -p "broom_leaf_jnt2";
 		 -0.063124853677692383 0.17215438153390916 0.98304533047405684 -2.6699626681883459e-19
 		 -39.740564043026303 117.39300225920411 19.718665764763433 0.99999999999999978;
 	setAttr ".liw" yes;
-createNode joint -n "broom_leaf_jnt4" -p "broom_jnt1";
-	rename -uid "0EFC791B-4512-2770-A5F3-FC9502C9C4C9";
+createNode joint -n "witch:broom_leaf_jnt4" -p "witch:broom_jnt1";
+	rename -uid "2564B574-41C7-57F5-8B0F-F3A385F55584";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 1;
@@ -22151,8 +22130,8 @@ createNode joint -n "broom_leaf_jnt4" -p "broom_jnt1";
 		 -0.54822602755719618 0.14178259333375642 -0.82422443480911867 0 0.77668822076995592 -0.27918603526065305 -0.56463312463283422 0
 		 -50.252008442450318 136.66786330112055 13.197040635596778 1;
 	setAttr ".liw" yes;
-createNode joint -n "broom_leaf_jnt5" -p "broom_leaf_jnt4";
-	rename -uid "21C43B1E-46BE-1CB4-7C18-24AA13887248";
+createNode joint -n "witch:broom_leaf_jnt5" -p "witch:broom_leaf_jnt4";
+	rename -uid "64786A0D-4C07-42DE-D69A-A4A13D73F2B4";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
@@ -22164,8 +22143,8 @@ createNode joint -n "broom_leaf_jnt5" -p "broom_leaf_jnt4";
 		 -0.21568407533705647 0.71519934796475793 -0.66480844783801007 0 0.71973640249684601 -0.34366574745080608 -0.60321916825477051 0
 		 -53.379398110447816 127.09199454892637 13.629962657961485 1;
 	setAttr ".liw" yes;
-createNode joint -n "broom_leaf_jnt6" -p "broom_leaf_jnt5";
-	rename -uid "F565F6BF-4593-A999-B3F3-BB8B51336FD1";
+createNode joint -n "witch:broom_leaf_jnt6" -p "witch:broom_leaf_jnt5";
+	rename -uid "11C90CA2-444F-B0B6-0AED-00B8E5739E48";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
@@ -22176,8 +22155,8 @@ createNode joint -n "broom_leaf_jnt6" -p "broom_leaf_jnt5";
 		 -0.21568407533705647 0.71519934796475793 -0.66480844783801007 0 0.71973640249684601 -0.34366574745080608 -0.60321916825477051 0
 		 -60.614465522990379 120.41940420368007 8.798881690616172 1;
 	setAttr ".liw" yes;
-createNode joint -n "broom_leaf_jnt7" -p "broom_jnt1";
-	rename -uid "695FFE14-4226-3E78-EC0A-BE82A36893F2";
+createNode joint -n "witch:broom_leaf_jnt7" -p "witch:broom_jnt1";
+	rename -uid "719F6B12-44B1-29F5-57C4-BE9211F5807A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 1;
@@ -22189,8 +22168,8 @@ createNode joint -n "broom_leaf_jnt7" -p "broom_jnt1";
 		 -0.12594351141138474 -0.61214668661263727 0.78065015596138854 0 -0.98732690176218529 0.00075124727946680606 -0.15869790384314997 0
 		 -46.493632929798927 138.46149018637476 13.147307842588946 1;
 	setAttr ".liw" yes;
-createNode joint -n "broom_leaf_jnt8" -p "broom_leaf_jnt7";
-	rename -uid "4E4BE246-4511-59AB-6203-D3B907FA01A4";
+createNode joint -n "witch:broom_leaf_jnt8" -p "witch:broom_leaf_jnt7";
+	rename -uid "875BC501-473B-1549-4E83-04BE73803983";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
@@ -22202,8 +22181,8 @@ createNode joint -n "broom_leaf_jnt8" -p "broom_leaf_jnt7";
 		 -0.15399531143027806 -0.24620943644462312 0.95690457071910417 0 -0.98732690176218529 0.00075124727946680606 -0.15869790384314997 0
 		 -45.751530468034616 132.38430118274098 8.501605673779391 1;
 	setAttr ".liw" yes;
-createNode joint -n "broom_leaf_jnt9" -p "broom_leaf_jnt8";
-	rename -uid "24FDAEB5-400D-4A10-F440-F69C5734FA96";
+createNode joint -n "witch:broom_leaf_jnt9" -p "witch:broom_leaf_jnt8";
+	rename -uid "C3042D7B-41E1-51CF-5C88-11B2D56C8238";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
@@ -22214,8 +22193,8 @@ createNode joint -n "broom_leaf_jnt9" -p "broom_leaf_jnt8";
 		 -0.15399531143027806 -0.24620943644462312 0.95690457071910417 0 -0.98732690176218529 0.00075124727946680606 -0.15869790384314997 0
 		 -45.426646443245886 124.17440117655107 6.441500311618471 1;
 	setAttr ".liw" yes;
-createNode joint -n "broom_bot_jnt" -p "broom_jnt1";
-	rename -uid "88F9DF83-43EB-F81B-11DC-1793D74D3AF1";
+createNode joint -n "witch:broom_bot_jnt" -p "witch:broom_jnt1";
+	rename -uid "9942B833-4C8B-5985-22A4-54A968D2E1DF";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 1;
@@ -22226,8 +22205,8 @@ createNode joint -n "broom_bot_jnt" -p "broom_jnt1";
 	setAttr ".bps" -type "matrix" 1.5970948522014972e-14 -1 0 0 1 1.5970948522014972e-14 0 0
 		 0 0 1 0 -47.02844548374884 31.724399437537116 15.434404189506658 1;
 	setAttr ".liw" yes;
-createNode joint -n "broom_rod_jnt1" -p "broom_bot_jnt";
-	rename -uid "EA5D5BE2-457A-0C72-416F-7F8EC4949E05";
+createNode joint -n "witch:broom_rod_jnt1" -p "witch:broom_bot_jnt";
+	rename -uid "6CA4EA54-46A6-7DDC-C490-A0BE93E7715C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
@@ -22237,8 +22216,8 @@ createNode joint -n "broom_rod_jnt1" -p "broom_bot_jnt";
 	setAttr ".bps" -type "matrix" 1.5970948522014972e-14 -1 0 0 1 1.5970948522014972e-14 0 0
 		 0 0 1 0 -46.659483056111 8.5413664949377903 15.434404189506658 1;
 	setAttr ".liw" yes;
-createNode joint -n "broom_rod_jnt2" -p "broom_bot_jnt";
-	rename -uid "51122AC0-420D-BEC6-61BA-ACB140ADB4DD";
+createNode joint -n "witch:broom_rod_jnt2" -p "witch:broom_bot_jnt";
+	rename -uid "C9F5BF1D-4629-FA89-4F9B-6DB2725DEF2A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
@@ -22248,8 +22227,8 @@ createNode joint -n "broom_rod_jnt2" -p "broom_bot_jnt";
 	setAttr ".bps" -type "matrix" 1.5970948522014972e-14 -1 0 0 1 1.5970948522014972e-14 0 0
 		 0 0 1 0 -38.710887090270411 8.2758027658231796 15.434404189506658 1;
 	setAttr ".liw" yes;
-createNode joint -n "broom_rod_jnt3" -p "broom_bot_jnt";
-	rename -uid "E9B31E1F-418D-A84B-51FF-80A4CC6D6F63";
+createNode joint -n "witch:broom_rod_jnt3" -p "witch:broom_bot_jnt";
+	rename -uid "06EAE139-490E-46CB-FD8B-B28BDA336E5A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
@@ -22259,27 +22238,27 @@ createNode joint -n "broom_rod_jnt3" -p "broom_bot_jnt";
 	setAttr ".bps" -type "matrix" 1.5970948522014972e-14 -1 0 0 1 1.5970948522014972e-14 0 0
 		 0 0 1 0 -56.186644698102604 8.2758027658232898 15.434404189506658 1;
 	setAttr ".liw" yes;
-createNode transform -n "rig";
-	rename -uid "FFF6BE54-4A5B-6CCE-4013-8E85AEA09216";
-createNode transform -n "hip_locs_grp" -p "rig";
-	rename -uid "B746A54E-4CD1-2CBD-42C5-6397240FB73A";
-createNode transform -n "rt_hip_locator" -p "hip_locs_grp";
-	rename -uid "6047A4AB-4AF5-E3E3-BBBE-F68BE8B9913A";
+createNode transform -n "witch:rig";
+	rename -uid "9ACA6CB2-45CC-C074-0289-E28A9A593ACF";
+createNode transform -n "witch:hip_locs_grp" -p "witch:rig";
+	rename -uid "062CB645-4C33-A7D2-6F8E-509E106D594A";
+createNode transform -n "witch:rt_hip_locator" -p "witch:hip_locs_grp";
+	rename -uid "274E33F3-4B84-19DC-32D8-CEA6EB868551";
 	setAttr ".t" -type "double3" -10.6206 94.1224 4.1671099999999992 ;
 	setAttr ".r" -type "double3" 89.73309888186273 -7.8392451406810748 85.849954120543103 ;
-createNode locator -n "rt_hip_locatorShape" -p "rt_hip_locator";
-	rename -uid "64823326-4B4F-87AF-8EA4-5FB6D022138B";
+createNode locator -n "witch:rt_hip_locatorShape" -p "witch:rt_hip_locator";
+	rename -uid "1418D4D9-455D-FD74-1D28-CE9CDE2CD3AF";
 	setAttr -k off ".v";
-createNode transform -n "lf_hip_locator" -p "hip_locs_grp";
-	rename -uid "B265E710-431E-6DD8-BE28-A384246727D0";
+createNode transform -n "witch:lf_hip_locator" -p "witch:hip_locs_grp";
+	rename -uid "B602F14F-4F21-C81A-CEB2-D1A98C330249";
 	setAttr ".t" -type "double3" 10.620646804610775 94.122423645533814 4.1671131859051691 ;
 	setAttr ".r" -type "double3" -90.266901118137255 7.8392451406810961 -85.849954120543117 ;
 	setAttr ".dla" yes;
-createNode locator -n "lf_hip_locatorShape" -p "lf_hip_locator";
-	rename -uid "A0405AE3-4043-42F2-FF75-D69FB7ED53A9";
+createNode locator -n "witch:lf_hip_locatorShape" -p "witch:lf_hip_locator";
+	rename -uid "84617A4B-49EA-B0A4-4AC0-63B3A4DC1E85";
 	setAttr -k off ".v";
-createNode parentConstraint -n "hip_locs_grp_parentConstraint1" -p "hip_locs_grp";
-	rename -uid "80398554-423A-4070-1808-A5AD65F4CBF4";
+createNode parentConstraint -n "witch:hip_locs_grp_parentConstraint1" -p "witch:hip_locs_grp";
+	rename -uid "0110E164-4C1D-A7E5-3030-E1AABE761C2F";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "pelvis_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -22298,27 +22277,19 @@ createNode parentConstraint -n "hip_locs_grp_parentConstraint1" -p "hip_locs_grp
 	setAttr ".lr" -type "double3" -1.4124500153760501e-30 1.2722218725854064e-14 -1.2722218725854064e-14 ;
 	setAttr ".rsrr" -type "double3" -1.4124500153760501e-30 1.2722218725854064e-14 -1.2722218725854064e-14 ;
 	setAttr -k on ".w0";
-createNode transform -n "controls" -p "rig";
-	rename -uid "BA544B7E-46A9-96B0-A940-05BF282F44E4";
-createNode transform -n "left_side" -p "controls";
-	rename -uid "F16264DE-4336-2050-84AF-C8BAA072AC85";
-createNode transform -n "lf_arm_IK_ctrl_grp" -p "left_side";
-	rename -uid "B7BF6BF7-4A82-1A84-8DC6-F9BA7CCD79D4";
-	setAttr -l on -k off ".v";
+createNode transform -n "witch:controls" -p "witch:rig";
+	rename -uid "253EBEBA-4DA6-0D6F-A3A1-A097520E8DDC";
+createNode transform -n "witch:left_side" -p "witch:controls";
+	rename -uid "E9891DF0-4943-15D7-BC90-AFBFD308664F";
+createNode transform -n "witch:lf_arm_IK_ctrl_grp" -p "witch:left_side";
+	rename -uid "91239F45-4FFF-64ED-514C-A0A827235C01";
 	setAttr ".t" -type "double3" 41.729521045500789 93.311458380738287 0.14951187575597569 ;
 	setAttr ".r" -type "double3" 101.44301714835767 -8.120332654459629 -48.997033021873669 ;
 	setAttr ".s" -type "double3" 1 1.0000000000000002 0.99999999999999989 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode transform -n "lf_arm_IK_ctrl" -p "lf_arm_IK_ctrl_grp";
-	rename -uid "972AC970-4413-6C96-ECAE-418094A07CFC";
-	setAttr -k off ".v";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "lf_arm_IK_ctrlShape" -p "lf_arm_IK_ctrl";
-	rename -uid "00B5A03D-4FF7-085E-63AF-F6B0879B4E0A";
+createNode transform -n "witch:lf_arm_IK_ctrl" -p "witch:lf_arm_IK_ctrl_grp";
+	rename -uid "B1F02D51-4CF3-92B0-89DB-9E9E2E8F9ECA";
+createNode nurbsCurve -n "witch:lf_arm_IK_ctrlShape" -p "witch:lf_arm_IK_ctrl";
+	rename -uid "1F6898DC-4B98-472F-F087-84B7686DFCB3";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 4;
@@ -22345,12 +22316,13 @@ createNode nurbsCurve -n "lf_arm_IK_ctrlShape" -p "lf_arm_IK_ctrl";
 		2.6794349266696109 -7.8713260319202165 4.1800534093604451
 		2.6794349266696109 -7.8713260319202165 -4.1800534093606494
 		;
-createNode ikHandle -n "lf_arm_IK_handler" -p "left_side";
-	rename -uid "823940B4-4DE1-9745-6FBD-16B064F69602";
+createNode ikHandle -n "witch:lf_arm_IK_handler" -p "witch:left_side";
+	rename -uid "751182D6-407E-875F-00EA-6E9D964BBF80";
 	setAttr ".s" -type "double3" 1 0.99999999999999978 1 ;
+	setAttr ".pv" -type "double3" -0.17718964230871379 -0.27002337124279008 -1.9737505439242289 ;
 	setAttr ".roc" yes;
-createNode pointConstraint -n "lf_arm_IK_handler_pointConstraint1" -p "lf_arm_IK_handler";
-	rename -uid "B6017FBD-402E-4F11-AF42-29845AFE6342";
+createNode pointConstraint -n "witch:lf_arm_IK_handler_pointConstraint1" -p "witch:lf_arm_IK_handler";
+	rename -uid "98036754-406B-C2F9-B2FB-D0875606C248";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_arm_IK_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -22366,27 +22338,11 @@ createNode pointConstraint -n "lf_arm_IK_handler_pointConstraint1" -p "lf_arm_IK
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 41.729521045500789 93.311458380738287 0.14951187575597569 ;
 	setAttr -k on ".w0";
-createNode poleVectorConstraint -n "lf_arm_IK_handler_poleVectorConstraint1" -p "lf_arm_IK_handler";
-	rename -uid "56FA74EA-4BA1-217D-9F23-EDAC9B43FA9A";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_arm_poleW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".rst" -type "double3" 11.271239363735113 -20.356788319680703 -29.72798405245549 ;
-	setAttr -k on ".w0";
-createNode transform -n "lf_arm_switch_grp" -p "left_side";
-	rename -uid "A0953B9B-4754-FB79-B1FB-EEB8906E3B71";
-createNode transform -n "lf_arm_switch_ctrl" -p "lf_arm_switch_grp";
-	rename -uid "9BC275CF-4326-557E-6BE6-7180AB8CF7CB";
+createNode transform -n "witch:lf_arm_switch_grp" -p "witch:left_side";
+	rename -uid "F025331F-464F-9FE8-482A-27A8F5B19176";
+	setAttr ".t" -type "double3" 53.460600689018456 94.037349849767665 -3.8890261898172405 ;
+createNode transform -n "witch:lf_arm_switch_ctrl" -p "witch:lf_arm_switch_grp";
+	rename -uid "547530DF-454F-7274-44AF-B0859AD92610";
 	addAttr -ci true -sn "ikFk" -ln "ikFk" -min 0 -max 1 -at "double";
 	setAttr -l on -k off ".v";
 	setAttr ".ove" yes;
@@ -22401,56 +22357,26 @@ createNode transform -n "lf_arm_switch_ctrl" -p "lf_arm_switch_grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-	setAttr -k on ".ikFk";
-createNode nurbsCurve -n "lf_arm_switch_ctrlShape" -p "lf_arm_switch_ctrl";
-	rename -uid "3F0863F4-484B-86FE-B5C8-4E84F0059666";
+	setAttr -k on ".ikFk" 1;
+createNode nurbsCurve -n "witch:lf_arm_switch_ctrlShape" -p "witch:lf_arm_switch_ctrl";
+	rename -uid "1F781F4D-4E09-8826-3BF8-DEAF8D040454";
 	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		1 12 0 no 3
-		13 0 0.51763809020504148 1.035276180410083 1.5529142706151244 2.0705523608201659
-		 2.5881904510252074 3.1058285412302489 3.6234666314352904 4.1411047216403318 4.6587428118453733
-		 5.1763809020504148 5.6940189922554563 6.2116570824604977
-		13
-		1.9494023653836438e-16 3.1836156624765501 0
-		-0.59894959371493361 1.0374111274870039 0
-		-2.7570920395907166 1.5918078312382764 0
-		-1.1978991874298679 1.8537516994802822e-16 0
-		-2.7570920395907175 -1.5918078312382735 0
-		-0.59894959371493517 -1.0374111274870039 0
-		-1.9622019415577323e-15 -3.1836156624765501 0
-		0.5989495937149325 -1.0374111274870039 0
-		2.7570920395907161 -1.5918078312382771 0
-		1.1978991874298679 -1.2912604296750971e-15 0
-		2.7570920395907179 1.5918078312382715 0
-		0.59894959371493561 1.037411127487003 0
-		3.7294636465771031e-15 3.1836156624765501 0
-		;
-createNode pointConstraint -n "lf_arm_switch_grp_pointConstraint1" -p "lf_arm_switch_grp";
-	rename -uid "63E0DDE1-4DF1-83ED-169A-9389FB954523";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_wrist_jntW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".o" -type "double3" 11.731079643517674 0.72589146902937784 -4.0385380655732135 ;
-	setAttr ".rst" -type "double3" 53.460600689018463 94.037349849767665 -3.8890261898172378 ;
-	setAttr -k on ".w0";
-createNode transform -n "lf_shld_FK_ctrl_grp" -p "left_side";
-	rename -uid "09DA65F1-4159-5E5B-E5DF-968BAE2F5A03";
+	setAttr ".tw" yes;
+	setAttr -s 13 ".cp[0:12]" -type "double3" 1.3370789658099673e-16 2.1836156624765501 
+		0 -0.098949593714933726 0.17138572370256522 0 -1.8910666358062778 1.0918078312382762 
+		0 -0.1978991874298679 -1.5341292616562859e-16 0 -1.8910666358062787 -1.091807831238274 
+		0 -0.098949593714934725 -0.17138572370256544 0 -1.3458580892877865e-15 -2.1836156624765501 
+		0 0.098949593714933115 -0.171385723702565 0 1.8910666358062778 -1.0918078312382764 
+		0 0.1978991874298679 -3.9736082124886213e-16 0 1.8910666358062787 1.0918078312382724 
+		0 0.098949593714934725 0.17138572370256488 0 2.558008281994579e-15 2.1836156624765501 
+		0;
+createNode transform -n "witch:lf_shld_FK_ctrl_grp" -p "witch:left_side";
+	rename -uid "6F7C1B14-4F93-C4C2-9739-EB8B37033E65";
 	setAttr ".t" -type "double3" 10.249068177158442 129.58206145200492 -1.9864725057720496 ;
 	setAttr ".r" -type "double3" 80.991407778958148 7.4755344017753478 -50.626313924026974 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 1 0.99999999999999989 ;
-createNode transform -n "lf_shld_FK_ctrl" -p "lf_shld_FK_ctrl_grp";
-	rename -uid "DE169987-4B75-565E-2AA4-A48DDB37C286";
-	setAttr -l on -k off ".v";
+createNode transform -n "witch:lf_shld_FK_ctrl" -p "witch:lf_shld_FK_ctrl_grp";
+	rename -uid "F2FE580A-4592-5AC6-5925-F3A04C321B6C";
 	setAttr ".t" -type "double3" 1.4210854715202004e-14 6.106226635438361e-16 0 ;
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -22459,8 +22385,8 @@ createNode transform -n "lf_shld_FK_ctrl" -p "lf_shld_FK_ctrl_grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "lf_shld_FK_ctrlShape" -p "lf_shld_FK_ctrl";
-	rename -uid "B4317095-4FDF-C0D9-DBCE-268A72A2854E";
+createNode nurbsCurve -n "witch:lf_shld_FK_ctrlShape" -p "witch:lf_shld_FK_ctrl";
+	rename -uid "4ECC72C1-4032-E5AA-D315-22970F209279";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 17;
@@ -22472,14 +22398,13 @@ createNode nurbsCurve -n "lf_shld_FK_ctrlShape" -p "lf_shld_FK_ctrl";
 		-1.7976577377919369 -1.7180632642241882e-14 4.3387764484380638 -1.2711359766451444 
 		-0.95380578498046065 3.598656962988108 1.8939505530430615e-15 -1.3488850769892737 
 		0 0 0 0 0 0 0 0 0;
-createNode transform -n "lf_elbow_FK_ctrl_grp" -p "lf_shld_FK_ctrl";
-	rename -uid "D9665434-4A1D-605C-CFA5-00B6FED765AF";
+createNode transform -n "witch:lf_elbow_FK_ctrl_grp" -p "witch:lf_shld_FK_ctrl";
+	rename -uid "43940FE1-45A7-9ABE-238C-4D8379484A67";
 	setAttr ".t" -type "double3" 21.758707920501593 -1.8041124150158794e-15 -4.2632564145606011e-14 ;
 	setAttr ".r" -type "double3" 0 0 18.328063082726246 ;
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1.0000000000000002 ;
-createNode transform -n "lf_elbow_FK_ctrl" -p "lf_elbow_FK_ctrl_grp";
-	rename -uid "8B02CE05-4210-E804-6CC3-8E9B42E5C8F0";
-	setAttr -k off -cb on ".v";
+createNode transform -n "witch:lf_elbow_FK_ctrl" -p "witch:lf_elbow_FK_ctrl_grp";
+	rename -uid "E285418A-425D-5040-8BE6-2D8855C2CC6F";
 	setAttr ".t" -type "double3" -1.4210854715202004e-14 0 2.8421709430404007e-14 ;
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -22488,8 +22413,8 @@ createNode transform -n "lf_elbow_FK_ctrl" -p "lf_elbow_FK_ctrl_grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "lf_elbow_FK_ctrlShape" -p "lf_elbow_FK_ctrl";
-	rename -uid "A2DD83CB-446C-DB8E-30EC-05B6D034B0B3";
+createNode nurbsCurve -n "witch:lf_elbow_FK_ctrlShape" -p "witch:lf_elbow_FK_ctrl";
+	rename -uid "6C9C9D15-49E6-A17C-2ACD-D3AA2F2DE4AC";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 17;
@@ -22509,14 +22434,13 @@ createNode nurbsCurve -n "lf_elbow_FK_ctrlShape" -p "lf_elbow_FK_ctrl";
 		2.0775313423421278e-32 5.5409709377719381 -3.392866161555456e-16
 		-2.3991186704942365e-16 3.9180581244561221 3.9180581244561226
 		;
-createNode transform -n "lf_wrist_FK_ctrl_grp" -p "lf_elbow_FK_ctrl";
-	rename -uid "3839EAFD-440F-B1CF-F89C-A98FECA86170";
+createNode transform -n "witch:lf_wrist_FK_ctrl_grp" -p "witch:lf_elbow_FK_ctrl";
+	rename -uid "BAD220AB-4C6D-67A5-8F36-5B8871B7C5C3";
 	setAttr ".t" -type "double3" 26.929974492797825 2.9753977059954195e-14 -2.8421709430404007e-14 ;
 	setAttr ".r" -type "double3" 20.245499516526479 2.2416470375651407 -10.928655867896611 ;
 	setAttr ".s" -type "double3" 1 1.0000000000000004 1 ;
-createNode transform -n "lf_wrist_FK_ctrl" -p "lf_wrist_FK_ctrl_grp";
-	rename -uid "994F03A5-409E-72ED-FFA7-7D9F7DF65851";
-	setAttr -l on -k off ".v";
+createNode transform -n "witch:lf_wrist_FK_ctrl" -p "witch:lf_wrist_FK_ctrl_grp";
+	rename -uid "44831652-47D8-8A16-559B-16BE29500351";
 	setAttr ".t" -type "double3" 0 0 -1.4210854715202004e-14 ;
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -22525,8 +22449,8 @@ createNode transform -n "lf_wrist_FK_ctrl" -p "lf_wrist_FK_ctrl_grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "lf_wrist_FK_ctrlShape" -p "lf_wrist_FK_ctrl";
-	rename -uid "440DC673-4B73-61DD-A367-97A9EF803495";
+createNode nurbsCurve -n "witch:lf_wrist_FK_ctrlShape" -p "witch:lf_wrist_FK_ctrl";
+	rename -uid "CA20F399-467B-75C0-E5CA-B0A683578277";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 17;
@@ -22546,172 +22470,17 @@ createNode nurbsCurve -n "lf_wrist_FK_ctrlShape" -p "lf_wrist_FK_ctrl";
 		2.0775313423421278e-32 5.5409709377719381 -3.392866161555456e-16
 		-2.3991186704942365e-16 3.9180581244561221 3.9180581244561226
 		;
-createNode transform -n "lf_arm_pole_grp" -p "left_side";
-	rename -uid "2C42B924-4002-3BAD-49EF-089AE87D5AA2";
-	setAttr ".t" -type "double3" 21.520307540893555 109.22527313232422 -31.714456558227539 ;
-createNode transform -n "lf_arm_pole" -p "lf_arm_pole_grp";
-	rename -uid "F8B1B750-4F5A-C908-8AF3-839D5D5F0410";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovrgbf" yes;
-	setAttr ".ovrgb" -type "float3" 10.18 0.16966651 0 ;
-	setAttr -l on -k off ".rx";
-	setAttr -l on -k off ".ry";
-	setAttr -l on -k off ".rz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "lf_arm_poleShape" -p "lf_arm_pole";
-	rename -uid "446E6C89-47CF-CAD3-BCB0-E99D93672448";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		1.909136640770573 1.1690090381273066e-16 -1.909136640770573
-		1.6532284362563632e-16 1.6532284362563632e-16 -2.6999269298011561
-		-1.909136640770573 1.1690090381273066e-16 -1.909136640770573
-		-2.699926929801157 8.5703654073794575e-33 -1.3996468881225969e-16
-		-1.909136640770573 -1.1690090381273066e-16 1.909136640770573
-		-2.7045352712276035e-16 -1.6532284362563645e-16 2.699926929801157
-		1.909136640770573 -1.1690090381273066e-16 1.909136640770573
-		2.699926929801157 -2.2545017813397607e-32 3.6818808213264939e-16
-		1.909136640770573 1.1690090381273066e-16 -1.909136640770573
-		1.6532284362563632e-16 1.6532284362563632e-16 -2.6999269298011561
-		-1.909136640770573 1.1690090381273066e-16 -1.909136640770573
-		;
-createNode nurbsCurve -n "lf_arm_poleShape1" -p "lf_arm_pole";
-	rename -uid "EEE1337F-4D5D-0363-F2FC-4EB6CD1F76CF";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		1.909136640770573 1.909136640770573 0
-		1.6532284362563632e-16 2.6999269298011561 0
-		-1.909136640770573 1.909136640770573 0
-		-2.699926929801157 1.3996468881225969e-16 0
-		-1.909136640770573 -1.909136640770573 0
-		-2.7045352712276035e-16 -2.699926929801157 0
-		1.909136640770573 -1.909136640770573 0
-		2.699926929801157 -3.6818808213264939e-16 0
-		1.909136640770573 1.909136640770573 0
-		1.6532284362563632e-16 2.6999269298011561 0
-		-1.909136640770573 1.909136640770573 0
-		;
-createNode nurbsCurve -n "lf_arm_poleShape2" -p "lf_arm_pole";
-	rename -uid "DB6A81F1-48C6-730F-A1EF-80A74F0407DE";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		1.1690090381273066e-16 1.909136640770573 -1.909136640770573
-		1.0123104563603694e-32 2.6999269298011561 -1.6532284362563632e-16
-		-1.1690090381273066e-16 1.909136640770573 1.909136640770573
-		-1.653228436256364e-16 1.3996468881225969e-16 2.699926929801157
-		-1.1690090381273066e-16 -1.909136640770573 1.909136640770573
-		-1.6560502315450025e-32 -2.699926929801157 2.7045352712276035e-16
-		1.1690090381273066e-16 -1.909136640770573 -1.909136640770573
-		1.653228436256364e-16 -3.6818808213264939e-16 -2.699926929801157
-		1.1690090381273066e-16 1.909136640770573 -1.909136640770573
-		1.0123104563603694e-32 2.6999269298011561 -1.6532284362563632e-16
-		-1.1690090381273066e-16 1.909136640770573 1.909136640770573
-		;
-createNode transform -n "lf_pole_line" -p "left_side";
-	rename -uid "C2A380B5-4124-E0D2-9534-8096A424E51D";
-createNode transform -n "lf_elbow_poleEnd" -p "lf_pole_line";
-	rename -uid "EA0077A0-481A-B7DF-6D08-18A5B23F8909";
-	setAttr ".v" no;
-createNode locator -n "lf_elbow_poleEndShape" -p "lf_elbow_poleEnd";
-	rename -uid "D7C99616-4539-7200-582E-D7B7CD30B0C1";
-	setAttr -k off ".v";
-createNode pointConstraint -n "lf_elbow_poleEnd_pointConstraint1" -p "lf_elbow_poleEnd";
-	rename -uid "E39959D6-41BB-E434-CC5C-1995AD7316EF";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_arm_poleW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".rst" -type "double3" 21.520307540893555 109.22527313232422 -31.714456558227539 ;
-	setAttr -k on ".w0";
-createNode transform -n "lf_elbow_poleStart" -p "lf_pole_line";
-	rename -uid "E39D52BC-4CB7-5C75-E2EE-4DAEFC6676EA";
-	setAttr ".v" no;
-createNode locator -n "lf_elbow_poleStartShape" -p "lf_elbow_poleStart";
-	rename -uid "3FFC89FA-4692-6367-4204-CA9B8FBD85B8";
-	setAttr -k off ".v";
-createNode pointConstraint -n "lf_elbow_poleStart_pointConstraint1" -p "lf_elbow_poleStart";
-	rename -uid "35BEA22A-4156-375F-9A60-82B28618874C";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_elbow_jntW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".o" -type "double3" -1.5102611428119417e-07 8.4741697037316044e-07 1.392636423958038e-07 ;
-	setAttr ".rst" -type "double3" 23.934940338134766 112.90499877929688 -4.8173418045043945 ;
-	setAttr -k on ".w0";
-createNode transform -n "lf_elbow_poleLine" -p "lf_pole_line";
-	rename -uid "90D1E233-47FE-1D8C-94A2-B9A87B47486B";
-	setAttr -l on ".v";
-	setAttr -l on ".tx";
-	setAttr -l on ".ty";
-	setAttr -l on ".tz";
-	setAttr -l on ".rx";
-	setAttr -l on ".ry";
-	setAttr -l on ".rz";
-	setAttr -l on ".sx";
-	setAttr -l on ".sy";
-	setAttr -l on ".sz";
-createNode nurbsCurve -n "lf_elbow_poleLineShape" -p "lf_elbow_poleLine";
-	rename -uid "4E25EA44-43DB-1840-DDDF-F1A5DA299CAE";
-	setAttr -k off ".v";
-	setAttr ".ovdt" 2;
-	setAttr ".ove" yes;
-	setAttr -s 2 ".cp";
-	setAttr ".cc" -type "nurbsCurve" 
-		1 1 0 no 3
-		2 0 1
-		2
-		21.520307540893555 109.22527313232422 -31.714456558227539
-		23.934940338134766 112.90499877929688 -4.8173418045043945
-		;
-createNode transform -n "right_side" -p "controls";
-	rename -uid "1C920032-451A-4AB4-BE11-AB98CED5AF8F";
-createNode transform -n "rt_arm_IK_ctrl_grp" -p "right_side";
-	rename -uid "57491030-4A0A-993D-64CE-EDB228D481CC";
-	setAttr -l on -k off ".v";
+createNode transform -n "witch:right_side" -p "witch:controls";
+	rename -uid "B4CD4C41-4851-564E-B808-B4B21EFE74F5";
+createNode transform -n "witch:rt_arm_IK_ctrl_grp" -p "witch:right_side";
+	rename -uid "1F1355DF-4E37-9DC1-AEEF-5AB5FCD2FC7F";
 	setAttr ".t" -type "double3" -41.729500000000016 93.311499999999981 0.14951199999999965 ;
 	setAttr ".r" -type "double3" 71.263644175508972 -9.1630806047241578 241.83030397006061 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 1 1 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode transform -n "rt_arm_IK_ctrl" -p "rt_arm_IK_ctrl_grp";
-	rename -uid "C95C2856-4201-7E27-6EB8-999BFAD02BEE";
-	setAttr -k off ".v";
-	setAttr ".t" -type "double3" 2.3175905639050143e-15 -1.3877787807814457e-15 0 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "rt_arm_IK_ctrlShape" -p "rt_arm_IK_ctrl";
-	rename -uid "369ABB06-4237-D724-83C2-0EB7FE307742";
+createNode transform -n "witch:rt_arm_IK_ctrl" -p "witch:rt_arm_IK_ctrl_grp";
+	rename -uid "D5094C01-4409-1A78-0082-538D4A4E4C15";
+createNode nurbsCurve -n "witch:rt_arm_IK_ctrlShape" -p "witch:rt_arm_IK_ctrl";
+	rename -uid "4A8BC654-421D-5661-A132-8C941B197FE6";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 4;
@@ -22738,10 +22507,11 @@ createNode nurbsCurve -n "rt_arm_IK_ctrlShape" -p "rt_arm_IK_ctrl";
 		2.6794349266696109 -7.8713260319202165 4.1800534093604451
 		2.6794349266696109 -7.8713260319202165 -4.1800534093606494
 		;
-createNode transform -n "rt_arm_switch_grp" -p "right_side";
-	rename -uid "2C736E26-4D6D-D109-2958-10B2BEFC1E71";
-createNode transform -n "rt_arm_switch_ctrl" -p "rt_arm_switch_grp";
-	rename -uid "8D73CAF1-44E5-163B-7838-6FAC9266574B";
+createNode transform -n "witch:rt_arm_switch_grp" -p "witch:right_side";
+	rename -uid "E4CAA6EA-4858-6014-BF03-84A4493DEF16";
+	setAttr ".t" -type "double3" -56.6551080336938 94.037349849767651 -3.8890261898172405 ;
+createNode transform -n "witch:rt_arm_switch_ctrl" -p "witch:rt_arm_switch_grp";
+	rename -uid "41673140-4225-E059-7906-9A9BB409080B";
 	addAttr -ci true -sn "ikFk" -ln "ikFk" -min 0 -max 1 -at "double";
 	setAttr -l on -k off ".v";
 	setAttr ".ove" yes;
@@ -22756,9 +22526,9 @@ createNode transform -n "rt_arm_switch_ctrl" -p "rt_arm_switch_grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-	setAttr -k on ".ikFk";
-createNode nurbsCurve -n "rt_arm_switch_ctrlShape" -p "rt_arm_switch_ctrl";
-	rename -uid "5EBDBEDF-4D71-15B5-D6E5-B1959D6ADE2E";
+	setAttr -k on ".ikFk" 1;
+createNode nurbsCurve -n "witch:rt_arm_switch_ctrlShape" -p "witch:rt_arm_switch_ctrl";
+	rename -uid "DAB7373E-4EBD-69EB-38AD-67A3823647CA";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
 		1 12 0 no 3
@@ -22780,32 +22550,13 @@ createNode nurbsCurve -n "rt_arm_switch_ctrlShape" -p "rt_arm_switch_ctrl";
 		0.59894959371493561 1.037411127487003 0
 		3.7294636465771031e-15 3.1836156624765501 0
 		;
-createNode pointConstraint -n "rt_arm_switch_grp_pointConstraint1" -p "rt_arm_switch_grp";
-	rename -uid "D134788C-4BB5-4B30-EECF-789E9B3DFF0B";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_wrist_jntW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".o" -type "double3" -14.925608034054513 0.72584985031737403 -4.038538185799224 ;
-	setAttr ".rst" -type "double3" -56.6551080336938 94.037349849767651 -3.8890261898172405 ;
-	setAttr -k on ".w0";
-createNode transform -n "rt_shld_FK_ctrl_grp" -p "right_side";
-	rename -uid "65C82C36-42FE-2C8C-4D93-4FA80341DED9";
+createNode transform -n "witch:rt_shld_FK_ctrl_grp" -p "witch:right_side";
+	rename -uid "64AC7844-4360-54FC-B68D-58817117B80E";
 	setAttr ".t" -type "double3" -10.249099999999997 129.582 -1.9864700000000006 ;
 	setAttr ".r" -type "double3" -99.008592221041866 -7.475534401775338 50.626313924026995 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 1 1 ;
-createNode transform -n "rt_shld_FK_ctrl" -p "rt_shld_FK_ctrl_grp";
-	rename -uid "0C5DD7FC-4BFA-19AF-E4F7-B9AE313E90D8";
-	setAttr -l on -k off ".v";
+createNode transform -n "witch:rt_shld_FK_ctrl" -p "witch:rt_shld_FK_ctrl_grp";
+	rename -uid "7FD4662B-4662-2AE9-031F-C0B5F12EDADA";
 	setAttr ".t" -type "double3" 1.4210854715202004e-14 6.106226635438361e-16 0 ;
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -22815,8 +22566,8 @@ createNode transform -n "rt_shld_FK_ctrl" -p "rt_shld_FK_ctrl_grp";
 	setAttr -l on -k off ".sz";
 	setAttr ".rp" -type "double3" 0 -6.9388939039072284e-16 0 ;
 	setAttr ".sp" -type "double3" 0 -6.9388939039072284e-16 0 ;
-createNode nurbsCurve -n "rt_shld_FK_ctrlShape" -p "rt_shld_FK_ctrl";
-	rename -uid "BE23420C-49EA-AC51-EEDC-719012162BCE";
+createNode nurbsCurve -n "witch:rt_shld_FK_ctrlShape" -p "witch:rt_shld_FK_ctrl";
+	rename -uid "7A2D257D-4457-D30C-82EB-839802FC5191";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 17;
@@ -22836,14 +22587,13 @@ createNode nurbsCurve -n "rt_shld_FK_ctrlShape" -p "rt_shld_FK_ctrl";
 		-6.125582947987942 -7.338628675563875 1.7819079545233762e-14
 		-7.9123894475378229 -5.1891941011012701 -4.8718639094365468
 		;
-createNode transform -n "rt_elbow_FK_ctrl_grp" -p "rt_shld_FK_ctrl";
-	rename -uid "C43EA374-4CC7-DDD8-BE92-7181D8B93260";
+createNode transform -n "witch:rt_elbow_FK_ctrl_grp" -p "witch:rt_shld_FK_ctrl";
+	rename -uid "E06A7395-4909-2A74-737A-FEA7F675CC51";
 	setAttr ".t" -type "double3" -21.758676723621591 -5.0580781128239938e-06 6.1667802569331798e-05 ;
 	setAttr ".r" -type "double3" 0 0 18.328063082726263 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 1.0000000000000002 0.99999999999999978 ;
-createNode transform -n "rt_elbow_FK_ctrl" -p "rt_elbow_FK_ctrl_grp";
-	rename -uid "B627D4F0-425A-117C-0B26-1A9C88A95006";
-	setAttr -l on -k off ".v";
+createNode transform -n "witch:rt_elbow_FK_ctrl" -p "witch:rt_elbow_FK_ctrl_grp";
+	rename -uid "11396788-477F-0180-B415-028E9812E872";
 	setAttr ".t" -type "double3" -1.4210854715202004e-14 0 2.8421709430404007e-14 ;
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -22852,8 +22602,8 @@ createNode transform -n "rt_elbow_FK_ctrl" -p "rt_elbow_FK_ctrl_grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "rt_elbow_FK_ctrlShape" -p "rt_elbow_FK_ctrl";
-	rename -uid "2AD08A95-447E-D1E7-D2FE-818D7007AE6C";
+createNode nurbsCurve -n "witch:rt_elbow_FK_ctrlShape" -p "witch:rt_elbow_FK_ctrl";
+	rename -uid "EF210C43-4050-D97F-E023-41A03A818E5E";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 17;
@@ -22873,14 +22623,13 @@ createNode nurbsCurve -n "rt_elbow_FK_ctrlShape" -p "rt_elbow_FK_ctrl";
 		2.0775313423421278e-32 5.5409709377719381 -3.392866161555456e-16
 		-2.3991186704942365e-16 3.9180581244561221 3.9180581244561226
 		;
-createNode transform -n "rt_wrist_FK_ctrl_grp" -p "rt_elbow_FK_ctrl";
-	rename -uid "185BF306-4394-E682-9ABB-32AF15BBA490";
+createNode transform -n "witch:rt_wrist_FK_ctrl_grp" -p "witch:rt_elbow_FK_ctrl";
+	rename -uid "37AF9B0A-4DC4-303B-74C7-D69F2754AA78";
 	setAttr ".t" -type "double3" -26.929892151448165 -8.2101841201165371e-06 -3.4776750510445709e-05 ;
 	setAttr ".r" -type "double3" 20.245499516526415 2.2416470375651447 -10.928655867896605 ;
 	setAttr ".s" -type "double3" 1.0000000000000002 1 0.99999999999999967 ;
-createNode transform -n "rt_wrist_FK_ctrl" -p "rt_wrist_FK_ctrl_grp";
-	rename -uid "E238A944-4D3D-FC63-632B-42962E02E402";
-	setAttr -l on -k off ".v";
+createNode transform -n "witch:rt_wrist_FK_ctrl" -p "witch:rt_wrist_FK_ctrl_grp";
+	rename -uid "A12A904E-4D7F-5988-B806-9C8D3E77E34C";
 	setAttr ".t" -type "double3" 0 0 -1.4210854715202004e-14 ;
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -22889,8 +22638,8 @@ createNode transform -n "rt_wrist_FK_ctrl" -p "rt_wrist_FK_ctrl_grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "rt_wrist_FK_ctrlShape" -p "rt_wrist_FK_ctrl";
-	rename -uid "968C8DE0-47D2-9151-F0F7-DCB2D3533471";
+createNode nurbsCurve -n "witch:rt_wrist_FK_ctrlShape" -p "witch:rt_wrist_FK_ctrl";
+	rename -uid "45935E18-4C78-F050-32DD-F1A97129581D";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 17;
@@ -22910,83 +22659,12 @@ createNode nurbsCurve -n "rt_wrist_FK_ctrlShape" -p "rt_wrist_FK_ctrl";
 		2.0775313423421278e-32 5.5409709377719381 -3.392866161555456e-16
 		-2.3991186704942365e-16 3.9180581244561221 3.9180581244561226
 		;
-createNode transform -n "rt_arm_pole_grp" -p "right_side";
-	rename -uid "229D10A6-4E9F-7A41-9805-F8822741A626";
-	setAttr ".t" -type "double3" -21.52 109.225 -31.714 ;
-createNode transform -n "rt_arm_pole" -p "rt_arm_pole_grp";
-	rename -uid "BBFFE60A-47C1-E9D3-DC47-D18CBDF3B274";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovrgbf" yes;
-	setAttr ".ovrgb" -type "float3" 10.18 0.16966651 0 ;
-	setAttr -l on -k off ".rx";
-	setAttr -l on -k off ".ry";
-	setAttr -l on -k off ".rz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "rt_arm_poleShape" -p "rt_arm_pole";
-	rename -uid "A4DB7B63-4594-7658-C6CF-06B887BCED71";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		1.909136640770573 1.1690090381273066e-16 -1.909136640770573
-		1.6532284362563632e-16 1.6532284362563632e-16 -2.6999269298011561
-		-1.909136640770573 1.1690090381273066e-16 -1.909136640770573
-		-2.699926929801157 8.5703654073794575e-33 -1.3996468881225969e-16
-		-1.909136640770573 -1.1690090381273066e-16 1.909136640770573
-		-2.7045352712276035e-16 -1.6532284362563645e-16 2.699926929801157
-		1.909136640770573 -1.1690090381273066e-16 1.909136640770573
-		2.699926929801157 -2.2545017813397607e-32 3.6818808213264939e-16
-		1.909136640770573 1.1690090381273066e-16 -1.909136640770573
-		1.6532284362563632e-16 1.6532284362563632e-16 -2.6999269298011561
-		-1.909136640770573 1.1690090381273066e-16 -1.909136640770573
-		;
-createNode nurbsCurve -n "rt_arm_poleShape3" -p "rt_arm_pole";
-	rename -uid "5BCB30AF-49BB-1E4B-C4AD-D69526A80714";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		1.909136640770573 1.909136640770573 0
-		1.6532284362563632e-16 2.6999269298011561 0
-		-1.909136640770573 1.909136640770573 0
-		-2.699926929801157 1.3996468881225969e-16 0
-		-1.909136640770573 -1.909136640770573 0
-		-2.7045352712276035e-16 -2.699926929801157 0
-		1.909136640770573 -1.909136640770573 0
-		2.699926929801157 -3.6818808213264939e-16 0
-		1.909136640770573 1.909136640770573 0
-		1.6532284362563632e-16 2.6999269298011561 0
-		-1.909136640770573 1.909136640770573 0
-		;
-createNode nurbsCurve -n "rt_arm_poleShape4" -p "rt_arm_pole";
-	rename -uid "B4849DB6-4865-60C5-5C35-BF889C9A34CF";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		1.1690090381273066e-16 1.909136640770573 -1.909136640770573
-		1.0123104563603694e-32 2.6999269298011561 -1.6532284362563632e-16
-		-1.1690090381273066e-16 1.909136640770573 1.909136640770573
-		-1.653228436256364e-16 1.3996468881225969e-16 2.699926929801157
-		-1.1690090381273066e-16 -1.909136640770573 1.909136640770573
-		-1.6560502315450025e-32 -2.699926929801157 2.7045352712276035e-16
-		1.1690090381273066e-16 -1.909136640770573 -1.909136640770573
-		1.653228436256364e-16 -3.6818808213264939e-16 -2.699926929801157
-		1.1690090381273066e-16 1.909136640770573 -1.909136640770573
-		1.0123104563603694e-32 2.6999269298011561 -1.6532284362563632e-16
-		-1.1690090381273066e-16 1.909136640770573 1.909136640770573
-		;
-createNode ikHandle -n "rt_arm_IK_handler" -p "right_side";
-	rename -uid "5B264309-4779-8CD6-7D94-2CBBAEBA5687";
+createNode ikHandle -n "witch:rt_arm_IK_handler" -p "witch:right_side";
+	rename -uid "8422DC19-4C8F-6C86-EB83-A38CB80EC2EB";
+	setAttr ".pv" -type "double3" 0.17716999472386696 -0.2700069341903078 -1.9737545562857346 ;
 	setAttr ".roc" yes;
-createNode pointConstraint -n "rt_arm_IK_handler_pointConstraint1" -p "rt_arm_IK_handler";
-	rename -uid "A5CC7092-46FD-8ABD-4117-299A07F9C874";
+createNode pointConstraint -n "witch:rt_arm_IK_handler_pointConstraint1" -p "witch:rt_arm_IK_handler";
+	rename -uid "77227783-40EF-E73A-253D-BB9CFBE5D8AD";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_arm_IK_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -23000,204 +22678,77 @@ createNode pointConstraint -n "rt_arm_IK_handler_pointConstraint1" -p "rt_arm_IK
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".rst" -type "double3" -41.729500000000016 93.311499999999981 0.14951199999999873 ;
+	setAttr ".rst" -type "double3" -41.729500000000016 93.311499999999981 0.14951199999999965 ;
 	setAttr -k on ".w0";
-createNode poleVectorConstraint -n "rt_arm_IK_handler_poleVectorConstraint1" -p "rt_arm_IK_handler";
-	rename -uid "E5267E57-403D-DC8D-D7AD-3D82C315838B";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_arm_poleW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
+createNode transform -n "locator1";
+	rename -uid "772E3861-4CE7-24C6-4B9C-7E8EF7E7928C";
+	setAttr ".t" -type "double3" -0.26021731330024789 18.277970996042729 0 ;
+createNode locator -n "locatorShape1" -p "locator1";
+	rename -uid "B1CC0C97-4E3B-E47A-2ADF-FBBFA62DD034";
 	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".rst" -type "double3" -11.270900000000003 -20.357 -29.727529999999998 ;
-	setAttr -k on ".w0";
-createNode transform -n "rt_pole_line" -p "right_side";
-	rename -uid "6F5CE5A7-4096-887B-0783-D0AAD5349737";
-createNode transform -n "rt_elbow_poleEnd" -p "rt_pole_line";
-	rename -uid "820222CF-4EAA-8BAE-F74C-FA8F0BC460E6";
-	setAttr ".v" no;
-createNode locator -n "rt_elbow_poleEndShape" -p "rt_elbow_poleEnd";
-	rename -uid "785D4876-4F29-9D56-738F-1D97A0E7EFAB";
-	setAttr -k off ".v";
-createNode pointConstraint -n "rt_elbow_poleEnd_pointConstraint1" -p "rt_elbow_poleEnd";
-	rename -uid "8F379631-45EF-F4D6-9770-96AB1ED7F63F";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_arm_poleW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tpm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 21.520307540893555 109.22527313232422 -31.714456558227539 1;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
-	setAttr ".rst" -type "double3" 21.520307540893555 109.22527313232422 -31.714456558227539 ;
-	setAttr -k on ".w0";
-createNode pointConstraint -n "rt_elbow_poleEnd_pointConstraint2" -p "rt_elbow_poleEnd";
-	rename -uid "7B8544BF-473F-4A58-C594-BAA278B2BB21";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_arm_poleW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".rst" -type "double3" -21.52 109.225 -31.714 ;
-	setAttr -k on ".w0";
-createNode transform -n "rt_elbow_poleStart" -p "rt_pole_line";
-	rename -uid "8196D2C9-46B9-E4AB-C1B4-07BAC020F354";
-	setAttr ".v" no;
-createNode locator -n "rt_elbow_poleStartShape" -p "rt_elbow_poleStart";
-	rename -uid "2FF843D2-4C50-05C8-43D6-38A6616F1429";
-	setAttr -k off ".v";
-createNode pointConstraint -n "rt_elbow_poleStart_pointConstraint1" -p "rt_elbow_poleStart";
-	rename -uid "3EE0B37C-44D8-29C1-8109-EF81EF2325B0";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lf_elbow_jntW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tt" -type "double3" 21.758707920501607 -2.6922908347160046e-15 -5.6843418860808015e-14 ;
-	setAttr ".tg[0].tpm" -type "matrix" 0.62898368607205846 -0.76645468017020923 -0.13010282817982308 0
-		 0.20255823457911282 6.3837823915946501e-16 0.97927021888965526 0 -0.75056624241928116 -0.64229839112766141 0.15525170690017653 0
-		 10.249068177158442 129.58206145200492 -1.9864725057720496 1;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
-	setAttr ".o" -type "double3" -1.5102611428119417e-07 8.4741697037316044e-07 1.392636423958038e-07 ;
-	setAttr ".rst" -type "double3" 23.934940338134766 112.90499877929688 -4.8173418045043945 ;
-	setAttr -k on ".w0";
-createNode pointConstraint -n "rt_elbow_poleStart_pointConstraint2" -p "rt_elbow_poleStart";
-	rename -uid "2CAFA301-4BFA-3347-2C1E-9DBD3A0C5BB6";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rt_elbow_jntW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".o" -type "double3" -8.0576130358167575e-05 6.8189236657190122e-05 -1.6672734805212031e-05 ;
-	setAttr ".rst" -type "double3" -23.934999465942383 112.90499877929688 -4.8173398971557617 ;
-	setAttr -k on ".w0";
-createNode transform -n "rt_elbow_poleLine" -p "rt_pole_line";
-	rename -uid "228A71C2-4E49-2DB5-12B8-309AD8B6A019";
-	setAttr -l on ".v";
-	setAttr -l on ".tx";
-	setAttr -l on ".ty";
-	setAttr -l on ".tz";
-	setAttr -l on ".rx";
-	setAttr -l on ".ry";
-	setAttr -l on ".rz";
-	setAttr -l on ".sx";
-	setAttr -l on ".sy";
-	setAttr -l on ".sz";
-createNode nurbsCurve -n "rt_elbow_poleLineShape" -p "rt_elbow_poleLine";
-	rename -uid "1EF695EE-4C47-982B-D36F-878CCFF8C699";
-	setAttr -k off ".v";
-	setAttr ".ovdt" 2;
-	setAttr ".ove" yes;
-	setAttr -s 2 ".cp";
-	setAttr ".cc" -type "nurbsCurve" 
-		1 1 0 no 3
-		2 0 1
-		2
-		-21.52 109.22499999999999 -31.713999999999999
-		-23.934999465942383 112.90499877929688 -4.8173398971557617
-		;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "13417270-43BC-CAE2-5538-9F869C234475";
+	rename -uid "391CB496-473D-ECC1-F2B2-8FABC174F30E";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "2671690E-4D6C-81E2-AA41-85B3FD3AB2CC";
+	rename -uid "6A41B22D-44BC-A3B4-308E-7287300FB501";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "63357FEE-456B-196B-0F9C-919A45DE272F";
+	rename -uid "D2EB02F6-4D5A-468E-BDAB-F280466409B6";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "539D6A2C-4E3F-307D-DE74-7F8CAC44BD9C";
+	rename -uid "D694E469-4C68-5320-161B-C7B10D1ECFD4";
 createNode displayLayer -n "defaultLayer";
-	rename -uid "7BB0A3E0-47D9-6E92-8A6B-C1AB81AF0915";
+	rename -uid "F98F36D8-467A-93FD-583A-76B8B2866F24";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "B929B7A8-4F95-4EEE-5313-A5A6643FEBCA";
+	rename -uid "A56E9484-4116-ACC7-3BDF-2EABDAB41904";
 createNode renderLayer -n "defaultRenderLayer";
-	rename -uid "BCC9DADE-4927-F33A-4CBA-8B899586EB53";
+	rename -uid "C6EDBEC5-47F8-7B10-AABF-B6BB2B72FDBE";
 	setAttr ".g" yes;
-createNode phong -n "base_mtl";
-	rename -uid "DCD09CBF-40CA-FB6B-2669-BF918376A95D";
+createNode phong -n "witch:witch:base_mtl";
+	rename -uid "5AE73429-4383-1969-DC90-7196A862D4A7";
 	setAttr ".dc" 1;
 	setAttr ".sc" -type "float3" 0 0 0 ;
 	setAttr ".rfl" 1;
 	setAttr ".cp" 2;
-createNode shadingEngine -n "U3DMeshSG";
-	rename -uid "8B42C738-48CA-5D38-C79B-0596C13F556F";
+createNode shadingEngine -n "witch:witch:U3DMeshSG";
+	rename -uid "F1364A89-4070-4183-1C81-53BA43217E38";
 	setAttr ".ihi" 0;
 	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 3 ".gn";
-createNode materialInfo -n "materialInfo1";
-	rename -uid "7C9067B3-4989-D5C6-86AC-9F9BE5A03703";
-createNode shadingEngine -n "U3DMeshSG1";
-	rename -uid "9E358929-43D6-2D21-AE10-A9B518EF1BC8";
+createNode materialInfo -n "witch:witch:materialInfo1";
+	rename -uid "50C2272F-45A7-F2C5-BABB-46A646F002F2";
+createNode shadingEngine -n "witch:witch:U3DMeshSG1";
+	rename -uid "B92BA391-4259-48F7-7B03-DE9E49A095D1";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo2";
-	rename -uid "D69D819C-435F-7F8A-7E9C-21875A2436A2";
-createNode file -n "texmap0";
-	rename -uid "5B6CF0BD-4FAF-0943-E808-FEAC70DB461A";
+createNode materialInfo -n "witch:witch:materialInfo2";
+	rename -uid "599FC657-468D-B58A-46AC-8A969FB12946";
+createNode file -n "witch:witch:texmap0";
+	rename -uid "945057C6-4737-7F98-8B17-6F91C2E84B9A";
 	setAttr ".ftn" -type "string" "D:/riggingProjects/Rig_Witch//scenes/RIG/diffuse.jpg";
 	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "place2dTexture1";
-	rename -uid "710E62BB-4AFC-B992-DEFD-EBAE815EDD1F";
-createNode script -n "uiConfigurationScriptNode";
-	rename -uid "D712D167-41D8-6277-836A-1180D2B60A8B";
+createNode place2dTexture -n "witch:witch:place2dTexture1";
+	rename -uid "668F2D47-4094-5CB0-7BC2-6B81246053E1";
+createNode script -n "witch:witch:uiConfigurationScriptNode";
+	rename -uid "08F55E0C-45D8-9268-C9F4-7F8FE6A4ACA6";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top|topShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top|topShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
 		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side|sideShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side|sideShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
 		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front|frontShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n"
-		+ "            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n"
+		+ "            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n"
 		+ "            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n"
 		+ "            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp|perspShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
 		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n"
 		+ "            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
-		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1248\n            -height 697\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
+		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1118\n            -height 697\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
 		+ "            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n"
-		+ "            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n"
+		+ "            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n"
 		+ "            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n"
 		+ "                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n"
@@ -23209,30 +22760,30 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"schematic\" \n                -mergeConnections 1\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 1\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n"
 		+ "                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -connectionMinSegment 0.03\n                -connectionOffset 0.03\n                -connectionRoundness 0.8\n                -connectionTension -100\n                -defaultPinnedState 0\n"
-		+ "                -additiveGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n"
-		+ "                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -connectionMinSegment 0.03\n                -connectionOffset 0.03\n                -connectionRoundness 0.8\n                -connectionTension -100\n                -defaultPinnedState 0\n                -additiveGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n"
-		+ "                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp|perspShape\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n"
-		+ "                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n"
-		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n"
-		+ "                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n"
-		+ "                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n"
-		+ "            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n"
-		+ "            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
-		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Node Editor\")) \n\t\t\t\t\t\"scriptedPanel\"\n\t\t\t\t\t\"$panelName = `scriptedPanel -unParent  -type \\\"nodeEditorPanel\\\" -l (localizedPanelLabel(\\\"Node Editor\\\")) -mbv $menusOkayInPanels `;\\n\\n\\t\\t\\t$editorName = ($panelName+\\\"NodeEditorEd\\\");\\n            nodeEditor -e \\n                -allAttributes 0\\n                -allNodes 0\\n                -autoSizeNodes 1\\n                -consistentNameSize 1\\n                -createNodeCommand \\\"nodeEdCreateNodeCommand\\\" \\n                -connectNodeOnCreation 0\\n                -connectOnDrop 0\\n                -copyConnectionsOnPaste 0\\n                -connectionStyle \\\"bezier\\\" \\n                -connectionMinSegment 0.03\\n                -connectionOffset 0.03\\n                -connectionRoundness 0.8\\n                -connectionTension -100\\n                -defaultPinnedState 0\\n                -additiveGraphingMode 1\\n                -settingsChangedCallback \\\"nodeEdSyncControls\\\" \\n                -traversalDepthLimit -1\\n                -keyPressCommand \\\"nodeEdKeyPressCommand\\\" \\n                -nodeTitleMode \\\"name\\\" \\n                -gridSnap 0\\n                -gridVisibility 1\\n                -crosshairOnEdgeDragging 0\\n                -popupMenuScript \\\"nodeEdBuildPanelMenus\\\" \\n                -showNamespace 1\\n                -showShapes 1\\n                -showSGShapes 0\\n                -showTransforms 1\\n                -useAssets 1\\n                -syncedSelection 1\\n                -extendToShapes 1\\n                -editorMode \\\"default\\\" \\n                -hasWatchpoint 0\\n                $editorName\"\n"
-		+ "\t\t\t\t\t\"scriptedPanel -edit -l (localizedPanelLabel(\\\"Node Editor\\\")) -mbv $menusOkayInPanels  $panelName;\\n\\n\\t\\t\\t$editorName = ($panelName+\\\"NodeEditorEd\\\");\\n            nodeEditor -e \\n                -allAttributes 0\\n                -allNodes 0\\n                -autoSizeNodes 1\\n                -consistentNameSize 1\\n                -createNodeCommand \\\"nodeEdCreateNodeCommand\\\" \\n                -connectNodeOnCreation 0\\n                -connectOnDrop 0\\n                -copyConnectionsOnPaste 0\\n                -connectionStyle \\\"bezier\\\" \\n                -connectionMinSegment 0.03\\n                -connectionOffset 0.03\\n                -connectionRoundness 0.8\\n                -connectionTension -100\\n                -defaultPinnedState 0\\n                -additiveGraphingMode 1\\n                -settingsChangedCallback \\\"nodeEdSyncControls\\\" \\n                -traversalDepthLimit -1\\n                -keyPressCommand \\\"nodeEdKeyPressCommand\\\" \\n                -nodeTitleMode \\\"name\\\" \\n                -gridSnap 0\\n                -gridVisibility 1\\n                -crosshairOnEdgeDragging 0\\n                -popupMenuScript \\\"nodeEdBuildPanelMenus\\\" \\n                -showNamespace 1\\n                -showShapes 1\\n                -showSGShapes 0\\n                -showTransforms 1\\n                -useAssets 1\\n                -syncedSelection 1\\n                -extendToShapes 1\\n                -editorMode \\\"default\\\" \\n                -hasWatchpoint 0\\n                $editorName\"\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n"
+		+ "                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n"
+		+ "                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp|perspShape\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n"
+		+ "                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n"
+		+ "                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n"
+		+ "                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n"
+		+ "\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n"
+		+ "            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n"
+		+ "            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1118\\n    -height 697\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1118\\n    -height 697\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
-createNode script -n "sceneConfigurationScriptNode";
-	rename -uid "758736B3-4FA8-C9A5-81B9-538EC73835AB";
+createNode script -n "witch:witch:sceneConfigurationScriptNode";
+	rename -uid "D6421EA8-40A7-4352-1157-B0B8E6E53D04";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
-createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo1";
-	rename -uid "E48D0E05-4442-0F61-AEFB-C88E37674F70";
+createNode nodeGraphEditorInfo -n "witch:witch:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "A39089F8-4992-4639-CEFD-E9A65E90403B";
 	setAttr ".def" no;
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" 16.666666004392955 -566.87415833945147 ;
@@ -23240,15 +22791,15 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo1";
 	setAttr ".tgi[0].ni[0].x" 438.57144165039062;
 	setAttr ".tgi[0].ni[0].y" -68.571426391601562;
 	setAttr ".tgi[0].ni[0].nvs" 1923;
-createNode groupId -n "groupId1";
-	rename -uid "30996850-4889-EBF1-A661-7EAC2C2C87D1";
+createNode groupId -n "witch:groupId1";
+	rename -uid "7387F8B6-49D3-CF5A-5F57-9297616D721A";
 	setAttr ".ihi" 0;
-createNode groupParts -n "skinCluster5GroupParts";
-	rename -uid "5E891573-498A-0E8D-C6EB-35A1B4F16E37";
+createNode groupParts -n "witch:skinCluster5GroupParts";
+	rename -uid "D0A4EDF0-4A33-D9A6-F981-BAAB51AB270E";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:389]";
-createNode dagPose -n "bindPose1";
-	rename -uid "43EB955F-4178-8610-6F96-7B940B8FA373";
+createNode dagPose -n "witch:bindPose1";
+	rename -uid "C64858C0-4B00-0F57-8780-37B65DACE288";
 	setAttr -s 67 ".wm";
 	setAttr ".wm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 147 ".xm";
@@ -23666,8 +23217,8 @@ createNode dagPose -n "bindPose1";
 		no no no no yes yes yes yes yes yes yes no no no no no no no no no no no no no no 
 		no no no no no no no no;
 	setAttr ".bp" yes;
-createNode skinCluster -n "skinCluster2";
-	rename -uid "B71208BD-4D5D-68C8-1381-B286C9055FE2";
+createNode skinCluster -n "witch:skinCluster2";
+	rename -uid "1E58BEAF-47CD-820A-8FDD-B18EEA2CF1F4";
 	setAttr -s 283 ".wl";
 	setAttr ".wl[0:282].w"
 		1 11 1
@@ -24205,22 +23756,22 @@ createNode skinCluster -n "skinCluster2";
 	setAttr ".ucm" yes;
 	setAttr ".wd" 1;
 	setAttr -s 52 ".ifcl";
-createNode groupId -n "groupId2";
-	rename -uid "755C5459-499C-D769-4AAC-2584A48B9BFE";
+createNode groupId -n "witch:groupId2";
+	rename -uid "D48B72F1-4E95-C0BC-30DE-FCA9B1CE6C44";
 	setAttr ".ihi" 0;
-createNode groupParts -n "skinCluster2GroupParts";
-	rename -uid "7589CD3C-467E-5E5D-ABE5-2483F490ABAD";
+createNode groupParts -n "witch:skinCluster2GroupParts";
+	rename -uid "324BC586-43A9-CFBD-9F00-1CB05C186CAA";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:334]";
-createNode groupId -n "groupId3";
-	rename -uid "3587FE9E-470E-D8CA-6B01-919CBDE26F94";
+createNode groupId -n "witch:groupId3";
+	rename -uid "7FAFE771-4498-BFFE-F5DF-8F980E0F1B92";
 	setAttr ".ihi" 0;
-createNode groupParts -n "skinCluster7GroupParts";
-	rename -uid "E039A512-4E93-9AD3-9845-00B439412F5B";
+createNode groupParts -n "witch:skinCluster7GroupParts";
+	rename -uid "392E5498-497C-2565-7C90-0B8B4AC43871";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:492]";
-createNode skinCluster -n "skinCluster5";
-	rename -uid "6386C1FB-441F-0FA1-2E3F-A484F80D1B73";
+createNode skinCluster -n "witch:skinCluster5";
+	rename -uid "C7A81B6E-47EC-E2A5-1888-60821E3B4C13";
 	setAttr -s 352 ".wl";
 	setAttr ".wl[0:351].w"
 		2 12 0.058299999684095383 13 0.94170000031590462
@@ -24783,8 +24334,8 @@ createNode skinCluster -n "skinCluster5";
 	setAttr ".wd" 1;
 	setAttr -s 43 ".ifcl";
 	setAttr -s 43 ".ifcl";
-createNode dagPose -n "bindPose2";
-	rename -uid "2647D15E-4B95-7938-E68F-1FBAB68EA00D";
+createNode dagPose -n "witch:bindPose2";
+	rename -uid "DE8D779E-475E-3842-EFBC-819DAA00CA61";
 	setAttr -s 136 ".wm";
 	setAttr ".wm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".wm[1]" -type "matrix" 0 0.98968830985327783 -0.14323773713572266 0 0 0.14323773713572263 0.98968830985327783 0
@@ -25410,227 +24961,227 @@ createNode dagPose -n "bindPose2";
 	setAttr ".g[198]" yes;
 	setAttr ".g[201]" yes;
 	setAttr ".bp" yes;
-createNode animCurveUL -n "lf_wrist_add_b_jnt_translateY";
-	rename -uid "78E02C40-427C-3A4C-7309-23B828F53325";
+createNode animCurveUL -n "witch:lf_wrist_add_b_jnt_translateY";
+	rename -uid "1622745C-4172-AAF1-45B0-05AB7D41387E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -70 -8 0 -2.9999999999999964 60 -1;
-createNode unitConversion -n "unitConversion1";
-	rename -uid "44FB8688-4FDC-6EAC-7A61-30B729BBD5A4";
+createNode unitConversion -n "witch:unitConversion1";
+	rename -uid "F32C6CBA-4979-B930-8967-D38ED5F467B6";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "lf_wrist_add_f_jnt_translateY";
-	rename -uid "1CE77C6A-4E73-168B-1CA7-FEA0D2BE7BCF";
+createNode animCurveUL -n "witch:lf_wrist_add_f_jnt_translateY";
+	rename -uid "9E8E21CE-4F10-2075-E4B7-649D6BFE14D1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -70 0 0 3 60 8;
-createNode unitConversion -n "unitConversion2";
-	rename -uid "B4F6BA11-4F11-6787-693F-4A8FEE284288";
+createNode unitConversion -n "witch:unitConversion2";
+	rename -uid "47E68935-403C-B419-17B6-0AB36E2F9671";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "lf_wrist_add_d_jnt_translateZ";
-	rename -uid "6B0BDFA0-45E7-DFF2-F07D-4988BFD99110";
+createNode animCurveUL -n "witch:lf_wrist_add_d_jnt_translateZ";
+	rename -uid "F6EC9BDD-40A4-05A7-45D5-6C93E53844F9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -100 8 0 3 80 0;
-createNode unitConversion -n "unitConversion3";
-	rename -uid "E41CEB52-442F-5DD6-0751-8592470C45CC";
+createNode unitConversion -n "witch:unitConversion3";
+	rename -uid "86A53216-477D-0007-1202-E5B44F50A834";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "lf_wrist_add_u_jnt_translateZ";
-	rename -uid "1B452736-461B-A78B-CD17-43890D3BDEBA";
+createNode animCurveUL -n "witch:lf_wrist_add_u_jnt_translateZ";
+	rename -uid "ADFC9475-4FCE-B750-A5F3-1B98C4BDB68D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -100 1 0 -3 80 -11;
-createNode unitConversion -n "unitConversion4";
-	rename -uid "180D3B2F-484A-6442-CEDD-C2AC2D1ABA00";
+createNode unitConversion -n "witch:unitConversion4";
+	rename -uid "81DDB428-4DE6-B8B7-1F0B-6B90B202A8DB";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "lf_elbow_add_b_jnt_translateY";
-	rename -uid "3E4DBC54-4FC0-F5BB-0878-848D7689A936";
+createNode animCurveUL -n "witch:lf_elbow_add_b_jnt_translateY";
+	rename -uid "7E07C3B1-4EA3-EC25-6DEA-57A1446B909C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 -2.9999999999999929 110 -8;
-createNode unitConversion -n "unitConversion9";
-	rename -uid "13EEB6D7-4209-3DEA-8C9B-1CBD893E741E";
+createNode unitConversion -n "witch:unitConversion9";
+	rename -uid "B6849B3C-476E-1CD5-57F1-C5B08418C7CF";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "lf_elbow_add_f_jnt_translateY";
-	rename -uid "5AC1A6A2-42D1-3E02-E531-E2AD1A6F2CEF";
+createNode animCurveUL -n "witch:lf_elbow_add_f_jnt_translateY";
+	rename -uid "727366E0-4738-D505-C03D-8BAF6066EDE2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 3.0000000000000036 110 20;
-createNode unitConversion -n "unitConversion10";
-	rename -uid "7928B8C2-42A8-A003-874B-48A4EB79050F";
+createNode unitConversion -n "witch:unitConversion10";
+	rename -uid "F6E7CF6A-46D5-ACE6-B084-4A8B404ACCE9";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "lf_shld_add_f_jnt_translateY";
-	rename -uid "749E5805-45F3-04D3-9A58-88B27D5D8E82";
+createNode animCurveUL -n "witch:lf_shld_add_f_jnt_translateY";
+	rename -uid "CC4CD430-494E-A250-A801-EDAD60AEB820";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 2.9999999999999996 70 8;
-createNode unitConversion -n "unitConversion13";
-	rename -uid "37B4BACC-46C5-24F9-1BCE-81BAC7425631";
+createNode unitConversion -n "witch:unitConversion13";
+	rename -uid "82099F74-484D-761C-6349-638DBD56F7B3";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "lf_shld_add_u_jnt_translateZ";
-	rename -uid "0573609E-446E-F7C8-C00F-04AD9319C550";
+createNode animCurveUL -n "witch:lf_shld_add_u_jnt_translateZ";
+	rename -uid "588464E2-45F1-2064-6D51-118EB270D80A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 -3.0000000000000142 110 -8;
-createNode unitConversion -n "unitConversion15";
-	rename -uid "F4F2443A-49A7-2C54-BB12-6B9FAA8D55A0";
+createNode unitConversion -n "witch:unitConversion15";
+	rename -uid "46AC94F2-44D7-764B-C3F4-F6A8F3EBD79B";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "lf_shld_add_d_jnt_translateZ";
-	rename -uid "9B6F068A-457F-06E5-E9CB-39B67E45926D";
+createNode animCurveUL -n "witch:lf_shld_add_d_jnt_translateZ";
+	rename -uid "F567E49F-40FE-9370-1376-269777B10320";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 2.9999999999999716 110 16;
-createNode unitConversion -n "unitConversion16";
-	rename -uid "0346BFA6-40EE-4202-E202-D4AEA1600ECE";
+createNode unitConversion -n "witch:unitConversion16";
+	rename -uid "374AC394-4865-D86A-0684-1584CE257833";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "lf_ankle_add_f_jnt_translateY";
-	rename -uid "DB9047FE-4549-0533-EB3F-3381EACA7DC6";
+createNode animCurveUL -n "witch:lf_ankle_add_f_jnt_translateY";
+	rename -uid "631D10FC-41EC-FF7F-324B-92865DBAD13E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -30 -8 0 -3.0000000000000004 45 -3;
-createNode unitConversion -n "unitConversion21";
-	rename -uid "E53E6549-4FBF-A9F1-BBEA-AD9E9AB4CC7F";
+createNode unitConversion -n "witch:unitConversion21";
+	rename -uid "93429199-4E77-508C-72FB-9C9E5552FA88";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "lf_ankle_add_b_jnt_translateY";
-	rename -uid "B028C6ED-427B-6D78-B34F-97A275A93753";
+createNode animCurveUL -n "witch:lf_ankle_add_b_jnt_translateY";
+	rename -uid "27B668B7-4E2D-38A6-4813-55AA2882164D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -30 2 0 3.0000000000000004 45 8;
-createNode unitConversion -n "unitConversion22";
-	rename -uid "E8CEAA01-4AED-BA30-30AC-CC8F1EBE9301";
+createNode unitConversion -n "witch:unitConversion22";
+	rename -uid "B7E3F412-4F62-658B-6447-83BC4237F421";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "lf_ankle_add_l_jnt_translateZ";
-	rename -uid "EC87A81A-4475-BF6C-F776-DB919A8871E0";
+createNode animCurveUL -n "witch:lf_ankle_add_l_jnt_translateZ";
+	rename -uid "4C96EA94-4E05-89A9-B776-B2808AFE8926";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -45 8 0 3 35 8;
-createNode unitConversion -n "unitConversion23";
-	rename -uid "81537A1E-44B0-531A-1980-C7845F806B45";
+createNode unitConversion -n "witch:unitConversion23";
+	rename -uid "5A381698-4218-BF6B-B706-B0B13AFE55B2";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "lf_ankle_add_r_jnt_translateZ";
-	rename -uid "2051D738-4247-30A9-AECD-6E94E3EA0320";
+createNode animCurveUL -n "witch:lf_ankle_add_r_jnt_translateZ";
+	rename -uid "D3488137-47FE-1D69-0756-BE86E8D3A5A1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -45 -8 0 -3 35 -8;
-createNode unitConversion -n "unitConversion24";
-	rename -uid "28282A8D-4D87-E7DF-0152-A5B270C256A5";
+createNode unitConversion -n "witch:unitConversion24";
+	rename -uid "E2F8B1E2-46B1-4D95-9130-90812C7521B2";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "rt_ankle_add_f_jnt_translateY";
-	rename -uid "C0838269-4E35-25FE-AB68-22B079A098A6";
+createNode animCurveUL -n "witch:rt_ankle_add_f_jnt_translateY";
+	rename -uid "FCA7CEFC-4D85-C721-023D-B88EF143858D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -30 8 0 3.0000034026827032 45 3;
-createNode unitConversion -n "unitConversion25";
-	rename -uid "D9AB5805-43A3-76A4-3FA0-CA9B064ED6A0";
+createNode unitConversion -n "witch:unitConversion25";
+	rename -uid "CB13E28F-485D-4656-BB67-0A98D7BA7BB4";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "rt_ankle_add_b_jnt_translateY";
-	rename -uid "8809B0A0-4CCE-9618-0CBF-D29E776A9841";
+createNode animCurveUL -n "witch:rt_ankle_add_b_jnt_translateY";
+	rename -uid "52124DC0-4734-9CE3-2A03-89B5731F40DB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -30 -2 0 -3 45 -8;
-createNode unitConversion -n "unitConversion26";
-	rename -uid "5339B104-4831-3793-96C3-1A9AF2E22EE4";
+createNode unitConversion -n "witch:unitConversion26";
+	rename -uid "EBC4AB8F-4073-2ACF-8523-1E85447CBED7";
 	setAttr ".cf" 57.295779513082323;
-createNode unitConversion -n "unitConversion27";
-	rename -uid "7BE07533-4F81-EEEE-6F68-38BD61A8B298";
+createNode unitConversion -n "witch:unitConversion27";
+	rename -uid "D2A1EAEB-4C2B-75D7-3EEA-F5A40388D63C";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "rt_ankle_add_r_jnt_translateZ";
-	rename -uid "67BD380C-4C50-5AF4-C58D-EBBA6F2ED0A0";
+createNode animCurveUL -n "witch:rt_ankle_add_r_jnt_translateZ";
+	rename -uid "7AA5D750-4F0E-6EAF-2D15-E2BFF31F3FF0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -45 8 0 3 35 8;
-createNode unitConversion -n "unitConversion28";
-	rename -uid "A1213456-4A50-FBF3-830E-68B005238200";
+createNode unitConversion -n "witch:unitConversion28";
+	rename -uid "31F10C84-421C-1985-DD96-89B0FB185C6B";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "rt_ankle_add_l_jnt_translateZ";
-	rename -uid "17E9B52D-404E-819A-36B5-EFB211F3C913";
+createNode animCurveUL -n "witch:rt_ankle_add_l_jnt_translateZ";
+	rename -uid "7F5D3CDE-4C76-1F32-61A1-949082FBD863";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -45 -8 0 -3 35 -8;
-createNode unitConversion -n "unitConversion29";
-	rename -uid "259440BA-48B9-1EF4-AEEE-A2A89151D762";
+createNode unitConversion -n "witch:unitConversion29";
+	rename -uid "19B9BA8D-4C19-EEF4-3143-9985E0C2ADF8";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "lf_knee_add_b_jnt_translateY";
-	rename -uid "D385CF47-4FF2-5F44-6865-678DA2548E5A";
+createNode animCurveUL -n "witch:lf_knee_add_b_jnt_translateY";
+	rename -uid "EA9C07BC-461B-EB8F-E0CA-FEB8C77B61DE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 3.0000000000000018 100 14;
-createNode unitConversion -n "unitConversion30";
-	rename -uid "318AE5F7-4CA2-0B2A-0FC4-A89D36167EB9";
+createNode unitConversion -n "witch:unitConversion30";
+	rename -uid "C3898681-47BA-5FCC-5CA2-32946D478DB7";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "lf_knee_add_f_jnt_translateY";
-	rename -uid "FD3C2C24-4E1A-8416-F288-DFA71DEA2F76";
+createNode animCurveUL -n "witch:lf_knee_add_f_jnt_translateY";
+	rename -uid "560C6F3E-4E9F-5641-5C13-C99FD9AF0820";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 -2.9999999999999991 100 -13;
-createNode unitConversion -n "unitConversion31";
-	rename -uid "643EDBE4-4C6B-DFD1-B1B2-4EA1CFDB5D26";
+createNode unitConversion -n "witch:unitConversion31";
+	rename -uid "F619CD98-4666-D331-0EB0-A8A0AC6B82F1";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "rt_knee_add_b_jnt_translateY";
-	rename -uid "00F9AEC0-4DCC-90B6-8DAA-66B27765D928";
+createNode animCurveUL -n "witch:rt_knee_add_b_jnt_translateY";
+	rename -uid "C5A06120-49F8-00D0-BA1B-1BB272CC7379";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 -3 100 -13;
-createNode unitConversion -n "unitConversion32";
-	rename -uid "9E6A3B32-4313-CDBD-D633-CABC937339C5";
+createNode unitConversion -n "witch:unitConversion32";
+	rename -uid "6DE5A576-4C04-610D-542C-249F3F6BF5C1";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "rt_knee_add_f_jnt_translateY";
-	rename -uid "B157EF5B-421F-97E8-2C4D-7686D23BD9BF";
+createNode animCurveUL -n "witch:rt_knee_add_f_jnt_translateY";
+	rename -uid "856D606D-4C1A-2D91-4555-05ABC2B0654F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 3 100 12;
-createNode unitConversion -n "unitConversion33";
-	rename -uid "B841C6D9-4A36-8BEE-32B4-6DAB73063B31";
+createNode unitConversion -n "witch:unitConversion33";
+	rename -uid "41802231-41B3-2FDF-0775-0CB0F1FA0C94";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "lf_hip_add_f_jnt_translateY";
-	rename -uid "B1CD2625-4F12-8F45-D134-B28097FCC6ED";
+createNode animCurveUL -n "witch:lf_hip_add_f_jnt_translateY";
+	rename -uid "39373D7E-47CC-CB31-267F-8296D4EE2D53";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -100 -20 0 -2.9999999999999982 80 -1;
-createNode unitConversion -n "unitConversion34";
-	rename -uid "55B0A540-4751-C512-03E7-278E2D89D7B5";
+createNode unitConversion -n "witch:unitConversion34";
+	rename -uid "3C1E674C-4744-9F67-3EB8-FCB1EA21214A";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "lf_hip_add_b_jnt_translateY";
-	rename -uid "70D8E881-41F4-2AAF-703B-BBA0F8A0065C";
+createNode animCurveUL -n "witch:lf_hip_add_b_jnt_translateY";
+	rename -uid "C336B829-4CA4-76EB-C0F7-D9AB4C442DCA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -100 1 0 3.0000000000000018 80 20;
-createNode unitConversion -n "unitConversion35";
-	rename -uid "E7BA9DE7-4724-2AA5-2CFD-3B984D45EF7C";
+createNode unitConversion -n "witch:unitConversion35";
+	rename -uid "5AB64057-46EE-08D7-1BF6-F0A99FC42687";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "lf_hip_add_l_jnt_translateZ";
-	rename -uid "496D7B0C-46A2-EC8F-2B6C-D7A8A2954F86";
+createNode animCurveUL -n "witch:lf_hip_add_l_jnt_translateZ";
+	rename -uid "0D9BEBDB-4ECF-581A-9BCA-A5A4AF3A829B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  -100 13 0 3.0000000000000036;
-createNode unitConversion -n "unitConversion36";
-	rename -uid "ABA4C0E3-4ED8-36B3-3758-97A6F1890BDD";
+createNode unitConversion -n "witch:unitConversion36";
+	rename -uid "C2B03F78-433C-D718-3664-2AB0A09B9C6B";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "rt_hip_add_r_jnt_translateZ";
-	rename -uid "28EEC66B-4E9A-D697-ACFC-5BACACD36F73";
+createNode animCurveUL -n "witch:rt_hip_add_r_jnt_translateZ";
+	rename -uid "4260A746-4380-2697-8A21-52B67B7C85E0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  -100 -13 0 -3;
-createNode unitConversion -n "unitConversion37";
-	rename -uid "F923C98B-445C-EB63-CF78-DF8BEEA71F87";
+createNode unitConversion -n "witch:unitConversion37";
+	rename -uid "6C38BA14-40B7-D6B3-7854-7A88BBC75617";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "rt_hip_add_b_jnt_translateY";
-	rename -uid "FC814A5B-4368-3673-76F3-11B14BC908C3";
+createNode animCurveUL -n "witch:rt_hip_add_b_jnt_translateY";
+	rename -uid "C71588FB-4874-1C37-3ED9-369A2DFA61C4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -100 -8 0 -3 80 -8;
-createNode unitConversion -n "unitConversion38";
-	rename -uid "DE803568-4310-7283-D24C-41AF60CE85BC";
+createNode unitConversion -n "witch:unitConversion38";
+	rename -uid "94050F89-437D-F238-1408-CC95DF55F394";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "rt_hip_add_f_jnt_translateY";
-	rename -uid "A61C08E3-48BD-36C7-BD11-0AB9D7FD288F";
+createNode animCurveUL -n "witch:rt_hip_add_f_jnt_translateY";
+	rename -uid "F93FEC0F-4210-8FBD-947A-F284408F40D1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -100 20 0 3 80 1;
-createNode unitConversion -n "unitConversion39";
-	rename -uid "C2FC88D5-498C-5281-A378-7DB8E7E2C945";
+createNode unitConversion -n "witch:unitConversion39";
+	rename -uid "E41BE3BC-4FCF-10BA-2AA2-889A732335CD";
 	setAttr ".cf" 57.295779513082323;
-createNode skinCluster -n "skinCluster7";
-	rename -uid "AF68082E-4E2D-7EDA-2D7E-B9B04518E0E3";
+createNode skinCluster -n "witch:skinCluster7";
+	rename -uid "A0050DC6-4B83-82FE-8886-8CBFEA537AF5";
 	setAttr -s 468 ".wl";
 	setAttr ".wl[0:192].w"
 		1 0 1
@@ -26159,8 +25710,8 @@ createNode skinCluster -n "skinCluster7";
 	setAttr ".ucm" yes;
 	setAttr ".wd" 1;
 	setAttr -s 14 ".ifcl";
-createNode dagPose -n "bindPose3";
-	rename -uid "D7F24FB8-4BFD-E408-B5AF-8195B41F529D";
+createNode dagPose -n "witch:bindPose3";
+	rename -uid "734956FA-409D-DC40-A8C8-4ABE976175C8";
 	setAttr -s 15 ".wm";
 	setAttr ".wm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 16 ".xm";
@@ -26211,58 +25762,62 @@ createNode dagPose -n "bindPose3";
 	setAttr -s 16 ".g[0:15]" yes no yes yes no no no no no no no no no 
 		no no yes;
 	setAttr ".bp" yes;
-createNode animCurveUA -n "lf_ribbon_tape_rotateZ";
-	rename -uid "F4A8E8E3-4712-09B9-7D14-BCB29C482821";
+createNode animCurveUA -n "witch:lf_ribbon_tape_rotateZ";
+	rename -uid "F5E31BAE-4BAB-E5E8-78F6-DBA9DACDD9B2";
 	setAttr ".tan" 2;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  56.559890747070312 0 121.25685119628906 
 		-89.661621156000649;
-createNode unitConversion -n "unitConversion42";
-	rename -uid "773D5DB3-49C3-B154-5126-7E938A80A667";
+createNode unitConversion -n "witch:unitConversion42";
+	rename -uid "5FED6D91-4C57-DCB5-A7DD-86BD3B638934";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUA -n "rt_ribbon_tape_rotateZ";
-	rename -uid "9A347629-49B3-A531-1F52-E0802ACB8400";
+createNode animCurveUA -n "witch:rt_ribbon_tape_rotateZ";
+	rename -uid "68403629-4E67-C8AF-910A-20A6ED0E9AEF";
 	setAttr ".tan" 2;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  63.548793792724609 0 126.35031127929688 
 		-92.408476726435708;
-createNode unitConversion -n "unitConversion43";
-	rename -uid "E4ADF74B-4567-9F6D-2F0C-F08513AD6DFD";
+createNode unitConversion -n "witch:unitConversion43";
+	rename -uid "C385670C-4469-3995-2752-E2A4C083F5D9";
 	setAttr ".cf" 57.295779513082323;
-createNode objectSet -n "lf_add_jnts";
-	rename -uid "D1E6797C-4BA3-C205-36DA-90A609224AB7";
+createNode objectSet -n "witch:lf_add_jnts";
+	rename -uid "AD3A5E46-4374-3306-9E0D-8D8C7DA45AF3";
 	setAttr ".ihi" 0;
 	setAttr -s 34 ".dsm";
-createNode objectSet -n "add_jnts";
-	rename -uid "F225CAB9-4026-699D-1503-CFA6A0502C1A";
+createNode objectSet -n "witch:add_jnts";
+	rename -uid "54BC01D5-4530-FBDF-1A2A-DFB70C26A14E";
 	setAttr ".ihi" 0;
 	setAttr -s 2 ".dnsm";
-createNode objectSet -n "rt_add_jnts";
-	rename -uid "E55C2343-47E6-BFE1-6419-9FB943830DDF";
+createNode objectSet -n "witch:rt_add_jnts";
+	rename -uid "289B88EE-4ADF-A533-D186-8A83744AC005";
 	setAttr ".ihi" 0;
 	setAttr -s 31 ".dsm";
-createNode unitConversion -n "unitConversion44";
-	rename -uid "66462F2C-4E4D-DCF5-6159-42B4EBB3ABEE";
+createNode unitConversion -n "witch:unitConversion44";
+	rename -uid "DB85FFAC-435A-C309-3D8D-94AA60834470";
 	setAttr ".i" 0.34329025241997047;
 	setAttr ".cf" 0.5;
-createNode ikRPsolver -n "ikRPsolver";
-	rename -uid "9C4A81D5-4978-31B5-0341-52AD5AA33EEB";
-createNode reverse -n "reverse1";
-	rename -uid "12FBFAC3-47FE-B4CD-F523-16A8BB5CCDBB";
-createNode reverse -n "reverse2";
-	rename -uid "0C59082A-4D8A-A9CB-017E-A6810E254D2F";
-createNode makeNurbCircle -n "makeNurbCircle5";
-	rename -uid "991A22FA-4AE3-60AE-95B5-CAB9656CF315";
+createNode ikRPsolver -n "witch:ikRPsolver";
+	rename -uid "96D4B2B3-46AE-EE02-BA77-5CBC40F627AB";
+createNode makeNurbCircle -n "witch:makeNurbCircle4";
+	rename -uid "83F305DA-47F3-7B53-C578-6C996BC32401";
+	setAttr ".d" 1;
+	setAttr ".s" 12;
+createNode reverse -n "witch:reverse1";
+	rename -uid "F52130D9-43D3-924B-23D5-6B9730895151";
+createNode reverse -n "witch:reverse2";
+	rename -uid "BD58F49E-4D2D-F1CE-69C1-8A9DEFBD7475";
+createNode makeNurbCircle -n "witch:makeNurbCircle5";
+	rename -uid "053D83A6-443B-85D7-95E4-9893E1F073A9";
 	setAttr ".nr" -type "double3" 1 0 0 ;
 	setAttr ".r" 5;
-createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "51FB6F54-4607-E18A-9497-CA9648AA3622";
+createNode nodeGraphEditorInfo -n "witch:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "F727AAFC-4C98-4852-4CD6-989B0BF0966D";
 	setAttr ".def" no;
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -330.95236780151544 -323.80951094248991 ;
 	setAttr ".tgi[0].vh" -type "double2" 317.85713022663526 338.09522466054096 ;
-createNode skinCluster -n "skinCluster8";
-	rename -uid "B21516ED-4CC7-7959-1C96-12B9541BEA80";
+createNode skinCluster -n "witch:skinCluster8";
+	rename -uid "63204B2A-486E-B53D-9EE6-899A20E25692";
 	setAttr -s 2592 ".wl";
 	setAttr ".wl[0:499].w"
 		1 52 1
@@ -28863,8 +28418,8 @@ createNode skinCluster -n "skinCluster8";
 		1 23 1
 		1 23 1;
 	setAttr ".bm" 1;
-createNode skinCluster -n "skinCluster9";
-	rename -uid "B01B5E46-4104-D7F7-89AB-D8AF387E265B";
+createNode skinCluster -n "witch:skinCluster9";
+	rename -uid "62B2C677-4E19-8518-7DBA-8792560A039A";
 	setAttr -s 2592 ".wl";
 	setAttr ".wl[0:255].w"
 		4 47 0.097999994927086068 51 0.00400000008754432 52 0.84500000696862099 
@@ -32737,119 +32292,85 @@ createNode skinCluster -n "skinCluster9";
 	setAttr ".wd" 1;
 	setAttr -s 85 ".ifcl";
 	setAttr -s 85 ".ifcl";
-createNode animCurveUL -n "rt_shld_add_u_jnt_translateZ";
-	rename -uid "31F3DA11-4845-BDB9-F35B-F88635E57194";
+createNode animCurveUL -n "witch:rt_shld_add_u_jnt_translateZ";
+	rename -uid "D48BBF6C-418F-C27C-21A3-C48814690FED";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 3 110 8;
-createNode unitConversion -n "unitConversion45";
-	rename -uid "0A0A191D-430B-3929-1838-35BC820132DB";
+createNode unitConversion -n "witch:unitConversion45";
+	rename -uid "15FEF9DD-4424-4416-A6B2-8CA6797CA611";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "rt_shld_add_d_jnt_translateZ";
-	rename -uid "B9055EE6-458F-B874-FA7A-25B5633FC1A9";
+createNode animCurveUL -n "witch:rt_shld_add_d_jnt_translateZ";
+	rename -uid "E7A0C3BF-448A-E5E6-A898-B9AC27D3BCF9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 -3 110 -16;
-createNode unitConversion -n "unitConversion46";
-	rename -uid "418C2CBD-438D-F0A4-B503-1CAD5514DB54";
+createNode unitConversion -n "witch:unitConversion46";
+	rename -uid "59677DBE-44E6-3F06-83F4-1FB9D365A787";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "rt_elbow_add_f_jnt_translateY";
-	rename -uid "761AA520-4528-46E4-CEB8-C9B453E8758E";
+createNode animCurveUL -n "witch:rt_elbow_add_f_jnt_translateY";
+	rename -uid "B803BDCA-42E6-6537-A605-0E9FB63D659C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 3.0000000000000036 110 20;
-createNode animCurveUL -n "rt_elbow_add_b_jnt_translateY";
-	rename -uid "E4171FD1-48C4-292B-7139-99B96D72340C";
+createNode animCurveUL -n "witch:rt_elbow_add_b_jnt_translateY";
+	rename -uid "7EEAFF48-426A-D8B0-C626-F8A3559476DD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 3 110 8;
-createNode unitConversion -n "unitConversion47";
-	rename -uid "4DA5401D-44E5-A9E2-DA5B-BD8116CB9F7E";
+createNode unitConversion -n "witch:unitConversion47";
+	rename -uid "AEFEFC06-4B33-84CA-CC6A-DFB410193566";
 	setAttr ".i" 0;
 	setAttr ".cf" 57.295779513082323;
-createNode unitConversion -n "unitConversion48";
-	rename -uid "40FD9A75-45D8-33E9-14EA-03908C521FC5";
+createNode unitConversion -n "witch:unitConversion48";
+	rename -uid "170DA920-42FD-0E67-C828-75BA7D442B3E";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "rt_elbow_add_f_jnt_translateY1";
-	rename -uid "2554040F-4395-285D-00E8-10AD760BE03F";
+createNode animCurveUL -n "witch:rt_elbow_add_f_jnt_translateY1";
+	rename -uid "04D0459E-4AC8-15E0-B95F-F88FFB99839C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 -3 110 -20;
-createNode unitConversion -n "unitConversion49";
-	rename -uid "FB126465-4AF0-A493-719E-23969F8524A7";
+createNode unitConversion -n "witch:unitConversion49";
+	rename -uid "3C372328-4896-6DAD-7BDD-F18479D98DB3";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "rt_wrist_add_u_jnt_translateZ";
-	rename -uid "962F44A9-45C8-A6C4-EEA5-BC8C07408B2B";
+createNode animCurveUL -n "witch:rt_wrist_add_u_jnt_translateZ";
+	rename -uid "53D03936-4725-0135-DD04-B79AD6BFA33F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -100 -1 0 3 80 11;
-createNode unitConversion -n "unitConversion50";
-	rename -uid "8803CF14-4542-88B5-CC45-29A929144A86";
+createNode unitConversion -n "witch:unitConversion50";
+	rename -uid "9B347CC2-439A-0C9D-24B0-BE9B746EE778";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "rt_wrist_add_d_jnt_translateZ";
-	rename -uid "9E3BEDA9-4802-87D7-DAFA-72BF3C31FD5D";
+createNode animCurveUL -n "witch:rt_wrist_add_d_jnt_translateZ";
+	rename -uid "B5A0FE09-4FFA-D30D-9E2B-C3A66EBEE01E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -100 -8 0 -3 80 0;
-createNode unitConversion -n "unitConversion51";
-	rename -uid "1CD25E12-4627-AC1B-B181-5AA42135CF68";
+createNode unitConversion -n "witch:unitConversion51";
+	rename -uid "9551EC18-4F9C-A23E-C769-E38A4044C927";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "rt_wrist_add_f_jnt_translateY";
-	rename -uid "E69E0205-4BE3-32A8-40F5-64AD72955D22";
+createNode animCurveUL -n "witch:rt_wrist_add_f_jnt_translateY";
+	rename -uid "618EA385-47DF-5893-5F11-8C9F87A81BDD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -70 0 0 -3 60 -8;
-createNode unitConversion -n "unitConversion52";
-	rename -uid "CCB174ED-4402-C9E6-E6D2-D29A99F39348";
+createNode unitConversion -n "witch:unitConversion52";
+	rename -uid "ECC14301-426E-B463-4E22-9A9720BF91F8";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveUL -n "rt_wrist_add_b_jnt_translateY";
-	rename -uid "753DCC2F-474A-35BD-F0A0-67857BC94AAC";
+createNode animCurveUL -n "witch:rt_wrist_add_b_jnt_translateY";
+	rename -uid "10ABCE1E-46BF-DBD1-0C30-CFA89DC1C7FB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  -70 8 0 3 60 1;
-createNode unitConversion -n "unitConversion53";
-	rename -uid "38574697-4C87-82EB-E82D-11A674A7D312";
+createNode unitConversion -n "witch:unitConversion53";
+	rename -uid "9F6E5B03-4EF2-DE8B-8694-B182C59FC455";
 	setAttr ".cf" 57.295779513082323;
-createNode reverse -n "reverse3";
-	rename -uid "CAEAA789-48B3-0A36-0DBE-5388DC5D3BAC";
-createNode reverse -n "reverse4";
-	rename -uid "F82970C6-4945-D692-6002-3F9B04312386";
-createNode reverse -n "reverse5";
-	rename -uid "1B8B9EA6-402C-FA17-394E-90BAB1FB1DC9";
-createNode reverse -n "reverse6";
-	rename -uid "818E9ACB-40DE-11D7-B93B-E4B96219589E";
-createNode reverse -n "reverse7";
-	rename -uid "FB59F82C-4EF5-181F-A2E0-3F91664839DA";
-createNode reverse -n "reverse8";
-	rename -uid "0001DD0B-41E2-315F-946A-E6959F98DA7A";
-createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
-	rename -uid "DE8B2C50-42AE-A9A9-9BE8-3FA86B5EA071";
-	setAttr ".pee" yes;
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -3185.9410591427618 -465.7743964743762 ;
-	setAttr ".tgi[0].vh" -type "double2" -602.23109055202656 899.1257000186298 ;
-	setAttr -s 7 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" -1640;
-	setAttr ".tgi[0].ni[0].y" -355.71429443359375;
-	setAttr ".tgi[0].ni[0].nvs" 18304;
-	setAttr ".tgi[0].ni[1].x" -2342.857177734375;
-	setAttr ".tgi[0].ni[1].y" 841.4285888671875;
-	setAttr ".tgi[0].ni[1].nvs" 18306;
-	setAttr ".tgi[0].ni[2].x" -1640;
-	setAttr ".tgi[0].ni[2].y" -95.714286804199219;
-	setAttr ".tgi[0].ni[2].nvs" 18304;
-	setAttr ".tgi[0].ni[3].x" -1728.5714111328125;
-	setAttr ".tgi[0].ni[3].y" 481.42855834960938;
-	setAttr ".tgi[0].ni[3].nvs" 18306;
-	setAttr ".tgi[0].ni[4].x" -2035.7142333984375;
-	setAttr ".tgi[0].ni[4].y" 430;
-	setAttr ".tgi[0].ni[4].nvs" 18304;
-	setAttr ".tgi[0].ni[5].x" -2035.7142333984375;
-	setAttr ".tgi[0].ni[5].y" -44.285713195800781;
-	setAttr ".tgi[0].ni[5].nvs" 18306;
-	setAttr ".tgi[0].ni[6].x" -2200.234130859375;
-	setAttr ".tgi[0].ni[6].y" -167.42535400390625;
-	setAttr ".tgi[0].ni[6].nvs" 18304;
+createNode reverse -n "witch:reverse3";
+	rename -uid "329191A4-40F4-3C69-8BCD-059C0349A0B8";
+createNode reverse -n "witch:reverse4";
+	rename -uid "0C0019C7-40BC-1DE6-B29E-A6A60A93A431";
+createNode reverse -n "witch:reverse5";
+	rename -uid "520A1957-4B40-E968-0DE4-43ABDF8E93F4";
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -av -cb on ".ihi";
@@ -32892,7 +32413,7 @@ select -ne :postProcessList1;
 	setAttr -cb on ".bnm";
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 10 ".u";
+	setAttr -s 7 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -k on ".ihi";
 select -ne :defaultTextureList1;
@@ -32941,2323 +32462,2579 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
-connectAttr "groupId1.id" "hat_geoShape.iog.og[0].gid";
-connectAttr "U3DMeshSG.mwc" "hat_geoShape.iog.og[0].gco";
-connectAttr "skinCluster5.og[0]" "hat_geoShape.i";
-connectAttr "groupId2.id" "ribbons_geoShape.iog.og[0].gid";
-connectAttr "U3DMeshSG.mwc" "ribbons_geoShape.iog.og[0].gco";
-connectAttr "skinCluster2.og[0]" "ribbons_geoShape.i";
-connectAttr "groupId3.id" "broom_geoShape.iog.og[0].gid";
-connectAttr "U3DMeshSG.mwc" "broom_geoShape.iog.og[0].gco";
-connectAttr "skinCluster7.og[0]" "broom_geoShape.i";
-connectAttr "skinCluster9.og[0]" "body_geoShape.i";
-connectAttr "pelvis_jnt.s" "lf_hip_jnt.is";
-connectAttr "lf_hip_jnt.s" "lf_knee_jnt.is";
-connectAttr "lf_knee_jnt.s" "lf_ankle_jnt.is";
-connectAttr "lf_ankle_jnt.s" "lf_ball_jnt.is";
-connectAttr "lf_ball_jnt.s" "lf_toe_jnt.is";
-connectAttr "lf_ball_jnt.s" "lf_ball_add_jnt.is";
-connectAttr "lf_ball_add_jnt_orientConstraint1.crx" "lf_ball_add_jnt.rx";
-connectAttr "lf_ball_add_jnt_orientConstraint1.cry" "lf_ball_add_jnt.ry";
-connectAttr "lf_ball_add_jnt_orientConstraint1.crz" "lf_ball_add_jnt.rz";
-connectAttr "lf_ball_add_jnt.s" "lf_ball_add_u_jnt.is";
-connectAttr "lf_ball_add_jnt.s" "lf_ball_add_d_jnt.is";
-connectAttr "lf_ball_add_jnt.ro" "lf_ball_add_jnt_orientConstraint1.cro";
-connectAttr "lf_ball_add_jnt.pim" "lf_ball_add_jnt_orientConstraint1.cpim";
-connectAttr "lf_ball_add_jnt.jo" "lf_ball_add_jnt_orientConstraint1.cjo";
-connectAttr "lf_ball_add_jnt.is" "lf_ball_add_jnt_orientConstraint1.is";
-connectAttr "lf_ankle_jnt.r" "lf_ball_add_jnt_orientConstraint1.tg[0].tr";
-connectAttr "lf_ankle_jnt.ro" "lf_ball_add_jnt_orientConstraint1.tg[0].tro";
-connectAttr "lf_ankle_jnt.pm" "lf_ball_add_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "lf_ankle_jnt.jo" "lf_ball_add_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "lf_ball_add_jnt_orientConstraint1.w0" "lf_ball_add_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "lf_ball_jnt.r" "lf_ball_add_jnt_orientConstraint1.tg[1].tr";
-connectAttr "lf_ball_jnt.ro" "lf_ball_add_jnt_orientConstraint1.tg[1].tro";
-connectAttr "lf_ball_jnt.pm" "lf_ball_add_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "lf_ball_jnt.jo" "lf_ball_add_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "lf_ball_add_jnt_orientConstraint1.w1" "lf_ball_add_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "lf_ankle_jnt.s" "lf_ankle_add_jnt.is";
-connectAttr "lf_ankle_add_jnt_orientConstraint1.crx" "lf_ankle_add_jnt.rx";
-connectAttr "lf_ankle_add_jnt_orientConstraint1.cry" "lf_ankle_add_jnt.ry";
-connectAttr "lf_ankle_add_jnt_orientConstraint1.crz" "lf_ankle_add_jnt.rz";
-connectAttr "lf_ankle_add_jnt.s" "lf_ankle_add_f_jnt.is";
-connectAttr "lf_ankle_add_f_jnt_translateY.o" "lf_ankle_add_f_jnt.ty";
-connectAttr "lf_ankle_add_jnt.s" "lf_ankle_add_r_jnt.is";
-connectAttr "lf_ankle_add_r_jnt_translateZ.o" "lf_ankle_add_r_jnt.tz";
-connectAttr "lf_ankle_add_jnt.s" "lf_ankle_add_b_jnt.is";
-connectAttr "lf_ankle_add_b_jnt_translateY.o" "lf_ankle_add_b_jnt.ty";
-connectAttr "lf_ankle_add_jnt.s" "lf_ankle_add_l_jnt.is";
-connectAttr "lf_ankle_add_l_jnt_translateZ.o" "lf_ankle_add_l_jnt.tz";
-connectAttr "lf_ankle_add_jnt.ro" "lf_ankle_add_jnt_orientConstraint1.cro";
-connectAttr "lf_ankle_add_jnt.pim" "lf_ankle_add_jnt_orientConstraint1.cpim";
-connectAttr "lf_ankle_add_jnt.jo" "lf_ankle_add_jnt_orientConstraint1.cjo";
-connectAttr "lf_ankle_add_jnt.is" "lf_ankle_add_jnt_orientConstraint1.is";
-connectAttr "lf_knee_jnt.r" "lf_ankle_add_jnt_orientConstraint1.tg[0].tr";
-connectAttr "lf_knee_jnt.ro" "lf_ankle_add_jnt_orientConstraint1.tg[0].tro";
-connectAttr "lf_knee_jnt.pm" "lf_ankle_add_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "lf_knee_jnt.jo" "lf_ankle_add_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "lf_ankle_add_jnt_orientConstraint1.w0" "lf_ankle_add_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "lf_ankle_jnt.r" "lf_ankle_add_jnt_orientConstraint1.tg[1].tr";
-connectAttr "lf_ankle_jnt.ro" "lf_ankle_add_jnt_orientConstraint1.tg[1].tro";
-connectAttr "lf_ankle_jnt.pm" "lf_ankle_add_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "lf_ankle_jnt.jo" "lf_ankle_add_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "lf_ankle_add_jnt_orientConstraint1.w1" "lf_ankle_add_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "lf_knee_jnt.s" "lf_knee_add_jnt.is";
-connectAttr "lf_knee_add_jnt_orientConstraint1.crx" "lf_knee_add_jnt.rx";
-connectAttr "lf_knee_add_jnt_orientConstraint1.cry" "lf_knee_add_jnt.ry";
-connectAttr "lf_knee_add_jnt_orientConstraint1.crz" "lf_knee_add_jnt.rz";
-connectAttr "lf_knee_add_jnt.s" "lf_knee_add_f_jnt.is";
-connectAttr "lf_knee_add_f_jnt_translateY.o" "lf_knee_add_f_jnt.ty";
-connectAttr "lf_knee_add_jnt.s" "lf_knee_add_b_jnt.is";
-connectAttr "lf_knee_add_b_jnt_translateY.o" "lf_knee_add_b_jnt.ty";
-connectAttr "lf_knee_add_jnt.ro" "lf_knee_add_jnt_orientConstraint1.cro";
-connectAttr "lf_knee_add_jnt.pim" "lf_knee_add_jnt_orientConstraint1.cpim";
-connectAttr "lf_knee_add_jnt.jo" "lf_knee_add_jnt_orientConstraint1.cjo";
-connectAttr "lf_knee_add_jnt.is" "lf_knee_add_jnt_orientConstraint1.is";
-connectAttr "lf_hip_jnt.r" "lf_knee_add_jnt_orientConstraint1.tg[0].tr";
-connectAttr "lf_hip_jnt.ro" "lf_knee_add_jnt_orientConstraint1.tg[0].tro";
-connectAttr "lf_hip_jnt.pm" "lf_knee_add_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "lf_hip_jnt.jo" "lf_knee_add_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "lf_knee_add_jnt_orientConstraint1.w0" "lf_knee_add_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "lf_knee_jnt.r" "lf_knee_add_jnt_orientConstraint1.tg[1].tr";
-connectAttr "lf_knee_jnt.ro" "lf_knee_add_jnt_orientConstraint1.tg[1].tro";
-connectAttr "lf_knee_jnt.pm" "lf_knee_add_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "lf_knee_jnt.jo" "lf_knee_add_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "lf_knee_add_jnt_orientConstraint1.w1" "lf_knee_add_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "lf_hip_jnt.s" "lf_hip_add_jnt.is";
-connectAttr "lf_hip_add_jnt_orientConstraint1.crx" "lf_hip_add_jnt.rx";
-connectAttr "lf_hip_add_jnt_orientConstraint1.cry" "lf_hip_add_jnt.ry";
-connectAttr "lf_hip_add_jnt_orientConstraint1.crz" "lf_hip_add_jnt.rz";
-connectAttr "lf_hip_add_jnt.s" "lf_hip_add_f_jnt.is";
-connectAttr "lf_hip_add_f_jnt_translateY.o" "lf_hip_add_f_jnt.ty";
-connectAttr "lf_hip_add_jnt.s" "lf_hip_add_b_jnt.is";
-connectAttr "lf_hip_add_b_jnt_translateY.o" "lf_hip_add_b_jnt.ty";
-connectAttr "lf_hip_add_jnt.s" "lf_hip_add_l_jnt.is";
-connectAttr "lf_hip_add_l_jnt_translateZ.o" "lf_hip_add_l_jnt.tz";
-connectAttr "lf_hip_add_jnt.ro" "lf_hip_add_jnt_orientConstraint1.cro";
-connectAttr "lf_hip_add_jnt.pim" "lf_hip_add_jnt_orientConstraint1.cpim";
-connectAttr "lf_hip_add_jnt.jo" "lf_hip_add_jnt_orientConstraint1.cjo";
-connectAttr "lf_hip_add_jnt.is" "lf_hip_add_jnt_orientConstraint1.is";
-connectAttr "lf_hip_locator.r" "lf_hip_add_jnt_orientConstraint1.tg[0].tr";
-connectAttr "lf_hip_locator.ro" "lf_hip_add_jnt_orientConstraint1.tg[0].tro";
-connectAttr "lf_hip_locator.pm" "lf_hip_add_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "lf_hip_add_jnt_orientConstraint1.w0" "lf_hip_add_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "lf_hip_jnt.r" "lf_hip_add_jnt_orientConstraint1.tg[1].tr";
-connectAttr "lf_hip_jnt.ro" "lf_hip_add_jnt_orientConstraint1.tg[1].tro";
-connectAttr "lf_hip_jnt.pm" "lf_hip_add_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "lf_hip_jnt.jo" "lf_hip_add_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "lf_hip_add_jnt_orientConstraint1.w1" "lf_hip_add_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "pelvis_jnt.s" "rt_hip_jnt.is";
-connectAttr "rt_hip_jnt.s" "rt_knee_jnt.is";
-connectAttr "rt_knee_jnt.s" "rt_ankle_jnt.is";
-connectAttr "rt_ankle_jnt.s" "rt_ball_jnt.is";
-connectAttr "rt_ball_jnt.s" "rt_toe_jnt.is";
-connectAttr "rt_ball_add_jnt_orientConstraint1.crx" "rt_ball_add_jnt.rx";
-connectAttr "rt_ball_add_jnt_orientConstraint1.cry" "rt_ball_add_jnt.ry";
-connectAttr "rt_ball_add_jnt_orientConstraint1.crz" "rt_ball_add_jnt.rz";
-connectAttr "rt_ball_jnt.s" "rt_ball_add_jnt.is";
-connectAttr "rt_ball_add_jnt.s" "rt_ball_add_u_jnt.is";
-connectAttr "rt_ball_add_jnt.s" "rt_ball_add_d_jnt.is";
-connectAttr "rt_ball_add_jnt.ro" "rt_ball_add_jnt_orientConstraint1.cro";
-connectAttr "rt_ball_add_jnt.pim" "rt_ball_add_jnt_orientConstraint1.cpim";
-connectAttr "rt_ball_add_jnt.jo" "rt_ball_add_jnt_orientConstraint1.cjo";
-connectAttr "rt_ball_add_jnt.is" "rt_ball_add_jnt_orientConstraint1.is";
-connectAttr "rt_ankle_jnt.r" "rt_ball_add_jnt_orientConstraint1.tg[0].tr";
-connectAttr "rt_ankle_jnt.ro" "rt_ball_add_jnt_orientConstraint1.tg[0].tro";
-connectAttr "rt_ankle_jnt.pm" "rt_ball_add_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "rt_ankle_jnt.jo" "rt_ball_add_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "rt_ball_add_jnt_orientConstraint1.w0" "rt_ball_add_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "rt_ball_jnt.r" "rt_ball_add_jnt_orientConstraint1.tg[1].tr";
-connectAttr "rt_ball_jnt.ro" "rt_ball_add_jnt_orientConstraint1.tg[1].tro";
-connectAttr "rt_ball_jnt.pm" "rt_ball_add_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "rt_ball_jnt.jo" "rt_ball_add_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "rt_ball_add_jnt_orientConstraint1.w1" "rt_ball_add_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "rt_ankle_add_jnt_orientConstraint1.crx" "rt_ankle_add_jnt.rx";
-connectAttr "rt_ankle_add_jnt_orientConstraint1.cry" "rt_ankle_add_jnt.ry";
-connectAttr "rt_ankle_add_jnt_orientConstraint1.crz" "rt_ankle_add_jnt.rz";
-connectAttr "rt_ankle_jnt.s" "rt_ankle_add_jnt.is";
-connectAttr "rt_ankle_add_jnt.s" "rt_ankle_add_f_jnt.is";
-connectAttr "rt_ankle_add_f_jnt_translateY.o" "rt_ankle_add_f_jnt.ty";
-connectAttr "rt_ankle_add_jnt.s" "rt_ankle_add_r_jnt.is";
-connectAttr "rt_ankle_add_r_jnt_translateZ.o" "rt_ankle_add_r_jnt.tz";
-connectAttr "rt_ankle_add_jnt.s" "rt_ankle_add_b_jnt.is";
-connectAttr "rt_ankle_add_b_jnt_translateY.o" "rt_ankle_add_b_jnt.ty";
-connectAttr "rt_ankle_add_jnt.s" "rt_ankle_add_l_jnt.is";
-connectAttr "rt_ankle_add_l_jnt_translateZ.o" "rt_ankle_add_l_jnt.tz";
-connectAttr "rt_ankle_add_jnt.ro" "rt_ankle_add_jnt_orientConstraint1.cro";
-connectAttr "rt_ankle_add_jnt.pim" "rt_ankle_add_jnt_orientConstraint1.cpim";
-connectAttr "rt_ankle_add_jnt.jo" "rt_ankle_add_jnt_orientConstraint1.cjo";
-connectAttr "rt_ankle_add_jnt.is" "rt_ankle_add_jnt_orientConstraint1.is";
-connectAttr "rt_knee_jnt.r" "rt_ankle_add_jnt_orientConstraint1.tg[0].tr";
-connectAttr "rt_knee_jnt.ro" "rt_ankle_add_jnt_orientConstraint1.tg[0].tro";
-connectAttr "rt_knee_jnt.pm" "rt_ankle_add_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "rt_knee_jnt.jo" "rt_ankle_add_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "rt_ankle_add_jnt_orientConstraint1.w0" "rt_ankle_add_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "rt_ankle_jnt.r" "rt_ankle_add_jnt_orientConstraint1.tg[1].tr";
-connectAttr "rt_ankle_jnt.ro" "rt_ankle_add_jnt_orientConstraint1.tg[1].tro";
-connectAttr "rt_ankle_jnt.pm" "rt_ankle_add_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "rt_ankle_jnt.jo" "rt_ankle_add_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "rt_ankle_add_jnt_orientConstraint1.w1" "rt_ankle_add_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "rt_knee_add_jnt_orientConstraint1.crx" "rt_knee_add_jnt.rx";
-connectAttr "rt_knee_add_jnt_orientConstraint1.cry" "rt_knee_add_jnt.ry";
-connectAttr "rt_knee_add_jnt_orientConstraint1.crz" "rt_knee_add_jnt.rz";
-connectAttr "rt_knee_jnt.s" "rt_knee_add_jnt.is";
-connectAttr "rt_knee_add_jnt.s" "rt_knee_add_b_jnt.is";
-connectAttr "rt_knee_add_f_jnt_translateY.o" "rt_knee_add_b_jnt.ty";
-connectAttr "rt_knee_add_jnt.s" "rt_knee_add_f_jnt1.is";
-connectAttr "rt_knee_add_b_jnt_translateY.o" "rt_knee_add_f_jnt1.ty";
-connectAttr "rt_knee_add_jnt.ro" "rt_knee_add_jnt_orientConstraint1.cro";
-connectAttr "rt_knee_add_jnt.pim" "rt_knee_add_jnt_orientConstraint1.cpim";
-connectAttr "rt_knee_add_jnt.jo" "rt_knee_add_jnt_orientConstraint1.cjo";
-connectAttr "rt_knee_add_jnt.is" "rt_knee_add_jnt_orientConstraint1.is";
-connectAttr "rt_hip_jnt.r" "rt_knee_add_jnt_orientConstraint1.tg[0].tr";
-connectAttr "rt_hip_jnt.ro" "rt_knee_add_jnt_orientConstraint1.tg[0].tro";
-connectAttr "rt_hip_jnt.pm" "rt_knee_add_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "rt_hip_jnt.jo" "rt_knee_add_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "rt_knee_add_jnt_orientConstraint1.w0" "rt_knee_add_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "rt_knee_jnt.r" "rt_knee_add_jnt_orientConstraint1.tg[1].tr";
-connectAttr "rt_knee_jnt.ro" "rt_knee_add_jnt_orientConstraint1.tg[1].tro";
-connectAttr "rt_knee_jnt.pm" "rt_knee_add_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "rt_knee_jnt.jo" "rt_knee_add_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "rt_knee_add_jnt_orientConstraint1.w1" "rt_knee_add_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "rt_hip_add_jnt_orientConstraint1.crx" "rt_hip_add_jnt.rx";
-connectAttr "rt_hip_add_jnt_orientConstraint1.cry" "rt_hip_add_jnt.ry";
-connectAttr "rt_hip_add_jnt_orientConstraint1.crz" "rt_hip_add_jnt.rz";
-connectAttr "rt_hip_jnt.s" "rt_hip_add_jnt.is";
-connectAttr "rt_hip_add_jnt.s" "rt_hip_add_f_jnt.is";
-connectAttr "rt_hip_add_f_jnt_translateY.o" "rt_hip_add_f_jnt.ty";
-connectAttr "rt_hip_add_jnt.s" "rt_hip_add_b_jnt.is";
-connectAttr "rt_hip_add_b_jnt_translateY.o" "rt_hip_add_b_jnt.ty";
-connectAttr "rt_hip_add_jnt.s" "rt_hip_add_r_jnt.is";
-connectAttr "rt_hip_add_r_jnt_translateZ.o" "rt_hip_add_r_jnt.tz";
-connectAttr "rt_hip_add_jnt.ro" "rt_hip_add_jnt_orientConstraint1.cro";
-connectAttr "rt_hip_add_jnt.pim" "rt_hip_add_jnt_orientConstraint1.cpim";
-connectAttr "rt_hip_add_jnt.jo" "rt_hip_add_jnt_orientConstraint1.cjo";
-connectAttr "rt_hip_add_jnt.is" "rt_hip_add_jnt_orientConstraint1.is";
-connectAttr "rt_hip_locator.r" "rt_hip_add_jnt_orientConstraint1.tg[0].tr";
-connectAttr "rt_hip_locator.ro" "rt_hip_add_jnt_orientConstraint1.tg[0].tro";
-connectAttr "rt_hip_locator.pm" "rt_hip_add_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "rt_hip_add_jnt_orientConstraint1.w0" "rt_hip_add_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "rt_hip_jnt.r" "rt_hip_add_jnt_orientConstraint1.tg[1].tr";
-connectAttr "rt_hip_jnt.ro" "rt_hip_add_jnt_orientConstraint1.tg[1].tro";
-connectAttr "rt_hip_jnt.pm" "rt_hip_add_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "rt_hip_jnt.jo" "rt_hip_add_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "rt_hip_add_jnt_orientConstraint1.w1" "rt_hip_add_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "spine_jnt1.s" "spine_jnt2.is";
-connectAttr "spine_jnt2.s" "spine_jnt3.is";
-connectAttr "spine_jnt3.s" "neck_jnt1.is";
-connectAttr "neck_jnt1.s" "head_jnt.is";
-connectAttr "head_jnt.s" "lf_ear_ring_jnt.is";
-connectAttr "head_jnt.s" "jaw_jnt.is";
-connectAttr "head_jnt.s" "rt_ear_ring_jnt.is";
-connectAttr "head_jnt.s" "hat_jnt1.is";
-connectAttr "hat_jnt1.s" "hat_jnt2.is";
-connectAttr "hat_jnt2.s" "hat_jnt3.is";
-connectAttr "hat_jnt3.s" "hat_jnt4.is";
-connectAttr "hat_jnt1.s" "feather_bot_jnt1.is";
-connectAttr "feather_bot_jnt1.s" "feather_bot_jnt2.is";
-connectAttr "feather_bot_jnt2.s" "feather_bot_jnt3.is";
-connectAttr "hat_jnt1.s" "feather_top_jnt1.is";
-connectAttr "feather_top_jnt1.s" "feather_top_jnt2.is";
-connectAttr "spine_jnt3.s" "lf_clavicle_jnt.is";
-connectAttr "lf_clavicle_jnt.s" "lf_shld_jnt.is";
-connectAttr "lf_shld_jnt_orientConstraint1.crz" "lf_shld_jnt.rz";
-connectAttr "lf_shld_jnt_orientConstraint1.cry" "lf_shld_jnt.ry";
-connectAttr "lf_shld_jnt_orientConstraint1.crx" "lf_shld_jnt.rx";
-connectAttr "lf_shld_jnt.s" "lf_elbow_jnt.is";
-connectAttr "lf_elbow_jnt_orientConstraint1.crz" "lf_elbow_jnt.rz";
-connectAttr "lf_elbow_jnt_orientConstraint1.crx" "lf_elbow_jnt.rx";
-connectAttr "lf_elbow_jnt_orientConstraint1.cry" "lf_elbow_jnt.ry";
-connectAttr "lf_wrist_jnt_orientConstraint1.crz" "lf_wrist_jnt.rz";
-connectAttr "lf_wrist_jnt_orientConstraint1.cry" "lf_wrist_jnt.ry";
-connectAttr "lf_wrist_jnt_orientConstraint1.crx" "lf_wrist_jnt.rx";
-connectAttr "lf_elbow_jnt.s" "lf_wrist_jnt.is";
-connectAttr "lf_wrist_jnt.s" "lf_thumb_jnt5.is";
-connectAttr "lf_thumb_jnt5.s" "lf_thumb_jnt2.is";
-connectAttr "lf_thumb_jnt2.s" "lf_thumb_jnt3.is";
-connectAttr "lf_thumb_jnt3.s" "lf_thumb_jnt4.is";
-connectAttr "lf_wrist_jnt.s" "lf_index_jnt1.is";
-connectAttr "lf_index_jnt1.s" "lf_index_jnt2.is";
-connectAttr "lf_index_jnt2.s" "lf_index_jnt3.is";
-connectAttr "lf_index_jnt3.s" "lf_index_jnt4.is";
-connectAttr "lf_wrist_jnt.s" "lf_ltl_jnt1.is";
-connectAttr "lf_ltl_jnt1.s" "lf_ltl_jnt2.is";
-connectAttr "lf_ltl_jnt2.s" "lf_ltl_jnt3.is";
-connectAttr "lf_ltl_jnt3.s" "lf_ltl_jnt4.is";
-connectAttr "lf_wrist_jnt.s" "lf_middle_jnt1.is";
-connectAttr "lf_middle_jnt1.s" "lf_middle_jnt2.is";
-connectAttr "lf_middle_jnt2.s" "lf_middle_jnt3.is";
-connectAttr "lf_middle_jnt3.s" "lf_middle_jnt4.is";
-connectAttr "lf_wrist_jnt.s" "lf_ring_jnt1.is";
-connectAttr "lf_ring_jnt1.s" "lf_ring_jnt2.is";
-connectAttr "lf_ring_jnt2.s" "lf_ring_jnt3.is";
-connectAttr "lf_ring_jnt3.s" "lf_ring_jnt4.is";
-connectAttr "lf_wrist_jnt.s" "lf_wrist_add_jnt.is";
-connectAttr "lf_wrist_add_jnt_orientConstraint1.crx" "lf_wrist_add_jnt.rx";
-connectAttr "lf_wrist_add_jnt_orientConstraint1.cry" "lf_wrist_add_jnt.ry";
-connectAttr "lf_wrist_add_jnt_orientConstraint1.crz" "lf_wrist_add_jnt.rz";
-connectAttr "lf_wrist_add_jnt.s" "lf_wrist_add_b_jnt.is";
-connectAttr "lf_wrist_add_b_jnt_translateY.o" "lf_wrist_add_b_jnt.ty";
-connectAttr "lf_wrist_add_jnt.s" "lf_wrist_add_u_jnt.is";
-connectAttr "lf_wrist_add_u_jnt_translateZ.o" "lf_wrist_add_u_jnt.tz";
-connectAttr "lf_wrist_add_f_jnt_translateY.o" "lf_wrist_add_f_jnt.ty";
-connectAttr "lf_wrist_add_jnt.s" "lf_wrist_add_f_jnt.is";
-connectAttr "lf_wrist_add_jnt.s" "lf_wrist_add_d_jnt.is";
-connectAttr "lf_wrist_add_d_jnt_translateZ.o" "lf_wrist_add_d_jnt.tz";
-connectAttr "lf_wrist_add_jnt.ro" "lf_wrist_add_jnt_orientConstraint1.cro";
-connectAttr "lf_wrist_add_jnt.pim" "lf_wrist_add_jnt_orientConstraint1.cpim";
-connectAttr "lf_wrist_add_jnt.jo" "lf_wrist_add_jnt_orientConstraint1.cjo";
-connectAttr "lf_wrist_add_jnt.is" "lf_wrist_add_jnt_orientConstraint1.is";
-connectAttr "lf_elbow_jnt.r" "lf_wrist_add_jnt_orientConstraint1.tg[0].tr";
-connectAttr "lf_elbow_jnt.ro" "lf_wrist_add_jnt_orientConstraint1.tg[0].tro";
-connectAttr "lf_elbow_jnt.pm" "lf_wrist_add_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "lf_elbow_jnt.jo" "lf_wrist_add_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "lf_wrist_add_jnt_orientConstraint1.w0" "lf_wrist_add_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "lf_wrist_jnt.r" "lf_wrist_add_jnt_orientConstraint1.tg[1].tr";
-connectAttr "lf_wrist_jnt.ro" "lf_wrist_add_jnt_orientConstraint1.tg[1].tro";
-connectAttr "lf_wrist_jnt.pm" "lf_wrist_add_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "lf_wrist_jnt.jo" "lf_wrist_add_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "lf_wrist_add_jnt_orientConstraint1.w1" "lf_wrist_add_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "lf_wrist_jnt.ro" "lf_wrist_jnt_orientConstraint1.cro";
-connectAttr "lf_wrist_jnt.pim" "lf_wrist_jnt_orientConstraint1.cpim";
-connectAttr "lf_wrist_jnt.jo" "lf_wrist_jnt_orientConstraint1.cjo";
-connectAttr "lf_wrist_jnt.is" "lf_wrist_jnt_orientConstraint1.is";
-connectAttr "lf_wrist_IK_jnt.r" "lf_wrist_jnt_orientConstraint1.tg[0].tr";
-connectAttr "lf_wrist_IK_jnt.ro" "lf_wrist_jnt_orientConstraint1.tg[0].tro";
-connectAttr "lf_wrist_IK_jnt.pm" "lf_wrist_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "lf_wrist_IK_jnt.jo" "lf_wrist_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "lf_wrist_jnt_orientConstraint1.w0" "lf_wrist_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "lf_wrist_FK_jnt.r" "lf_wrist_jnt_orientConstraint1.tg[1].tr";
-connectAttr "lf_wrist_FK_jnt.ro" "lf_wrist_jnt_orientConstraint1.tg[1].tro";
-connectAttr "lf_wrist_FK_jnt.pm" "lf_wrist_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "lf_wrist_FK_jnt.jo" "lf_wrist_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "lf_wrist_jnt_orientConstraint1.w1" "lf_wrist_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "reverse1.ox" "lf_wrist_jnt_orientConstraint1.w0";
-connectAttr "lf_arm_switch_ctrl.ikFk" "lf_wrist_jnt_orientConstraint1.w1";
-connectAttr "lf_elbow_jnt.s" "lf_elbow_add_jnt.is";
-connectAttr "lf_elbow_add_jnt_orientConstraint1.crx" "lf_elbow_add_jnt.rx";
-connectAttr "lf_elbow_add_jnt_orientConstraint1.cry" "lf_elbow_add_jnt.ry";
-connectAttr "lf_elbow_add_jnt_orientConstraint1.crz" "lf_elbow_add_jnt.rz";
-connectAttr "lf_elbow_add_jnt.s" "lf_elbow_add_b_jnt.is";
-connectAttr "lf_elbow_add_b_jnt_translateY.o" "lf_elbow_add_b_jnt.ty";
-connectAttr "lf_elbow_add_f_jnt_translateY.o" "lf_elbow_add_f_jnt.ty";
-connectAttr "lf_elbow_add_jnt.s" "lf_elbow_add_f_jnt.is";
-connectAttr "lf_elbow_add_jnt.ro" "lf_elbow_add_jnt_orientConstraint1.cro";
-connectAttr "lf_elbow_add_jnt.pim" "lf_elbow_add_jnt_orientConstraint1.cpim";
-connectAttr "lf_elbow_add_jnt.jo" "lf_elbow_add_jnt_orientConstraint1.cjo";
-connectAttr "lf_elbow_add_jnt.is" "lf_elbow_add_jnt_orientConstraint1.is";
-connectAttr "lf_shld_jnt.r" "lf_elbow_add_jnt_orientConstraint1.tg[0].tr";
-connectAttr "lf_shld_jnt.ro" "lf_elbow_add_jnt_orientConstraint1.tg[0].tro";
-connectAttr "lf_shld_jnt.pm" "lf_elbow_add_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "lf_shld_jnt.jo" "lf_elbow_add_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "lf_elbow_add_jnt_orientConstraint1.w0" "lf_elbow_add_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "lf_elbow_jnt.r" "lf_elbow_add_jnt_orientConstraint1.tg[1].tr";
-connectAttr "lf_elbow_jnt.ro" "lf_elbow_add_jnt_orientConstraint1.tg[1].tro";
-connectAttr "lf_elbow_jnt.pm" "lf_elbow_add_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "lf_elbow_jnt.jo" "lf_elbow_add_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "lf_elbow_add_jnt_orientConstraint1.w1" "lf_elbow_add_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "lf_elbow_jnt.ro" "lf_elbow_jnt_orientConstraint1.cro";
-connectAttr "lf_elbow_jnt.pim" "lf_elbow_jnt_orientConstraint1.cpim";
-connectAttr "lf_elbow_jnt.jo" "lf_elbow_jnt_orientConstraint1.cjo";
-connectAttr "lf_elbow_jnt.is" "lf_elbow_jnt_orientConstraint1.is";
-connectAttr "lf_elbow_IK_jnt.r" "lf_elbow_jnt_orientConstraint1.tg[0].tr";
-connectAttr "lf_elbow_IK_jnt.ro" "lf_elbow_jnt_orientConstraint1.tg[0].tro";
-connectAttr "lf_elbow_IK_jnt.pm" "lf_elbow_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "lf_elbow_IK_jnt.jo" "lf_elbow_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "lf_elbow_jnt_orientConstraint1.w0" "lf_elbow_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "lf_elbow_FK_jnt.r" "lf_elbow_jnt_orientConstraint1.tg[1].tr";
-connectAttr "lf_elbow_FK_jnt.ro" "lf_elbow_jnt_orientConstraint1.tg[1].tro";
-connectAttr "lf_elbow_FK_jnt.pm" "lf_elbow_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "lf_elbow_FK_jnt.jo" "lf_elbow_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "lf_elbow_jnt_orientConstraint1.w1" "lf_elbow_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "reverse1.ox" "lf_elbow_jnt_orientConstraint1.w0";
-connectAttr "lf_arm_switch_ctrl.ikFk" "lf_elbow_jnt_orientConstraint1.w1";
-connectAttr "lf_shld_add_jnt_orientConstraint1.crx" "lf_shld_add_jnt.rx";
-connectAttr "lf_shld_add_jnt_orientConstraint1.cry" "lf_shld_add_jnt.ry";
-connectAttr "lf_shld_add_jnt_orientConstraint1.crz" "lf_shld_add_jnt.rz";
-connectAttr "lf_shld_jnt.s" "lf_shld_add_jnt.is";
-connectAttr "lf_shld_add_jnt.s" "lf_shld_add_u_jnt.is";
-connectAttr "lf_shld_add_u_jnt_translateZ.o" "lf_shld_add_u_jnt.tz";
-connectAttr "lf_shld_add_jnt.s" "lf_shld_add_f_jnt.is";
-connectAttr "lf_shld_add_f_jnt_translateY.o" "lf_shld_add_f_jnt.ty";
-connectAttr "lf_shld_add_jnt.s" "lf_shld_add_d_jnt.is";
-connectAttr "lf_shld_add_d_jnt_translateZ.o" "lf_shld_add_d_jnt.tz";
-connectAttr "lf_shld_add_jnt.ro" "lf_shld_add_jnt_orientConstraint1.cro";
-connectAttr "lf_shld_add_jnt.pim" "lf_shld_add_jnt_orientConstraint1.cpim";
-connectAttr "lf_shld_add_jnt.jo" "lf_shld_add_jnt_orientConstraint1.cjo";
-connectAttr "lf_shld_add_jnt.is" "lf_shld_add_jnt_orientConstraint1.is";
-connectAttr "lf_clavicle_jnt.r" "lf_shld_add_jnt_orientConstraint1.tg[0].tr";
-connectAttr "lf_clavicle_jnt.ro" "lf_shld_add_jnt_orientConstraint1.tg[0].tro";
-connectAttr "lf_clavicle_jnt.pm" "lf_shld_add_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "lf_clavicle_jnt.jo" "lf_shld_add_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "lf_shld_add_jnt_orientConstraint1.w0" "lf_shld_add_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "lf_shld_jnt.r" "lf_shld_add_jnt_orientConstraint1.tg[1].tr";
-connectAttr "lf_shld_jnt.ro" "lf_shld_add_jnt_orientConstraint1.tg[1].tro";
-connectAttr "lf_shld_jnt.pm" "lf_shld_add_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "lf_shld_jnt.jo" "lf_shld_add_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "lf_shld_add_jnt_orientConstraint1.w1" "lf_shld_add_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "lf_shld_jnt.ro" "lf_shld_jnt_orientConstraint1.cro";
-connectAttr "lf_shld_jnt.pim" "lf_shld_jnt_orientConstraint1.cpim";
-connectAttr "lf_shld_jnt.jo" "lf_shld_jnt_orientConstraint1.cjo";
-connectAttr "lf_shld_jnt.is" "lf_shld_jnt_orientConstraint1.is";
-connectAttr "lf_shld_IK_jnt.r" "lf_shld_jnt_orientConstraint1.tg[0].tr";
-connectAttr "lf_shld_IK_jnt.ro" "lf_shld_jnt_orientConstraint1.tg[0].tro";
-connectAttr "lf_shld_IK_jnt.pm" "lf_shld_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "lf_shld_IK_jnt.jo" "lf_shld_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "lf_shld_jnt_orientConstraint1.w0" "lf_shld_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "lf_shld_FK_jnt.r" "lf_shld_jnt_orientConstraint1.tg[1].tr";
-connectAttr "lf_shld_FK_jnt.ro" "lf_shld_jnt_orientConstraint1.tg[1].tro";
-connectAttr "lf_shld_FK_jnt.pm" "lf_shld_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "lf_shld_FK_jnt.jo" "lf_shld_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "lf_shld_jnt_orientConstraint1.w1" "lf_shld_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "reverse1.ox" "lf_shld_jnt_orientConstraint1.w0";
-connectAttr "lf_arm_switch_ctrl.ikFk" "lf_shld_jnt_orientConstraint1.w1";
-connectAttr "lf_shld_FK_jnt_orientConstraint1.crx" "lf_shld_FK_jnt.rx";
-connectAttr "lf_shld_FK_jnt_orientConstraint1.cry" "lf_shld_FK_jnt.ry";
-connectAttr "lf_shld_FK_jnt_orientConstraint1.crz" "lf_shld_FK_jnt.rz";
-connectAttr "lf_clavicle_jnt.s" "lf_shld_FK_jnt.is";
-connectAttr "lf_elbow_FK_jnt_orientConstraint1.crx" "lf_elbow_FK_jnt.rx";
-connectAttr "lf_elbow_FK_jnt_orientConstraint1.cry" "lf_elbow_FK_jnt.ry";
-connectAttr "lf_elbow_FK_jnt_orientConstraint1.crz" "lf_elbow_FK_jnt.rz";
-connectAttr "lf_shld_FK_jnt.s" "lf_elbow_FK_jnt.is";
-connectAttr "lf_wrist_FK_jnt_orientConstraint1.crx" "lf_wrist_FK_jnt.rx";
-connectAttr "lf_wrist_FK_jnt_orientConstraint1.cry" "lf_wrist_FK_jnt.ry";
-connectAttr "lf_wrist_FK_jnt_orientConstraint1.crz" "lf_wrist_FK_jnt.rz";
-connectAttr "lf_elbow_FK_jnt.s" "lf_wrist_FK_jnt.is";
-connectAttr "lf_wrist_FK_jnt.ro" "lf_wrist_FK_jnt_orientConstraint1.cro";
-connectAttr "lf_wrist_FK_jnt.pim" "lf_wrist_FK_jnt_orientConstraint1.cpim";
-connectAttr "lf_wrist_FK_jnt.jo" "lf_wrist_FK_jnt_orientConstraint1.cjo";
-connectAttr "lf_wrist_FK_jnt.is" "lf_wrist_FK_jnt_orientConstraint1.is";
-connectAttr "lf_wrist_FK_ctrl.r" "lf_wrist_FK_jnt_orientConstraint1.tg[0].tr";
-connectAttr "lf_wrist_FK_ctrl.ro" "lf_wrist_FK_jnt_orientConstraint1.tg[0].tro";
-connectAttr "lf_wrist_FK_ctrl.pm" "lf_wrist_FK_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "lf_wrist_FK_jnt_orientConstraint1.w0" "lf_wrist_FK_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "lf_elbow_FK_jnt.ro" "lf_elbow_FK_jnt_orientConstraint1.cro";
-connectAttr "lf_elbow_FK_jnt.pim" "lf_elbow_FK_jnt_orientConstraint1.cpim";
-connectAttr "lf_elbow_FK_jnt.jo" "lf_elbow_FK_jnt_orientConstraint1.cjo";
-connectAttr "lf_elbow_FK_jnt.is" "lf_elbow_FK_jnt_orientConstraint1.is";
-connectAttr "lf_elbow_FK_ctrl.r" "lf_elbow_FK_jnt_orientConstraint1.tg[0].tr";
-connectAttr "lf_elbow_FK_ctrl.ro" "lf_elbow_FK_jnt_orientConstraint1.tg[0].tro";
-connectAttr "lf_elbow_FK_ctrl.pm" "lf_elbow_FK_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "lf_elbow_FK_jnt_orientConstraint1.w0" "lf_elbow_FK_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "lf_shld_FK_jnt.ro" "lf_shld_FK_jnt_orientConstraint1.cro";
-connectAttr "lf_shld_FK_jnt.pim" "lf_shld_FK_jnt_orientConstraint1.cpim";
-connectAttr "lf_shld_FK_jnt.jo" "lf_shld_FK_jnt_orientConstraint1.cjo";
-connectAttr "lf_shld_FK_jnt.is" "lf_shld_FK_jnt_orientConstraint1.is";
-connectAttr "lf_shld_FK_ctrl.r" "lf_shld_FK_jnt_orientConstraint1.tg[0].tr";
-connectAttr "lf_shld_FK_ctrl.ro" "lf_shld_FK_jnt_orientConstraint1.tg[0].tro";
-connectAttr "lf_shld_FK_ctrl.pm" "lf_shld_FK_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "lf_shld_FK_jnt_orientConstraint1.w0" "lf_shld_FK_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "lf_clavicle_jnt.s" "lf_shld_IK_jnt.is";
-connectAttr "lf_elbow_IK_jnt_orientConstraint1.crx" "lf_elbow_IK_jnt.rx";
-connectAttr "lf_elbow_IK_jnt_orientConstraint1.cry" "lf_elbow_IK_jnt.ry";
-connectAttr "lf_elbow_IK_jnt_orientConstraint1.crz" "lf_elbow_IK_jnt.rz";
-connectAttr "lf_shld_IK_jnt.s" "lf_elbow_IK_jnt.is";
-connectAttr "lf_wrist_IK_jnt_orientConstraint1.crx" "lf_wrist_IK_jnt.rx";
-connectAttr "lf_wrist_IK_jnt_orientConstraint1.cry" "lf_wrist_IK_jnt.ry";
-connectAttr "lf_wrist_IK_jnt_orientConstraint1.crz" "lf_wrist_IK_jnt.rz";
-connectAttr "lf_elbow_IK_jnt.s" "lf_wrist_IK_jnt.is";
-connectAttr "lf_wrist_IK_jnt.ro" "lf_wrist_IK_jnt_orientConstraint1.cro";
-connectAttr "lf_wrist_IK_jnt.pim" "lf_wrist_IK_jnt_orientConstraint1.cpim";
-connectAttr "lf_wrist_IK_jnt.jo" "lf_wrist_IK_jnt_orientConstraint1.cjo";
-connectAttr "lf_wrist_IK_jnt.is" "lf_wrist_IK_jnt_orientConstraint1.is";
-connectAttr "lf_wrist_FK_ctrl.r" "lf_wrist_IK_jnt_orientConstraint1.tg[0].tr";
-connectAttr "lf_wrist_FK_ctrl.ro" "lf_wrist_IK_jnt_orientConstraint1.tg[0].tro";
-connectAttr "lf_wrist_FK_ctrl.pm" "lf_wrist_IK_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "lf_wrist_IK_jnt_orientConstraint1.w0" "lf_wrist_IK_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "lf_arm_IK_ctrl.r" "lf_wrist_IK_jnt_orientConstraint1.tg[1].tr";
-connectAttr "lf_arm_IK_ctrl.ro" "lf_wrist_IK_jnt_orientConstraint1.tg[1].tro";
-connectAttr "lf_arm_IK_ctrl.pm" "lf_wrist_IK_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "lf_wrist_IK_jnt_orientConstraint1.w1" "lf_wrist_IK_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "lf_wrist_IK_jnt.tx" "effector1.tx";
-connectAttr "lf_wrist_IK_jnt.ty" "effector1.ty";
-connectAttr "lf_wrist_IK_jnt.tz" "effector1.tz";
-connectAttr "lf_wrist_IK_jnt.opm" "effector1.opm";
-connectAttr "lf_elbow_IK_jnt.ro" "lf_elbow_IK_jnt_orientConstraint1.cro";
-connectAttr "lf_elbow_IK_jnt.pim" "lf_elbow_IK_jnt_orientConstraint1.cpim";
-connectAttr "lf_elbow_IK_jnt.jo" "lf_elbow_IK_jnt_orientConstraint1.cjo";
-connectAttr "lf_elbow_IK_jnt.is" "lf_elbow_IK_jnt_orientConstraint1.is";
-connectAttr "lf_elbow_FK_ctrl.r" "lf_elbow_IK_jnt_orientConstraint1.tg[0].tr";
-connectAttr "lf_elbow_FK_ctrl.ro" "lf_elbow_IK_jnt_orientConstraint1.tg[0].tro";
-connectAttr "lf_elbow_FK_ctrl.pm" "lf_elbow_IK_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "lf_elbow_IK_jnt_orientConstraint1.w0" "lf_elbow_IK_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "spine_jnt3.s" "lf_chest_jnt.is";
-connectAttr "spine_jnt3.s" "rt_chest_jnt.is";
-connectAttr "spine_jnt3.s" "front_ribbon.is";
-connectAttr "spine_jnt3.s" "rt_clavicle_jnt.is";
-connectAttr "rt_clavicle_jnt.s" "rt_shld_jnt.is";
-connectAttr "rt_shld_jnt_orientConstraint1.cry" "rt_shld_jnt.ry";
-connectAttr "rt_shld_jnt_orientConstraint1.crx" "rt_shld_jnt.rx";
-connectAttr "rt_shld_jnt_orientConstraint1.crz" "rt_shld_jnt.rz";
-connectAttr "rt_shld_jnt.s" "rt_elbow_jnt.is";
-connectAttr "rt_elbow_jnt_orientConstraint1.crz" "rt_elbow_jnt.rz";
-connectAttr "rt_elbow_jnt_orientConstraint1.crx" "rt_elbow_jnt.rx";
-connectAttr "rt_elbow_jnt_orientConstraint1.cry" "rt_elbow_jnt.ry";
-connectAttr "rt_elbow_jnt.s" "rt_wrist_jnt.is";
-connectAttr "rt_wrist_jnt_orientConstraint1.cry" "rt_wrist_jnt.ry";
-connectAttr "rt_wrist_jnt_orientConstraint1.crz" "rt_wrist_jnt.rz";
-connectAttr "rt_wrist_jnt_orientConstraint1.crx" "rt_wrist_jnt.rx";
-connectAttr "rt_wrist_jnt.s" "rt_thumb_jnt5.is";
-connectAttr "rt_thumb_jnt5.s" "rt_thumb_jnt2.is";
-connectAttr "rt_thumb_jnt2.s" "rt_thumb_jnt3.is";
-connectAttr "rt_thumb_jnt3.s" "rt_thumb_jnt4.is";
-connectAttr "rt_wrist_jnt.s" "rt_index_jnt1.is";
-connectAttr "rt_index_jnt1.s" "rt_index_jnt2.is";
-connectAttr "rt_index_jnt2.s" "rt_index_jnt3.is";
-connectAttr "rt_index_jnt3.s" "rt_index_jnt4.is";
-connectAttr "rt_wrist_jnt.s" "rt_ltl_jnt1.is";
-connectAttr "rt_ltl_jnt1.s" "rt_ltl_jnt2.is";
-connectAttr "rt_ltl_jnt2.s" "rt_ltl_jnt3.is";
-connectAttr "rt_ltl_jnt3.s" "rt_ltl_jnt4.is";
-connectAttr "rt_wrist_jnt.s" "rt_middle_jnt1.is";
-connectAttr "rt_middle_jnt1.s" "rt_middle_jnt2.is";
-connectAttr "rt_middle_jnt2.s" "rt_middle_jnt3.is";
-connectAttr "rt_middle_jnt3.s" "rt_middle_jnt4.is";
-connectAttr "rt_wrist_jnt.s" "rt_ring_jnt1.is";
-connectAttr "rt_ring_jnt1.s" "rt_ring_jnt2.is";
-connectAttr "rt_ring_jnt2.s" "rt_ring_jnt3.is";
-connectAttr "rt_ring_jnt3.s" "rt_ring_jnt4.is";
-connectAttr "rt_wrist_jnt.s" "rt_wrist_add_jnt.is";
-connectAttr "rt_wrist_add_jnt_orientConstraint1.crx" "rt_wrist_add_jnt.rx";
-connectAttr "rt_wrist_add_jnt_orientConstraint1.cry" "rt_wrist_add_jnt.ry";
-connectAttr "rt_wrist_add_jnt_orientConstraint1.crz" "rt_wrist_add_jnt.rz";
-connectAttr "rt_wrist_add_jnt.s" "rt_wrist_add_b_jnt.is";
-connectAttr "rt_wrist_add_b_jnt_translateY.o" "rt_wrist_add_b_jnt.ty";
-connectAttr "rt_wrist_add_jnt.s" "rt_wrist_add_u_jnt.is";
-connectAttr "rt_wrist_add_u_jnt_translateZ.o" "rt_wrist_add_u_jnt.tz";
-connectAttr "rt_wrist_add_f_jnt_translateY.o" "rt_wrist_add_f_jnt.ty";
-connectAttr "rt_wrist_add_jnt.s" "rt_wrist_add_f_jnt.is";
-connectAttr "rt_wrist_add_jnt.s" "rt_wrist_add_d_jnt.is";
-connectAttr "rt_wrist_add_d_jnt_translateZ.o" "rt_wrist_add_d_jnt.tz";
-connectAttr "rt_wrist_add_jnt.ro" "rt_wrist_add_jnt_orientConstraint1.cro";
-connectAttr "rt_wrist_add_jnt.pim" "rt_wrist_add_jnt_orientConstraint1.cpim";
-connectAttr "rt_wrist_add_jnt.jo" "rt_wrist_add_jnt_orientConstraint1.cjo";
-connectAttr "rt_wrist_add_jnt.is" "rt_wrist_add_jnt_orientConstraint1.is";
-connectAttr "rt_elbow_jnt.r" "rt_wrist_add_jnt_orientConstraint1.tg[0].tr";
-connectAttr "rt_elbow_jnt.ro" "rt_wrist_add_jnt_orientConstraint1.tg[0].tro";
-connectAttr "rt_elbow_jnt.pm" "rt_wrist_add_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "rt_elbow_jnt.jo" "rt_wrist_add_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "rt_wrist_add_jnt_orientConstraint1.w0" "rt_wrist_add_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "rt_wrist_jnt.r" "rt_wrist_add_jnt_orientConstraint1.tg[1].tr";
-connectAttr "rt_wrist_jnt.ro" "rt_wrist_add_jnt_orientConstraint1.tg[1].tro";
-connectAttr "rt_wrist_jnt.pm" "rt_wrist_add_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "rt_wrist_jnt.jo" "rt_wrist_add_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "rt_wrist_add_jnt_orientConstraint1.w1" "rt_wrist_add_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "rt_wrist_jnt.ro" "rt_wrist_jnt_orientConstraint1.cro";
-connectAttr "rt_wrist_jnt.pim" "rt_wrist_jnt_orientConstraint1.cpim";
-connectAttr "rt_wrist_jnt.jo" "rt_wrist_jnt_orientConstraint1.cjo";
-connectAttr "rt_wrist_jnt.is" "rt_wrist_jnt_orientConstraint1.is";
-connectAttr "rt_wrist_IK_jnt.r" "rt_wrist_jnt_orientConstraint1.tg[0].tr";
-connectAttr "rt_wrist_IK_jnt.ro" "rt_wrist_jnt_orientConstraint1.tg[0].tro";
-connectAttr "rt_wrist_IK_jnt.pm" "rt_wrist_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "rt_wrist_IK_jnt.jo" "rt_wrist_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "rt_wrist_jnt_orientConstraint1.w0" "rt_wrist_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "rt_wrist_FK_jnt.r" "rt_wrist_jnt_orientConstraint1.tg[1].tr";
-connectAttr "rt_wrist_FK_jnt.ro" "rt_wrist_jnt_orientConstraint1.tg[1].tro";
-connectAttr "rt_wrist_FK_jnt.pm" "rt_wrist_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "rt_wrist_FK_jnt.jo" "rt_wrist_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "rt_wrist_jnt_orientConstraint1.w1" "rt_wrist_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "reverse6.ox" "rt_wrist_jnt_orientConstraint1.w0";
-connectAttr "rt_arm_switch_ctrl.ikFk" "rt_wrist_jnt_orientConstraint1.w1";
-connectAttr "rt_elbow_jnt.s" "rt_elbow_add_jnt.is";
-connectAttr "rt_elbow_add_jnt_orientConstraint1.crx" "rt_elbow_add_jnt.rx";
-connectAttr "rt_elbow_add_jnt_orientConstraint1.cry" "rt_elbow_add_jnt.ry";
-connectAttr "rt_elbow_add_jnt_orientConstraint1.crz" "rt_elbow_add_jnt.rz";
-connectAttr "rt_elbow_add_b_jnt_translateY.o" "rt_elbow_add_b_jnt.ty";
-connectAttr "rt_elbow_add_jnt.s" "rt_elbow_add_b_jnt.is";
-connectAttr "rt_elbow_add_f_jnt_translateY1.o" "rt_elbow_add_f_jnt.ty";
-connectAttr "rt_elbow_add_jnt.s" "rt_elbow_add_f_jnt.is";
-connectAttr "rt_elbow_add_jnt.ro" "rt_elbow_add_jnt_orientConstraint1.cro";
-connectAttr "rt_elbow_add_jnt.pim" "rt_elbow_add_jnt_orientConstraint1.cpim";
-connectAttr "rt_elbow_add_jnt.jo" "rt_elbow_add_jnt_orientConstraint1.cjo";
-connectAttr "rt_elbow_add_jnt.is" "rt_elbow_add_jnt_orientConstraint1.is";
-connectAttr "rt_shld_jnt.r" "rt_elbow_add_jnt_orientConstraint1.tg[0].tr";
-connectAttr "rt_shld_jnt.ro" "rt_elbow_add_jnt_orientConstraint1.tg[0].tro";
-connectAttr "rt_shld_jnt.pm" "rt_elbow_add_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "rt_shld_jnt.jo" "rt_elbow_add_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "rt_elbow_add_jnt_orientConstraint1.w0" "rt_elbow_add_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "rt_elbow_jnt.r" "rt_elbow_add_jnt_orientConstraint1.tg[1].tr";
-connectAttr "rt_elbow_jnt.ro" "rt_elbow_add_jnt_orientConstraint1.tg[1].tro";
-connectAttr "rt_elbow_jnt.pm" "rt_elbow_add_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "rt_elbow_jnt.jo" "rt_elbow_add_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "rt_elbow_add_jnt_orientConstraint1.w1" "rt_elbow_add_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "rt_elbow_jnt.ro" "rt_elbow_jnt_orientConstraint1.cro";
-connectAttr "rt_elbow_jnt.pim" "rt_elbow_jnt_orientConstraint1.cpim";
-connectAttr "rt_elbow_jnt.jo" "rt_elbow_jnt_orientConstraint1.cjo";
-connectAttr "rt_elbow_jnt.is" "rt_elbow_jnt_orientConstraint1.is";
-connectAttr "rt_elbow_IK_jnt.r" "rt_elbow_jnt_orientConstraint1.tg[0].tr";
-connectAttr "rt_elbow_IK_jnt.ro" "rt_elbow_jnt_orientConstraint1.tg[0].tro";
-connectAttr "rt_elbow_IK_jnt.pm" "rt_elbow_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "rt_elbow_IK_jnt.jo" "rt_elbow_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "rt_elbow_jnt_orientConstraint1.w0" "rt_elbow_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "rt_elbow_FK_jnt.r" "rt_elbow_jnt_orientConstraint1.tg[1].tr";
-connectAttr "rt_elbow_FK_jnt.ro" "rt_elbow_jnt_orientConstraint1.tg[1].tro";
-connectAttr "rt_elbow_FK_jnt.pm" "rt_elbow_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "rt_elbow_FK_jnt.jo" "rt_elbow_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "rt_elbow_jnt_orientConstraint1.w1" "rt_elbow_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "reverse6.ox" "rt_elbow_jnt_orientConstraint1.w0";
-connectAttr "rt_arm_switch_ctrl.ikFk" "rt_elbow_jnt_orientConstraint1.w1";
-connectAttr "rt_shld_add_jnt_orientConstraint1.crx" "rt_shld_add_jnt.rx";
-connectAttr "rt_shld_add_jnt_orientConstraint1.cry" "rt_shld_add_jnt.ry";
-connectAttr "rt_shld_add_jnt_orientConstraint1.crz" "rt_shld_add_jnt.rz";
-connectAttr "rt_shld_jnt.s" "rt_shld_add_jnt.is";
-connectAttr "rt_shld_add_u_jnt_translateZ.o" "rt_shld_add_u_jnt.tz";
-connectAttr "rt_shld_add_jnt.s" "rt_shld_add_u_jnt.is";
-connectAttr "rt_shld_add_jnt.s" "rt_shld_add_f_jnt.is";
-connectAttr "rt_shld_add_d_jnt_translateZ.o" "rt_shld_add_d_jnt.tz";
-connectAttr "rt_shld_add_jnt.s" "rt_shld_add_d_jnt.is";
-connectAttr "rt_shld_add_jnt.ro" "rt_shld_add_jnt_orientConstraint1.cro";
-connectAttr "rt_shld_add_jnt.pim" "rt_shld_add_jnt_orientConstraint1.cpim";
-connectAttr "rt_shld_add_jnt.jo" "rt_shld_add_jnt_orientConstraint1.cjo";
-connectAttr "rt_shld_add_jnt.is" "rt_shld_add_jnt_orientConstraint1.is";
-connectAttr "rt_clavicle_jnt.r" "rt_shld_add_jnt_orientConstraint1.tg[0].tr";
-connectAttr "rt_clavicle_jnt.ro" "rt_shld_add_jnt_orientConstraint1.tg[0].tro";
-connectAttr "rt_clavicle_jnt.pm" "rt_shld_add_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "rt_clavicle_jnt.jo" "rt_shld_add_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "rt_shld_add_jnt_orientConstraint1.w0" "rt_shld_add_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "rt_shld_jnt.ro" "rt_shld_jnt_orientConstraint1.cro";
-connectAttr "rt_shld_jnt.pim" "rt_shld_jnt_orientConstraint1.cpim";
-connectAttr "rt_shld_jnt.jo" "rt_shld_jnt_orientConstraint1.cjo";
-connectAttr "rt_shld_jnt.is" "rt_shld_jnt_orientConstraint1.is";
-connectAttr "rt_shld_IK_jnt.r" "rt_shld_jnt_orientConstraint1.tg[0].tr";
-connectAttr "rt_shld_IK_jnt.ro" "rt_shld_jnt_orientConstraint1.tg[0].tro";
-connectAttr "rt_shld_IK_jnt.pm" "rt_shld_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "rt_shld_IK_jnt.jo" "rt_shld_jnt_orientConstraint1.tg[0].tjo";
-connectAttr "rt_shld_jnt_orientConstraint1.w0" "rt_shld_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "rt_shld_FK_jnt.r" "rt_shld_jnt_orientConstraint1.tg[1].tr";
-connectAttr "rt_shld_FK_jnt.ro" "rt_shld_jnt_orientConstraint1.tg[1].tro";
-connectAttr "rt_shld_FK_jnt.pm" "rt_shld_jnt_orientConstraint1.tg[1].tpm";
-connectAttr "rt_shld_FK_jnt.jo" "rt_shld_jnt_orientConstraint1.tg[1].tjo";
-connectAttr "rt_shld_jnt_orientConstraint1.w1" "rt_shld_jnt_orientConstraint1.tg[1].tw"
-		;
-connectAttr "reverse6.ox" "rt_shld_jnt_orientConstraint1.w0";
-connectAttr "rt_arm_switch_ctrl.ikFk" "rt_shld_jnt_orientConstraint1.w1";
-connectAttr "rt_shld_FK_jnt_orientConstraint1.crx" "rt_shld_FK_jnt.rx";
-connectAttr "rt_shld_FK_jnt_orientConstraint1.cry" "rt_shld_FK_jnt.ry";
-connectAttr "rt_shld_FK_jnt_orientConstraint1.crz" "rt_shld_FK_jnt.rz";
-connectAttr "rt_clavicle_jnt.s" "rt_shld_FK_jnt.is";
-connectAttr "rt_elbow_FK_jnt_orientConstraint1.crx" "rt_elbow_FK_jnt.rx";
-connectAttr "rt_elbow_FK_jnt_orientConstraint1.cry" "rt_elbow_FK_jnt.ry";
-connectAttr "rt_elbow_FK_jnt_orientConstraint1.crz" "rt_elbow_FK_jnt.rz";
-connectAttr "rt_shld_FK_jnt.s" "rt_elbow_FK_jnt.is";
-connectAttr "rt_wrist_FK_jnt_orientConstraint1.crx" "rt_wrist_FK_jnt.rx";
-connectAttr "rt_wrist_FK_jnt_orientConstraint1.cry" "rt_wrist_FK_jnt.ry";
-connectAttr "rt_wrist_FK_jnt_orientConstraint1.crz" "rt_wrist_FK_jnt.rz";
-connectAttr "rt_elbow_FK_jnt.s" "rt_wrist_FK_jnt.is";
-connectAttr "rt_wrist_FK_jnt.ro" "rt_wrist_FK_jnt_orientConstraint1.cro";
-connectAttr "rt_wrist_FK_jnt.pim" "rt_wrist_FK_jnt_orientConstraint1.cpim";
-connectAttr "rt_wrist_FK_jnt.jo" "rt_wrist_FK_jnt_orientConstraint1.cjo";
-connectAttr "rt_wrist_FK_jnt.is" "rt_wrist_FK_jnt_orientConstraint1.is";
-connectAttr "rt_wrist_FK_ctrl.r" "rt_wrist_FK_jnt_orientConstraint1.tg[0].tr";
-connectAttr "rt_wrist_FK_ctrl.ro" "rt_wrist_FK_jnt_orientConstraint1.tg[0].tro";
-connectAttr "rt_wrist_FK_ctrl.pm" "rt_wrist_FK_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "rt_wrist_FK_jnt_orientConstraint1.w0" "rt_wrist_FK_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "rt_elbow_FK_jnt.ro" "rt_elbow_FK_jnt_orientConstraint1.cro";
-connectAttr "rt_elbow_FK_jnt.pim" "rt_elbow_FK_jnt_orientConstraint1.cpim";
-connectAttr "rt_elbow_FK_jnt.jo" "rt_elbow_FK_jnt_orientConstraint1.cjo";
-connectAttr "rt_elbow_FK_jnt.is" "rt_elbow_FK_jnt_orientConstraint1.is";
-connectAttr "rt_elbow_FK_ctrl.r" "rt_elbow_FK_jnt_orientConstraint1.tg[0].tr";
-connectAttr "rt_elbow_FK_ctrl.ro" "rt_elbow_FK_jnt_orientConstraint1.tg[0].tro";
-connectAttr "rt_elbow_FK_ctrl.pm" "rt_elbow_FK_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "rt_elbow_FK_jnt_orientConstraint1.w0" "rt_elbow_FK_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "rt_shld_FK_jnt.ro" "rt_shld_FK_jnt_orientConstraint1.cro";
-connectAttr "rt_shld_FK_jnt.pim" "rt_shld_FK_jnt_orientConstraint1.cpim";
-connectAttr "rt_shld_FK_jnt.jo" "rt_shld_FK_jnt_orientConstraint1.cjo";
-connectAttr "rt_shld_FK_jnt.is" "rt_shld_FK_jnt_orientConstraint1.is";
-connectAttr "rt_shld_FK_ctrl.r" "rt_shld_FK_jnt_orientConstraint1.tg[0].tr";
-connectAttr "rt_shld_FK_ctrl.ro" "rt_shld_FK_jnt_orientConstraint1.tg[0].tro";
-connectAttr "rt_shld_FK_ctrl.pm" "rt_shld_FK_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "rt_shld_FK_jnt_orientConstraint1.w0" "rt_shld_FK_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "rt_clavicle_jnt.s" "rt_shld_IK_jnt.is";
-connectAttr "rt_shld_IK_jnt.s" "rt_elbow_IK_jnt.is";
-connectAttr "rt_wrist_IK_jnt_orientConstraint1.crx" "rt_wrist_IK_jnt.rx";
-connectAttr "rt_wrist_IK_jnt_orientConstraint1.cry" "rt_wrist_IK_jnt.ry";
-connectAttr "rt_wrist_IK_jnt_orientConstraint1.crz" "rt_wrist_IK_jnt.rz";
-connectAttr "rt_elbow_IK_jnt.s" "rt_wrist_IK_jnt.is";
-connectAttr "rt_wrist_IK_jnt.ro" "rt_wrist_IK_jnt_orientConstraint1.cro";
-connectAttr "rt_wrist_IK_jnt.pim" "rt_wrist_IK_jnt_orientConstraint1.cpim";
-connectAttr "rt_wrist_IK_jnt.jo" "rt_wrist_IK_jnt_orientConstraint1.cjo";
-connectAttr "rt_wrist_IK_jnt.is" "rt_wrist_IK_jnt_orientConstraint1.is";
-connectAttr "rt_arm_IK_ctrl.r" "rt_wrist_IK_jnt_orientConstraint1.tg[0].tr";
-connectAttr "rt_arm_IK_ctrl.ro" "rt_wrist_IK_jnt_orientConstraint1.tg[0].tro";
-connectAttr "rt_arm_IK_ctrl.pm" "rt_wrist_IK_jnt_orientConstraint1.tg[0].tpm";
-connectAttr "rt_wrist_IK_jnt_orientConstraint1.w0" "rt_wrist_IK_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "rt_wrist_IK_jnt.tx" "effector2.tx";
-connectAttr "rt_wrist_IK_jnt.ty" "effector2.ty";
-connectAttr "rt_wrist_IK_jnt.tz" "effector2.tz";
-connectAttr "rt_wrist_IK_jnt.opm" "effector2.opm";
-connectAttr "spine_jnt1.s" "lf_ribbon_tape.is";
-connectAttr "lf_ribbon_tape_rotateZ.o" "lf_ribbon_tape.rz";
-connectAttr "rt_ribbon_tape_rotateZ.o" "rt_ribbon_tape.rz";
-connectAttr "spine_jnt1.s" "rt_ribbon_tape.is";
-connectAttr "broom_jnt1.s" "broom_leaf_jnt1.is";
-connectAttr "broom_leaf_jnt1.s" "broom_leaf_jnt2.is";
-connectAttr "broom_leaf_jnt2.s" "broom_leaf_jnt23.is";
-connectAttr "broom_jnt1.s" "broom_leaf_jnt4.is";
-connectAttr "broom_leaf_jnt4.s" "broom_leaf_jnt5.is";
-connectAttr "broom_leaf_jnt5.s" "broom_leaf_jnt6.is";
-connectAttr "broom_jnt1.s" "broom_leaf_jnt7.is";
-connectAttr "broom_leaf_jnt7.s" "broom_leaf_jnt8.is";
-connectAttr "broom_leaf_jnt8.s" "broom_leaf_jnt9.is";
-connectAttr "broom_jnt1.s" "broom_bot_jnt.is";
-connectAttr "broom_bot_jnt.s" "broom_rod_jnt1.is";
-connectAttr "broom_bot_jnt.s" "broom_rod_jnt2.is";
-connectAttr "broom_bot_jnt.s" "broom_rod_jnt3.is";
-connectAttr "hip_locs_grp_parentConstraint1.ctx" "hip_locs_grp.tx";
-connectAttr "hip_locs_grp_parentConstraint1.cty" "hip_locs_grp.ty";
-connectAttr "hip_locs_grp_parentConstraint1.ctz" "hip_locs_grp.tz";
-connectAttr "hip_locs_grp_parentConstraint1.crx" "hip_locs_grp.rx";
-connectAttr "hip_locs_grp_parentConstraint1.cry" "hip_locs_grp.ry";
-connectAttr "hip_locs_grp_parentConstraint1.crz" "hip_locs_grp.rz";
-connectAttr "hip_locs_grp.ro" "hip_locs_grp_parentConstraint1.cro";
-connectAttr "hip_locs_grp.pim" "hip_locs_grp_parentConstraint1.cpim";
-connectAttr "hip_locs_grp.rp" "hip_locs_grp_parentConstraint1.crp";
-connectAttr "hip_locs_grp.rpt" "hip_locs_grp_parentConstraint1.crt";
-connectAttr "pelvis_jnt.t" "hip_locs_grp_parentConstraint1.tg[0].tt";
-connectAttr "pelvis_jnt.rp" "hip_locs_grp_parentConstraint1.tg[0].trp";
-connectAttr "pelvis_jnt.rpt" "hip_locs_grp_parentConstraint1.tg[0].trt";
-connectAttr "pelvis_jnt.r" "hip_locs_grp_parentConstraint1.tg[0].tr";
-connectAttr "pelvis_jnt.ro" "hip_locs_grp_parentConstraint1.tg[0].tro";
-connectAttr "pelvis_jnt.s" "hip_locs_grp_parentConstraint1.tg[0].ts";
-connectAttr "pelvis_jnt.pm" "hip_locs_grp_parentConstraint1.tg[0].tpm";
-connectAttr "pelvis_jnt.jo" "hip_locs_grp_parentConstraint1.tg[0].tjo";
-connectAttr "pelvis_jnt.ssc" "hip_locs_grp_parentConstraint1.tg[0].tsc";
-connectAttr "pelvis_jnt.is" "hip_locs_grp_parentConstraint1.tg[0].tis";
-connectAttr "hip_locs_grp_parentConstraint1.w0" "hip_locs_grp_parentConstraint1.tg[0].tw"
-		;
-connectAttr "reverse1.ox" "lf_arm_IK_ctrl.v" -l on;
-connectAttr "lf_shld_IK_jnt.msg" "lf_arm_IK_handler.hsj";
-connectAttr "effector1.hp" "lf_arm_IK_handler.hee";
-connectAttr "ikRPsolver.msg" "lf_arm_IK_handler.hsv";
-connectAttr "lf_arm_IK_handler_pointConstraint1.ctx" "lf_arm_IK_handler.tx";
-connectAttr "lf_arm_IK_handler_pointConstraint1.cty" "lf_arm_IK_handler.ty";
-connectAttr "lf_arm_IK_handler_pointConstraint1.ctz" "lf_arm_IK_handler.tz";
-connectAttr "lf_arm_IK_handler_poleVectorConstraint1.ctx" "lf_arm_IK_handler.pvx"
-		;
-connectAttr "lf_arm_IK_handler_poleVectorConstraint1.cty" "lf_arm_IK_handler.pvy"
-		;
-connectAttr "lf_arm_IK_handler_poleVectorConstraint1.ctz" "lf_arm_IK_handler.pvz"
-		;
-connectAttr "lf_arm_IK_handler.pim" "lf_arm_IK_handler_pointConstraint1.cpim";
-connectAttr "lf_arm_IK_handler.rp" "lf_arm_IK_handler_pointConstraint1.crp";
-connectAttr "lf_arm_IK_handler.rpt" "lf_arm_IK_handler_pointConstraint1.crt";
-connectAttr "lf_arm_IK_ctrl.t" "lf_arm_IK_handler_pointConstraint1.tg[0].tt";
-connectAttr "lf_arm_IK_ctrl.rp" "lf_arm_IK_handler_pointConstraint1.tg[0].trp";
-connectAttr "lf_arm_IK_ctrl.rpt" "lf_arm_IK_handler_pointConstraint1.tg[0].trt";
-connectAttr "lf_arm_IK_ctrl.pm" "lf_arm_IK_handler_pointConstraint1.tg[0].tpm";
-connectAttr "lf_arm_IK_handler_pointConstraint1.w0" "lf_arm_IK_handler_pointConstraint1.tg[0].tw"
-		;
-connectAttr "lf_arm_IK_handler.pim" "lf_arm_IK_handler_poleVectorConstraint1.cpim"
-		;
-connectAttr "lf_shld_IK_jnt.pm" "lf_arm_IK_handler_poleVectorConstraint1.ps";
-connectAttr "lf_shld_IK_jnt.t" "lf_arm_IK_handler_poleVectorConstraint1.crp";
-connectAttr "lf_arm_pole.t" "lf_arm_IK_handler_poleVectorConstraint1.tg[0].tt";
-connectAttr "lf_arm_pole.rp" "lf_arm_IK_handler_poleVectorConstraint1.tg[0].trp"
-		;
-connectAttr "lf_arm_pole.rpt" "lf_arm_IK_handler_poleVectorConstraint1.tg[0].trt"
-		;
-connectAttr "lf_arm_pole.pm" "lf_arm_IK_handler_poleVectorConstraint1.tg[0].tpm"
-		;
-connectAttr "lf_arm_IK_handler_poleVectorConstraint1.w0" "lf_arm_IK_handler_poleVectorConstraint1.tg[0].tw"
-		;
-connectAttr "lf_arm_switch_grp_pointConstraint1.ctx" "lf_arm_switch_grp.tx";
-connectAttr "lf_arm_switch_grp_pointConstraint1.cty" "lf_arm_switch_grp.ty";
-connectAttr "lf_arm_switch_grp_pointConstraint1.ctz" "lf_arm_switch_grp.tz";
-connectAttr "lf_arm_switch_grp.pim" "lf_arm_switch_grp_pointConstraint1.cpim";
-connectAttr "lf_arm_switch_grp.rp" "lf_arm_switch_grp_pointConstraint1.crp";
-connectAttr "lf_arm_switch_grp.rpt" "lf_arm_switch_grp_pointConstraint1.crt";
-connectAttr "lf_wrist_jnt.t" "lf_arm_switch_grp_pointConstraint1.tg[0].tt";
-connectAttr "lf_wrist_jnt.rp" "lf_arm_switch_grp_pointConstraint1.tg[0].trp";
-connectAttr "lf_wrist_jnt.rpt" "lf_arm_switch_grp_pointConstraint1.tg[0].trt";
-connectAttr "lf_wrist_jnt.pm" "lf_arm_switch_grp_pointConstraint1.tg[0].tpm";
-connectAttr "lf_arm_switch_grp_pointConstraint1.w0" "lf_arm_switch_grp_pointConstraint1.tg[0].tw"
-		;
-connectAttr "lf_arm_switch_ctrl.ikFk" "lf_shld_FK_ctrl_grp.v";
-connectAttr "makeNurbCircle5.oc" "lf_shld_FK_ctrlShape.cr";
-connectAttr "reverse7.ox" "lf_arm_pole.v";
-connectAttr "lf_elbow_poleEnd_pointConstraint1.ctx" "lf_elbow_poleEnd.tx";
-connectAttr "lf_elbow_poleEnd_pointConstraint1.cty" "lf_elbow_poleEnd.ty";
-connectAttr "lf_elbow_poleEnd_pointConstraint1.ctz" "lf_elbow_poleEnd.tz";
-connectAttr "lf_elbow_poleEnd.pim" "lf_elbow_poleEnd_pointConstraint1.cpim";
-connectAttr "lf_elbow_poleEnd.rp" "lf_elbow_poleEnd_pointConstraint1.crp";
-connectAttr "lf_elbow_poleEnd.rpt" "lf_elbow_poleEnd_pointConstraint1.crt";
-connectAttr "lf_arm_pole.t" "lf_elbow_poleEnd_pointConstraint1.tg[0].tt";
-connectAttr "lf_arm_pole.rp" "lf_elbow_poleEnd_pointConstraint1.tg[0].trp";
-connectAttr "lf_arm_pole.rpt" "lf_elbow_poleEnd_pointConstraint1.tg[0].trt";
-connectAttr "lf_arm_pole.pm" "lf_elbow_poleEnd_pointConstraint1.tg[0].tpm";
-connectAttr "lf_elbow_poleEnd_pointConstraint1.w0" "lf_elbow_poleEnd_pointConstraint1.tg[0].tw"
-		;
-connectAttr "lf_elbow_poleStart_pointConstraint1.ctx" "lf_elbow_poleStart.tx";
-connectAttr "lf_elbow_poleStart_pointConstraint1.cty" "lf_elbow_poleStart.ty";
-connectAttr "lf_elbow_poleStart_pointConstraint1.ctz" "lf_elbow_poleStart.tz";
-connectAttr "lf_elbow_poleStart.pim" "lf_elbow_poleStart_pointConstraint1.cpim";
-connectAttr "lf_elbow_poleStart.rp" "lf_elbow_poleStart_pointConstraint1.crp";
-connectAttr "lf_elbow_poleStart.rpt" "lf_elbow_poleStart_pointConstraint1.crt";
-connectAttr "lf_elbow_jnt.t" "lf_elbow_poleStart_pointConstraint1.tg[0].tt";
-connectAttr "lf_elbow_jnt.rp" "lf_elbow_poleStart_pointConstraint1.tg[0].trp";
-connectAttr "lf_elbow_jnt.rpt" "lf_elbow_poleStart_pointConstraint1.tg[0].trt";
-connectAttr "lf_elbow_jnt.pm" "lf_elbow_poleStart_pointConstraint1.tg[0].tpm";
-connectAttr "lf_elbow_poleStart_pointConstraint1.w0" "lf_elbow_poleStart_pointConstraint1.tg[0].tw"
-		;
-connectAttr "reverse7.ox" "lf_elbow_poleLineShape.v";
-connectAttr "lf_elbow_poleEndShape.wp" "lf_elbow_poleLineShape.cp[0]";
-connectAttr "lf_elbow_poleStartShape.wp" "lf_elbow_poleLineShape.cp[1]";
-connectAttr "reverse2.ox" "rt_arm_IK_ctrl.v" -l on;
-connectAttr "rt_arm_switch_grp_pointConstraint1.ctx" "rt_arm_switch_grp.tx";
-connectAttr "rt_arm_switch_grp_pointConstraint1.cty" "rt_arm_switch_grp.ty";
-connectAttr "rt_arm_switch_grp_pointConstraint1.ctz" "rt_arm_switch_grp.tz";
-connectAttr "rt_arm_switch_grp.pim" "rt_arm_switch_grp_pointConstraint1.cpim";
-connectAttr "rt_arm_switch_grp.rp" "rt_arm_switch_grp_pointConstraint1.crp";
-connectAttr "rt_arm_switch_grp.rpt" "rt_arm_switch_grp_pointConstraint1.crt";
-connectAttr "rt_wrist_jnt.t" "rt_arm_switch_grp_pointConstraint1.tg[0].tt";
-connectAttr "rt_wrist_jnt.rp" "rt_arm_switch_grp_pointConstraint1.tg[0].trp";
-connectAttr "rt_wrist_jnt.rpt" "rt_arm_switch_grp_pointConstraint1.tg[0].trt";
-connectAttr "rt_wrist_jnt.pm" "rt_arm_switch_grp_pointConstraint1.tg[0].tpm";
-connectAttr "rt_arm_switch_grp_pointConstraint1.w0" "rt_arm_switch_grp_pointConstraint1.tg[0].tw"
-		;
-connectAttr "rt_arm_switch_ctrl.ikFk" "rt_shld_FK_ctrl_grp.v";
-connectAttr "reverse7.oy" "rt_arm_pole.v" -l on;
-connectAttr "rt_shld_IK_jnt.msg" "rt_arm_IK_handler.hsj";
-connectAttr "effector2.hp" "rt_arm_IK_handler.hee";
-connectAttr "ikRPsolver.msg" "rt_arm_IK_handler.hsv";
-connectAttr "rt_arm_IK_handler_pointConstraint1.ctx" "rt_arm_IK_handler.tx";
-connectAttr "rt_arm_IK_handler_pointConstraint1.cty" "rt_arm_IK_handler.ty";
-connectAttr "rt_arm_IK_handler_pointConstraint1.ctz" "rt_arm_IK_handler.tz";
-connectAttr "rt_arm_IK_handler_poleVectorConstraint1.ctx" "rt_arm_IK_handler.pvx"
-		;
-connectAttr "rt_arm_IK_handler_poleVectorConstraint1.cty" "rt_arm_IK_handler.pvy"
-		;
-connectAttr "rt_arm_IK_handler_poleVectorConstraint1.ctz" "rt_arm_IK_handler.pvz"
-		;
-connectAttr "rt_arm_IK_handler.pim" "rt_arm_IK_handler_pointConstraint1.cpim";
-connectAttr "rt_arm_IK_handler.rp" "rt_arm_IK_handler_pointConstraint1.crp";
-connectAttr "rt_arm_IK_handler.rpt" "rt_arm_IK_handler_pointConstraint1.crt";
-connectAttr "rt_arm_IK_ctrl.t" "rt_arm_IK_handler_pointConstraint1.tg[0].tt";
-connectAttr "rt_arm_IK_ctrl.rp" "rt_arm_IK_handler_pointConstraint1.tg[0].trp";
-connectAttr "rt_arm_IK_ctrl.rpt" "rt_arm_IK_handler_pointConstraint1.tg[0].trt";
-connectAttr "rt_arm_IK_ctrl.pm" "rt_arm_IK_handler_pointConstraint1.tg[0].tpm";
-connectAttr "rt_arm_IK_handler_pointConstraint1.w0" "rt_arm_IK_handler_pointConstraint1.tg[0].tw"
-		;
-connectAttr "rt_arm_IK_handler.pim" "rt_arm_IK_handler_poleVectorConstraint1.cpim"
-		;
-connectAttr "rt_shld_IK_jnt.pm" "rt_arm_IK_handler_poleVectorConstraint1.ps";
-connectAttr "rt_shld_IK_jnt.t" "rt_arm_IK_handler_poleVectorConstraint1.crp";
-connectAttr "rt_arm_pole.t" "rt_arm_IK_handler_poleVectorConstraint1.tg[0].tt";
-connectAttr "rt_arm_pole.rp" "rt_arm_IK_handler_poleVectorConstraint1.tg[0].trp"
-		;
-connectAttr "rt_arm_pole.rpt" "rt_arm_IK_handler_poleVectorConstraint1.tg[0].trt"
-		;
-connectAttr "rt_arm_pole.pm" "rt_arm_IK_handler_poleVectorConstraint1.tg[0].tpm"
-		;
-connectAttr "rt_arm_IK_handler_poleVectorConstraint1.w0" "rt_arm_IK_handler_poleVectorConstraint1.tg[0].tw"
-		;
-connectAttr "rt_elbow_poleEnd_pointConstraint2.ctx" "rt_elbow_poleEnd.tx";
-connectAttr "rt_elbow_poleEnd_pointConstraint2.cty" "rt_elbow_poleEnd.ty";
-connectAttr "rt_elbow_poleEnd_pointConstraint2.ctz" "rt_elbow_poleEnd.tz";
-connectAttr "rt_elbow_poleEnd.pim" "rt_elbow_poleEnd_pointConstraint2.cpim";
-connectAttr "rt_elbow_poleEnd.rp" "rt_elbow_poleEnd_pointConstraint2.crp";
-connectAttr "rt_elbow_poleEnd.rpt" "rt_elbow_poleEnd_pointConstraint2.crt";
-connectAttr "rt_arm_pole.t" "rt_elbow_poleEnd_pointConstraint2.tg[0].tt";
-connectAttr "rt_arm_pole.rp" "rt_elbow_poleEnd_pointConstraint2.tg[0].trp";
-connectAttr "rt_arm_pole.rpt" "rt_elbow_poleEnd_pointConstraint2.tg[0].trt";
-connectAttr "rt_arm_pole.pm" "rt_elbow_poleEnd_pointConstraint2.tg[0].tpm";
-connectAttr "rt_elbow_poleEnd_pointConstraint2.w0" "rt_elbow_poleEnd_pointConstraint2.tg[0].tw"
-		;
-connectAttr "rt_elbow_poleStart_pointConstraint2.ctx" "rt_elbow_poleStart.tx";
-connectAttr "rt_elbow_poleStart_pointConstraint2.cty" "rt_elbow_poleStart.ty";
-connectAttr "rt_elbow_poleStart_pointConstraint2.ctz" "rt_elbow_poleStart.tz";
-connectAttr "rt_elbow_poleStart.pim" "rt_elbow_poleStart_pointConstraint2.cpim";
-connectAttr "rt_elbow_poleStart.rp" "rt_elbow_poleStart_pointConstraint2.crp";
-connectAttr "rt_elbow_poleStart.rpt" "rt_elbow_poleStart_pointConstraint2.crt";
-connectAttr "rt_elbow_jnt.t" "rt_elbow_poleStart_pointConstraint2.tg[0].tt";
-connectAttr "rt_elbow_jnt.rp" "rt_elbow_poleStart_pointConstraint2.tg[0].trp";
-connectAttr "rt_elbow_jnt.rpt" "rt_elbow_poleStart_pointConstraint2.tg[0].trt";
-connectAttr "rt_elbow_jnt.pm" "rt_elbow_poleStart_pointConstraint2.tg[0].tpm";
-connectAttr "rt_elbow_poleStart_pointConstraint2.w0" "rt_elbow_poleStart_pointConstraint2.tg[0].tw"
-		;
-connectAttr "reverse8.ox" "rt_elbow_poleLineShape.v";
-connectAttr "rt_elbow_poleEndShape.wp" "rt_elbow_poleLineShape.cp[0]";
-connectAttr "rt_elbow_poleStartShape.wp" "rt_elbow_poleLineShape.cp[1]";
+connectAttr "witch:groupId1.id" "witch:witch:hat_geoShape.iog.og[0].gid";
+connectAttr "witch:witch:U3DMeshSG.mwc" "witch:witch:hat_geoShape.iog.og[0].gco"
+		;
+connectAttr "witch:skinCluster5.og[0]" "witch:witch:hat_geoShape.i";
+connectAttr "witch:groupId2.id" "witch:witch:ribbons_geoShape.iog.og[0].gid";
+connectAttr "witch:witch:U3DMeshSG.mwc" "witch:witch:ribbons_geoShape.iog.og[0].gco"
+		;
+connectAttr "witch:skinCluster2.og[0]" "witch:witch:ribbons_geoShape.i";
+connectAttr "witch:groupId3.id" "witch:witch:broom_geoShape.iog.og[0].gid";
+connectAttr "witch:witch:U3DMeshSG.mwc" "witch:witch:broom_geoShape.iog.og[0].gco"
+		;
+connectAttr "witch:skinCluster7.og[0]" "witch:witch:broom_geoShape.i";
+connectAttr "witch:skinCluster9.og[0]" "witch:witch:body_geoShape.i";
+connectAttr "witch:pelvis_jnt.s" "witch:lf_hip_jnt.is";
+connectAttr "witch:lf_hip_jnt.s" "witch:lf_knee_jnt.is";
+connectAttr "witch:lf_knee_jnt.s" "witch:lf_ankle_jnt.is";
+connectAttr "witch:lf_ankle_jnt.s" "witch:lf_ball_jnt.is";
+connectAttr "witch:lf_ball_jnt.s" "witch:lf_toe_jnt.is";
+connectAttr "witch:lf_ball_jnt.s" "witch:lf_ball_add_jnt.is";
+connectAttr "witch:lf_ball_add_jnt_orientConstraint1.crx" "witch:lf_ball_add_jnt.rx"
+		;
+connectAttr "witch:lf_ball_add_jnt_orientConstraint1.cry" "witch:lf_ball_add_jnt.ry"
+		;
+connectAttr "witch:lf_ball_add_jnt_orientConstraint1.crz" "witch:lf_ball_add_jnt.rz"
+		;
+connectAttr "witch:lf_ball_add_jnt.s" "witch:lf_ball_add_u_jnt.is";
+connectAttr "witch:lf_ball_add_jnt.s" "witch:lf_ball_add_d_jnt.is";
+connectAttr "witch:lf_ball_add_jnt.ro" "witch:lf_ball_add_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:lf_ball_add_jnt.pim" "witch:lf_ball_add_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:lf_ball_add_jnt.jo" "witch:lf_ball_add_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:lf_ball_add_jnt.is" "witch:lf_ball_add_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:lf_ankle_jnt.r" "witch:lf_ball_add_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:lf_ankle_jnt.ro" "witch:lf_ball_add_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:lf_ankle_jnt.pm" "witch:lf_ball_add_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:lf_ankle_jnt.jo" "witch:lf_ball_add_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:lf_ball_add_jnt_orientConstraint1.w0" "witch:lf_ball_add_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:lf_ball_jnt.r" "witch:lf_ball_add_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:lf_ball_jnt.ro" "witch:lf_ball_add_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:lf_ball_jnt.pm" "witch:lf_ball_add_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:lf_ball_jnt.jo" "witch:lf_ball_add_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:lf_ball_add_jnt_orientConstraint1.w1" "witch:lf_ball_add_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:lf_ankle_jnt.s" "witch:lf_ankle_add_jnt.is";
+connectAttr "witch:lf_ankle_add_jnt_orientConstraint1.crx" "witch:lf_ankle_add_jnt.rx"
+		;
+connectAttr "witch:lf_ankle_add_jnt_orientConstraint1.cry" "witch:lf_ankle_add_jnt.ry"
+		;
+connectAttr "witch:lf_ankle_add_jnt_orientConstraint1.crz" "witch:lf_ankle_add_jnt.rz"
+		;
+connectAttr "witch:lf_ankle_add_jnt.s" "witch:lf_ankle_add_f_jnt.is";
+connectAttr "witch:lf_ankle_add_f_jnt_translateY.o" "witch:lf_ankle_add_f_jnt.ty"
+		;
+connectAttr "witch:lf_ankle_add_jnt.s" "witch:lf_ankle_add_r_jnt.is";
+connectAttr "witch:lf_ankle_add_r_jnt_translateZ.o" "witch:lf_ankle_add_r_jnt.tz"
+		;
+connectAttr "witch:lf_ankle_add_jnt.s" "witch:lf_ankle_add_b_jnt.is";
+connectAttr "witch:lf_ankle_add_b_jnt_translateY.o" "witch:lf_ankle_add_b_jnt.ty"
+		;
+connectAttr "witch:lf_ankle_add_jnt.s" "witch:lf_ankle_add_l_jnt.is";
+connectAttr "witch:lf_ankle_add_l_jnt_translateZ.o" "witch:lf_ankle_add_l_jnt.tz"
+		;
+connectAttr "witch:lf_ankle_add_jnt.ro" "witch:lf_ankle_add_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:lf_ankle_add_jnt.pim" "witch:lf_ankle_add_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:lf_ankle_add_jnt.jo" "witch:lf_ankle_add_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:lf_ankle_add_jnt.is" "witch:lf_ankle_add_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:lf_knee_jnt.r" "witch:lf_ankle_add_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:lf_knee_jnt.ro" "witch:lf_ankle_add_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:lf_knee_jnt.pm" "witch:lf_ankle_add_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:lf_knee_jnt.jo" "witch:lf_ankle_add_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:lf_ankle_add_jnt_orientConstraint1.w0" "witch:lf_ankle_add_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:lf_ankle_jnt.r" "witch:lf_ankle_add_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:lf_ankle_jnt.ro" "witch:lf_ankle_add_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:lf_ankle_jnt.pm" "witch:lf_ankle_add_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:lf_ankle_jnt.jo" "witch:lf_ankle_add_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:lf_ankle_add_jnt_orientConstraint1.w1" "witch:lf_ankle_add_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:lf_knee_jnt.s" "witch:lf_knee_add_jnt.is";
+connectAttr "witch:lf_knee_add_jnt_orientConstraint1.crx" "witch:lf_knee_add_jnt.rx"
+		;
+connectAttr "witch:lf_knee_add_jnt_orientConstraint1.cry" "witch:lf_knee_add_jnt.ry"
+		;
+connectAttr "witch:lf_knee_add_jnt_orientConstraint1.crz" "witch:lf_knee_add_jnt.rz"
+		;
+connectAttr "witch:lf_knee_add_jnt.s" "witch:lf_knee_add_f_jnt.is";
+connectAttr "witch:lf_knee_add_f_jnt_translateY.o" "witch:lf_knee_add_f_jnt.ty";
+connectAttr "witch:lf_knee_add_jnt.s" "witch:lf_knee_add_b_jnt.is";
+connectAttr "witch:lf_knee_add_b_jnt_translateY.o" "witch:lf_knee_add_b_jnt.ty";
+connectAttr "witch:lf_knee_add_jnt.ro" "witch:lf_knee_add_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:lf_knee_add_jnt.pim" "witch:lf_knee_add_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:lf_knee_add_jnt.jo" "witch:lf_knee_add_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:lf_knee_add_jnt.is" "witch:lf_knee_add_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:lf_hip_jnt.r" "witch:lf_knee_add_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:lf_hip_jnt.ro" "witch:lf_knee_add_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:lf_hip_jnt.pm" "witch:lf_knee_add_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:lf_hip_jnt.jo" "witch:lf_knee_add_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:lf_knee_add_jnt_orientConstraint1.w0" "witch:lf_knee_add_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:lf_knee_jnt.r" "witch:lf_knee_add_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:lf_knee_jnt.ro" "witch:lf_knee_add_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:lf_knee_jnt.pm" "witch:lf_knee_add_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:lf_knee_jnt.jo" "witch:lf_knee_add_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:lf_knee_add_jnt_orientConstraint1.w1" "witch:lf_knee_add_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:lf_hip_jnt.s" "witch:lf_hip_add_jnt.is";
+connectAttr "witch:lf_hip_add_jnt_orientConstraint1.crx" "witch:lf_hip_add_jnt.rx"
+		;
+connectAttr "witch:lf_hip_add_jnt_orientConstraint1.cry" "witch:lf_hip_add_jnt.ry"
+		;
+connectAttr "witch:lf_hip_add_jnt_orientConstraint1.crz" "witch:lf_hip_add_jnt.rz"
+		;
+connectAttr "witch:lf_hip_add_jnt.s" "witch:lf_hip_add_f_jnt.is";
+connectAttr "witch:lf_hip_add_f_jnt_translateY.o" "witch:lf_hip_add_f_jnt.ty";
+connectAttr "witch:lf_hip_add_jnt.s" "witch:lf_hip_add_b_jnt.is";
+connectAttr "witch:lf_hip_add_b_jnt_translateY.o" "witch:lf_hip_add_b_jnt.ty";
+connectAttr "witch:lf_hip_add_jnt.s" "witch:lf_hip_add_l_jnt.is";
+connectAttr "witch:lf_hip_add_l_jnt_translateZ.o" "witch:lf_hip_add_l_jnt.tz";
+connectAttr "witch:lf_hip_add_jnt.ro" "witch:lf_hip_add_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:lf_hip_add_jnt.pim" "witch:lf_hip_add_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:lf_hip_add_jnt.jo" "witch:lf_hip_add_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:lf_hip_add_jnt.is" "witch:lf_hip_add_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:lf_hip_locator.r" "witch:lf_hip_add_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:lf_hip_locator.ro" "witch:lf_hip_add_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:lf_hip_locator.pm" "witch:lf_hip_add_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:lf_hip_add_jnt_orientConstraint1.w0" "witch:lf_hip_add_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:lf_hip_jnt.r" "witch:lf_hip_add_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:lf_hip_jnt.ro" "witch:lf_hip_add_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:lf_hip_jnt.pm" "witch:lf_hip_add_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:lf_hip_jnt.jo" "witch:lf_hip_add_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:lf_hip_add_jnt_orientConstraint1.w1" "witch:lf_hip_add_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:pelvis_jnt.s" "witch:rt_hip_jnt.is";
+connectAttr "witch:rt_hip_jnt.s" "witch:rt_knee_jnt.is";
+connectAttr "witch:rt_knee_jnt.s" "witch:rt_ankle_jnt.is";
+connectAttr "witch:rt_ankle_jnt.s" "witch:rt_ball_jnt.is";
+connectAttr "witch:rt_ball_jnt.s" "witch:rt_toe_jnt.is";
+connectAttr "witch:rt_ball_add_jnt_orientConstraint1.crx" "witch:rt_ball_add_jnt.rx"
+		;
+connectAttr "witch:rt_ball_add_jnt_orientConstraint1.cry" "witch:rt_ball_add_jnt.ry"
+		;
+connectAttr "witch:rt_ball_add_jnt_orientConstraint1.crz" "witch:rt_ball_add_jnt.rz"
+		;
+connectAttr "witch:rt_ball_jnt.s" "witch:rt_ball_add_jnt.is";
+connectAttr "witch:rt_ball_add_jnt.s" "witch:rt_ball_add_u_jnt.is";
+connectAttr "witch:rt_ball_add_jnt.s" "witch:rt_ball_add_d_jnt.is";
+connectAttr "witch:rt_ball_add_jnt.ro" "witch:rt_ball_add_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:rt_ball_add_jnt.pim" "witch:rt_ball_add_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:rt_ball_add_jnt.jo" "witch:rt_ball_add_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:rt_ball_add_jnt.is" "witch:rt_ball_add_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:rt_ankle_jnt.r" "witch:rt_ball_add_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:rt_ankle_jnt.ro" "witch:rt_ball_add_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:rt_ankle_jnt.pm" "witch:rt_ball_add_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:rt_ankle_jnt.jo" "witch:rt_ball_add_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:rt_ball_add_jnt_orientConstraint1.w0" "witch:rt_ball_add_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:rt_ball_jnt.r" "witch:rt_ball_add_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:rt_ball_jnt.ro" "witch:rt_ball_add_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:rt_ball_jnt.pm" "witch:rt_ball_add_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:rt_ball_jnt.jo" "witch:rt_ball_add_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:rt_ball_add_jnt_orientConstraint1.w1" "witch:rt_ball_add_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:rt_ankle_add_jnt_orientConstraint1.crx" "witch:rt_ankle_add_jnt.rx"
+		;
+connectAttr "witch:rt_ankle_add_jnt_orientConstraint1.cry" "witch:rt_ankle_add_jnt.ry"
+		;
+connectAttr "witch:rt_ankle_add_jnt_orientConstraint1.crz" "witch:rt_ankle_add_jnt.rz"
+		;
+connectAttr "witch:rt_ankle_jnt.s" "witch:rt_ankle_add_jnt.is";
+connectAttr "witch:rt_ankle_add_jnt.s" "witch:rt_ankle_add_f_jnt.is";
+connectAttr "witch:rt_ankle_add_f_jnt_translateY.o" "witch:rt_ankle_add_f_jnt.ty"
+		;
+connectAttr "witch:rt_ankle_add_jnt.s" "witch:rt_ankle_add_r_jnt.is";
+connectAttr "witch:rt_ankle_add_r_jnt_translateZ.o" "witch:rt_ankle_add_r_jnt.tz"
+		;
+connectAttr "witch:rt_ankle_add_jnt.s" "witch:rt_ankle_add_b_jnt.is";
+connectAttr "witch:rt_ankle_add_b_jnt_translateY.o" "witch:rt_ankle_add_b_jnt.ty"
+		;
+connectAttr "witch:rt_ankle_add_jnt.s" "witch:rt_ankle_add_l_jnt.is";
+connectAttr "witch:rt_ankle_add_l_jnt_translateZ.o" "witch:rt_ankle_add_l_jnt.tz"
+		;
+connectAttr "witch:rt_ankle_add_jnt.ro" "witch:rt_ankle_add_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:rt_ankle_add_jnt.pim" "witch:rt_ankle_add_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:rt_ankle_add_jnt.jo" "witch:rt_ankle_add_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:rt_ankle_add_jnt.is" "witch:rt_ankle_add_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:rt_knee_jnt.r" "witch:rt_ankle_add_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:rt_knee_jnt.ro" "witch:rt_ankle_add_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:rt_knee_jnt.pm" "witch:rt_ankle_add_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:rt_knee_jnt.jo" "witch:rt_ankle_add_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:rt_ankle_add_jnt_orientConstraint1.w0" "witch:rt_ankle_add_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:rt_ankle_jnt.r" "witch:rt_ankle_add_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:rt_ankle_jnt.ro" "witch:rt_ankle_add_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:rt_ankle_jnt.pm" "witch:rt_ankle_add_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:rt_ankle_jnt.jo" "witch:rt_ankle_add_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:rt_ankle_add_jnt_orientConstraint1.w1" "witch:rt_ankle_add_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:rt_knee_add_jnt_orientConstraint1.crx" "witch:rt_knee_add_jnt.rx"
+		;
+connectAttr "witch:rt_knee_add_jnt_orientConstraint1.cry" "witch:rt_knee_add_jnt.ry"
+		;
+connectAttr "witch:rt_knee_add_jnt_orientConstraint1.crz" "witch:rt_knee_add_jnt.rz"
+		;
+connectAttr "witch:rt_knee_jnt.s" "witch:rt_knee_add_jnt.is";
+connectAttr "witch:rt_knee_add_jnt.s" "witch:rt_knee_add_b_jnt.is";
+connectAttr "witch:rt_knee_add_f_jnt_translateY.o" "witch:rt_knee_add_b_jnt.ty";
+connectAttr "witch:rt_knee_add_jnt.s" "witch:rt_knee_add_f_jnt1.is";
+connectAttr "witch:rt_knee_add_b_jnt_translateY.o" "witch:rt_knee_add_f_jnt1.ty"
+		;
+connectAttr "witch:rt_knee_add_jnt.ro" "witch:rt_knee_add_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:rt_knee_add_jnt.pim" "witch:rt_knee_add_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:rt_knee_add_jnt.jo" "witch:rt_knee_add_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:rt_knee_add_jnt.is" "witch:rt_knee_add_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:rt_hip_jnt.r" "witch:rt_knee_add_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:rt_hip_jnt.ro" "witch:rt_knee_add_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:rt_hip_jnt.pm" "witch:rt_knee_add_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:rt_hip_jnt.jo" "witch:rt_knee_add_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:rt_knee_add_jnt_orientConstraint1.w0" "witch:rt_knee_add_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:rt_knee_jnt.r" "witch:rt_knee_add_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:rt_knee_jnt.ro" "witch:rt_knee_add_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:rt_knee_jnt.pm" "witch:rt_knee_add_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:rt_knee_jnt.jo" "witch:rt_knee_add_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:rt_knee_add_jnt_orientConstraint1.w1" "witch:rt_knee_add_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:rt_hip_add_jnt_orientConstraint1.crx" "witch:rt_hip_add_jnt.rx"
+		;
+connectAttr "witch:rt_hip_add_jnt_orientConstraint1.cry" "witch:rt_hip_add_jnt.ry"
+		;
+connectAttr "witch:rt_hip_add_jnt_orientConstraint1.crz" "witch:rt_hip_add_jnt.rz"
+		;
+connectAttr "witch:rt_hip_jnt.s" "witch:rt_hip_add_jnt.is";
+connectAttr "witch:rt_hip_add_jnt.s" "witch:rt_hip_add_f_jnt.is";
+connectAttr "witch:rt_hip_add_f_jnt_translateY.o" "witch:rt_hip_add_f_jnt.ty";
+connectAttr "witch:rt_hip_add_jnt.s" "witch:rt_hip_add_b_jnt.is";
+connectAttr "witch:rt_hip_add_b_jnt_translateY.o" "witch:rt_hip_add_b_jnt.ty";
+connectAttr "witch:rt_hip_add_jnt.s" "witch:rt_hip_add_r_jnt.is";
+connectAttr "witch:rt_hip_add_r_jnt_translateZ.o" "witch:rt_hip_add_r_jnt.tz";
+connectAttr "witch:rt_hip_add_jnt.ro" "witch:rt_hip_add_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:rt_hip_add_jnt.pim" "witch:rt_hip_add_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:rt_hip_add_jnt.jo" "witch:rt_hip_add_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:rt_hip_add_jnt.is" "witch:rt_hip_add_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:rt_hip_locator.r" "witch:rt_hip_add_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:rt_hip_locator.ro" "witch:rt_hip_add_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:rt_hip_locator.pm" "witch:rt_hip_add_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:rt_hip_add_jnt_orientConstraint1.w0" "witch:rt_hip_add_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:rt_hip_jnt.r" "witch:rt_hip_add_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:rt_hip_jnt.ro" "witch:rt_hip_add_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:rt_hip_jnt.pm" "witch:rt_hip_add_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:rt_hip_jnt.jo" "witch:rt_hip_add_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:rt_hip_add_jnt_orientConstraint1.w1" "witch:rt_hip_add_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:spine_jnt1.s" "witch:spine_jnt2.is";
+connectAttr "witch:spine_jnt2.s" "witch:spine_jnt3.is";
+connectAttr "witch:spine_jnt3.s" "witch:neck_jnt1.is";
+connectAttr "witch:neck_jnt1.s" "witch:head_jnt.is";
+connectAttr "witch:head_jnt.s" "witch:lf_ear_ring_jnt.is";
+connectAttr "witch:head_jnt.s" "witch:jaw_jnt.is";
+connectAttr "witch:head_jnt.s" "witch:rt_ear_ring_jnt.is";
+connectAttr "witch:head_jnt.s" "witch:hat_jnt1.is";
+connectAttr "witch:hat_jnt1.s" "witch:hat_jnt2.is";
+connectAttr "witch:hat_jnt2.s" "witch:hat_jnt3.is";
+connectAttr "witch:hat_jnt3.s" "witch:hat_jnt4.is";
+connectAttr "witch:hat_jnt1.s" "witch:feather_bot_jnt1.is";
+connectAttr "witch:feather_bot_jnt1.s" "witch:feather_bot_jnt2.is";
+connectAttr "witch:feather_bot_jnt2.s" "witch:feather_bot_jnt3.is";
+connectAttr "witch:hat_jnt1.s" "witch:feather_top_jnt1.is";
+connectAttr "witch:feather_top_jnt1.s" "witch:feather_top_jnt2.is";
+connectAttr "witch:spine_jnt3.s" "witch:lf_clavicle_jnt.is";
+connectAttr "witch:lf_clavicle_jnt.s" "witch:lf_shld_jnt.is";
+connectAttr "witch:lf_shld_jnt_orientConstraint1.crz" "witch:lf_shld_jnt.rz";
+connectAttr "witch:lf_shld_jnt_orientConstraint1.cry" "witch:lf_shld_jnt.ry";
+connectAttr "witch:lf_shld_jnt_orientConstraint1.crx" "witch:lf_shld_jnt.rx";
+connectAttr "witch:lf_shld_jnt.s" "witch:lf_elbow_jnt.is";
+connectAttr "witch:lf_elbow_jnt_orientConstraint1.crz" "witch:lf_elbow_jnt.rz";
+connectAttr "witch:lf_elbow_jnt_orientConstraint1.crx" "witch:lf_elbow_jnt.rx";
+connectAttr "witch:lf_elbow_jnt_orientConstraint1.cry" "witch:lf_elbow_jnt.ry";
+connectAttr "witch:lf_wrist_jnt_orientConstraint1.crz" "witch:lf_wrist_jnt.rz";
+connectAttr "witch:lf_wrist_jnt_orientConstraint1.cry" "witch:lf_wrist_jnt.ry";
+connectAttr "witch:lf_wrist_jnt_orientConstraint1.crx" "witch:lf_wrist_jnt.rx";
+connectAttr "witch:lf_elbow_jnt.s" "witch:lf_wrist_jnt.is";
+connectAttr "witch:lf_wrist_jnt.s" "witch:lf_thumb_jnt5.is";
+connectAttr "witch:lf_thumb_jnt5.s" "witch:lf_thumb_jnt2.is";
+connectAttr "witch:lf_thumb_jnt2.s" "witch:lf_thumb_jnt3.is";
+connectAttr "witch:lf_thumb_jnt3.s" "witch:lf_thumb_jnt4.is";
+connectAttr "witch:lf_wrist_jnt.s" "witch:lf_index_jnt1.is";
+connectAttr "witch:lf_index_jnt1.s" "witch:lf_index_jnt2.is";
+connectAttr "witch:lf_index_jnt2.s" "witch:lf_index_jnt3.is";
+connectAttr "witch:lf_index_jnt3.s" "witch:lf_index_jnt4.is";
+connectAttr "witch:lf_wrist_jnt.s" "witch:lf_ltl_jnt1.is";
+connectAttr "witch:lf_ltl_jnt1.s" "witch:lf_ltl_jnt2.is";
+connectAttr "witch:lf_ltl_jnt2.s" "witch:lf_ltl_jnt3.is";
+connectAttr "witch:lf_ltl_jnt3.s" "witch:lf_ltl_jnt4.is";
+connectAttr "witch:lf_wrist_jnt.s" "witch:lf_middle_jnt1.is";
+connectAttr "witch:lf_middle_jnt1.s" "witch:lf_middle_jnt2.is";
+connectAttr "witch:lf_middle_jnt2.s" "witch:lf_middle_jnt3.is";
+connectAttr "witch:lf_middle_jnt3.s" "witch:lf_middle_jnt4.is";
+connectAttr "witch:lf_wrist_jnt.s" "witch:lf_ring_jnt1.is";
+connectAttr "witch:lf_ring_jnt1.s" "witch:lf_ring_jnt2.is";
+connectAttr "witch:lf_ring_jnt2.s" "witch:lf_ring_jnt3.is";
+connectAttr "witch:lf_ring_jnt3.s" "witch:lf_ring_jnt4.is";
+connectAttr "witch:lf_wrist_jnt.s" "witch:lf_wrist_add_jnt.is";
+connectAttr "witch:lf_wrist_add_jnt_orientConstraint1.crx" "witch:lf_wrist_add_jnt.rx"
+		;
+connectAttr "witch:lf_wrist_add_jnt_orientConstraint1.cry" "witch:lf_wrist_add_jnt.ry"
+		;
+connectAttr "witch:lf_wrist_add_jnt_orientConstraint1.crz" "witch:lf_wrist_add_jnt.rz"
+		;
+connectAttr "witch:lf_wrist_add_jnt.s" "witch:lf_wrist_add_b_jnt.is";
+connectAttr "witch:lf_wrist_add_b_jnt_translateY.o" "witch:lf_wrist_add_b_jnt.ty"
+		;
+connectAttr "witch:lf_wrist_add_jnt.s" "witch:lf_wrist_add_u_jnt.is";
+connectAttr "witch:lf_wrist_add_u_jnt_translateZ.o" "witch:lf_wrist_add_u_jnt.tz"
+		;
+connectAttr "witch:lf_wrist_add_f_jnt_translateY.o" "witch:lf_wrist_add_f_jnt.ty"
+		;
+connectAttr "witch:lf_wrist_add_jnt.s" "witch:lf_wrist_add_f_jnt.is";
+connectAttr "witch:lf_wrist_add_jnt.s" "witch:lf_wrist_add_d_jnt.is";
+connectAttr "witch:lf_wrist_add_d_jnt_translateZ.o" "witch:lf_wrist_add_d_jnt.tz"
+		;
+connectAttr "witch:lf_wrist_add_jnt.ro" "witch:lf_wrist_add_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:lf_wrist_add_jnt.pim" "witch:lf_wrist_add_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:lf_wrist_add_jnt.jo" "witch:lf_wrist_add_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:lf_wrist_add_jnt.is" "witch:lf_wrist_add_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:lf_elbow_jnt.r" "witch:lf_wrist_add_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:lf_elbow_jnt.ro" "witch:lf_wrist_add_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:lf_elbow_jnt.pm" "witch:lf_wrist_add_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:lf_elbow_jnt.jo" "witch:lf_wrist_add_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:lf_wrist_add_jnt_orientConstraint1.w0" "witch:lf_wrist_add_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:lf_wrist_jnt.r" "witch:lf_wrist_add_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:lf_wrist_jnt.ro" "witch:lf_wrist_add_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:lf_wrist_jnt.pm" "witch:lf_wrist_add_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:lf_wrist_jnt.jo" "witch:lf_wrist_add_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:lf_wrist_add_jnt_orientConstraint1.w1" "witch:lf_wrist_add_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:lf_wrist_jnt.ro" "witch:lf_wrist_jnt_orientConstraint1.cro";
+connectAttr "witch:lf_wrist_jnt.pim" "witch:lf_wrist_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:lf_wrist_jnt.jo" "witch:lf_wrist_jnt_orientConstraint1.cjo";
+connectAttr "witch:lf_wrist_jnt.is" "witch:lf_wrist_jnt_orientConstraint1.is";
+connectAttr "witch:lf_wrist_IK_jnt.r" "witch:lf_wrist_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:lf_wrist_IK_jnt.ro" "witch:lf_wrist_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:lf_wrist_IK_jnt.pm" "witch:lf_wrist_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:lf_wrist_IK_jnt.jo" "witch:lf_wrist_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:lf_wrist_jnt_orientConstraint1.w0" "witch:lf_wrist_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:lf_wrist_FK_jnt.r" "witch:lf_wrist_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:lf_wrist_FK_jnt.ro" "witch:lf_wrist_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:lf_wrist_FK_jnt.pm" "witch:lf_wrist_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:lf_wrist_FK_jnt.jo" "witch:lf_wrist_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:lf_wrist_jnt_orientConstraint1.w1" "witch:lf_wrist_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:reverse1.ox" "witch:lf_wrist_jnt_orientConstraint1.w0";
+connectAttr "witch:lf_arm_switch_ctrl.ikFk" "witch:lf_wrist_jnt_orientConstraint1.w1"
+		;
+connectAttr "witch:lf_elbow_jnt.s" "witch:lf_elbow_add_jnt.is";
+connectAttr "witch:lf_elbow_add_jnt_orientConstraint1.crx" "witch:lf_elbow_add_jnt.rx"
+		;
+connectAttr "witch:lf_elbow_add_jnt_orientConstraint1.cry" "witch:lf_elbow_add_jnt.ry"
+		;
+connectAttr "witch:lf_elbow_add_jnt_orientConstraint1.crz" "witch:lf_elbow_add_jnt.rz"
+		;
+connectAttr "witch:lf_elbow_add_jnt.s" "witch:lf_elbow_add_b_jnt.is";
+connectAttr "witch:lf_elbow_add_b_jnt_translateY.o" "witch:lf_elbow_add_b_jnt.ty"
+		;
+connectAttr "witch:lf_elbow_add_f_jnt_translateY.o" "witch:lf_elbow_add_f_jnt.ty"
+		;
+connectAttr "witch:lf_elbow_add_jnt.s" "witch:lf_elbow_add_f_jnt.is";
+connectAttr "witch:lf_elbow_add_jnt.ro" "witch:lf_elbow_add_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:lf_elbow_add_jnt.pim" "witch:lf_elbow_add_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:lf_elbow_add_jnt.jo" "witch:lf_elbow_add_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:lf_elbow_add_jnt.is" "witch:lf_elbow_add_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:lf_shld_jnt.r" "witch:lf_elbow_add_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:lf_shld_jnt.ro" "witch:lf_elbow_add_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:lf_shld_jnt.pm" "witch:lf_elbow_add_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:lf_shld_jnt.jo" "witch:lf_elbow_add_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:lf_elbow_add_jnt_orientConstraint1.w0" "witch:lf_elbow_add_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:lf_elbow_jnt.r" "witch:lf_elbow_add_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:lf_elbow_jnt.ro" "witch:lf_elbow_add_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:lf_elbow_jnt.pm" "witch:lf_elbow_add_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:lf_elbow_jnt.jo" "witch:lf_elbow_add_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:lf_elbow_add_jnt_orientConstraint1.w1" "witch:lf_elbow_add_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:lf_elbow_jnt.ro" "witch:lf_elbow_jnt_orientConstraint1.cro";
+connectAttr "witch:lf_elbow_jnt.pim" "witch:lf_elbow_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:lf_elbow_jnt.jo" "witch:lf_elbow_jnt_orientConstraint1.cjo";
+connectAttr "witch:lf_elbow_jnt.is" "witch:lf_elbow_jnt_orientConstraint1.is";
+connectAttr "witch:lf_elbow_IK_jnt.r" "witch:lf_elbow_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:lf_elbow_IK_jnt.ro" "witch:lf_elbow_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:lf_elbow_IK_jnt.pm" "witch:lf_elbow_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:lf_elbow_IK_jnt.jo" "witch:lf_elbow_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:lf_elbow_jnt_orientConstraint1.w0" "witch:lf_elbow_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:lf_elbow_FK_jnt.r" "witch:lf_elbow_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:lf_elbow_FK_jnt.ro" "witch:lf_elbow_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:lf_elbow_FK_jnt.pm" "witch:lf_elbow_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:lf_elbow_FK_jnt.jo" "witch:lf_elbow_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:lf_elbow_jnt_orientConstraint1.w1" "witch:lf_elbow_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:reverse1.ox" "witch:lf_elbow_jnt_orientConstraint1.w0";
+connectAttr "witch:lf_arm_switch_ctrl.ikFk" "witch:lf_elbow_jnt_orientConstraint1.w1"
+		;
+connectAttr "witch:lf_shld_add_jnt_orientConstraint1.crx" "witch:lf_shld_add_jnt.rx"
+		;
+connectAttr "witch:lf_shld_add_jnt_orientConstraint1.cry" "witch:lf_shld_add_jnt.ry"
+		;
+connectAttr "witch:lf_shld_add_jnt_orientConstraint1.crz" "witch:lf_shld_add_jnt.rz"
+		;
+connectAttr "witch:lf_shld_jnt.s" "witch:lf_shld_add_jnt.is";
+connectAttr "witch:lf_shld_add_jnt.s" "witch:lf_shld_add_u_jnt.is";
+connectAttr "witch:lf_shld_add_u_jnt_translateZ.o" "witch:lf_shld_add_u_jnt.tz";
+connectAttr "witch:lf_shld_add_jnt.s" "witch:lf_shld_add_f_jnt.is";
+connectAttr "witch:lf_shld_add_f_jnt_translateY.o" "witch:lf_shld_add_f_jnt.ty";
+connectAttr "witch:lf_shld_add_jnt.s" "witch:lf_shld_add_d_jnt.is";
+connectAttr "witch:lf_shld_add_d_jnt_translateZ.o" "witch:lf_shld_add_d_jnt.tz";
+connectAttr "witch:lf_shld_add_jnt.ro" "witch:lf_shld_add_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:lf_shld_add_jnt.pim" "witch:lf_shld_add_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:lf_shld_add_jnt.jo" "witch:lf_shld_add_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:lf_shld_add_jnt.is" "witch:lf_shld_add_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:lf_clavicle_jnt.r" "witch:lf_shld_add_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:lf_clavicle_jnt.ro" "witch:lf_shld_add_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:lf_clavicle_jnt.pm" "witch:lf_shld_add_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:lf_clavicle_jnt.jo" "witch:lf_shld_add_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:lf_shld_add_jnt_orientConstraint1.w0" "witch:lf_shld_add_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:lf_shld_jnt.r" "witch:lf_shld_add_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:lf_shld_jnt.ro" "witch:lf_shld_add_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:lf_shld_jnt.pm" "witch:lf_shld_add_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:lf_shld_jnt.jo" "witch:lf_shld_add_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:lf_shld_add_jnt_orientConstraint1.w1" "witch:lf_shld_add_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:lf_shld_jnt.ro" "witch:lf_shld_jnt_orientConstraint1.cro";
+connectAttr "witch:lf_shld_jnt.pim" "witch:lf_shld_jnt_orientConstraint1.cpim";
+connectAttr "witch:lf_shld_jnt.jo" "witch:lf_shld_jnt_orientConstraint1.cjo";
+connectAttr "witch:lf_shld_jnt.is" "witch:lf_shld_jnt_orientConstraint1.is";
+connectAttr "witch:lf_shld_IK_jnt.r" "witch:lf_shld_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:lf_shld_IK_jnt.ro" "witch:lf_shld_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:lf_shld_IK_jnt.pm" "witch:lf_shld_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:lf_shld_IK_jnt.jo" "witch:lf_shld_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:lf_shld_jnt_orientConstraint1.w0" "witch:lf_shld_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:lf_shld_FK_jnt.r" "witch:lf_shld_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:lf_shld_FK_jnt.ro" "witch:lf_shld_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:lf_shld_FK_jnt.pm" "witch:lf_shld_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:lf_shld_FK_jnt.jo" "witch:lf_shld_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:lf_shld_jnt_orientConstraint1.w1" "witch:lf_shld_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:reverse1.ox" "witch:lf_shld_jnt_orientConstraint1.w0";
+connectAttr "witch:lf_arm_switch_ctrl.ikFk" "witch:lf_shld_jnt_orientConstraint1.w1"
+		;
+connectAttr "witch:lf_shld_FK_jnt_orientConstraint1.crx" "witch:lf_shld_FK_jnt.rx"
+		;
+connectAttr "witch:lf_shld_FK_jnt_orientConstraint1.cry" "witch:lf_shld_FK_jnt.ry"
+		;
+connectAttr "witch:lf_shld_FK_jnt_orientConstraint1.crz" "witch:lf_shld_FK_jnt.rz"
+		;
+connectAttr "witch:lf_clavicle_jnt.s" "witch:lf_shld_FK_jnt.is";
+connectAttr "witch:lf_elbow_FK_jnt_orientConstraint1.crx" "witch:lf_elbow_FK_jnt.rx"
+		;
+connectAttr "witch:lf_elbow_FK_jnt_orientConstraint1.cry" "witch:lf_elbow_FK_jnt.ry"
+		;
+connectAttr "witch:lf_elbow_FK_jnt_orientConstraint1.crz" "witch:lf_elbow_FK_jnt.rz"
+		;
+connectAttr "witch:lf_shld_FK_jnt.s" "witch:lf_elbow_FK_jnt.is";
+connectAttr "witch:lf_wrist_FK_jnt_orientConstraint1.crx" "witch:lf_wrist_FK_jnt.rx"
+		;
+connectAttr "witch:lf_wrist_FK_jnt_orientConstraint1.cry" "witch:lf_wrist_FK_jnt.ry"
+		;
+connectAttr "witch:lf_wrist_FK_jnt_orientConstraint1.crz" "witch:lf_wrist_FK_jnt.rz"
+		;
+connectAttr "witch:lf_elbow_FK_jnt.s" "witch:lf_wrist_FK_jnt.is";
+connectAttr "witch:lf_wrist_FK_jnt.ro" "witch:lf_wrist_FK_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:lf_wrist_FK_jnt.pim" "witch:lf_wrist_FK_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:lf_wrist_FK_jnt.jo" "witch:lf_wrist_FK_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:lf_wrist_FK_jnt.is" "witch:lf_wrist_FK_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:lf_wrist_FK_ctrl.r" "witch:lf_wrist_FK_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:lf_wrist_FK_ctrl.ro" "witch:lf_wrist_FK_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:lf_wrist_FK_ctrl.pm" "witch:lf_wrist_FK_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:lf_wrist_FK_jnt_orientConstraint1.w0" "witch:lf_wrist_FK_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:lf_elbow_FK_jnt.ro" "witch:lf_elbow_FK_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:lf_elbow_FK_jnt.pim" "witch:lf_elbow_FK_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:lf_elbow_FK_jnt.jo" "witch:lf_elbow_FK_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:lf_elbow_FK_jnt.is" "witch:lf_elbow_FK_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:lf_elbow_FK_ctrl.r" "witch:lf_elbow_FK_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:lf_elbow_FK_ctrl.ro" "witch:lf_elbow_FK_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:lf_elbow_FK_ctrl.pm" "witch:lf_elbow_FK_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:lf_elbow_FK_jnt_orientConstraint1.w0" "witch:lf_elbow_FK_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:lf_shld_FK_jnt.ro" "witch:lf_shld_FK_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:lf_shld_FK_jnt.pim" "witch:lf_shld_FK_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:lf_shld_FK_jnt.jo" "witch:lf_shld_FK_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:lf_shld_FK_jnt.is" "witch:lf_shld_FK_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:lf_shld_FK_ctrl.r" "witch:lf_shld_FK_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:lf_shld_FK_ctrl.ro" "witch:lf_shld_FK_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:lf_shld_FK_ctrl.pm" "witch:lf_shld_FK_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:lf_shld_FK_jnt_orientConstraint1.w0" "witch:lf_shld_FK_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:lf_clavicle_jnt.s" "witch:lf_shld_IK_jnt.is";
+connectAttr "witch:lf_elbow_IK_jnt_orientConstraint1.crx" "witch:lf_elbow_IK_jnt.rx"
+		;
+connectAttr "witch:lf_elbow_IK_jnt_orientConstraint1.cry" "witch:lf_elbow_IK_jnt.ry"
+		;
+connectAttr "witch:lf_elbow_IK_jnt_orientConstraint1.crz" "witch:lf_elbow_IK_jnt.rz"
+		;
+connectAttr "witch:lf_shld_IK_jnt.s" "witch:lf_elbow_IK_jnt.is";
+connectAttr "witch:lf_wrist_IK_jnt_orientConstraint1.crx" "witch:lf_wrist_IK_jnt.rx"
+		;
+connectAttr "witch:lf_wrist_IK_jnt_orientConstraint1.cry" "witch:lf_wrist_IK_jnt.ry"
+		;
+connectAttr "witch:lf_wrist_IK_jnt_orientConstraint1.crz" "witch:lf_wrist_IK_jnt.rz"
+		;
+connectAttr "witch:lf_elbow_IK_jnt.s" "witch:lf_wrist_IK_jnt.is";
+connectAttr "witch:lf_wrist_IK_jnt.ro" "witch:lf_wrist_IK_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:lf_wrist_IK_jnt.pim" "witch:lf_wrist_IK_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:lf_wrist_IK_jnt.jo" "witch:lf_wrist_IK_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:lf_wrist_IK_jnt.is" "witch:lf_wrist_IK_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:lf_wrist_FK_ctrl.r" "witch:lf_wrist_IK_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:lf_wrist_FK_ctrl.ro" "witch:lf_wrist_IK_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:lf_wrist_FK_ctrl.pm" "witch:lf_wrist_IK_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:lf_wrist_IK_jnt_orientConstraint1.w0" "witch:lf_wrist_IK_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:lf_wrist_IK_jnt.tx" "witch:effector1.tx";
+connectAttr "witch:lf_wrist_IK_jnt.ty" "witch:effector1.ty";
+connectAttr "witch:lf_wrist_IK_jnt.tz" "witch:effector1.tz";
+connectAttr "witch:lf_wrist_IK_jnt.opm" "witch:effector1.opm";
+connectAttr "witch:lf_elbow_IK_jnt.ro" "witch:lf_elbow_IK_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:lf_elbow_IK_jnt.pim" "witch:lf_elbow_IK_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:lf_elbow_IK_jnt.jo" "witch:lf_elbow_IK_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:lf_elbow_IK_jnt.is" "witch:lf_elbow_IK_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:lf_elbow_FK_ctrl.r" "witch:lf_elbow_IK_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:lf_elbow_FK_ctrl.ro" "witch:lf_elbow_IK_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:lf_elbow_FK_ctrl.pm" "witch:lf_elbow_IK_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:lf_elbow_IK_jnt_orientConstraint1.w0" "witch:lf_elbow_IK_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:spine_jnt3.s" "witch:lf_chest_jnt.is";
+connectAttr "witch:spine_jnt3.s" "witch:rt_chest_jnt.is";
+connectAttr "witch:spine_jnt3.s" "witch:front_ribbon.is";
+connectAttr "witch:spine_jnt3.s" "witch:rt_clavicle_jnt.is";
+connectAttr "witch:rt_clavicle_jnt.s" "witch:rt_shld_jnt.is";
+connectAttr "witch:rt_shld_jnt_orientConstraint1.cry" "witch:rt_shld_jnt.ry";
+connectAttr "witch:rt_shld_jnt_orientConstraint1.crx" "witch:rt_shld_jnt.rx";
+connectAttr "witch:rt_shld_jnt_orientConstraint1.crz" "witch:rt_shld_jnt.rz";
+connectAttr "witch:rt_shld_jnt.s" "witch:rt_elbow_jnt.is";
+connectAttr "witch:rt_elbow_jnt_orientConstraint1.crz" "witch:rt_elbow_jnt.rz";
+connectAttr "witch:rt_elbow_jnt_orientConstraint1.crx" "witch:rt_elbow_jnt.rx";
+connectAttr "witch:rt_elbow_jnt_orientConstraint1.cry" "witch:rt_elbow_jnt.ry";
+connectAttr "witch:rt_elbow_jnt.s" "witch:rt_wrist_jnt.is";
+connectAttr "witch:rt_wrist_jnt_orientConstraint1.cry" "witch:rt_wrist_jnt.ry";
+connectAttr "witch:rt_wrist_jnt_orientConstraint1.crz" "witch:rt_wrist_jnt.rz";
+connectAttr "witch:rt_wrist_jnt_orientConstraint1.crx" "witch:rt_wrist_jnt.rx";
+connectAttr "witch:rt_wrist_jnt.s" "witch:rt_thumb_jnt5.is";
+connectAttr "witch:rt_thumb_jnt5.s" "witch:rt_thumb_jnt2.is";
+connectAttr "witch:rt_thumb_jnt2.s" "witch:rt_thumb_jnt3.is";
+connectAttr "witch:rt_thumb_jnt3.s" "witch:rt_thumb_jnt4.is";
+connectAttr "witch:rt_wrist_jnt.s" "witch:rt_index_jnt1.is";
+connectAttr "witch:rt_index_jnt1.s" "witch:rt_index_jnt2.is";
+connectAttr "witch:rt_index_jnt2.s" "witch:rt_index_jnt3.is";
+connectAttr "witch:rt_index_jnt3.s" "witch:rt_index_jnt4.is";
+connectAttr "witch:rt_wrist_jnt.s" "witch:rt_ltl_jnt1.is";
+connectAttr "witch:rt_ltl_jnt1.s" "witch:rt_ltl_jnt2.is";
+connectAttr "witch:rt_ltl_jnt2.s" "witch:rt_ltl_jnt3.is";
+connectAttr "witch:rt_ltl_jnt3.s" "witch:rt_ltl_jnt4.is";
+connectAttr "witch:rt_wrist_jnt.s" "witch:rt_middle_jnt1.is";
+connectAttr "witch:rt_middle_jnt1.s" "witch:rt_middle_jnt2.is";
+connectAttr "witch:rt_middle_jnt2.s" "witch:rt_middle_jnt3.is";
+connectAttr "witch:rt_middle_jnt3.s" "witch:rt_middle_jnt4.is";
+connectAttr "witch:rt_wrist_jnt.s" "witch:rt_ring_jnt1.is";
+connectAttr "witch:rt_ring_jnt1.s" "witch:rt_ring_jnt2.is";
+connectAttr "witch:rt_ring_jnt2.s" "witch:rt_ring_jnt3.is";
+connectAttr "witch:rt_ring_jnt3.s" "witch:rt_ring_jnt4.is";
+connectAttr "witch:rt_wrist_jnt.s" "witch:rt_wrist_add_jnt.is";
+connectAttr "witch:rt_wrist_add_jnt_orientConstraint1.crx" "witch:rt_wrist_add_jnt.rx"
+		;
+connectAttr "witch:rt_wrist_add_jnt_orientConstraint1.cry" "witch:rt_wrist_add_jnt.ry"
+		;
+connectAttr "witch:rt_wrist_add_jnt_orientConstraint1.crz" "witch:rt_wrist_add_jnt.rz"
+		;
+connectAttr "witch:rt_wrist_add_jnt.s" "witch:rt_wrist_add_b_jnt.is";
+connectAttr "witch:rt_wrist_add_b_jnt_translateY.o" "witch:rt_wrist_add_b_jnt.ty"
+		;
+connectAttr "witch:rt_wrist_add_jnt.s" "witch:rt_wrist_add_u_jnt.is";
+connectAttr "witch:rt_wrist_add_u_jnt_translateZ.o" "witch:rt_wrist_add_u_jnt.tz"
+		;
+connectAttr "witch:rt_wrist_add_f_jnt_translateY.o" "witch:rt_wrist_add_f_jnt.ty"
+		;
+connectAttr "witch:rt_wrist_add_jnt.s" "witch:rt_wrist_add_f_jnt.is";
+connectAttr "witch:rt_wrist_add_jnt.s" "witch:rt_wrist_add_d_jnt.is";
+connectAttr "witch:rt_wrist_add_d_jnt_translateZ.o" "witch:rt_wrist_add_d_jnt.tz"
+		;
+connectAttr "witch:rt_wrist_add_jnt.ro" "witch:rt_wrist_add_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:rt_wrist_add_jnt.pim" "witch:rt_wrist_add_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:rt_wrist_add_jnt.jo" "witch:rt_wrist_add_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:rt_wrist_add_jnt.is" "witch:rt_wrist_add_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:rt_elbow_jnt.r" "witch:rt_wrist_add_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:rt_elbow_jnt.ro" "witch:rt_wrist_add_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:rt_elbow_jnt.pm" "witch:rt_wrist_add_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:rt_elbow_jnt.jo" "witch:rt_wrist_add_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:rt_wrist_add_jnt_orientConstraint1.w0" "witch:rt_wrist_add_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:rt_wrist_jnt.r" "witch:rt_wrist_add_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:rt_wrist_jnt.ro" "witch:rt_wrist_add_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:rt_wrist_jnt.pm" "witch:rt_wrist_add_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:rt_wrist_jnt.jo" "witch:rt_wrist_add_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:rt_wrist_add_jnt_orientConstraint1.w1" "witch:rt_wrist_add_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:rt_wrist_jnt.ro" "witch:rt_wrist_jnt_orientConstraint1.cro";
+connectAttr "witch:rt_wrist_jnt.pim" "witch:rt_wrist_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:rt_wrist_jnt.jo" "witch:rt_wrist_jnt_orientConstraint1.cjo";
+connectAttr "witch:rt_wrist_jnt.is" "witch:rt_wrist_jnt_orientConstraint1.is";
+connectAttr "witch:rt_wrist_IK_jnt.r" "witch:rt_wrist_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:rt_wrist_IK_jnt.ro" "witch:rt_wrist_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:rt_wrist_IK_jnt.pm" "witch:rt_wrist_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:rt_wrist_IK_jnt.jo" "witch:rt_wrist_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:rt_wrist_jnt_orientConstraint1.w0" "witch:rt_wrist_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:rt_wrist_FK_jnt.r" "witch:rt_wrist_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:rt_wrist_FK_jnt.ro" "witch:rt_wrist_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:rt_wrist_FK_jnt.pm" "witch:rt_wrist_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:rt_wrist_FK_jnt.jo" "witch:rt_wrist_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:rt_wrist_jnt_orientConstraint1.w1" "witch:rt_wrist_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:reverse5.ox" "witch:rt_wrist_jnt_orientConstraint1.w0";
+connectAttr "witch:rt_arm_switch_ctrl.ikFk" "witch:rt_wrist_jnt_orientConstraint1.w1"
+		;
+connectAttr "witch:rt_elbow_jnt.s" "witch:rt_elbow_add_jnt.is";
+connectAttr "witch:rt_elbow_add_jnt_orientConstraint1.crx" "witch:rt_elbow_add_jnt.rx"
+		;
+connectAttr "witch:rt_elbow_add_jnt_orientConstraint1.cry" "witch:rt_elbow_add_jnt.ry"
+		;
+connectAttr "witch:rt_elbow_add_jnt_orientConstraint1.crz" "witch:rt_elbow_add_jnt.rz"
+		;
+connectAttr "witch:rt_elbow_add_b_jnt_translateY.o" "witch:rt_elbow_add_b_jnt.ty"
+		;
+connectAttr "witch:rt_elbow_add_jnt.s" "witch:rt_elbow_add_b_jnt.is";
+connectAttr "witch:rt_elbow_add_f_jnt_translateY1.o" "witch:rt_elbow_add_f_jnt.ty"
+		;
+connectAttr "witch:rt_elbow_add_jnt.s" "witch:rt_elbow_add_f_jnt.is";
+connectAttr "witch:rt_elbow_add_jnt.ro" "witch:rt_elbow_add_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:rt_elbow_add_jnt.pim" "witch:rt_elbow_add_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:rt_elbow_add_jnt.jo" "witch:rt_elbow_add_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:rt_elbow_add_jnt.is" "witch:rt_elbow_add_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:rt_shld_jnt.r" "witch:rt_elbow_add_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:rt_shld_jnt.ro" "witch:rt_elbow_add_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:rt_shld_jnt.pm" "witch:rt_elbow_add_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:rt_shld_jnt.jo" "witch:rt_elbow_add_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:rt_elbow_add_jnt_orientConstraint1.w0" "witch:rt_elbow_add_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:rt_elbow_jnt.r" "witch:rt_elbow_add_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:rt_elbow_jnt.ro" "witch:rt_elbow_add_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:rt_elbow_jnt.pm" "witch:rt_elbow_add_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:rt_elbow_jnt.jo" "witch:rt_elbow_add_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:rt_elbow_add_jnt_orientConstraint1.w1" "witch:rt_elbow_add_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:rt_elbow_jnt.ro" "witch:rt_elbow_jnt_orientConstraint1.cro";
+connectAttr "witch:rt_elbow_jnt.pim" "witch:rt_elbow_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:rt_elbow_jnt.jo" "witch:rt_elbow_jnt_orientConstraint1.cjo";
+connectAttr "witch:rt_elbow_jnt.is" "witch:rt_elbow_jnt_orientConstraint1.is";
+connectAttr "witch:rt_elbow_IK_jnt.r" "witch:rt_elbow_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:rt_elbow_IK_jnt.ro" "witch:rt_elbow_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:rt_elbow_IK_jnt.pm" "witch:rt_elbow_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:rt_elbow_IK_jnt.jo" "witch:rt_elbow_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:rt_elbow_jnt_orientConstraint1.w0" "witch:rt_elbow_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:rt_elbow_FK_jnt.r" "witch:rt_elbow_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:rt_elbow_FK_jnt.ro" "witch:rt_elbow_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:rt_elbow_FK_jnt.pm" "witch:rt_elbow_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:rt_elbow_FK_jnt.jo" "witch:rt_elbow_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:rt_elbow_jnt_orientConstraint1.w1" "witch:rt_elbow_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:reverse4.ox" "witch:rt_elbow_jnt_orientConstraint1.w0";
+connectAttr "witch:rt_arm_switch_ctrl.ikFk" "witch:rt_elbow_jnt_orientConstraint1.w1"
+		;
+connectAttr "witch:rt_shld_add_jnt_orientConstraint1.crx" "witch:rt_shld_add_jnt.rx"
+		;
+connectAttr "witch:rt_shld_add_jnt_orientConstraint1.cry" "witch:rt_shld_add_jnt.ry"
+		;
+connectAttr "witch:rt_shld_add_jnt_orientConstraint1.crz" "witch:rt_shld_add_jnt.rz"
+		;
+connectAttr "witch:rt_shld_jnt.s" "witch:rt_shld_add_jnt.is";
+connectAttr "witch:rt_shld_add_u_jnt_translateZ.o" "witch:rt_shld_add_u_jnt.tz";
+connectAttr "witch:rt_shld_add_jnt.s" "witch:rt_shld_add_u_jnt.is";
+connectAttr "witch:rt_shld_add_jnt.s" "witch:rt_shld_add_f_jnt.is";
+connectAttr "witch:rt_shld_add_d_jnt_translateZ.o" "witch:rt_shld_add_d_jnt.tz";
+connectAttr "witch:rt_shld_add_jnt.s" "witch:rt_shld_add_d_jnt.is";
+connectAttr "witch:rt_shld_add_jnt.ro" "witch:rt_shld_add_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:rt_shld_add_jnt.pim" "witch:rt_shld_add_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:rt_shld_add_jnt.jo" "witch:rt_shld_add_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:rt_shld_add_jnt.is" "witch:rt_shld_add_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:rt_clavicle_jnt.r" "witch:rt_shld_add_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:rt_clavicle_jnt.ro" "witch:rt_shld_add_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:rt_clavicle_jnt.pm" "witch:rt_shld_add_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:rt_clavicle_jnt.jo" "witch:rt_shld_add_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:rt_shld_add_jnt_orientConstraint1.w0" "witch:rt_shld_add_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:rt_shld_jnt.ro" "witch:rt_shld_jnt_orientConstraint1.cro";
+connectAttr "witch:rt_shld_jnt.pim" "witch:rt_shld_jnt_orientConstraint1.cpim";
+connectAttr "witch:rt_shld_jnt.jo" "witch:rt_shld_jnt_orientConstraint1.cjo";
+connectAttr "witch:rt_shld_jnt.is" "witch:rt_shld_jnt_orientConstraint1.is";
+connectAttr "witch:rt_shld_IK_jnt.r" "witch:rt_shld_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:rt_shld_IK_jnt.ro" "witch:rt_shld_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:rt_shld_IK_jnt.pm" "witch:rt_shld_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:rt_shld_IK_jnt.jo" "witch:rt_shld_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:rt_shld_jnt_orientConstraint1.w0" "witch:rt_shld_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:rt_shld_FK_jnt.r" "witch:rt_shld_jnt_orientConstraint1.tg[1].tr"
+		;
+connectAttr "witch:rt_shld_FK_jnt.ro" "witch:rt_shld_jnt_orientConstraint1.tg[1].tro"
+		;
+connectAttr "witch:rt_shld_FK_jnt.pm" "witch:rt_shld_jnt_orientConstraint1.tg[1].tpm"
+		;
+connectAttr "witch:rt_shld_FK_jnt.jo" "witch:rt_shld_jnt_orientConstraint1.tg[1].tjo"
+		;
+connectAttr "witch:rt_shld_jnt_orientConstraint1.w1" "witch:rt_shld_jnt_orientConstraint1.tg[1].tw"
+		;
+connectAttr "witch:reverse3.ox" "witch:rt_shld_jnt_orientConstraint1.w0";
+connectAttr "witch:rt_arm_switch_ctrl.ikFk" "witch:rt_shld_jnt_orientConstraint1.w1"
+		;
+connectAttr "witch:rt_shld_FK_jnt_orientConstraint1.crx" "witch:rt_shld_FK_jnt.rx"
+		;
+connectAttr "witch:rt_shld_FK_jnt_orientConstraint1.cry" "witch:rt_shld_FK_jnt.ry"
+		;
+connectAttr "witch:rt_shld_FK_jnt_orientConstraint1.crz" "witch:rt_shld_FK_jnt.rz"
+		;
+connectAttr "witch:rt_clavicle_jnt.s" "witch:rt_shld_FK_jnt.is";
+connectAttr "witch:rt_elbow_FK_jnt_orientConstraint1.crx" "witch:rt_elbow_FK_jnt.rx"
+		;
+connectAttr "witch:rt_elbow_FK_jnt_orientConstraint1.cry" "witch:rt_elbow_FK_jnt.ry"
+		;
+connectAttr "witch:rt_elbow_FK_jnt_orientConstraint1.crz" "witch:rt_elbow_FK_jnt.rz"
+		;
+connectAttr "witch:rt_shld_FK_jnt.s" "witch:rt_elbow_FK_jnt.is";
+connectAttr "witch:rt_wrist_FK_jnt_orientConstraint1.crx" "witch:rt_wrist_FK_jnt.rx"
+		;
+connectAttr "witch:rt_wrist_FK_jnt_orientConstraint1.cry" "witch:rt_wrist_FK_jnt.ry"
+		;
+connectAttr "witch:rt_wrist_FK_jnt_orientConstraint1.crz" "witch:rt_wrist_FK_jnt.rz"
+		;
+connectAttr "witch:rt_elbow_FK_jnt.s" "witch:rt_wrist_FK_jnt.is";
+connectAttr "witch:rt_wrist_FK_jnt.ro" "witch:rt_wrist_FK_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:rt_wrist_FK_jnt.pim" "witch:rt_wrist_FK_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:rt_wrist_FK_jnt.jo" "witch:rt_wrist_FK_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:rt_wrist_FK_jnt.is" "witch:rt_wrist_FK_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:rt_wrist_FK_ctrl.r" "witch:rt_wrist_FK_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:rt_wrist_FK_ctrl.ro" "witch:rt_wrist_FK_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:rt_wrist_FK_ctrl.pm" "witch:rt_wrist_FK_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:rt_wrist_FK_jnt_orientConstraint1.w0" "witch:rt_wrist_FK_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:rt_elbow_FK_jnt.ro" "witch:rt_elbow_FK_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:rt_elbow_FK_jnt.pim" "witch:rt_elbow_FK_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:rt_elbow_FK_jnt.jo" "witch:rt_elbow_FK_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:rt_elbow_FK_jnt.is" "witch:rt_elbow_FK_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:rt_elbow_FK_ctrl.r" "witch:rt_elbow_FK_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:rt_elbow_FK_ctrl.ro" "witch:rt_elbow_FK_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:rt_elbow_FK_ctrl.pm" "witch:rt_elbow_FK_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:rt_elbow_FK_jnt_orientConstraint1.w0" "witch:rt_elbow_FK_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:rt_shld_FK_jnt.ro" "witch:rt_shld_FK_jnt_orientConstraint1.cro"
+		;
+connectAttr "witch:rt_shld_FK_jnt.pim" "witch:rt_shld_FK_jnt_orientConstraint1.cpim"
+		;
+connectAttr "witch:rt_shld_FK_jnt.jo" "witch:rt_shld_FK_jnt_orientConstraint1.cjo"
+		;
+connectAttr "witch:rt_shld_FK_jnt.is" "witch:rt_shld_FK_jnt_orientConstraint1.is"
+		;
+connectAttr "witch:rt_shld_FK_ctrl.r" "witch:rt_shld_FK_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "witch:rt_shld_FK_ctrl.ro" "witch:rt_shld_FK_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "witch:rt_shld_FK_ctrl.pm" "witch:rt_shld_FK_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:rt_shld_FK_jnt_orientConstraint1.w0" "witch:rt_shld_FK_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "witch:rt_clavicle_jnt.s" "witch:rt_shld_IK_jnt.is";
+connectAttr "witch:rt_shld_IK_jnt.s" "witch:rt_elbow_IK_jnt.is";
+connectAttr "witch:rt_elbow_IK_jnt.s" "witch:rt_wrist_IK_jnt.is";
+connectAttr "witch:rt_wrist_IK_jnt.tx" "witch:effector2.tx";
+connectAttr "witch:rt_wrist_IK_jnt.ty" "witch:effector2.ty";
+connectAttr "witch:rt_wrist_IK_jnt.tz" "witch:effector2.tz";
+connectAttr "witch:rt_wrist_IK_jnt.opm" "witch:effector2.opm";
+connectAttr "witch:spine_jnt1.s" "witch:lf_ribbon_tape.is";
+connectAttr "witch:lf_ribbon_tape_rotateZ.o" "witch:lf_ribbon_tape.rz";
+connectAttr "witch:rt_ribbon_tape_rotateZ.o" "witch:rt_ribbon_tape.rz";
+connectAttr "witch:spine_jnt1.s" "witch:rt_ribbon_tape.is";
+connectAttr "witch:broom_jnt1.s" "witch:broom_leaf_jnt1.is";
+connectAttr "witch:broom_leaf_jnt1.s" "witch:broom_leaf_jnt2.is";
+connectAttr "witch:broom_leaf_jnt2.s" "witch:broom_leaf_jnt23.is";
+connectAttr "witch:broom_jnt1.s" "witch:broom_leaf_jnt4.is";
+connectAttr "witch:broom_leaf_jnt4.s" "witch:broom_leaf_jnt5.is";
+connectAttr "witch:broom_leaf_jnt5.s" "witch:broom_leaf_jnt6.is";
+connectAttr "witch:broom_jnt1.s" "witch:broom_leaf_jnt7.is";
+connectAttr "witch:broom_leaf_jnt7.s" "witch:broom_leaf_jnt8.is";
+connectAttr "witch:broom_leaf_jnt8.s" "witch:broom_leaf_jnt9.is";
+connectAttr "witch:broom_jnt1.s" "witch:broom_bot_jnt.is";
+connectAttr "witch:broom_bot_jnt.s" "witch:broom_rod_jnt1.is";
+connectAttr "witch:broom_bot_jnt.s" "witch:broom_rod_jnt2.is";
+connectAttr "witch:broom_bot_jnt.s" "witch:broom_rod_jnt3.is";
+connectAttr "witch:hip_locs_grp_parentConstraint1.ctx" "witch:hip_locs_grp.tx";
+connectAttr "witch:hip_locs_grp_parentConstraint1.cty" "witch:hip_locs_grp.ty";
+connectAttr "witch:hip_locs_grp_parentConstraint1.ctz" "witch:hip_locs_grp.tz";
+connectAttr "witch:hip_locs_grp_parentConstraint1.crx" "witch:hip_locs_grp.rx";
+connectAttr "witch:hip_locs_grp_parentConstraint1.cry" "witch:hip_locs_grp.ry";
+connectAttr "witch:hip_locs_grp_parentConstraint1.crz" "witch:hip_locs_grp.rz";
+connectAttr "witch:hip_locs_grp.ro" "witch:hip_locs_grp_parentConstraint1.cro";
+connectAttr "witch:hip_locs_grp.pim" "witch:hip_locs_grp_parentConstraint1.cpim"
+		;
+connectAttr "witch:hip_locs_grp.rp" "witch:hip_locs_grp_parentConstraint1.crp";
+connectAttr "witch:hip_locs_grp.rpt" "witch:hip_locs_grp_parentConstraint1.crt";
+connectAttr "witch:pelvis_jnt.t" "witch:hip_locs_grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "witch:pelvis_jnt.rp" "witch:hip_locs_grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "witch:pelvis_jnt.rpt" "witch:hip_locs_grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "witch:pelvis_jnt.r" "witch:hip_locs_grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "witch:pelvis_jnt.ro" "witch:hip_locs_grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "witch:pelvis_jnt.s" "witch:hip_locs_grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "witch:pelvis_jnt.pm" "witch:hip_locs_grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:pelvis_jnt.jo" "witch:hip_locs_grp_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "witch:pelvis_jnt.ssc" "witch:hip_locs_grp_parentConstraint1.tg[0].tsc"
+		;
+connectAttr "witch:pelvis_jnt.is" "witch:hip_locs_grp_parentConstraint1.tg[0].tis"
+		;
+connectAttr "witch:hip_locs_grp_parentConstraint1.w0" "witch:hip_locs_grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "witch:reverse1.ox" "witch:lf_arm_IK_ctrl.v";
+connectAttr "witch:lf_shld_IK_jnt.msg" "witch:lf_arm_IK_handler.hsj";
+connectAttr "witch:effector1.hp" "witch:lf_arm_IK_handler.hee";
+connectAttr "witch:ikRPsolver.msg" "witch:lf_arm_IK_handler.hsv";
+connectAttr "witch:lf_arm_IK_handler_pointConstraint1.ctx" "witch:lf_arm_IK_handler.tx"
+		;
+connectAttr "witch:lf_arm_IK_handler_pointConstraint1.cty" "witch:lf_arm_IK_handler.ty"
+		;
+connectAttr "witch:lf_arm_IK_handler_pointConstraint1.ctz" "witch:lf_arm_IK_handler.tz"
+		;
+connectAttr "witch:lf_arm_IK_handler.pim" "witch:lf_arm_IK_handler_pointConstraint1.cpim"
+		;
+connectAttr "witch:lf_arm_IK_handler.rp" "witch:lf_arm_IK_handler_pointConstraint1.crp"
+		;
+connectAttr "witch:lf_arm_IK_handler.rpt" "witch:lf_arm_IK_handler_pointConstraint1.crt"
+		;
+connectAttr "witch:lf_arm_IK_ctrl.t" "witch:lf_arm_IK_handler_pointConstraint1.tg[0].tt"
+		;
+connectAttr "witch:lf_arm_IK_ctrl.rp" "witch:lf_arm_IK_handler_pointConstraint1.tg[0].trp"
+		;
+connectAttr "witch:lf_arm_IK_ctrl.rpt" "witch:lf_arm_IK_handler_pointConstraint1.tg[0].trt"
+		;
+connectAttr "witch:lf_arm_IK_ctrl.pm" "witch:lf_arm_IK_handler_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:lf_arm_IK_handler_pointConstraint1.w0" "witch:lf_arm_IK_handler_pointConstraint1.tg[0].tw"
+		;
+connectAttr "witch:makeNurbCircle4.oc" "witch:lf_arm_switch_ctrlShape.cr";
+connectAttr "witch:makeNurbCircle5.oc" "witch:lf_shld_FK_ctrlShape.cr";
+connectAttr "witch:reverse2.ox" "witch:rt_arm_IK_ctrl.v";
+connectAttr "witch:rt_arm_switch_ctrl.ikFk" "witch:rt_shld_FK_ctrl_grp.v";
+connectAttr "witch:rt_shld_IK_jnt.msg" "witch:rt_arm_IK_handler.hsj";
+connectAttr "witch:effector2.hp" "witch:rt_arm_IK_handler.hee";
+connectAttr "witch:ikRPsolver.msg" "witch:rt_arm_IK_handler.hsv";
+connectAttr "witch:rt_arm_IK_handler_pointConstraint1.ctx" "witch:rt_arm_IK_handler.tx"
+		;
+connectAttr "witch:rt_arm_IK_handler_pointConstraint1.cty" "witch:rt_arm_IK_handler.ty"
+		;
+connectAttr "witch:rt_arm_IK_handler_pointConstraint1.ctz" "witch:rt_arm_IK_handler.tz"
+		;
+connectAttr "witch:rt_arm_IK_handler.pim" "witch:rt_arm_IK_handler_pointConstraint1.cpim"
+		;
+connectAttr "witch:rt_arm_IK_handler.rp" "witch:rt_arm_IK_handler_pointConstraint1.crp"
+		;
+connectAttr "witch:rt_arm_IK_handler.rpt" "witch:rt_arm_IK_handler_pointConstraint1.crt"
+		;
+connectAttr "witch:rt_arm_IK_ctrl.t" "witch:rt_arm_IK_handler_pointConstraint1.tg[0].tt"
+		;
+connectAttr "witch:rt_arm_IK_ctrl.rp" "witch:rt_arm_IK_handler_pointConstraint1.tg[0].trp"
+		;
+connectAttr "witch:rt_arm_IK_ctrl.rpt" "witch:rt_arm_IK_handler_pointConstraint1.tg[0].trt"
+		;
+connectAttr "witch:rt_arm_IK_ctrl.pm" "witch:rt_arm_IK_handler_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "witch:rt_arm_IK_handler_pointConstraint1.w0" "witch:rt_arm_IK_handler_pointConstraint1.tg[0].tw"
+		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "U3DMeshSG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "U3DMeshSG1.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "witch:witch:U3DMeshSG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "witch:witch:U3DMeshSG1.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "U3DMeshSG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "U3DMeshSG1.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "witch:witch:U3DMeshSG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "witch:witch:U3DMeshSG1.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "texmap0.oc" "base_mtl.c";
-connectAttr "base_mtl.oc" "U3DMeshSG.ss";
-connectAttr "groupId1.msg" "U3DMeshSG.gn" -na;
-connectAttr "groupId2.msg" "U3DMeshSG.gn" -na;
-connectAttr "groupId3.msg" "U3DMeshSG.gn" -na;
-connectAttr "hat_geoShape.iog.og[0]" "U3DMeshSG.dsm" -na;
-connectAttr "ribbons_geoShape.iog.og[0]" "U3DMeshSG.dsm" -na;
-connectAttr "broom_geoShape.iog.og[0]" "U3DMeshSG.dsm" -na;
-connectAttr "body_geoShape.iog" "U3DMeshSG.dsm" -na;
-connectAttr "U3DMeshSG.msg" "materialInfo1.sg";
-connectAttr "base_mtl.msg" "materialInfo1.m";
-connectAttr "texmap0.msg" "materialInfo1.t" -na;
-connectAttr "U3DMeshSG1.msg" "materialInfo2.sg";
-connectAttr "place2dTexture1.o" "texmap0.uv";
-connectAttr "place2dTexture1.ofu" "texmap0.ofu";
-connectAttr "place2dTexture1.ofv" "texmap0.ofv";
-connectAttr "place2dTexture1.rf" "texmap0.rf";
-connectAttr "place2dTexture1.reu" "texmap0.reu";
-connectAttr "place2dTexture1.rev" "texmap0.rev";
-connectAttr "place2dTexture1.vt1" "texmap0.vt1";
-connectAttr "place2dTexture1.vt2" "texmap0.vt2";
-connectAttr "place2dTexture1.vt3" "texmap0.vt3";
-connectAttr "place2dTexture1.vc1" "texmap0.vc1";
-connectAttr "place2dTexture1.ofs" "texmap0.fs";
-connectAttr ":defaultColorMgtGlobals.cme" "texmap0.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "texmap0.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "texmap0.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "texmap0.ws";
-connectAttr "U3DMeshSG1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo1.tgi[0].ni[0].dn"
+connectAttr "witch:witch:texmap0.oc" "witch:witch:base_mtl.c";
+connectAttr "witch:witch:base_mtl.oc" "witch:witch:U3DMeshSG.ss";
+connectAttr "witch:groupId1.msg" "witch:witch:U3DMeshSG.gn" -na;
+connectAttr "witch:groupId2.msg" "witch:witch:U3DMeshSG.gn" -na;
+connectAttr "witch:groupId3.msg" "witch:witch:U3DMeshSG.gn" -na;
+connectAttr "witch:witch:hat_geoShape.iog.og[0]" "witch:witch:U3DMeshSG.dsm" -na
 		;
-connectAttr "hat_geoShapeOrig.w" "skinCluster5GroupParts.ig";
-connectAttr "groupId1.id" "skinCluster5GroupParts.gi";
-connectAttr "skeleton.msg" "bindPose1.m[0]";
-connectAttr "pelvis_jnt.msg" "bindPose1.m[1]";
-connectAttr "lf_hip_jnt.msg" "bindPose1.m[2]";
-connectAttr "lf_knee_jnt.msg" "bindPose1.m[3]";
-connectAttr "lf_ankle_jnt.msg" "bindPose1.m[4]";
-connectAttr "lf_ball_jnt.msg" "bindPose1.m[5]";
-connectAttr "lf_toe_jnt.msg" "bindPose1.m[6]";
-connectAttr "spine_jnt1.msg" "bindPose1.m[12]";
-connectAttr "spine_jnt2.msg" "bindPose1.m[13]";
-connectAttr "spine_jnt3.msg" "bindPose1.m[14]";
-connectAttr "neck_jnt1.msg" "bindPose1.m[15]";
-connectAttr "head_jnt.msg" "bindPose1.m[16]";
-connectAttr "lf_ear_ring_jnt.msg" "bindPose1.m[17]";
-connectAttr "jaw_jnt.msg" "bindPose1.m[18]";
-connectAttr "rt_ear_ring_jnt.msg" "bindPose1.m[19]";
-connectAttr "hat_jnt1.msg" "bindPose1.m[20]";
-connectAttr "hat_jnt2.msg" "bindPose1.m[21]";
-connectAttr "hat_jnt3.msg" "bindPose1.m[22]";
-connectAttr "hat_jnt4.msg" "bindPose1.m[23]";
-connectAttr "feather_bot_jnt1.msg" "bindPose1.m[24]";
-connectAttr "feather_bot_jnt2.msg" "bindPose1.m[25]";
-connectAttr "feather_bot_jnt3.msg" "bindPose1.m[26]";
-connectAttr "feather_top_jnt1.msg" "bindPose1.m[27]";
-connectAttr "feather_top_jnt2.msg" "bindPose1.m[28]";
-connectAttr "lf_clavicle_jnt.msg" "bindPose1.m[29]";
-connectAttr "lf_shld_jnt.msg" "bindPose1.m[30]";
-connectAttr "lf_elbow_jnt.msg" "bindPose1.m[31]";
-connectAttr "lf_wrist_jnt.msg" "bindPose1.m[32]";
-connectAttr "lf_thumb_jnt5.msg" "bindPose1.m[33]";
-connectAttr "lf_thumb_jnt2.msg" "bindPose1.m[34]";
-connectAttr "lf_thumb_jnt3.msg" "bindPose1.m[35]";
-connectAttr "lf_thumb_jnt4.msg" "bindPose1.m[36]";
-connectAttr "lf_index_jnt1.msg" "bindPose1.m[37]";
-connectAttr "lf_index_jnt2.msg" "bindPose1.m[38]";
-connectAttr "lf_index_jnt3.msg" "bindPose1.m[39]";
-connectAttr "lf_index_jnt4.msg" "bindPose1.m[40]";
-connectAttr "lf_ltl_jnt1.msg" "bindPose1.m[41]";
-connectAttr "lf_ltl_jnt2.msg" "bindPose1.m[42]";
-connectAttr "lf_ltl_jnt3.msg" "bindPose1.m[43]";
-connectAttr "lf_ltl_jnt4.msg" "bindPose1.m[44]";
-connectAttr "lf_middle_jnt1.msg" "bindPose1.m[45]";
-connectAttr "lf_middle_jnt2.msg" "bindPose1.m[46]";
-connectAttr "lf_middle_jnt3.msg" "bindPose1.m[47]";
-connectAttr "lf_middle_jnt4.msg" "bindPose1.m[48]";
-connectAttr "lf_ring_jnt1.msg" "bindPose1.m[49]";
-connectAttr "lf_ring_jnt2.msg" "bindPose1.m[50]";
-connectAttr "lf_ring_jnt3.msg" "bindPose1.m[51]";
-connectAttr "lf_ring_jnt4.msg" "bindPose1.m[52]";
-connectAttr "lf_chest_jnt.msg" "bindPose1.m[53]";
-connectAttr "rt_chest_jnt.msg" "bindPose1.m[54]";
-connectAttr "lf_ribbon_tape.msg" "bindPose1.m[87]";
-connectAttr "rt_ribbon_tape.msg" "bindPose1.m[88]";
-connectAttr "front_ribbon.msg" "bindPose1.m[89]";
-connectAttr "lf_ankle_add_jnt.msg" "bindPose1.m[90]";
-connectAttr "lf_wrist_add_jnt.msg" "bindPose1.m[95]";
-connectAttr "lf_elbow_add_jnt.msg" "bindPose1.m[97]";
-connectAttr "lf_ball_add_jnt.msg" "bindPose1.m[103]";
-connectAttr "lf_knee_add_jnt.msg" "bindPose1.m[106]";
-connectAttr "lf_hip_add_jnt.msg" "bindPose1.m[107]";
-connectAttr "lf_shld_add_jnt.msg" "bindPose1.m[113]";
-connectAttr "rt_ball_add_jnt.msg" "bindPose1.m[118]";
-connectAttr "rt_elbow_add_jnt.msg" "bindPose1.m[119]";
-connectAttr "rt_ankle_add_jnt.msg" "bindPose1.m[120]";
-connectAttr "rt_knee_add_jnt.msg" "bindPose1.m[121]";
-connectAttr "rt_hip_add_jnt.msg" "bindPose1.m[122]";
-connectAttr "rt_wrist_add_jnt.msg" "bindPose1.m[123]";
-connectAttr "rt_shld_add_jnt.msg" "bindPose1.m[124]";
-connectAttr "bindPose1.w" "bindPose1.p[0]";
-connectAttr "bindPose1.m[0]" "bindPose1.p[1]";
-connectAttr "bindPose1.m[1]" "bindPose1.p[2]";
-connectAttr "bindPose1.m[2]" "bindPose1.p[3]";
-connectAttr "bindPose1.m[3]" "bindPose1.p[4]";
-connectAttr "bindPose1.m[4]" "bindPose1.p[5]";
-connectAttr "bindPose1.m[5]" "bindPose1.p[6]";
-connectAttr "bindPose1.m[1]" "bindPose1.p[7]";
-connectAttr "bindPose1.m[7]" "bindPose1.p[8]";
-connectAttr "bindPose1.m[8]" "bindPose1.p[9]";
-connectAttr "bindPose1.m[9]" "bindPose1.p[10]";
-connectAttr "bindPose1.m[0]" "bindPose1.p[12]";
-connectAttr "bindPose1.m[12]" "bindPose1.p[13]";
-connectAttr "bindPose1.m[13]" "bindPose1.p[14]";
-connectAttr "bindPose1.m[14]" "bindPose1.p[15]";
-connectAttr "bindPose1.m[15]" "bindPose1.p[16]";
-connectAttr "bindPose1.m[16]" "bindPose1.p[17]";
-connectAttr "bindPose1.m[16]" "bindPose1.p[18]";
-connectAttr "bindPose1.m[16]" "bindPose1.p[19]";
-connectAttr "bindPose1.m[16]" "bindPose1.p[20]";
-connectAttr "bindPose1.m[20]" "bindPose1.p[21]";
-connectAttr "bindPose1.m[21]" "bindPose1.p[22]";
-connectAttr "bindPose1.m[22]" "bindPose1.p[23]";
-connectAttr "bindPose1.m[20]" "bindPose1.p[24]";
-connectAttr "bindPose1.m[24]" "bindPose1.p[25]";
-connectAttr "bindPose1.m[25]" "bindPose1.p[26]";
-connectAttr "bindPose1.m[20]" "bindPose1.p[27]";
-connectAttr "bindPose1.m[27]" "bindPose1.p[28]";
-connectAttr "bindPose1.m[14]" "bindPose1.p[29]";
-connectAttr "bindPose1.m[29]" "bindPose1.p[30]";
-connectAttr "bindPose1.m[30]" "bindPose1.p[31]";
-connectAttr "bindPose1.m[31]" "bindPose1.p[32]";
-connectAttr "bindPose1.m[32]" "bindPose1.p[33]";
-connectAttr "bindPose1.m[33]" "bindPose1.p[34]";
-connectAttr "bindPose1.m[34]" "bindPose1.p[35]";
-connectAttr "bindPose1.m[35]" "bindPose1.p[36]";
-connectAttr "bindPose1.m[32]" "bindPose1.p[37]";
-connectAttr "bindPose1.m[37]" "bindPose1.p[38]";
-connectAttr "bindPose1.m[38]" "bindPose1.p[39]";
-connectAttr "bindPose1.m[39]" "bindPose1.p[40]";
-connectAttr "bindPose1.m[32]" "bindPose1.p[41]";
-connectAttr "bindPose1.m[41]" "bindPose1.p[42]";
-connectAttr "bindPose1.m[42]" "bindPose1.p[43]";
-connectAttr "bindPose1.m[43]" "bindPose1.p[44]";
-connectAttr "bindPose1.m[32]" "bindPose1.p[45]";
-connectAttr "bindPose1.m[45]" "bindPose1.p[46]";
-connectAttr "bindPose1.m[46]" "bindPose1.p[47]";
-connectAttr "bindPose1.m[47]" "bindPose1.p[48]";
-connectAttr "bindPose1.m[32]" "bindPose1.p[49]";
-connectAttr "bindPose1.m[49]" "bindPose1.p[50]";
-connectAttr "bindPose1.m[50]" "bindPose1.p[51]";
-connectAttr "bindPose1.m[51]" "bindPose1.p[52]";
-connectAttr "bindPose1.m[14]" "bindPose1.p[53]";
-connectAttr "bindPose1.m[14]" "bindPose1.p[54]";
-connectAttr "bindPose1.m[14]" "bindPose1.p[55]";
-connectAttr "bindPose1.m[55]" "bindPose1.p[56]";
-connectAttr "bindPose1.m[56]" "bindPose1.p[57]";
-connectAttr "bindPose1.m[57]" "bindPose1.p[58]";
-connectAttr "bindPose1.m[58]" "bindPose1.p[59]";
-connectAttr "bindPose1.m[59]" "bindPose1.p[60]";
-connectAttr "bindPose1.m[60]" "bindPose1.p[61]";
-connectAttr "bindPose1.m[58]" "bindPose1.p[63]";
-connectAttr "bindPose1.m[63]" "bindPose1.p[64]";
-connectAttr "bindPose1.m[64]" "bindPose1.p[65]";
-connectAttr "bindPose1.m[58]" "bindPose1.p[67]";
-connectAttr "bindPose1.m[67]" "bindPose1.p[68]";
-connectAttr "bindPose1.m[68]" "bindPose1.p[69]";
-connectAttr "bindPose1.m[58]" "bindPose1.p[71]";
-connectAttr "bindPose1.m[71]" "bindPose1.p[72]";
-connectAttr "bindPose1.m[72]" "bindPose1.p[73]";
-connectAttr "bindPose1.m[58]" "bindPose1.p[75]";
-connectAttr "bindPose1.m[75]" "bindPose1.p[76]";
-connectAttr "bindPose1.m[76]" "bindPose1.p[77]";
-connectAttr "bindPose1.m[1]" "bindPose1.p[79]";
-connectAttr "bindPose1.m[79]" "bindPose1.p[80]";
-connectAttr "bindPose1.m[80]" "bindPose1.p[81]";
-connectAttr "bindPose1.m[81]" "bindPose1.p[82]";
-connectAttr "bindPose1.w" "bindPose1.p[87]";
-connectAttr "bindPose1.w" "bindPose1.p[88]";
-connectAttr "bindPose1.w" "bindPose1.p[89]";
-connectAttr "bindPose1.m[4]" "bindPose1.p[90]";
-connectAttr "bindPose1.m[90]" "bindPose1.p[91]";
-connectAttr "bindPose1.m[90]" "bindPose1.p[93]";
-connectAttr "bindPose1.m[32]" "bindPose1.p[95]";
-connectAttr "bindPose1.m[31]" "bindPose1.p[97]";
-connectAttr "bindPose1.m[97]" "bindPose1.p[98]";
-connectAttr "bindPose1.m[95]" "bindPose1.p[99]";
-connectAttr "bindPose1.m[95]" "bindPose1.p[100]";
-connectAttr "bindPose1.m[95]" "bindPose1.p[101]";
-connectAttr "bindPose1.m[97]" "bindPose1.p[102]";
-connectAttr "bindPose1.m[5]" "bindPose1.p[103]";
-connectAttr "bindPose1.m[3]" "bindPose1.p[106]";
-connectAttr "bindPose1.m[2]" "bindPose1.p[107]";
-connectAttr "lf_hip_add_jnt.msg" "bindPose1.p[108]";
-connectAttr "bindPose1.m[106]" "bindPose1.p[109]";
-connectAttr "bindPose1.m[106]" "bindPose1.p[110]";
-connectAttr "bindPose1.m[107]" "bindPose1.p[111]";
-connectAttr "bindPose1.m[107]" "bindPose1.p[112]";
-connectAttr "bindPose1.w" "bindPose1.p[113]";
-connectAttr "bindPose1.m[113]" "bindPose1.p[116]";
-connectAttr "bindPose1.m[113]" "bindPose1.p[117]";
-connectAttr "bindPose1.m[82]" "bindPose1.p[118]";
-connectAttr "bindPose1.m[57]" "bindPose1.p[119]";
-connectAttr "bindPose1.m[81]" "bindPose1.p[120]";
-connectAttr "bindPose1.m[80]" "bindPose1.p[121]";
-connectAttr "bindPose1.m[79]" "bindPose1.p[122]";
-connectAttr "bindPose1.m[58]" "bindPose1.p[123]";
-connectAttr "bindPose1.w" "bindPose1.p[124]";
-connectAttr "bindPose1.m[120]" "bindPose1.p[128]";
-connectAttr "bindPose1.m[122]" "bindPose1.p[129]";
-connectAttr "bindPose1.m[122]" "bindPose1.p[130]";
-connectAttr "bindPose1.m[120]" "bindPose1.p[131]";
-connectAttr "bindPose1.m[121]" "bindPose1.p[132]";
-connectAttr "bindPose1.m[121]" "bindPose1.p[133]";
-connectAttr "bindPose1.m[122]" "bindPose1.p[135]";
-connectAttr "bindPose1.m[123]" "bindPose1.p[137]";
-connectAttr "bindPose1.m[119]" "bindPose1.p[138]";
-connectAttr "bindPose1.m[123]" "bindPose1.p[139]";
-connectAttr "bindPose1.m[123]" "bindPose1.p[140]";
-connectAttr "bindPose1.m[119]" "bindPose1.p[141]";
-connectAttr "bindPose1.m[124]" "bindPose1.p[142]";
-connectAttr "bindPose1.m[124]" "bindPose1.p[145]";
-connectAttr "pelvis_jnt.bps" "bindPose1.wm[1]";
-connectAttr "lf_hip_jnt.bps" "bindPose1.wm[2]";
-connectAttr "lf_knee_jnt.bps" "bindPose1.wm[3]";
-connectAttr "lf_ankle_jnt.bps" "bindPose1.wm[4]";
-connectAttr "lf_ball_jnt.bps" "bindPose1.wm[5]";
-connectAttr "lf_toe_jnt.bps" "bindPose1.wm[6]";
-connectAttr "spine_jnt1.bps" "bindPose1.wm[12]";
-connectAttr "spine_jnt2.bps" "bindPose1.wm[13]";
-connectAttr "spine_jnt3.bps" "bindPose1.wm[14]";
-connectAttr "neck_jnt1.bps" "bindPose1.wm[15]";
-connectAttr "head_jnt.bps" "bindPose1.wm[16]";
-connectAttr "lf_ear_ring_jnt.bps" "bindPose1.wm[17]";
-connectAttr "jaw_jnt.bps" "bindPose1.wm[18]";
-connectAttr "rt_ear_ring_jnt.bps" "bindPose1.wm[19]";
-connectAttr "hat_jnt1.bps" "bindPose1.wm[20]";
-connectAttr "hat_jnt2.bps" "bindPose1.wm[21]";
-connectAttr "hat_jnt3.bps" "bindPose1.wm[22]";
-connectAttr "hat_jnt4.bps" "bindPose1.wm[23]";
-connectAttr "feather_bot_jnt1.bps" "bindPose1.wm[24]";
-connectAttr "feather_bot_jnt2.bps" "bindPose1.wm[25]";
-connectAttr "feather_bot_jnt3.bps" "bindPose1.wm[26]";
-connectAttr "feather_top_jnt1.bps" "bindPose1.wm[27]";
-connectAttr "feather_top_jnt2.bps" "bindPose1.wm[28]";
-connectAttr "lf_clavicle_jnt.bps" "bindPose1.wm[29]";
-connectAttr "lf_shld_jnt.bps" "bindPose1.wm[30]";
-connectAttr "lf_elbow_jnt.bps" "bindPose1.wm[31]";
-connectAttr "lf_wrist_jnt.bps" "bindPose1.wm[32]";
-connectAttr "lf_thumb_jnt5.bps" "bindPose1.wm[33]";
-connectAttr "lf_thumb_jnt2.bps" "bindPose1.wm[34]";
-connectAttr "lf_thumb_jnt3.bps" "bindPose1.wm[35]";
-connectAttr "lf_thumb_jnt4.bps" "bindPose1.wm[36]";
-connectAttr "lf_index_jnt1.bps" "bindPose1.wm[37]";
-connectAttr "lf_index_jnt2.bps" "bindPose1.wm[38]";
-connectAttr "lf_index_jnt3.bps" "bindPose1.wm[39]";
-connectAttr "lf_index_jnt4.bps" "bindPose1.wm[40]";
-connectAttr "lf_ltl_jnt1.bps" "bindPose1.wm[41]";
-connectAttr "lf_ltl_jnt2.bps" "bindPose1.wm[42]";
-connectAttr "lf_ltl_jnt3.bps" "bindPose1.wm[43]";
-connectAttr "lf_ltl_jnt4.bps" "bindPose1.wm[44]";
-connectAttr "lf_middle_jnt1.bps" "bindPose1.wm[45]";
-connectAttr "lf_middle_jnt2.bps" "bindPose1.wm[46]";
-connectAttr "lf_middle_jnt3.bps" "bindPose1.wm[47]";
-connectAttr "lf_middle_jnt4.bps" "bindPose1.wm[48]";
-connectAttr "lf_ring_jnt1.bps" "bindPose1.wm[49]";
-connectAttr "lf_ring_jnt2.bps" "bindPose1.wm[50]";
-connectAttr "lf_ring_jnt3.bps" "bindPose1.wm[51]";
-connectAttr "lf_ring_jnt4.bps" "bindPose1.wm[52]";
-connectAttr "lf_chest_jnt.bps" "bindPose1.wm[53]";
-connectAttr "rt_chest_jnt.bps" "bindPose1.wm[54]";
-connectAttr "lf_ribbon_tape.bps" "bindPose1.wm[87]";
-connectAttr "rt_ribbon_tape.bps" "bindPose1.wm[88]";
-connectAttr "front_ribbon.bps" "bindPose1.wm[89]";
-connectAttr "lf_ankle_add_jnt.bps" "bindPose1.wm[90]";
-connectAttr "lf_wrist_add_jnt.bps" "bindPose1.wm[95]";
-connectAttr "lf_elbow_add_jnt.bps" "bindPose1.wm[97]";
-connectAttr "lf_ball_add_jnt.bps" "bindPose1.wm[103]";
-connectAttr "lf_knee_add_jnt.bps" "bindPose1.wm[106]";
-connectAttr "lf_hip_add_jnt.bps" "bindPose1.wm[107]";
-connectAttr "lf_shld_add_jnt.bps" "bindPose1.wm[113]";
-connectAttr "rt_ball_add_jnt.bps" "bindPose1.wm[118]";
-connectAttr "rt_elbow_add_jnt.bps" "bindPose1.wm[119]";
-connectAttr "rt_ankle_add_jnt.bps" "bindPose1.wm[120]";
-connectAttr "rt_knee_add_jnt.bps" "bindPose1.wm[121]";
-connectAttr "rt_hip_add_jnt.bps" "bindPose1.wm[122]";
-connectAttr "rt_wrist_add_jnt.bps" "bindPose1.wm[123]";
-connectAttr "rt_shld_add_jnt.bps" "bindPose1.wm[124]";
-connectAttr "skinCluster2GroupParts.og" "skinCluster2.ip[0].ig";
-connectAttr "ribbons_geoShapeOrig.o" "skinCluster2.orggeom[0]";
-connectAttr "pelvis_jnt.wm" "skinCluster2.ma[0]";
-connectAttr "lf_hip_jnt.wm" "skinCluster2.ma[1]";
-connectAttr "lf_knee_jnt.wm" "skinCluster2.ma[2]";
-connectAttr "lf_ankle_jnt.wm" "skinCluster2.ma[3]";
-connectAttr "lf_ball_jnt.wm" "skinCluster2.ma[4]";
-connectAttr "lf_toe_jnt.wm" "skinCluster2.ma[5]";
-connectAttr "spine_jnt1.wm" "skinCluster2.ma[11]";
-connectAttr "spine_jnt2.wm" "skinCluster2.ma[12]";
-connectAttr "spine_jnt3.wm" "skinCluster2.ma[13]";
-connectAttr "neck_jnt1.wm" "skinCluster2.ma[14]";
-connectAttr "head_jnt.wm" "skinCluster2.ma[15]";
-connectAttr "lf_ear_ring_jnt.wm" "skinCluster2.ma[16]";
-connectAttr "jaw_jnt.wm" "skinCluster2.ma[17]";
-connectAttr "rt_ear_ring_jnt.wm" "skinCluster2.ma[18]";
-connectAttr "hat_jnt1.wm" "skinCluster2.ma[19]";
-connectAttr "hat_jnt2.wm" "skinCluster2.ma[20]";
-connectAttr "hat_jnt3.wm" "skinCluster2.ma[21]";
-connectAttr "hat_jnt4.wm" "skinCluster2.ma[22]";
-connectAttr "feather_bot_jnt1.wm" "skinCluster2.ma[23]";
-connectAttr "feather_bot_jnt2.wm" "skinCluster2.ma[24]";
-connectAttr "feather_bot_jnt3.wm" "skinCluster2.ma[25]";
-connectAttr "feather_top_jnt1.wm" "skinCluster2.ma[26]";
-connectAttr "feather_top_jnt2.wm" "skinCluster2.ma[27]";
-connectAttr "lf_clavicle_jnt.wm" "skinCluster2.ma[28]";
-connectAttr "lf_shld_jnt.wm" "skinCluster2.ma[29]";
-connectAttr "lf_elbow_jnt.wm" "skinCluster2.ma[30]";
-connectAttr "lf_wrist_jnt.wm" "skinCluster2.ma[31]";
-connectAttr "lf_thumb_jnt5.wm" "skinCluster2.ma[32]";
-connectAttr "lf_thumb_jnt2.wm" "skinCluster2.ma[33]";
-connectAttr "lf_thumb_jnt3.wm" "skinCluster2.ma[34]";
-connectAttr "lf_thumb_jnt4.wm" "skinCluster2.ma[35]";
-connectAttr "lf_index_jnt1.wm" "skinCluster2.ma[36]";
-connectAttr "lf_index_jnt2.wm" "skinCluster2.ma[37]";
-connectAttr "lf_index_jnt3.wm" "skinCluster2.ma[38]";
-connectAttr "lf_index_jnt4.wm" "skinCluster2.ma[39]";
-connectAttr "lf_ltl_jnt1.wm" "skinCluster2.ma[40]";
-connectAttr "lf_ltl_jnt2.wm" "skinCluster2.ma[41]";
-connectAttr "lf_ltl_jnt3.wm" "skinCluster2.ma[42]";
-connectAttr "lf_ltl_jnt4.wm" "skinCluster2.ma[43]";
-connectAttr "lf_middle_jnt1.wm" "skinCluster2.ma[44]";
-connectAttr "lf_middle_jnt2.wm" "skinCluster2.ma[45]";
-connectAttr "lf_middle_jnt3.wm" "skinCluster2.ma[46]";
-connectAttr "lf_middle_jnt4.wm" "skinCluster2.ma[47]";
-connectAttr "lf_ring_jnt1.wm" "skinCluster2.ma[48]";
-connectAttr "lf_ring_jnt2.wm" "skinCluster2.ma[49]";
-connectAttr "lf_ring_jnt3.wm" "skinCluster2.ma[50]";
-connectAttr "lf_ring_jnt4.wm" "skinCluster2.ma[51]";
-connectAttr "lf_chest_jnt.wm" "skinCluster2.ma[52]";
-connectAttr "rt_chest_jnt.wm" "skinCluster2.ma[53]";
-connectAttr "lf_ribbon_tape.wm" "skinCluster2.ma[81]";
-connectAttr "rt_ribbon_tape.wm" "skinCluster2.ma[82]";
-connectAttr "front_ribbon.wm" "skinCluster2.ma[83]";
-connectAttr "pelvis_jnt.liw" "skinCluster2.lw[0]";
-connectAttr "lf_hip_jnt.liw" "skinCluster2.lw[1]";
-connectAttr "lf_knee_jnt.liw" "skinCluster2.lw[2]";
-connectAttr "lf_ankle_jnt.liw" "skinCluster2.lw[3]";
-connectAttr "lf_ball_jnt.liw" "skinCluster2.lw[4]";
-connectAttr "lf_toe_jnt.liw" "skinCluster2.lw[5]";
-connectAttr "spine_jnt1.liw" "skinCluster2.lw[11]";
-connectAttr "spine_jnt2.liw" "skinCluster2.lw[12]";
-connectAttr "spine_jnt3.liw" "skinCluster2.lw[13]";
-connectAttr "neck_jnt1.liw" "skinCluster2.lw[14]";
-connectAttr "head_jnt.liw" "skinCluster2.lw[15]";
-connectAttr "lf_ear_ring_jnt.liw" "skinCluster2.lw[16]";
-connectAttr "jaw_jnt.liw" "skinCluster2.lw[17]";
-connectAttr "rt_ear_ring_jnt.liw" "skinCluster2.lw[18]";
-connectAttr "hat_jnt1.liw" "skinCluster2.lw[19]";
-connectAttr "hat_jnt2.liw" "skinCluster2.lw[20]";
-connectAttr "hat_jnt3.liw" "skinCluster2.lw[21]";
-connectAttr "hat_jnt4.liw" "skinCluster2.lw[22]";
-connectAttr "feather_bot_jnt1.liw" "skinCluster2.lw[23]";
-connectAttr "feather_bot_jnt2.liw" "skinCluster2.lw[24]";
-connectAttr "feather_bot_jnt3.liw" "skinCluster2.lw[25]";
-connectAttr "feather_top_jnt1.liw" "skinCluster2.lw[26]";
-connectAttr "feather_top_jnt2.liw" "skinCluster2.lw[27]";
-connectAttr "lf_clavicle_jnt.liw" "skinCluster2.lw[28]";
-connectAttr "lf_shld_jnt.liw" "skinCluster2.lw[29]";
-connectAttr "lf_elbow_jnt.liw" "skinCluster2.lw[30]";
-connectAttr "lf_wrist_jnt.liw" "skinCluster2.lw[31]";
-connectAttr "lf_thumb_jnt5.liw" "skinCluster2.lw[32]";
-connectAttr "lf_thumb_jnt2.liw" "skinCluster2.lw[33]";
-connectAttr "lf_thumb_jnt3.liw" "skinCluster2.lw[34]";
-connectAttr "lf_thumb_jnt4.liw" "skinCluster2.lw[35]";
-connectAttr "lf_index_jnt1.liw" "skinCluster2.lw[36]";
-connectAttr "lf_index_jnt2.liw" "skinCluster2.lw[37]";
-connectAttr "lf_index_jnt3.liw" "skinCluster2.lw[38]";
-connectAttr "lf_index_jnt4.liw" "skinCluster2.lw[39]";
-connectAttr "lf_ltl_jnt1.liw" "skinCluster2.lw[40]";
-connectAttr "lf_ltl_jnt2.liw" "skinCluster2.lw[41]";
-connectAttr "lf_ltl_jnt3.liw" "skinCluster2.lw[42]";
-connectAttr "lf_ltl_jnt4.liw" "skinCluster2.lw[43]";
-connectAttr "lf_middle_jnt1.liw" "skinCluster2.lw[44]";
-connectAttr "lf_middle_jnt2.liw" "skinCluster2.lw[45]";
-connectAttr "lf_middle_jnt3.liw" "skinCluster2.lw[46]";
-connectAttr "lf_middle_jnt4.liw" "skinCluster2.lw[47]";
-connectAttr "lf_ring_jnt1.liw" "skinCluster2.lw[48]";
-connectAttr "lf_ring_jnt2.liw" "skinCluster2.lw[49]";
-connectAttr "lf_ring_jnt3.liw" "skinCluster2.lw[50]";
-connectAttr "lf_ring_jnt4.liw" "skinCluster2.lw[51]";
-connectAttr "lf_chest_jnt.liw" "skinCluster2.lw[52]";
-connectAttr "rt_chest_jnt.liw" "skinCluster2.lw[53]";
-connectAttr "lf_ribbon_tape.liw" "skinCluster2.lw[81]";
-connectAttr "rt_ribbon_tape.liw" "skinCluster2.lw[82]";
-connectAttr "front_ribbon.liw" "skinCluster2.lw[83]";
-connectAttr "pelvis_jnt.obcc" "skinCluster2.ifcl[0]";
-connectAttr "lf_hip_jnt.obcc" "skinCluster2.ifcl[1]";
-connectAttr "lf_knee_jnt.obcc" "skinCluster2.ifcl[2]";
-connectAttr "lf_ankle_jnt.obcc" "skinCluster2.ifcl[3]";
-connectAttr "lf_ball_jnt.obcc" "skinCluster2.ifcl[4]";
-connectAttr "lf_toe_jnt.obcc" "skinCluster2.ifcl[5]";
-connectAttr "spine_jnt1.obcc" "skinCluster2.ifcl[11]";
-connectAttr "spine_jnt2.obcc" "skinCluster2.ifcl[12]";
-connectAttr "spine_jnt3.obcc" "skinCluster2.ifcl[13]";
-connectAttr "neck_jnt1.obcc" "skinCluster2.ifcl[14]";
-connectAttr "head_jnt.obcc" "skinCluster2.ifcl[15]";
-connectAttr "lf_ear_ring_jnt.obcc" "skinCluster2.ifcl[16]";
-connectAttr "jaw_jnt.obcc" "skinCluster2.ifcl[17]";
-connectAttr "rt_ear_ring_jnt.obcc" "skinCluster2.ifcl[18]";
-connectAttr "hat_jnt1.obcc" "skinCluster2.ifcl[19]";
-connectAttr "hat_jnt2.obcc" "skinCluster2.ifcl[20]";
-connectAttr "hat_jnt3.obcc" "skinCluster2.ifcl[21]";
-connectAttr "hat_jnt4.obcc" "skinCluster2.ifcl[22]";
-connectAttr "feather_bot_jnt1.obcc" "skinCluster2.ifcl[23]";
-connectAttr "feather_bot_jnt2.obcc" "skinCluster2.ifcl[24]";
-connectAttr "feather_bot_jnt3.obcc" "skinCluster2.ifcl[25]";
-connectAttr "feather_top_jnt1.obcc" "skinCluster2.ifcl[26]";
-connectAttr "feather_top_jnt2.obcc" "skinCluster2.ifcl[27]";
-connectAttr "lf_clavicle_jnt.obcc" "skinCluster2.ifcl[28]";
-connectAttr "lf_shld_jnt.obcc" "skinCluster2.ifcl[29]";
-connectAttr "lf_elbow_jnt.obcc" "skinCluster2.ifcl[30]";
-connectAttr "lf_wrist_jnt.obcc" "skinCluster2.ifcl[31]";
-connectAttr "lf_thumb_jnt5.obcc" "skinCluster2.ifcl[32]";
-connectAttr "lf_thumb_jnt2.obcc" "skinCluster2.ifcl[33]";
-connectAttr "lf_thumb_jnt3.obcc" "skinCluster2.ifcl[34]";
-connectAttr "lf_thumb_jnt4.obcc" "skinCluster2.ifcl[35]";
-connectAttr "lf_index_jnt1.obcc" "skinCluster2.ifcl[36]";
-connectAttr "lf_index_jnt2.obcc" "skinCluster2.ifcl[37]";
-connectAttr "lf_index_jnt3.obcc" "skinCluster2.ifcl[38]";
-connectAttr "lf_index_jnt4.obcc" "skinCluster2.ifcl[39]";
-connectAttr "lf_ltl_jnt1.obcc" "skinCluster2.ifcl[40]";
-connectAttr "lf_ltl_jnt2.obcc" "skinCluster2.ifcl[41]";
-connectAttr "lf_ltl_jnt3.obcc" "skinCluster2.ifcl[42]";
-connectAttr "lf_ltl_jnt4.obcc" "skinCluster2.ifcl[43]";
-connectAttr "lf_middle_jnt1.obcc" "skinCluster2.ifcl[44]";
-connectAttr "lf_middle_jnt2.obcc" "skinCluster2.ifcl[45]";
-connectAttr "lf_middle_jnt3.obcc" "skinCluster2.ifcl[46]";
-connectAttr "lf_middle_jnt4.obcc" "skinCluster2.ifcl[47]";
-connectAttr "lf_ring_jnt1.obcc" "skinCluster2.ifcl[48]";
-connectAttr "lf_ring_jnt2.obcc" "skinCluster2.ifcl[49]";
-connectAttr "lf_ring_jnt3.obcc" "skinCluster2.ifcl[50]";
-connectAttr "lf_ring_jnt4.obcc" "skinCluster2.ifcl[51]";
-connectAttr "lf_chest_jnt.obcc" "skinCluster2.ifcl[52]";
-connectAttr "rt_chest_jnt.obcc" "skinCluster2.ifcl[53]";
-connectAttr "lf_ribbon_tape.obcc" "skinCluster2.ifcl[81]";
-connectAttr "rt_ribbon_tape.obcc" "skinCluster2.ifcl[82]";
-connectAttr "front_ribbon.obcc" "skinCluster2.ifcl[83]";
-connectAttr "bindPose1.msg" "skinCluster2.bp";
-connectAttr "head_jnt.msg" "skinCluster2.ptt";
-connectAttr "ribbons_geoShapeOrig.w" "skinCluster2GroupParts.ig";
-connectAttr "groupId2.id" "skinCluster2GroupParts.gi";
-connectAttr "broom_geoShapeOrig.w" "skinCluster7GroupParts.ig";
-connectAttr "groupId3.id" "skinCluster7GroupParts.gi";
-connectAttr "skinCluster5GroupParts.og" "skinCluster5.ip[0].ig";
-connectAttr "hat_geoShapeOrig.o" "skinCluster5.orggeom[0]";
-connectAttr "bindPose2.msg" "skinCluster5.bp";
-connectAttr "spine_jnt1.wm" "skinCluster5.ma[0]";
-connectAttr "spine_jnt2.wm" "skinCluster5.ma[1]";
-connectAttr "spine_jnt3.wm" "skinCluster5.ma[2]";
-connectAttr "neck_jnt1.wm" "skinCluster5.ma[3]";
-connectAttr "head_jnt.wm" "skinCluster5.ma[4]";
-connectAttr "lf_ear_ring_jnt.wm" "skinCluster5.ma[5]";
-connectAttr "jaw_jnt.wm" "skinCluster5.ma[6]";
-connectAttr "rt_ear_ring_jnt.wm" "skinCluster5.ma[7]";
-connectAttr "hat_jnt1.wm" "skinCluster5.ma[8]";
-connectAttr "hat_jnt2.wm" "skinCluster5.ma[9]";
-connectAttr "hat_jnt3.wm" "skinCluster5.ma[10]";
-connectAttr "hat_jnt4.wm" "skinCluster5.ma[11]";
-connectAttr "feather_bot_jnt1.wm" "skinCluster5.ma[12]";
-connectAttr "feather_bot_jnt2.wm" "skinCluster5.ma[13]";
-connectAttr "feather_bot_jnt3.wm" "skinCluster5.ma[14]";
-connectAttr "feather_top_jnt1.wm" "skinCluster5.ma[15]";
-connectAttr "feather_top_jnt2.wm" "skinCluster5.ma[16]";
-connectAttr "lf_clavicle_jnt.wm" "skinCluster5.ma[17]";
-connectAttr "lf_shld_jnt.wm" "skinCluster5.ma[18]";
-connectAttr "lf_elbow_jnt.wm" "skinCluster5.ma[19]";
-connectAttr "lf_wrist_jnt.wm" "skinCluster5.ma[20]";
-connectAttr "lf_thumb_jnt5.wm" "skinCluster5.ma[21]";
-connectAttr "lf_thumb_jnt2.wm" "skinCluster5.ma[22]";
-connectAttr "lf_thumb_jnt3.wm" "skinCluster5.ma[23]";
-connectAttr "lf_thumb_jnt4.wm" "skinCluster5.ma[24]";
-connectAttr "lf_index_jnt1.wm" "skinCluster5.ma[25]";
-connectAttr "lf_index_jnt2.wm" "skinCluster5.ma[26]";
-connectAttr "lf_index_jnt3.wm" "skinCluster5.ma[27]";
-connectAttr "lf_index_jnt4.wm" "skinCluster5.ma[28]";
-connectAttr "lf_ltl_jnt1.wm" "skinCluster5.ma[29]";
-connectAttr "lf_ltl_jnt2.wm" "skinCluster5.ma[30]";
-connectAttr "lf_ltl_jnt3.wm" "skinCluster5.ma[31]";
-connectAttr "lf_ltl_jnt4.wm" "skinCluster5.ma[32]";
-connectAttr "lf_middle_jnt1.wm" "skinCluster5.ma[33]";
-connectAttr "lf_middle_jnt2.wm" "skinCluster5.ma[34]";
-connectAttr "lf_middle_jnt3.wm" "skinCluster5.ma[35]";
-connectAttr "lf_middle_jnt4.wm" "skinCluster5.ma[36]";
-connectAttr "lf_ring_jnt1.wm" "skinCluster5.ma[37]";
-connectAttr "lf_ring_jnt2.wm" "skinCluster5.ma[38]";
-connectAttr "lf_ring_jnt3.wm" "skinCluster5.ma[39]";
-connectAttr "lf_ring_jnt4.wm" "skinCluster5.ma[40]";
-connectAttr "lf_chest_jnt.wm" "skinCluster5.ma[41]";
-connectAttr "rt_chest_jnt.wm" "skinCluster5.ma[42]";
-connectAttr "spine_jnt1.liw" "skinCluster5.lw[0]";
-connectAttr "spine_jnt2.liw" "skinCluster5.lw[1]";
-connectAttr "spine_jnt3.liw" "skinCluster5.lw[2]";
-connectAttr "neck_jnt1.liw" "skinCluster5.lw[3]";
-connectAttr "head_jnt.liw" "skinCluster5.lw[4]";
-connectAttr "lf_ear_ring_jnt.liw" "skinCluster5.lw[5]";
-connectAttr "jaw_jnt.liw" "skinCluster5.lw[6]";
-connectAttr "rt_ear_ring_jnt.liw" "skinCluster5.lw[7]";
-connectAttr "hat_jnt1.liw" "skinCluster5.lw[8]";
-connectAttr "hat_jnt2.liw" "skinCluster5.lw[9]";
-connectAttr "hat_jnt3.liw" "skinCluster5.lw[10]";
-connectAttr "hat_jnt4.liw" "skinCluster5.lw[11]";
-connectAttr "feather_bot_jnt1.liw" "skinCluster5.lw[12]";
-connectAttr "feather_bot_jnt2.liw" "skinCluster5.lw[13]";
-connectAttr "feather_bot_jnt3.liw" "skinCluster5.lw[14]";
-connectAttr "feather_top_jnt1.liw" "skinCluster5.lw[15]";
-connectAttr "feather_top_jnt2.liw" "skinCluster5.lw[16]";
-connectAttr "lf_clavicle_jnt.liw" "skinCluster5.lw[17]";
-connectAttr "lf_shld_jnt.liw" "skinCluster5.lw[18]";
-connectAttr "lf_elbow_jnt.liw" "skinCluster5.lw[19]";
-connectAttr "lf_wrist_jnt.liw" "skinCluster5.lw[20]";
-connectAttr "lf_thumb_jnt5.liw" "skinCluster5.lw[21]";
-connectAttr "lf_thumb_jnt2.liw" "skinCluster5.lw[22]";
-connectAttr "lf_thumb_jnt3.liw" "skinCluster5.lw[23]";
-connectAttr "lf_thumb_jnt4.liw" "skinCluster5.lw[24]";
-connectAttr "lf_index_jnt1.liw" "skinCluster5.lw[25]";
-connectAttr "lf_index_jnt2.liw" "skinCluster5.lw[26]";
-connectAttr "lf_index_jnt3.liw" "skinCluster5.lw[27]";
-connectAttr "lf_index_jnt4.liw" "skinCluster5.lw[28]";
-connectAttr "lf_ltl_jnt1.liw" "skinCluster5.lw[29]";
-connectAttr "lf_ltl_jnt2.liw" "skinCluster5.lw[30]";
-connectAttr "lf_ltl_jnt3.liw" "skinCluster5.lw[31]";
-connectAttr "lf_ltl_jnt4.liw" "skinCluster5.lw[32]";
-connectAttr "lf_middle_jnt1.liw" "skinCluster5.lw[33]";
-connectAttr "lf_middle_jnt2.liw" "skinCluster5.lw[34]";
-connectAttr "lf_middle_jnt3.liw" "skinCluster5.lw[35]";
-connectAttr "lf_middle_jnt4.liw" "skinCluster5.lw[36]";
-connectAttr "lf_ring_jnt1.liw" "skinCluster5.lw[37]";
-connectAttr "lf_ring_jnt2.liw" "skinCluster5.lw[38]";
-connectAttr "lf_ring_jnt3.liw" "skinCluster5.lw[39]";
-connectAttr "lf_ring_jnt4.liw" "skinCluster5.lw[40]";
-connectAttr "lf_chest_jnt.liw" "skinCluster5.lw[41]";
-connectAttr "rt_chest_jnt.liw" "skinCluster5.lw[42]";
-connectAttr "spine_jnt1.obcc" "skinCluster5.ifcl[0]";
-connectAttr "spine_jnt2.obcc" "skinCluster5.ifcl[1]";
-connectAttr "spine_jnt3.obcc" "skinCluster5.ifcl[2]";
-connectAttr "neck_jnt1.obcc" "skinCluster5.ifcl[3]";
-connectAttr "head_jnt.obcc" "skinCluster5.ifcl[4]";
-connectAttr "lf_ear_ring_jnt.obcc" "skinCluster5.ifcl[5]";
-connectAttr "jaw_jnt.obcc" "skinCluster5.ifcl[6]";
-connectAttr "rt_ear_ring_jnt.obcc" "skinCluster5.ifcl[7]";
-connectAttr "hat_jnt1.obcc" "skinCluster5.ifcl[8]";
-connectAttr "hat_jnt2.obcc" "skinCluster5.ifcl[9]";
-connectAttr "hat_jnt3.obcc" "skinCluster5.ifcl[10]";
-connectAttr "hat_jnt4.obcc" "skinCluster5.ifcl[11]";
-connectAttr "feather_bot_jnt1.obcc" "skinCluster5.ifcl[12]";
-connectAttr "feather_bot_jnt2.obcc" "skinCluster5.ifcl[13]";
-connectAttr "feather_bot_jnt3.obcc" "skinCluster5.ifcl[14]";
-connectAttr "feather_top_jnt1.obcc" "skinCluster5.ifcl[15]";
-connectAttr "feather_top_jnt2.obcc" "skinCluster5.ifcl[16]";
-connectAttr "lf_clavicle_jnt.obcc" "skinCluster5.ifcl[17]";
-connectAttr "lf_shld_jnt.obcc" "skinCluster5.ifcl[18]";
-connectAttr "lf_elbow_jnt.obcc" "skinCluster5.ifcl[19]";
-connectAttr "lf_wrist_jnt.obcc" "skinCluster5.ifcl[20]";
-connectAttr "lf_thumb_jnt5.obcc" "skinCluster5.ifcl[21]";
-connectAttr "lf_thumb_jnt2.obcc" "skinCluster5.ifcl[22]";
-connectAttr "lf_thumb_jnt3.obcc" "skinCluster5.ifcl[23]";
-connectAttr "lf_thumb_jnt4.obcc" "skinCluster5.ifcl[24]";
-connectAttr "lf_index_jnt1.obcc" "skinCluster5.ifcl[25]";
-connectAttr "lf_index_jnt2.obcc" "skinCluster5.ifcl[26]";
-connectAttr "lf_index_jnt3.obcc" "skinCluster5.ifcl[27]";
-connectAttr "lf_index_jnt4.obcc" "skinCluster5.ifcl[28]";
-connectAttr "lf_ltl_jnt1.obcc" "skinCluster5.ifcl[29]";
-connectAttr "lf_ltl_jnt2.obcc" "skinCluster5.ifcl[30]";
-connectAttr "lf_ltl_jnt3.obcc" "skinCluster5.ifcl[31]";
-connectAttr "lf_ltl_jnt4.obcc" "skinCluster5.ifcl[32]";
-connectAttr "lf_middle_jnt1.obcc" "skinCluster5.ifcl[33]";
-connectAttr "lf_middle_jnt2.obcc" "skinCluster5.ifcl[34]";
-connectAttr "lf_middle_jnt3.obcc" "skinCluster5.ifcl[35]";
-connectAttr "lf_middle_jnt4.obcc" "skinCluster5.ifcl[36]";
-connectAttr "lf_ring_jnt1.obcc" "skinCluster5.ifcl[37]";
-connectAttr "lf_ring_jnt2.obcc" "skinCluster5.ifcl[38]";
-connectAttr "lf_ring_jnt3.obcc" "skinCluster5.ifcl[39]";
-connectAttr "lf_ring_jnt4.obcc" "skinCluster5.ifcl[40]";
-connectAttr "lf_chest_jnt.obcc" "skinCluster5.ifcl[41]";
-connectAttr "rt_chest_jnt.obcc" "skinCluster5.ifcl[42]";
-connectAttr "hat_jnt1.msg" "skinCluster5.ptt";
-connectAttr "skeleton.msg" "bindPose2.m[0]";
-connectAttr "spine_jnt1.msg" "bindPose2.m[1]";
-connectAttr "spine_jnt2.msg" "bindPose2.m[2]";
-connectAttr "spine_jnt3.msg" "bindPose2.m[3]";
-connectAttr "neck_jnt1.msg" "bindPose2.m[4]";
-connectAttr "head_jnt.msg" "bindPose2.m[5]";
-connectAttr "lf_ear_ring_jnt.msg" "bindPose2.m[6]";
-connectAttr "jaw_jnt.msg" "bindPose2.m[7]";
-connectAttr "rt_ear_ring_jnt.msg" "bindPose2.m[8]";
-connectAttr "hat_jnt1.msg" "bindPose2.m[9]";
-connectAttr "hat_jnt2.msg" "bindPose2.m[10]";
-connectAttr "hat_jnt3.msg" "bindPose2.m[11]";
-connectAttr "hat_jnt4.msg" "bindPose2.m[12]";
-connectAttr "feather_bot_jnt1.msg" "bindPose2.m[13]";
-connectAttr "feather_bot_jnt2.msg" "bindPose2.m[14]";
-connectAttr "feather_bot_jnt3.msg" "bindPose2.m[15]";
-connectAttr "feather_top_jnt1.msg" "bindPose2.m[16]";
-connectAttr "feather_top_jnt2.msg" "bindPose2.m[17]";
-connectAttr "lf_clavicle_jnt.msg" "bindPose2.m[18]";
-connectAttr "lf_shld_jnt.msg" "bindPose2.m[19]";
-connectAttr "lf_elbow_jnt.msg" "bindPose2.m[20]";
-connectAttr "lf_wrist_jnt.msg" "bindPose2.m[21]";
-connectAttr "lf_thumb_jnt5.msg" "bindPose2.m[22]";
-connectAttr "lf_thumb_jnt2.msg" "bindPose2.m[23]";
-connectAttr "lf_thumb_jnt3.msg" "bindPose2.m[24]";
-connectAttr "lf_thumb_jnt4.msg" "bindPose2.m[25]";
-connectAttr "lf_index_jnt1.msg" "bindPose2.m[26]";
-connectAttr "lf_index_jnt2.msg" "bindPose2.m[27]";
-connectAttr "lf_index_jnt3.msg" "bindPose2.m[28]";
-connectAttr "lf_index_jnt4.msg" "bindPose2.m[29]";
-connectAttr "lf_ltl_jnt1.msg" "bindPose2.m[30]";
-connectAttr "lf_ltl_jnt2.msg" "bindPose2.m[31]";
-connectAttr "lf_ltl_jnt3.msg" "bindPose2.m[32]";
-connectAttr "lf_ltl_jnt4.msg" "bindPose2.m[33]";
-connectAttr "lf_middle_jnt1.msg" "bindPose2.m[34]";
-connectAttr "lf_middle_jnt2.msg" "bindPose2.m[35]";
-connectAttr "lf_middle_jnt3.msg" "bindPose2.m[36]";
-connectAttr "lf_middle_jnt4.msg" "bindPose2.m[37]";
-connectAttr "lf_ring_jnt1.msg" "bindPose2.m[38]";
-connectAttr "lf_ring_jnt2.msg" "bindPose2.m[39]";
-connectAttr "lf_ring_jnt3.msg" "bindPose2.m[40]";
-connectAttr "lf_ring_jnt4.msg" "bindPose2.m[41]";
-connectAttr "lf_chest_jnt.msg" "bindPose2.m[42]";
-connectAttr "rt_chest_jnt.msg" "bindPose2.m[43]";
-connectAttr "pelvis_jnt.msg" "bindPose2.m[136]";
-connectAttr "rt_clavicle_jnt.msg" "bindPose2.m[137]";
-connectAttr "rt_shld_jnt.msg" "bindPose2.m[138]";
-connectAttr "rt_elbow_jnt.msg" "bindPose2.m[139]";
-connectAttr "rt_wrist_jnt.msg" "bindPose2.m[140]";
-connectAttr "rt_thumb_jnt5.msg" "bindPose2.m[141]";
-connectAttr "rt_thumb_jnt2.msg" "bindPose2.m[142]";
-connectAttr "rt_thumb_jnt3.msg" "bindPose2.m[143]";
-connectAttr "rt_index_jnt1.msg" "bindPose2.m[144]";
-connectAttr "rt_middle_jnt1.msg" "bindPose2.m[145]";
-connectAttr "rt_index_jnt2.msg" "bindPose2.m[146]";
-connectAttr "rt_index_jnt3.msg" "bindPose2.m[147]";
-connectAttr "rt_ltl_jnt1.msg" "bindPose2.m[148]";
-connectAttr "rt_ltl_jnt2.msg" "bindPose2.m[149]";
-connectAttr "rt_ltl_jnt3.msg" "bindPose2.m[150]";
-connectAttr "rt_ring_jnt1.msg" "bindPose2.m[151]";
-connectAttr "rt_ring_jnt2.msg" "bindPose2.m[152]";
-connectAttr "rt_middle_jnt2.msg" "bindPose2.m[153]";
-connectAttr "rt_middle_jnt3.msg" "bindPose2.m[154]";
-connectAttr "rt_ring_jnt3.msg" "bindPose2.m[155]";
-connectAttr "lf_hip_jnt.msg" "bindPose2.m[156]";
-connectAttr "lf_knee_jnt.msg" "bindPose2.m[157]";
-connectAttr "lf_ankle_jnt.msg" "bindPose2.m[158]";
-connectAttr "lf_ball_jnt.msg" "bindPose2.m[159]";
-connectAttr "lf_knee_add_jnt.msg" "bindPose2.m[160]";
-connectAttr "lf_knee_add_b_jnt.msg" "bindPose2.m[161]";
-connectAttr "lf_knee_add_f_jnt.msg" "bindPose2.m[162]";
-connectAttr "lf_hip_add_jnt.msg" "bindPose2.m[163]";
-connectAttr "lf_hip_add_f_jnt.msg" "bindPose2.m[164]";
-connectAttr "lf_ankle_add_jnt.msg" "bindPose2.m[165]";
-connectAttr "lf_ankle_add_f_jnt.msg" "bindPose2.m[166]";
-connectAttr "lf_hip_add_b_jnt.msg" "bindPose2.m[167]";
-connectAttr "rt_hip_jnt.msg" "bindPose2.m[168]";
-connectAttr "rt_knee_jnt.msg" "bindPose2.m[169]";
-connectAttr "rt_ankle_jnt.msg" "bindPose2.m[170]";
-connectAttr "rt_ball_jnt.msg" "bindPose2.m[171]";
-connectAttr "lf_ankle_add_b_jnt.msg" "bindPose2.m[172]";
-connectAttr "lf_hip_add_l_jnt.msg" "bindPose2.m[173]";
-connectAttr "rt_ankle_add_jnt.msg" "bindPose2.m[174]";
-connectAttr "rt_ankle_add_f_jnt.msg" "bindPose2.m[175]";
-connectAttr "rt_knee_add_jnt.msg" "bindPose2.m[176]";
-connectAttr "rt_knee_add_f_jnt1.msg" "bindPose2.m[177]";
-connectAttr "rt_hip_add_jnt.msg" "bindPose2.m[178]";
-connectAttr "rt_hip_add_f_jnt.msg" "bindPose2.m[179]";
-connectAttr "rt_hip_add_r_jnt.msg" "bindPose2.m[180]";
-connectAttr "rt_ankle_add_b_jnt.msg" "bindPose2.m[181]";
-connectAttr "rt_knee_add_b_jnt.msg" "bindPose2.m[182]";
-connectAttr "rt_hip_add_b_jnt.msg" "bindPose2.m[183]";
-connectAttr "lf_wrist_add_jnt.msg" "bindPose2.m[184]";
-connectAttr "lf_wrist_add_u_jnt.msg" "bindPose2.m[185]";
-connectAttr "lf_elbow_add_jnt.msg" "bindPose2.m[186]";
-connectAttr "lf_elbow_add_f_jnt.msg" "bindPose2.m[187]";
-connectAttr "lf_shld_add_jnt.msg" "bindPose2.m[188]";
-connectAttr "lf_shld_add_u_jnt.msg" "bindPose2.m[189]";
-connectAttr "lf_wrist_add_f_jnt.msg" "bindPose2.m[190]";
-connectAttr "lf_wrist_add_d_jnt.msg" "bindPose2.m[191]";
-connectAttr "lf_elbow_add_b_jnt.msg" "bindPose2.m[192]";
-connectAttr "lf_shld_add_d_jnt.msg" "bindPose2.m[193]";
-connectAttr "rt_wrist_add_jnt.msg" "bindPose2.m[194]";
-connectAttr "rt_wrist_add_u_jnt.msg" "bindPose2.m[195]";
-connectAttr "rt_wrist_add_f_jnt.msg" "bindPose2.m[196]";
-connectAttr "rt_wrist_add_d_jnt.msg" "bindPose2.m[197]";
-connectAttr "rt_elbow_add_jnt.msg" "bindPose2.m[198]";
-connectAttr "rt_elbow_add_b_jnt.msg" "bindPose2.m[199]";
-connectAttr "rt_elbow_add_f_jnt.msg" "bindPose2.m[200]";
-connectAttr "rt_shld_add_jnt.msg" "bindPose2.m[201]";
-connectAttr "rt_shld_add_u_jnt.msg" "bindPose2.m[202]";
-connectAttr "rt_shld_add_d_jnt.msg" "bindPose2.m[203]";
-connectAttr "bindPose2.w" "bindPose2.p[0]";
-connectAttr "bindPose2.m[0]" "bindPose2.p[1]";
-connectAttr "bindPose2.m[1]" "bindPose2.p[2]";
-connectAttr "bindPose2.m[2]" "bindPose2.p[3]";
-connectAttr "bindPose2.m[3]" "bindPose2.p[4]";
-connectAttr "bindPose2.m[4]" "bindPose2.p[5]";
-connectAttr "bindPose2.m[5]" "bindPose2.p[6]";
-connectAttr "bindPose2.m[5]" "bindPose2.p[7]";
-connectAttr "bindPose2.m[5]" "bindPose2.p[8]";
-connectAttr "bindPose2.m[5]" "bindPose2.p[9]";
-connectAttr "bindPose2.m[9]" "bindPose2.p[10]";
-connectAttr "bindPose2.m[10]" "bindPose2.p[11]";
-connectAttr "bindPose2.m[11]" "bindPose2.p[12]";
-connectAttr "bindPose2.m[9]" "bindPose2.p[13]";
-connectAttr "bindPose2.m[13]" "bindPose2.p[14]";
-connectAttr "bindPose2.m[14]" "bindPose2.p[15]";
-connectAttr "bindPose2.m[9]" "bindPose2.p[16]";
-connectAttr "bindPose2.m[16]" "bindPose2.p[17]";
-connectAttr "bindPose2.m[3]" "bindPose2.p[18]";
-connectAttr "bindPose2.m[18]" "bindPose2.p[19]";
-connectAttr "bindPose2.m[19]" "bindPose2.p[20]";
-connectAttr "bindPose2.m[20]" "bindPose2.p[21]";
-connectAttr "bindPose2.m[21]" "bindPose2.p[22]";
-connectAttr "bindPose2.m[22]" "bindPose2.p[23]";
-connectAttr "bindPose2.m[23]" "bindPose2.p[24]";
-connectAttr "bindPose2.m[24]" "bindPose2.p[25]";
-connectAttr "bindPose2.m[21]" "bindPose2.p[26]";
-connectAttr "bindPose2.m[26]" "bindPose2.p[27]";
-connectAttr "bindPose2.m[27]" "bindPose2.p[28]";
-connectAttr "bindPose2.m[28]" "bindPose2.p[29]";
-connectAttr "bindPose2.m[21]" "bindPose2.p[30]";
-connectAttr "bindPose2.m[30]" "bindPose2.p[31]";
-connectAttr "bindPose2.m[31]" "bindPose2.p[32]";
-connectAttr "bindPose2.m[32]" "bindPose2.p[33]";
-connectAttr "bindPose2.m[21]" "bindPose2.p[34]";
-connectAttr "bindPose2.m[34]" "bindPose2.p[35]";
-connectAttr "bindPose2.m[35]" "bindPose2.p[36]";
-connectAttr "bindPose2.m[36]" "bindPose2.p[37]";
-connectAttr "bindPose2.m[21]" "bindPose2.p[38]";
-connectAttr "bindPose2.m[38]" "bindPose2.p[39]";
-connectAttr "bindPose2.m[39]" "bindPose2.p[40]";
-connectAttr "bindPose2.m[40]" "bindPose2.p[41]";
-connectAttr "bindPose2.m[3]" "bindPose2.p[42]";
-connectAttr "bindPose2.m[3]" "bindPose2.p[43]";
-connectAttr "bindPose2.m[3]" "bindPose2.p[44]";
-connectAttr "bindPose2.m[44]" "bindPose2.p[45]";
-connectAttr "bindPose2.m[45]" "bindPose2.p[46]";
-connectAttr "bindPose2.m[46]" "bindPose2.p[47]";
-connectAttr "bindPose2.m[47]" "bindPose2.p[48]";
-connectAttr "bindPose2.m[48]" "bindPose2.p[49]";
-connectAttr "bindPose2.m[49]" "bindPose2.p[50]";
-connectAttr "bindPose2.m[47]" "bindPose2.p[52]";
-connectAttr "bindPose2.m[52]" "bindPose2.p[53]";
-connectAttr "bindPose2.m[53]" "bindPose2.p[54]";
-connectAttr "bindPose2.m[47]" "bindPose2.p[56]";
-connectAttr "bindPose2.m[56]" "bindPose2.p[57]";
-connectAttr "bindPose2.m[57]" "bindPose2.p[58]";
-connectAttr "bindPose2.m[47]" "bindPose2.p[60]";
-connectAttr "bindPose2.m[60]" "bindPose2.p[61]";
-connectAttr "bindPose2.m[61]" "bindPose2.p[62]";
-connectAttr "bindPose2.m[47]" "bindPose2.p[64]";
-connectAttr "bindPose2.m[64]" "bindPose2.p[65]";
-connectAttr "bindPose2.m[65]" "bindPose2.p[66]";
-connectAttr "bindPose2.m[0]" "bindPose2.p[136]";
-connectAttr "bindPose2.m[3]" "bindPose2.p[137]";
-connectAttr "rt_clavicle_jnt.msg" "bindPose2.p[138]";
-connectAttr "rt_shld_jnt.msg" "bindPose2.p[139]";
-connectAttr "rt_elbow_jnt.msg" "bindPose2.p[140]";
-connectAttr "rt_wrist_jnt.msg" "bindPose2.p[141]";
-connectAttr "rt_thumb_jnt5.msg" "bindPose2.p[142]";
-connectAttr "rt_thumb_jnt2.msg" "bindPose2.p[143]";
-connectAttr "bindPose2.m[140]" "bindPose2.p[144]";
-connectAttr "bindPose2.m[140]" "bindPose2.p[145]";
-connectAttr "bindPose2.m[144]" "bindPose2.p[146]";
-connectAttr "rt_index_jnt2.msg" "bindPose2.p[147]";
-connectAttr "bindPose2.m[140]" "bindPose2.p[148]";
-connectAttr "rt_ltl_jnt1.msg" "bindPose2.p[149]";
-connectAttr "rt_ltl_jnt2.msg" "bindPose2.p[150]";
-connectAttr "bindPose2.m[140]" "bindPose2.p[151]";
-connectAttr "rt_ring_jnt1.msg" "bindPose2.p[152]";
-connectAttr "bindPose2.m[145]" "bindPose2.p[153]";
-connectAttr "rt_middle_jnt2.msg" "bindPose2.p[154]";
-connectAttr "bindPose2.m[152]" "bindPose2.p[155]";
-connectAttr "bindPose2.m[136]" "bindPose2.p[156]";
-connectAttr "lf_hip_jnt.msg" "bindPose2.p[157]";
-connectAttr "lf_knee_jnt.msg" "bindPose2.p[158]";
-connectAttr "lf_ankle_jnt.msg" "bindPose2.p[159]";
-connectAttr "bindPose2.m[157]" "bindPose2.p[160]";
-connectAttr "lf_knee_add_jnt.msg" "bindPose2.p[161]";
-connectAttr "bindPose2.m[160]" "bindPose2.p[162]";
-connectAttr "bindPose2.m[156]" "bindPose2.p[163]";
-connectAttr "lf_hip_add_jnt.msg" "bindPose2.p[164]";
-connectAttr "bindPose2.m[158]" "bindPose2.p[165]";
-connectAttr "lf_ankle_add_jnt.msg" "bindPose2.p[166]";
-connectAttr "bindPose2.m[163]" "bindPose2.p[167]";
-connectAttr "bindPose2.m[136]" "bindPose2.p[168]";
-connectAttr "rt_hip_jnt.msg" "bindPose2.p[169]";
-connectAttr "rt_knee_jnt.msg" "bindPose2.p[170]";
-connectAttr "rt_ankle_jnt.msg" "bindPose2.p[171]";
-connectAttr "bindPose2.m[165]" "bindPose2.p[172]";
-connectAttr "bindPose2.m[163]" "bindPose2.p[173]";
-connectAttr "bindPose2.m[170]" "bindPose2.p[174]";
-connectAttr "rt_ankle_add_jnt.msg" "bindPose2.p[175]";
-connectAttr "bindPose2.m[169]" "bindPose2.p[176]";
-connectAttr "rt_knee_add_jnt.msg" "bindPose2.p[177]";
-connectAttr "bindPose2.m[168]" "bindPose2.p[178]";
-connectAttr "rt_hip_add_jnt.msg" "bindPose2.p[179]";
-connectAttr "bindPose2.m[178]" "bindPose2.p[180]";
-connectAttr "bindPose2.m[174]" "bindPose2.p[181]";
-connectAttr "bindPose2.m[176]" "bindPose2.p[182]";
-connectAttr "bindPose2.m[178]" "bindPose2.p[183]";
-connectAttr "bindPose2.m[21]" "bindPose2.p[184]";
-connectAttr "lf_wrist_add_jnt.msg" "bindPose2.p[185]";
-connectAttr "bindPose2.m[20]" "bindPose2.p[186]";
-connectAttr "lf_elbow_add_jnt.msg" "bindPose2.p[187]";
-connectAttr "bindPose2.m[19]" "bindPose2.p[188]";
-connectAttr "lf_shld_add_jnt.msg" "bindPose2.p[189]";
-connectAttr "bindPose2.m[184]" "bindPose2.p[190]";
-connectAttr "bindPose2.m[184]" "bindPose2.p[191]";
-connectAttr "bindPose2.m[186]" "bindPose2.p[192]";
-connectAttr "bindPose2.m[188]" "bindPose2.p[193]";
-connectAttr "bindPose2.m[140]" "bindPose2.p[194]";
-connectAttr "rt_wrist_add_jnt.msg" "bindPose2.p[195]";
-connectAttr "bindPose2.m[194]" "bindPose2.p[196]";
-connectAttr "bindPose2.m[194]" "bindPose2.p[197]";
-connectAttr "bindPose2.m[139]" "bindPose2.p[198]";
-connectAttr "rt_elbow_add_jnt.msg" "bindPose2.p[199]";
-connectAttr "bindPose2.m[198]" "bindPose2.p[200]";
-connectAttr "bindPose2.m[138]" "bindPose2.p[201]";
-connectAttr "rt_shld_add_jnt.msg" "bindPose2.p[202]";
-connectAttr "bindPose2.m[201]" "bindPose2.p[203]";
-connectAttr "pelvis_jnt.bps" "bindPose2.wm[136]";
-connectAttr "rt_clavicle_jnt.bps" "bindPose2.wm[137]";
-connectAttr "rt_shld_jnt.bps" "bindPose2.wm[138]";
-connectAttr "rt_elbow_jnt.bps" "bindPose2.wm[139]";
-connectAttr "rt_wrist_jnt.bps" "bindPose2.wm[140]";
-connectAttr "rt_thumb_jnt5.bps" "bindPose2.wm[141]";
-connectAttr "rt_thumb_jnt2.bps" "bindPose2.wm[142]";
-connectAttr "rt_thumb_jnt3.bps" "bindPose2.wm[143]";
-connectAttr "rt_index_jnt1.bps" "bindPose2.wm[144]";
-connectAttr "rt_middle_jnt1.bps" "bindPose2.wm[145]";
-connectAttr "rt_index_jnt2.bps" "bindPose2.wm[146]";
-connectAttr "rt_index_jnt3.bps" "bindPose2.wm[147]";
-connectAttr "rt_ltl_jnt1.bps" "bindPose2.wm[148]";
-connectAttr "rt_ltl_jnt2.bps" "bindPose2.wm[149]";
-connectAttr "rt_ltl_jnt3.bps" "bindPose2.wm[150]";
-connectAttr "rt_ring_jnt1.bps" "bindPose2.wm[151]";
-connectAttr "rt_ring_jnt2.bps" "bindPose2.wm[152]";
-connectAttr "rt_middle_jnt2.bps" "bindPose2.wm[153]";
-connectAttr "rt_middle_jnt3.bps" "bindPose2.wm[154]";
-connectAttr "rt_ring_jnt3.bps" "bindPose2.wm[155]";
-connectAttr "lf_hip_jnt.bps" "bindPose2.wm[156]";
-connectAttr "lf_knee_jnt.bps" "bindPose2.wm[157]";
-connectAttr "lf_ankle_jnt.bps" "bindPose2.wm[158]";
-connectAttr "lf_ball_jnt.bps" "bindPose2.wm[159]";
-connectAttr "lf_knee_add_jnt.bps" "bindPose2.wm[160]";
-connectAttr "lf_knee_add_b_jnt.bps" "bindPose2.wm[161]";
-connectAttr "lf_knee_add_f_jnt.bps" "bindPose2.wm[162]";
-connectAttr "lf_hip_add_jnt.bps" "bindPose2.wm[163]";
-connectAttr "lf_hip_add_f_jnt.bps" "bindPose2.wm[164]";
-connectAttr "lf_ankle_add_jnt.bps" "bindPose2.wm[165]";
-connectAttr "lf_ankle_add_f_jnt.bps" "bindPose2.wm[166]";
-connectAttr "lf_hip_add_b_jnt.bps" "bindPose2.wm[167]";
-connectAttr "rt_hip_jnt.bps" "bindPose2.wm[168]";
-connectAttr "rt_knee_jnt.bps" "bindPose2.wm[169]";
-connectAttr "rt_ankle_jnt.bps" "bindPose2.wm[170]";
-connectAttr "rt_ball_jnt.bps" "bindPose2.wm[171]";
-connectAttr "lf_ankle_add_b_jnt.bps" "bindPose2.wm[172]";
-connectAttr "lf_hip_add_l_jnt.bps" "bindPose2.wm[173]";
-connectAttr "rt_ankle_add_jnt.bps" "bindPose2.wm[174]";
-connectAttr "rt_ankle_add_f_jnt.bps" "bindPose2.wm[175]";
-connectAttr "rt_knee_add_jnt.bps" "bindPose2.wm[176]";
-connectAttr "rt_knee_add_f_jnt1.bps" "bindPose2.wm[177]";
-connectAttr "rt_hip_add_jnt.bps" "bindPose2.wm[178]";
-connectAttr "rt_hip_add_f_jnt.bps" "bindPose2.wm[179]";
-connectAttr "rt_hip_add_r_jnt.bps" "bindPose2.wm[180]";
-connectAttr "rt_ankle_add_b_jnt.bps" "bindPose2.wm[181]";
-connectAttr "rt_knee_add_b_jnt.bps" "bindPose2.wm[182]";
-connectAttr "rt_hip_add_b_jnt.bps" "bindPose2.wm[183]";
-connectAttr "lf_wrist_add_jnt.bps" "bindPose2.wm[184]";
-connectAttr "lf_wrist_add_u_jnt.bps" "bindPose2.wm[185]";
-connectAttr "lf_elbow_add_jnt.bps" "bindPose2.wm[186]";
-connectAttr "lf_elbow_add_f_jnt.bps" "bindPose2.wm[187]";
-connectAttr "lf_shld_add_jnt.bps" "bindPose2.wm[188]";
-connectAttr "lf_shld_add_u_jnt.bps" "bindPose2.wm[189]";
-connectAttr "lf_wrist_add_f_jnt.bps" "bindPose2.wm[190]";
-connectAttr "lf_wrist_add_d_jnt.bps" "bindPose2.wm[191]";
-connectAttr "lf_elbow_add_b_jnt.bps" "bindPose2.wm[192]";
-connectAttr "lf_shld_add_d_jnt.bps" "bindPose2.wm[193]";
-connectAttr "rt_wrist_add_jnt.bps" "bindPose2.wm[194]";
-connectAttr "rt_wrist_add_u_jnt.bps" "bindPose2.wm[195]";
-connectAttr "rt_wrist_add_f_jnt.bps" "bindPose2.wm[196]";
-connectAttr "rt_wrist_add_d_jnt.bps" "bindPose2.wm[197]";
-connectAttr "rt_elbow_add_jnt.bps" "bindPose2.wm[198]";
-connectAttr "rt_elbow_add_b_jnt.bps" "bindPose2.wm[199]";
-connectAttr "rt_elbow_add_f_jnt.bps" "bindPose2.wm[200]";
-connectAttr "rt_shld_add_jnt.bps" "bindPose2.wm[201]";
-connectAttr "rt_shld_add_u_jnt.bps" "bindPose2.wm[202]";
-connectAttr "rt_shld_add_d_jnt.bps" "bindPose2.wm[203]";
-connectAttr "unitConversion1.o" "lf_wrist_add_b_jnt_translateY.i";
-connectAttr "lf_wrist_jnt.rz" "unitConversion1.i";
-connectAttr "unitConversion2.o" "lf_wrist_add_f_jnt_translateY.i";
-connectAttr "lf_wrist_jnt.rz" "unitConversion2.i";
-connectAttr "unitConversion3.o" "lf_wrist_add_d_jnt_translateZ.i";
-connectAttr "lf_wrist_jnt.ry" "unitConversion3.i";
-connectAttr "unitConversion4.o" "lf_wrist_add_u_jnt_translateZ.i";
-connectAttr "lf_wrist_jnt.ry" "unitConversion4.i";
-connectAttr "unitConversion9.o" "lf_elbow_add_b_jnt_translateY.i";
-connectAttr "lf_elbow_jnt.rz" "unitConversion9.i";
-connectAttr "unitConversion10.o" "lf_elbow_add_f_jnt_translateY.i";
-connectAttr "lf_elbow_jnt.rz" "unitConversion10.i";
-connectAttr "unitConversion13.o" "lf_shld_add_f_jnt_translateY.i";
-connectAttr "lf_shld_jnt.rz" "unitConversion13.i";
-connectAttr "unitConversion15.o" "lf_shld_add_u_jnt_translateZ.i";
-connectAttr "lf_shld_jnt.ry" "unitConversion15.i";
-connectAttr "unitConversion16.o" "lf_shld_add_d_jnt_translateZ.i";
-connectAttr "lf_shld_jnt.ry" "unitConversion16.i";
-connectAttr "unitConversion21.o" "lf_ankle_add_f_jnt_translateY.i";
-connectAttr "lf_ankle_jnt.rz" "unitConversion21.i";
-connectAttr "unitConversion22.o" "lf_ankle_add_b_jnt_translateY.i";
-connectAttr "lf_ankle_jnt.rz" "unitConversion22.i";
-connectAttr "unitConversion23.o" "lf_ankle_add_l_jnt_translateZ.i";
-connectAttr "lf_ankle_jnt.ry" "unitConversion23.i";
-connectAttr "unitConversion24.o" "lf_ankle_add_r_jnt_translateZ.i";
-connectAttr "lf_ankle_jnt.ry" "unitConversion24.i";
-connectAttr "unitConversion25.o" "rt_ankle_add_f_jnt_translateY.i";
-connectAttr "rt_ankle_jnt.rz" "unitConversion25.i";
-connectAttr "unitConversion26.o" "rt_ankle_add_b_jnt_translateY.i";
-connectAttr "rt_ankle_jnt.rz" "unitConversion26.i";
-connectAttr "rt_ankle_jnt.rz" "unitConversion27.i";
-connectAttr "unitConversion28.o" "rt_ankle_add_r_jnt_translateZ.i";
-connectAttr "rt_ankle_jnt.ry" "unitConversion28.i";
-connectAttr "unitConversion29.o" "rt_ankle_add_l_jnt_translateZ.i";
-connectAttr "rt_ankle_jnt.ry" "unitConversion29.i";
-connectAttr "unitConversion30.o" "lf_knee_add_b_jnt_translateY.i";
-connectAttr "lf_knee_jnt.rz" "unitConversion30.i";
-connectAttr "unitConversion31.o" "lf_knee_add_f_jnt_translateY.i";
-connectAttr "lf_knee_jnt.rz" "unitConversion31.i";
-connectAttr "unitConversion32.o" "rt_knee_add_b_jnt_translateY.i";
-connectAttr "rt_knee_jnt.rz" "unitConversion32.i";
-connectAttr "unitConversion33.o" "rt_knee_add_f_jnt_translateY.i";
-connectAttr "rt_knee_jnt.rz" "unitConversion33.i";
-connectAttr "unitConversion34.o" "lf_hip_add_f_jnt_translateY.i";
-connectAttr "lf_hip_jnt.rz" "unitConversion34.i";
-connectAttr "unitConversion35.o" "lf_hip_add_b_jnt_translateY.i";
-connectAttr "lf_hip_jnt.rz" "unitConversion35.i";
-connectAttr "unitConversion36.o" "lf_hip_add_l_jnt_translateZ.i";
-connectAttr "lf_hip_jnt.ry" "unitConversion36.i";
-connectAttr "unitConversion37.o" "rt_hip_add_r_jnt_translateZ.i";
-connectAttr "rt_hip_jnt.ry" "unitConversion37.i";
-connectAttr "unitConversion38.o" "rt_hip_add_b_jnt_translateY.i";
-connectAttr "rt_hip_jnt.rz" "unitConversion38.i";
-connectAttr "unitConversion39.o" "rt_hip_add_f_jnt_translateY.i";
-connectAttr "rt_hip_jnt.rz" "unitConversion39.i";
-connectAttr "skinCluster7GroupParts.og" "skinCluster7.ip[0].ig";
-connectAttr "broom_geoShapeOrig.o" "skinCluster7.orggeom[0]";
-connectAttr "bindPose3.msg" "skinCluster7.bp";
-connectAttr "broom_jnt1.wm" "skinCluster7.ma[0]";
-connectAttr "broom_leaf_jnt4.wm" "skinCluster7.ma[4]";
-connectAttr "broom_leaf_jnt5.wm" "skinCluster7.ma[5]";
-connectAttr "broom_leaf_jnt6.wm" "skinCluster7.ma[6]";
-connectAttr "broom_leaf_jnt7.wm" "skinCluster7.ma[7]";
-connectAttr "broom_leaf_jnt8.wm" "skinCluster7.ma[8]";
-connectAttr "broom_leaf_jnt9.wm" "skinCluster7.ma[9]";
-connectAttr "broom_bot_jnt.wm" "skinCluster7.ma[10]";
-connectAttr "broom_rod_jnt1.wm" "skinCluster7.ma[11]";
-connectAttr "broom_rod_jnt2.wm" "skinCluster7.ma[12]";
-connectAttr "broom_rod_jnt3.wm" "skinCluster7.ma[13]";
-connectAttr "broom_leaf_jnt1.wm" "skinCluster7.ma[14]";
-connectAttr "broom_leaf_jnt2.wm" "skinCluster7.ma[15]";
-connectAttr "broom_leaf_jnt23.wm" "skinCluster7.ma[16]";
-connectAttr "broom_jnt1.liw" "skinCluster7.lw[0]";
-connectAttr "broom_leaf_jnt4.liw" "skinCluster7.lw[4]";
-connectAttr "broom_leaf_jnt5.liw" "skinCluster7.lw[5]";
-connectAttr "broom_leaf_jnt6.liw" "skinCluster7.lw[6]";
-connectAttr "broom_leaf_jnt7.liw" "skinCluster7.lw[7]";
-connectAttr "broom_leaf_jnt8.liw" "skinCluster7.lw[8]";
-connectAttr "broom_leaf_jnt9.liw" "skinCluster7.lw[9]";
-connectAttr "broom_bot_jnt.liw" "skinCluster7.lw[10]";
-connectAttr "broom_rod_jnt1.liw" "skinCluster7.lw[11]";
-connectAttr "broom_rod_jnt2.liw" "skinCluster7.lw[12]";
-connectAttr "broom_rod_jnt3.liw" "skinCluster7.lw[13]";
-connectAttr "broom_leaf_jnt1.liw" "skinCluster7.lw[14]";
-connectAttr "broom_leaf_jnt2.liw" "skinCluster7.lw[15]";
-connectAttr "broom_leaf_jnt23.liw" "skinCluster7.lw[16]";
-connectAttr "broom_jnt1.obcc" "skinCluster7.ifcl[0]";
-connectAttr "broom_leaf_jnt4.obcc" "skinCluster7.ifcl[4]";
-connectAttr "broom_leaf_jnt5.obcc" "skinCluster7.ifcl[5]";
-connectAttr "broom_leaf_jnt6.obcc" "skinCluster7.ifcl[6]";
-connectAttr "broom_leaf_jnt7.obcc" "skinCluster7.ifcl[7]";
-connectAttr "broom_leaf_jnt8.obcc" "skinCluster7.ifcl[8]";
-connectAttr "broom_leaf_jnt9.obcc" "skinCluster7.ifcl[9]";
-connectAttr "broom_bot_jnt.obcc" "skinCluster7.ifcl[10]";
-connectAttr "broom_rod_jnt1.obcc" "skinCluster7.ifcl[11]";
-connectAttr "broom_rod_jnt2.obcc" "skinCluster7.ifcl[12]";
-connectAttr "broom_rod_jnt3.obcc" "skinCluster7.ifcl[13]";
-connectAttr "broom_leaf_jnt1.obcc" "skinCluster7.ifcl[14]";
-connectAttr "broom_leaf_jnt2.obcc" "skinCluster7.ifcl[15]";
-connectAttr "broom_leaf_jnt23.obcc" "skinCluster7.ifcl[16]";
-connectAttr "broom_skeleton.msg" "bindPose3.m[0]";
-connectAttr "broom_jnt1.msg" "bindPose3.m[1]";
-connectAttr "broom_leaf_jnt1.msg" "bindPose3.m[2]";
-connectAttr "broom_leaf_jnt2.msg" "bindPose3.m[3]";
-connectAttr "broom_leaf_jnt4.msg" "bindPose3.m[5]";
-connectAttr "broom_leaf_jnt5.msg" "bindPose3.m[6]";
-connectAttr "broom_leaf_jnt6.msg" "bindPose3.m[7]";
-connectAttr "broom_leaf_jnt7.msg" "bindPose3.m[8]";
-connectAttr "broom_leaf_jnt8.msg" "bindPose3.m[9]";
-connectAttr "broom_leaf_jnt9.msg" "bindPose3.m[10]";
-connectAttr "broom_bot_jnt.msg" "bindPose3.m[11]";
-connectAttr "broom_rod_jnt1.msg" "bindPose3.m[12]";
-connectAttr "broom_rod_jnt2.msg" "bindPose3.m[13]";
-connectAttr "broom_rod_jnt3.msg" "bindPose3.m[14]";
-connectAttr "broom_leaf_jnt23.msg" "bindPose3.m[15]";
-connectAttr "bindPose3.w" "bindPose3.p[0]";
-connectAttr "bindPose3.m[0]" "bindPose3.p[1]";
-connectAttr "bindPose3.m[1]" "bindPose3.p[2]";
-connectAttr "bindPose3.m[2]" "bindPose3.p[3]";
-connectAttr "bindPose3.m[1]" "bindPose3.p[5]";
-connectAttr "bindPose3.m[5]" "bindPose3.p[6]";
-connectAttr "bindPose3.m[6]" "bindPose3.p[7]";
-connectAttr "bindPose3.m[1]" "bindPose3.p[8]";
-connectAttr "bindPose3.m[8]" "bindPose3.p[9]";
-connectAttr "bindPose3.m[9]" "bindPose3.p[10]";
-connectAttr "bindPose3.m[1]" "bindPose3.p[11]";
-connectAttr "bindPose3.m[11]" "bindPose3.p[12]";
-connectAttr "bindPose3.m[11]" "bindPose3.p[13]";
-connectAttr "bindPose3.m[11]" "bindPose3.p[14]";
-connectAttr "bindPose3.m[3]" "bindPose3.p[15]";
-connectAttr "broom_jnt1.bps" "bindPose3.wm[1]";
-connectAttr "broom_leaf_jnt1.bps" "bindPose3.wm[2]";
-connectAttr "broom_leaf_jnt2.bps" "bindPose3.wm[3]";
-connectAttr "broom_leaf_jnt4.bps" "bindPose3.wm[5]";
-connectAttr "broom_leaf_jnt5.bps" "bindPose3.wm[6]";
-connectAttr "broom_leaf_jnt6.bps" "bindPose3.wm[7]";
-connectAttr "broom_leaf_jnt7.bps" "bindPose3.wm[8]";
-connectAttr "broom_leaf_jnt8.bps" "bindPose3.wm[9]";
-connectAttr "broom_leaf_jnt9.bps" "bindPose3.wm[10]";
-connectAttr "broom_bot_jnt.bps" "bindPose3.wm[11]";
-connectAttr "broom_rod_jnt1.bps" "bindPose3.wm[12]";
-connectAttr "broom_rod_jnt2.bps" "bindPose3.wm[13]";
-connectAttr "broom_rod_jnt3.bps" "bindPose3.wm[14]";
-connectAttr "broom_leaf_jnt23.bps" "bindPose3.wm[15]";
-connectAttr "unitConversion42.o" "lf_ribbon_tape_rotateZ.i";
-connectAttr "lf_hip_jnt.rz" "unitConversion42.i";
-connectAttr "unitConversion43.o" "rt_ribbon_tape_rotateZ.i";
-connectAttr "rt_hip_jnt.rz" "unitConversion43.i";
-connectAttr "lf_ball_add_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_ball_add_u_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_ball_add_d_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_ball_add_jnt_orientConstraint1.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_knee_add_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_knee_add_f_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_knee_add_b_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_knee_add_jnt_orientConstraint1.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_ankle_add_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_ankle_add_f_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_ankle_add_r_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_ankle_add_b_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_ankle_add_l_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_ankle_add_jnt_orientConstraint1.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_hip_add_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_hip_add_f_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_hip_add_b_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_hip_add_l_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_hip_add_jnt_orientConstraint1.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_elbow_add_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_elbow_add_b_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_elbow_add_f_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_elbow_add_jnt_orientConstraint1.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_shld_add_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_shld_add_u_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_shld_add_f_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_shld_add_d_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_shld_add_jnt_orientConstraint1.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_wrist_add_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_wrist_add_b_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_wrist_add_u_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_wrist_add_f_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_wrist_add_d_jnt.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_wrist_add_jnt_orientConstraint1.iog" "lf_add_jnts.dsm" -na;
-connectAttr "lf_add_jnts.msg" "add_jnts.dnsm" -na;
-connectAttr "rt_add_jnts.msg" "add_jnts.dnsm" -na;
-connectAttr "rt_ankle_add_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_ankle_add_f_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_ankle_add_r_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_ankle_add_b_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_ankle_add_l_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_ankle_add_jnt_orientConstraint1.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_ball_add_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_ball_add_u_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_ball_add_d_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_ball_add_jnt_orientConstraint1.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_knee_add_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_knee_add_b_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_knee_add_f_jnt1.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_knee_add_jnt_orientConstraint1.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_hip_add_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_hip_add_f_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_hip_add_b_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_hip_add_r_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_hip_add_jnt_orientConstraint1.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_wrist_add_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_wrist_add_b_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_wrist_add_u_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_wrist_add_f_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_wrist_add_d_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_elbow_add_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_elbow_add_b_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_elbow_add_f_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_shld_add_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_shld_add_u_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_shld_add_f_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "rt_shld_add_d_jnt.iog" "rt_add_jnts.dsm" -na;
-connectAttr "lf_arm_switch_ctrl.ikFk" "reverse1.ix";
-connectAttr "rt_arm_switch_ctrl.ikFk" "reverse2.ix";
-connectAttr "body_geoShapeOrig.w" "skinCluster9.ip[0].ig";
-connectAttr "body_geoShapeOrig.o" "skinCluster9.orggeom[0]";
-connectAttr "pelvis_jnt.wm" "skinCluster9.ma[0]";
-connectAttr "rt_shld_jnt.wm" "skinCluster9.ma[1]";
-connectAttr "rt_clavicle_jnt.wm" "skinCluster9.ma[2]";
-connectAttr "rt_thumb_jnt3.wm" "skinCluster9.ma[3]";
-connectAttr "rt_index_jnt1.wm" "skinCluster9.ma[4]";
-connectAttr "rt_wrist_jnt.wm" "skinCluster9.ma[5]";
-connectAttr "rt_thumb_jnt2.wm" "skinCluster9.ma[6]";
-connectAttr "rt_elbow_jnt.wm" "skinCluster9.ma[7]";
-connectAttr "rt_thumb_jnt5.wm" "skinCluster9.ma[8]";
-connectAttr "rt_middle_jnt1.wm" "skinCluster9.ma[9]";
-connectAttr "rt_index_jnt3.wm" "skinCluster9.ma[10]";
-connectAttr "rt_ltl_jnt1.wm" "skinCluster9.ma[11]";
-connectAttr "rt_index_jnt2.wm" "skinCluster9.ma[12]";
-connectAttr "rt_ltl_jnt2.wm" "skinCluster9.ma[13]";
-connectAttr "rt_ltl_jnt3.wm" "skinCluster9.ma[14]";
-connectAttr "rt_ring_jnt2.wm" "skinCluster9.ma[15]";
-connectAttr "rt_middle_jnt2.wm" "skinCluster9.ma[16]";
-connectAttr "rt_middle_jnt3.wm" "skinCluster9.ma[17]";
-connectAttr "rt_ring_jnt1.wm" "skinCluster9.ma[18]";
-connectAttr "rt_ring_jnt3.wm" "skinCluster9.ma[19]";
-connectAttr "lf_knee_jnt.wm" "skinCluster9.ma[20]";
-connectAttr "lf_ankle_jnt.wm" "skinCluster9.ma[21]";
-connectAttr "lf_ball_jnt.wm" "skinCluster9.ma[22]";
-connectAttr "lf_hip_jnt.wm" "skinCluster9.ma[23]";
-connectAttr "lf_knee_add_b_jnt.wm" "skinCluster9.ma[24]";
-connectAttr "lf_knee_add_f_jnt.wm" "skinCluster9.ma[25]";
-connectAttr "lf_hip_add_f_jnt.wm" "skinCluster9.ma[26]";
-connectAttr "lf_ankle_add_f_jnt.wm" "skinCluster9.ma[27]";
-connectAttr "lf_hip_add_b_jnt.wm" "skinCluster9.ma[28]";
-connectAttr "rt_ball_jnt.wm" "skinCluster9.ma[29]";
-connectAttr "lf_ankle_add_b_jnt.wm" "skinCluster9.ma[30]";
-connectAttr "rt_knee_jnt.wm" "skinCluster9.ma[31]";
-connectAttr "rt_hip_jnt.wm" "skinCluster9.ma[32]";
-connectAttr "lf_hip_add_l_jnt.wm" "skinCluster9.ma[33]";
-connectAttr "rt_ankle_jnt.wm" "skinCluster9.ma[34]";
-connectAttr "rt_ankle_add_f_jnt.wm" "skinCluster9.ma[35]";
-connectAttr "rt_knee_add_f_jnt1.wm" "skinCluster9.ma[36]";
-connectAttr "rt_hip_add_f_jnt.wm" "skinCluster9.ma[37]";
-connectAttr "rt_hip_add_r_jnt.wm" "skinCluster9.ma[38]";
-connectAttr "rt_ankle_add_b_jnt.wm" "skinCluster9.ma[39]";
-connectAttr "rt_knee_add_b_jnt.wm" "skinCluster9.ma[40]";
-connectAttr "rt_hip_add_b_jnt.wm" "skinCluster9.ma[41]";
-connectAttr "jaw_jnt.wm" "skinCluster9.ma[42]";
-connectAttr "spine_jnt2.wm" "skinCluster9.ma[43]";
-connectAttr "lf_ear_ring_jnt.wm" "skinCluster9.ma[44]";
-connectAttr "spine_jnt1.wm" "skinCluster9.ma[45]";
-connectAttr "neck_jnt1.wm" "skinCluster9.ma[46]";
-connectAttr "spine_jnt3.wm" "skinCluster9.ma[47]";
-connectAttr "head_jnt.wm" "skinCluster9.ma[48]";
-connectAttr "rt_ear_ring_jnt.wm" "skinCluster9.ma[49]";
-connectAttr "lf_elbow_jnt.wm" "skinCluster9.ma[50]";
-connectAttr "lf_shld_jnt.wm" "skinCluster9.ma[51]";
-connectAttr "lf_clavicle_jnt.wm" "skinCluster9.ma[52]";
-connectAttr "lf_thumb_jnt3.wm" "skinCluster9.ma[53]";
-connectAttr "lf_index_jnt3.wm" "skinCluster9.ma[54]";
-connectAttr "lf_thumb_jnt2.wm" "skinCluster9.ma[55]";
-connectAttr "lf_thumb_jnt5.wm" "skinCluster9.ma[56]";
-connectAttr "lf_index_jnt2.wm" "skinCluster9.ma[57]";
-connectAttr "lf_wrist_jnt.wm" "skinCluster9.ma[58]";
-connectAttr "lf_index_jnt1.wm" "skinCluster9.ma[59]";
-connectAttr "lf_middle_jnt1.wm" "skinCluster9.ma[60]";
-connectAttr "lf_ltl_jnt1.wm" "skinCluster9.ma[61]";
-connectAttr "lf_middle_jnt3.wm" "skinCluster9.ma[62]";
-connectAttr "lf_ltl_jnt2.wm" "skinCluster9.ma[63]";
-connectAttr "lf_ltl_jnt3.wm" "skinCluster9.ma[64]";
-connectAttr "lf_middle_jnt2.wm" "skinCluster9.ma[65]";
-connectAttr "lf_ring_jnt3.wm" "skinCluster9.ma[66]";
-connectAttr "lf_wrist_add_u_jnt.wm" "skinCluster9.ma[67]";
-connectAttr "lf_ring_jnt1.wm" "skinCluster9.ma[68]";
-connectAttr "lf_ring_jnt2.wm" "skinCluster9.ma[69]";
-connectAttr "lf_elbow_add_f_jnt.wm" "skinCluster9.ma[70]";
-connectAttr "lf_shld_add_u_jnt.wm" "skinCluster9.ma[71]";
-connectAttr "lf_wrist_add_f_jnt.wm" "skinCluster9.ma[72]";
-connectAttr "lf_wrist_add_d_jnt.wm" "skinCluster9.ma[73]";
-connectAttr "lf_elbow_add_b_jnt.wm" "skinCluster9.ma[74]";
-connectAttr "lf_shld_add_d_jnt.wm" "skinCluster9.ma[75]";
-connectAttr "lf_chest_jnt.wm" "skinCluster9.ma[76]";
-connectAttr "rt_chest_jnt.wm" "skinCluster9.ma[77]";
-connectAttr "rt_wrist_add_u_jnt.wm" "skinCluster9.ma[78]";
-connectAttr "rt_wrist_add_f_jnt.wm" "skinCluster9.ma[79]";
-connectAttr "rt_wrist_add_d_jnt.wm" "skinCluster9.ma[80]";
-connectAttr "rt_elbow_add_b_jnt.wm" "skinCluster9.ma[81]";
-connectAttr "rt_elbow_add_f_jnt.wm" "skinCluster9.ma[82]";
-connectAttr "rt_shld_add_u_jnt.wm" "skinCluster9.ma[83]";
-connectAttr "rt_shld_add_d_jnt.wm" "skinCluster9.ma[84]";
-connectAttr "pelvis_jnt.liw" "skinCluster9.lw[0]";
-connectAttr "rt_shld_jnt.liw" "skinCluster9.lw[1]";
-connectAttr "rt_clavicle_jnt.liw" "skinCluster9.lw[2]";
-connectAttr "rt_thumb_jnt3.liw" "skinCluster9.lw[3]";
-connectAttr "rt_index_jnt1.liw" "skinCluster9.lw[4]";
-connectAttr "rt_wrist_jnt.liw" "skinCluster9.lw[5]";
-connectAttr "rt_thumb_jnt2.liw" "skinCluster9.lw[6]";
-connectAttr "rt_elbow_jnt.liw" "skinCluster9.lw[7]";
-connectAttr "rt_thumb_jnt5.liw" "skinCluster9.lw[8]";
-connectAttr "rt_middle_jnt1.liw" "skinCluster9.lw[9]";
-connectAttr "rt_index_jnt3.liw" "skinCluster9.lw[10]";
-connectAttr "rt_ltl_jnt1.liw" "skinCluster9.lw[11]";
-connectAttr "rt_index_jnt2.liw" "skinCluster9.lw[12]";
-connectAttr "rt_ltl_jnt2.liw" "skinCluster9.lw[13]";
-connectAttr "rt_ltl_jnt3.liw" "skinCluster9.lw[14]";
-connectAttr "rt_ring_jnt2.liw" "skinCluster9.lw[15]";
-connectAttr "rt_middle_jnt2.liw" "skinCluster9.lw[16]";
-connectAttr "rt_middle_jnt3.liw" "skinCluster9.lw[17]";
-connectAttr "rt_ring_jnt1.liw" "skinCluster9.lw[18]";
-connectAttr "rt_ring_jnt3.liw" "skinCluster9.lw[19]";
-connectAttr "lf_knee_jnt.liw" "skinCluster9.lw[20]";
-connectAttr "lf_ankle_jnt.liw" "skinCluster9.lw[21]";
-connectAttr "lf_ball_jnt.liw" "skinCluster9.lw[22]";
-connectAttr "lf_hip_jnt.liw" "skinCluster9.lw[23]";
-connectAttr "lf_knee_add_b_jnt.liw" "skinCluster9.lw[24]";
-connectAttr "lf_knee_add_f_jnt.liw" "skinCluster9.lw[25]";
-connectAttr "lf_hip_add_f_jnt.liw" "skinCluster9.lw[26]";
-connectAttr "lf_ankle_add_f_jnt.liw" "skinCluster9.lw[27]";
-connectAttr "lf_hip_add_b_jnt.liw" "skinCluster9.lw[28]";
-connectAttr "rt_ball_jnt.liw" "skinCluster9.lw[29]";
-connectAttr "lf_ankle_add_b_jnt.liw" "skinCluster9.lw[30]";
-connectAttr "rt_knee_jnt.liw" "skinCluster9.lw[31]";
-connectAttr "rt_hip_jnt.liw" "skinCluster9.lw[32]";
-connectAttr "lf_hip_add_l_jnt.liw" "skinCluster9.lw[33]";
-connectAttr "rt_ankle_jnt.liw" "skinCluster9.lw[34]";
-connectAttr "rt_ankle_add_f_jnt.liw" "skinCluster9.lw[35]";
-connectAttr "rt_knee_add_f_jnt1.liw" "skinCluster9.lw[36]";
-connectAttr "rt_hip_add_f_jnt.liw" "skinCluster9.lw[37]";
-connectAttr "rt_hip_add_r_jnt.liw" "skinCluster9.lw[38]";
-connectAttr "rt_ankle_add_b_jnt.liw" "skinCluster9.lw[39]";
-connectAttr "rt_knee_add_b_jnt.liw" "skinCluster9.lw[40]";
-connectAttr "rt_hip_add_b_jnt.liw" "skinCluster9.lw[41]";
-connectAttr "jaw_jnt.liw" "skinCluster9.lw[42]";
-connectAttr "spine_jnt2.liw" "skinCluster9.lw[43]";
-connectAttr "lf_ear_ring_jnt.liw" "skinCluster9.lw[44]";
-connectAttr "spine_jnt1.liw" "skinCluster9.lw[45]";
-connectAttr "neck_jnt1.liw" "skinCluster9.lw[46]";
-connectAttr "spine_jnt3.liw" "skinCluster9.lw[47]";
-connectAttr "head_jnt.liw" "skinCluster9.lw[48]";
-connectAttr "rt_ear_ring_jnt.liw" "skinCluster9.lw[49]";
-connectAttr "lf_elbow_jnt.liw" "skinCluster9.lw[50]";
-connectAttr "lf_shld_jnt.liw" "skinCluster9.lw[51]";
-connectAttr "lf_clavicle_jnt.liw" "skinCluster9.lw[52]";
-connectAttr "lf_thumb_jnt3.liw" "skinCluster9.lw[53]";
-connectAttr "lf_index_jnt3.liw" "skinCluster9.lw[54]";
-connectAttr "lf_thumb_jnt2.liw" "skinCluster9.lw[55]";
-connectAttr "lf_thumb_jnt5.liw" "skinCluster9.lw[56]";
-connectAttr "lf_index_jnt2.liw" "skinCluster9.lw[57]";
-connectAttr "lf_wrist_jnt.liw" "skinCluster9.lw[58]";
-connectAttr "lf_index_jnt1.liw" "skinCluster9.lw[59]";
-connectAttr "lf_middle_jnt1.liw" "skinCluster9.lw[60]";
-connectAttr "lf_ltl_jnt1.liw" "skinCluster9.lw[61]";
-connectAttr "lf_middle_jnt3.liw" "skinCluster9.lw[62]";
-connectAttr "lf_ltl_jnt2.liw" "skinCluster9.lw[63]";
-connectAttr "lf_ltl_jnt3.liw" "skinCluster9.lw[64]";
-connectAttr "lf_middle_jnt2.liw" "skinCluster9.lw[65]";
-connectAttr "lf_ring_jnt3.liw" "skinCluster9.lw[66]";
-connectAttr "lf_wrist_add_u_jnt.liw" "skinCluster9.lw[67]";
-connectAttr "lf_ring_jnt1.liw" "skinCluster9.lw[68]";
-connectAttr "lf_ring_jnt2.liw" "skinCluster9.lw[69]";
-connectAttr "lf_elbow_add_f_jnt.liw" "skinCluster9.lw[70]";
-connectAttr "lf_shld_add_u_jnt.liw" "skinCluster9.lw[71]";
-connectAttr "lf_wrist_add_f_jnt.liw" "skinCluster9.lw[72]";
-connectAttr "lf_wrist_add_d_jnt.liw" "skinCluster9.lw[73]";
-connectAttr "lf_elbow_add_b_jnt.liw" "skinCluster9.lw[74]";
-connectAttr "lf_shld_add_d_jnt.liw" "skinCluster9.lw[75]";
-connectAttr "lf_chest_jnt.liw" "skinCluster9.lw[76]";
-connectAttr "rt_chest_jnt.liw" "skinCluster9.lw[77]";
-connectAttr "rt_wrist_add_u_jnt.liw" "skinCluster9.lw[78]";
-connectAttr "rt_wrist_add_f_jnt.liw" "skinCluster9.lw[79]";
-connectAttr "rt_wrist_add_d_jnt.liw" "skinCluster9.lw[80]";
-connectAttr "rt_elbow_add_b_jnt.liw" "skinCluster9.lw[81]";
-connectAttr "rt_elbow_add_f_jnt.liw" "skinCluster9.lw[82]";
-connectAttr "rt_shld_add_u_jnt.liw" "skinCluster9.lw[83]";
-connectAttr "rt_shld_add_d_jnt.liw" "skinCluster9.lw[84]";
-connectAttr "pelvis_jnt.obcc" "skinCluster9.ifcl[0]";
-connectAttr "rt_shld_jnt.obcc" "skinCluster9.ifcl[1]";
-connectAttr "rt_clavicle_jnt.obcc" "skinCluster9.ifcl[2]";
-connectAttr "rt_thumb_jnt3.obcc" "skinCluster9.ifcl[3]";
-connectAttr "rt_index_jnt1.obcc" "skinCluster9.ifcl[4]";
-connectAttr "rt_wrist_jnt.obcc" "skinCluster9.ifcl[5]";
-connectAttr "rt_thumb_jnt2.obcc" "skinCluster9.ifcl[6]";
-connectAttr "rt_elbow_jnt.obcc" "skinCluster9.ifcl[7]";
-connectAttr "rt_thumb_jnt5.obcc" "skinCluster9.ifcl[8]";
-connectAttr "rt_middle_jnt1.obcc" "skinCluster9.ifcl[9]";
-connectAttr "rt_index_jnt3.obcc" "skinCluster9.ifcl[10]";
-connectAttr "rt_ltl_jnt1.obcc" "skinCluster9.ifcl[11]";
-connectAttr "rt_index_jnt2.obcc" "skinCluster9.ifcl[12]";
-connectAttr "rt_ltl_jnt2.obcc" "skinCluster9.ifcl[13]";
-connectAttr "rt_ltl_jnt3.obcc" "skinCluster9.ifcl[14]";
-connectAttr "rt_ring_jnt2.obcc" "skinCluster9.ifcl[15]";
-connectAttr "rt_middle_jnt2.obcc" "skinCluster9.ifcl[16]";
-connectAttr "rt_middle_jnt3.obcc" "skinCluster9.ifcl[17]";
-connectAttr "rt_ring_jnt1.obcc" "skinCluster9.ifcl[18]";
-connectAttr "rt_ring_jnt3.obcc" "skinCluster9.ifcl[19]";
-connectAttr "lf_knee_jnt.obcc" "skinCluster9.ifcl[20]";
-connectAttr "lf_ankle_jnt.obcc" "skinCluster9.ifcl[21]";
-connectAttr "lf_ball_jnt.obcc" "skinCluster9.ifcl[22]";
-connectAttr "lf_hip_jnt.obcc" "skinCluster9.ifcl[23]";
-connectAttr "lf_knee_add_b_jnt.obcc" "skinCluster9.ifcl[24]";
-connectAttr "lf_knee_add_f_jnt.obcc" "skinCluster9.ifcl[25]";
-connectAttr "lf_hip_add_f_jnt.obcc" "skinCluster9.ifcl[26]";
-connectAttr "lf_ankle_add_f_jnt.obcc" "skinCluster9.ifcl[27]";
-connectAttr "lf_hip_add_b_jnt.obcc" "skinCluster9.ifcl[28]";
-connectAttr "rt_ball_jnt.obcc" "skinCluster9.ifcl[29]";
-connectAttr "lf_ankle_add_b_jnt.obcc" "skinCluster9.ifcl[30]";
-connectAttr "rt_knee_jnt.obcc" "skinCluster9.ifcl[31]";
-connectAttr "rt_hip_jnt.obcc" "skinCluster9.ifcl[32]";
-connectAttr "lf_hip_add_l_jnt.obcc" "skinCluster9.ifcl[33]";
-connectAttr "rt_ankle_jnt.obcc" "skinCluster9.ifcl[34]";
-connectAttr "rt_ankle_add_f_jnt.obcc" "skinCluster9.ifcl[35]";
-connectAttr "rt_knee_add_f_jnt1.obcc" "skinCluster9.ifcl[36]";
-connectAttr "rt_hip_add_f_jnt.obcc" "skinCluster9.ifcl[37]";
-connectAttr "rt_hip_add_r_jnt.obcc" "skinCluster9.ifcl[38]";
-connectAttr "rt_ankle_add_b_jnt.obcc" "skinCluster9.ifcl[39]";
-connectAttr "rt_knee_add_b_jnt.obcc" "skinCluster9.ifcl[40]";
-connectAttr "rt_hip_add_b_jnt.obcc" "skinCluster9.ifcl[41]";
-connectAttr "jaw_jnt.obcc" "skinCluster9.ifcl[42]";
-connectAttr "spine_jnt2.obcc" "skinCluster9.ifcl[43]";
-connectAttr "lf_ear_ring_jnt.obcc" "skinCluster9.ifcl[44]";
-connectAttr "spine_jnt1.obcc" "skinCluster9.ifcl[45]";
-connectAttr "neck_jnt1.obcc" "skinCluster9.ifcl[46]";
-connectAttr "spine_jnt3.obcc" "skinCluster9.ifcl[47]";
-connectAttr "head_jnt.obcc" "skinCluster9.ifcl[48]";
-connectAttr "rt_ear_ring_jnt.obcc" "skinCluster9.ifcl[49]";
-connectAttr "lf_elbow_jnt.obcc" "skinCluster9.ifcl[50]";
-connectAttr "lf_shld_jnt.obcc" "skinCluster9.ifcl[51]";
-connectAttr "lf_clavicle_jnt.obcc" "skinCluster9.ifcl[52]";
-connectAttr "lf_thumb_jnt3.obcc" "skinCluster9.ifcl[53]";
-connectAttr "lf_index_jnt3.obcc" "skinCluster9.ifcl[54]";
-connectAttr "lf_thumb_jnt2.obcc" "skinCluster9.ifcl[55]";
-connectAttr "lf_thumb_jnt5.obcc" "skinCluster9.ifcl[56]";
-connectAttr "lf_index_jnt2.obcc" "skinCluster9.ifcl[57]";
-connectAttr "lf_wrist_jnt.obcc" "skinCluster9.ifcl[58]";
-connectAttr "lf_index_jnt1.obcc" "skinCluster9.ifcl[59]";
-connectAttr "lf_middle_jnt1.obcc" "skinCluster9.ifcl[60]";
-connectAttr "lf_ltl_jnt1.obcc" "skinCluster9.ifcl[61]";
-connectAttr "lf_middle_jnt3.obcc" "skinCluster9.ifcl[62]";
-connectAttr "lf_ltl_jnt2.obcc" "skinCluster9.ifcl[63]";
-connectAttr "lf_ltl_jnt3.obcc" "skinCluster9.ifcl[64]";
-connectAttr "lf_middle_jnt2.obcc" "skinCluster9.ifcl[65]";
-connectAttr "lf_ring_jnt3.obcc" "skinCluster9.ifcl[66]";
-connectAttr "lf_wrist_add_u_jnt.obcc" "skinCluster9.ifcl[67]";
-connectAttr "lf_ring_jnt1.obcc" "skinCluster9.ifcl[68]";
-connectAttr "lf_ring_jnt2.obcc" "skinCluster9.ifcl[69]";
-connectAttr "lf_elbow_add_f_jnt.obcc" "skinCluster9.ifcl[70]";
-connectAttr "lf_shld_add_u_jnt.obcc" "skinCluster9.ifcl[71]";
-connectAttr "lf_wrist_add_f_jnt.obcc" "skinCluster9.ifcl[72]";
-connectAttr "lf_wrist_add_d_jnt.obcc" "skinCluster9.ifcl[73]";
-connectAttr "lf_elbow_add_b_jnt.obcc" "skinCluster9.ifcl[74]";
-connectAttr "lf_shld_add_d_jnt.obcc" "skinCluster9.ifcl[75]";
-connectAttr "lf_chest_jnt.obcc" "skinCluster9.ifcl[76]";
-connectAttr "rt_chest_jnt.obcc" "skinCluster9.ifcl[77]";
-connectAttr "rt_wrist_add_u_jnt.obcc" "skinCluster9.ifcl[78]";
-connectAttr "rt_wrist_add_f_jnt.obcc" "skinCluster9.ifcl[79]";
-connectAttr "rt_wrist_add_d_jnt.obcc" "skinCluster9.ifcl[80]";
-connectAttr "rt_elbow_add_b_jnt.obcc" "skinCluster9.ifcl[81]";
-connectAttr "rt_elbow_add_f_jnt.obcc" "skinCluster9.ifcl[82]";
-connectAttr "rt_shld_add_u_jnt.obcc" "skinCluster9.ifcl[83]";
-connectAttr "rt_shld_add_d_jnt.obcc" "skinCluster9.ifcl[84]";
-connectAttr "bindPose2.msg" "skinCluster9.bp";
-connectAttr "rt_wrist_add_f_jnt.msg" "skinCluster9.ptt";
-connectAttr "unitConversion45.o" "rt_shld_add_u_jnt_translateZ.i";
-connectAttr "rt_shld_jnt.ry" "unitConversion45.i";
-connectAttr "unitConversion46.o" "rt_shld_add_d_jnt_translateZ.i";
-connectAttr "rt_shld_jnt.ry" "unitConversion46.i";
-connectAttr "unitConversion48.o" "rt_elbow_add_b_jnt_translateY.i";
-connectAttr "rt_elbow_jnt.rz" "unitConversion48.i";
-connectAttr "unitConversion49.o" "rt_elbow_add_f_jnt_translateY1.i";
-connectAttr "rt_elbow_jnt.rz" "unitConversion49.i";
-connectAttr "unitConversion50.o" "rt_wrist_add_u_jnt_translateZ.i";
-connectAttr "rt_wrist_jnt.ry" "unitConversion50.i";
-connectAttr "unitConversion51.o" "rt_wrist_add_d_jnt_translateZ.i";
-connectAttr "rt_wrist_jnt.ry" "unitConversion51.i";
-connectAttr "unitConversion52.o" "rt_wrist_add_f_jnt_translateY.i";
-connectAttr "rt_wrist_jnt.rz" "unitConversion52.i";
-connectAttr "unitConversion53.o" "rt_wrist_add_b_jnt_translateY.i";
-connectAttr "rt_wrist_jnt.rz" "unitConversion53.i";
-connectAttr "rt_arm_switch_ctrl.ikFk" "reverse3.ix";
-connectAttr "rt_arm_switch_ctrl.ikFk" "reverse4.ix";
-connectAttr "rt_arm_switch_ctrl.ikFk" "reverse5.ix";
-connectAttr "rt_arm_switch_ctrl.ikFk" "reverse6.ix";
-connectAttr "lf_arm_switch_ctrl.ikFk" "reverse7.ix";
-connectAttr "rt_arm_switch_ctrl.ikFk" "reverse7.iy";
-connectAttr "rt_arm_switch_ctrl.ikFk" "reverse8.ix";
-connectAttr "rt_elbow_poleLine.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "witch:witch:ribbons_geoShape.iog.og[0]" "witch:witch:U3DMeshSG.dsm"
+		 -na;
+connectAttr "witch:witch:broom_geoShape.iog.og[0]" "witch:witch:U3DMeshSG.dsm" -na
 		;
-connectAttr "rt_arm_switch_ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "witch:witch:body_geoShape.iog" "witch:witch:U3DMeshSG.dsm" -na;
+connectAttr "witch:witch:U3DMeshSG.msg" "witch:witch:materialInfo1.sg";
+connectAttr "witch:witch:base_mtl.msg" "witch:witch:materialInfo1.m";
+connectAttr "witch:witch:texmap0.msg" "witch:witch:materialInfo1.t" -na;
+connectAttr "witch:witch:U3DMeshSG1.msg" "witch:witch:materialInfo2.sg";
+connectAttr "witch:witch:place2dTexture1.o" "witch:witch:texmap0.uv";
+connectAttr "witch:witch:place2dTexture1.ofu" "witch:witch:texmap0.ofu";
+connectAttr "witch:witch:place2dTexture1.ofv" "witch:witch:texmap0.ofv";
+connectAttr "witch:witch:place2dTexture1.rf" "witch:witch:texmap0.rf";
+connectAttr "witch:witch:place2dTexture1.reu" "witch:witch:texmap0.reu";
+connectAttr "witch:witch:place2dTexture1.rev" "witch:witch:texmap0.rev";
+connectAttr "witch:witch:place2dTexture1.vt1" "witch:witch:texmap0.vt1";
+connectAttr "witch:witch:place2dTexture1.vt2" "witch:witch:texmap0.vt2";
+connectAttr "witch:witch:place2dTexture1.vt3" "witch:witch:texmap0.vt3";
+connectAttr "witch:witch:place2dTexture1.vc1" "witch:witch:texmap0.vc1";
+connectAttr "witch:witch:place2dTexture1.ofs" "witch:witch:texmap0.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "witch:witch:texmap0.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "witch:witch:texmap0.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "witch:witch:texmap0.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "witch:witch:texmap0.ws";
+connectAttr "witch:witch:U3DMeshSG1.msg" "witch:witch:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "rt_arm_switch_ctrlShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "witch:hat_geoShapeOrig.w" "witch:skinCluster5GroupParts.ig";
+connectAttr "witch:groupId1.id" "witch:skinCluster5GroupParts.gi";
+connectAttr "witch:skeleton.msg" "witch:bindPose1.m[0]";
+connectAttr "witch:pelvis_jnt.msg" "witch:bindPose1.m[1]";
+connectAttr "witch:lf_hip_jnt.msg" "witch:bindPose1.m[2]";
+connectAttr "witch:lf_knee_jnt.msg" "witch:bindPose1.m[3]";
+connectAttr "witch:lf_ankle_jnt.msg" "witch:bindPose1.m[4]";
+connectAttr "witch:lf_ball_jnt.msg" "witch:bindPose1.m[5]";
+connectAttr "witch:lf_toe_jnt.msg" "witch:bindPose1.m[6]";
+connectAttr "witch:spine_jnt1.msg" "witch:bindPose1.m[12]";
+connectAttr "witch:spine_jnt2.msg" "witch:bindPose1.m[13]";
+connectAttr "witch:spine_jnt3.msg" "witch:bindPose1.m[14]";
+connectAttr "witch:neck_jnt1.msg" "witch:bindPose1.m[15]";
+connectAttr "witch:head_jnt.msg" "witch:bindPose1.m[16]";
+connectAttr "witch:lf_ear_ring_jnt.msg" "witch:bindPose1.m[17]";
+connectAttr "witch:jaw_jnt.msg" "witch:bindPose1.m[18]";
+connectAttr "witch:rt_ear_ring_jnt.msg" "witch:bindPose1.m[19]";
+connectAttr "witch:hat_jnt1.msg" "witch:bindPose1.m[20]";
+connectAttr "witch:hat_jnt2.msg" "witch:bindPose1.m[21]";
+connectAttr "witch:hat_jnt3.msg" "witch:bindPose1.m[22]";
+connectAttr "witch:hat_jnt4.msg" "witch:bindPose1.m[23]";
+connectAttr "witch:feather_bot_jnt1.msg" "witch:bindPose1.m[24]";
+connectAttr "witch:feather_bot_jnt2.msg" "witch:bindPose1.m[25]";
+connectAttr "witch:feather_bot_jnt3.msg" "witch:bindPose1.m[26]";
+connectAttr "witch:feather_top_jnt1.msg" "witch:bindPose1.m[27]";
+connectAttr "witch:feather_top_jnt2.msg" "witch:bindPose1.m[28]";
+connectAttr "witch:lf_clavicle_jnt.msg" "witch:bindPose1.m[29]";
+connectAttr "witch:lf_shld_jnt.msg" "witch:bindPose1.m[30]";
+connectAttr "witch:lf_elbow_jnt.msg" "witch:bindPose1.m[31]";
+connectAttr "witch:lf_wrist_jnt.msg" "witch:bindPose1.m[32]";
+connectAttr "witch:lf_thumb_jnt5.msg" "witch:bindPose1.m[33]";
+connectAttr "witch:lf_thumb_jnt2.msg" "witch:bindPose1.m[34]";
+connectAttr "witch:lf_thumb_jnt3.msg" "witch:bindPose1.m[35]";
+connectAttr "witch:lf_thumb_jnt4.msg" "witch:bindPose1.m[36]";
+connectAttr "witch:lf_index_jnt1.msg" "witch:bindPose1.m[37]";
+connectAttr "witch:lf_index_jnt2.msg" "witch:bindPose1.m[38]";
+connectAttr "witch:lf_index_jnt3.msg" "witch:bindPose1.m[39]";
+connectAttr "witch:lf_index_jnt4.msg" "witch:bindPose1.m[40]";
+connectAttr "witch:lf_ltl_jnt1.msg" "witch:bindPose1.m[41]";
+connectAttr "witch:lf_ltl_jnt2.msg" "witch:bindPose1.m[42]";
+connectAttr "witch:lf_ltl_jnt3.msg" "witch:bindPose1.m[43]";
+connectAttr "witch:lf_ltl_jnt4.msg" "witch:bindPose1.m[44]";
+connectAttr "witch:lf_middle_jnt1.msg" "witch:bindPose1.m[45]";
+connectAttr "witch:lf_middle_jnt2.msg" "witch:bindPose1.m[46]";
+connectAttr "witch:lf_middle_jnt3.msg" "witch:bindPose1.m[47]";
+connectAttr "witch:lf_middle_jnt4.msg" "witch:bindPose1.m[48]";
+connectAttr "witch:lf_ring_jnt1.msg" "witch:bindPose1.m[49]";
+connectAttr "witch:lf_ring_jnt2.msg" "witch:bindPose1.m[50]";
+connectAttr "witch:lf_ring_jnt3.msg" "witch:bindPose1.m[51]";
+connectAttr "witch:lf_ring_jnt4.msg" "witch:bindPose1.m[52]";
+connectAttr "witch:lf_chest_jnt.msg" "witch:bindPose1.m[53]";
+connectAttr "witch:rt_chest_jnt.msg" "witch:bindPose1.m[54]";
+connectAttr "witch:lf_ribbon_tape.msg" "witch:bindPose1.m[87]";
+connectAttr "witch:rt_ribbon_tape.msg" "witch:bindPose1.m[88]";
+connectAttr "witch:front_ribbon.msg" "witch:bindPose1.m[89]";
+connectAttr "witch:lf_ankle_add_jnt.msg" "witch:bindPose1.m[90]";
+connectAttr "witch:lf_wrist_add_jnt.msg" "witch:bindPose1.m[95]";
+connectAttr "witch:lf_elbow_add_jnt.msg" "witch:bindPose1.m[97]";
+connectAttr "witch:lf_ball_add_jnt.msg" "witch:bindPose1.m[103]";
+connectAttr "witch:lf_knee_add_jnt.msg" "witch:bindPose1.m[106]";
+connectAttr "witch:lf_hip_add_jnt.msg" "witch:bindPose1.m[107]";
+connectAttr "witch:lf_shld_add_jnt.msg" "witch:bindPose1.m[113]";
+connectAttr "witch:rt_ball_add_jnt.msg" "witch:bindPose1.m[118]";
+connectAttr "witch:rt_elbow_add_jnt.msg" "witch:bindPose1.m[119]";
+connectAttr "witch:rt_ankle_add_jnt.msg" "witch:bindPose1.m[120]";
+connectAttr "witch:rt_knee_add_jnt.msg" "witch:bindPose1.m[121]";
+connectAttr "witch:rt_hip_add_jnt.msg" "witch:bindPose1.m[122]";
+connectAttr "witch:rt_wrist_add_jnt.msg" "witch:bindPose1.m[123]";
+connectAttr "witch:rt_shld_add_jnt.msg" "witch:bindPose1.m[124]";
+connectAttr "witch:bindPose1.w" "witch:bindPose1.p[0]";
+connectAttr "witch:bindPose1.m[0]" "witch:bindPose1.p[1]";
+connectAttr "witch:bindPose1.m[1]" "witch:bindPose1.p[2]";
+connectAttr "witch:bindPose1.m[2]" "witch:bindPose1.p[3]";
+connectAttr "witch:bindPose1.m[3]" "witch:bindPose1.p[4]";
+connectAttr "witch:bindPose1.m[4]" "witch:bindPose1.p[5]";
+connectAttr "witch:bindPose1.m[5]" "witch:bindPose1.p[6]";
+connectAttr "witch:bindPose1.m[1]" "witch:bindPose1.p[7]";
+connectAttr "witch:bindPose1.m[7]" "witch:bindPose1.p[8]";
+connectAttr "witch:bindPose1.m[8]" "witch:bindPose1.p[9]";
+connectAttr "witch:bindPose1.m[9]" "witch:bindPose1.p[10]";
+connectAttr "witch:bindPose1.m[0]" "witch:bindPose1.p[12]";
+connectAttr "witch:bindPose1.m[12]" "witch:bindPose1.p[13]";
+connectAttr "witch:bindPose1.m[13]" "witch:bindPose1.p[14]";
+connectAttr "witch:bindPose1.m[14]" "witch:bindPose1.p[15]";
+connectAttr "witch:bindPose1.m[15]" "witch:bindPose1.p[16]";
+connectAttr "witch:bindPose1.m[16]" "witch:bindPose1.p[17]";
+connectAttr "witch:bindPose1.m[16]" "witch:bindPose1.p[18]";
+connectAttr "witch:bindPose1.m[16]" "witch:bindPose1.p[19]";
+connectAttr "witch:bindPose1.m[16]" "witch:bindPose1.p[20]";
+connectAttr "witch:bindPose1.m[20]" "witch:bindPose1.p[21]";
+connectAttr "witch:bindPose1.m[21]" "witch:bindPose1.p[22]";
+connectAttr "witch:bindPose1.m[22]" "witch:bindPose1.p[23]";
+connectAttr "witch:bindPose1.m[20]" "witch:bindPose1.p[24]";
+connectAttr "witch:bindPose1.m[24]" "witch:bindPose1.p[25]";
+connectAttr "witch:bindPose1.m[25]" "witch:bindPose1.p[26]";
+connectAttr "witch:bindPose1.m[20]" "witch:bindPose1.p[27]";
+connectAttr "witch:bindPose1.m[27]" "witch:bindPose1.p[28]";
+connectAttr "witch:bindPose1.m[14]" "witch:bindPose1.p[29]";
+connectAttr "witch:bindPose1.m[29]" "witch:bindPose1.p[30]";
+connectAttr "witch:bindPose1.m[30]" "witch:bindPose1.p[31]";
+connectAttr "witch:bindPose1.m[31]" "witch:bindPose1.p[32]";
+connectAttr "witch:bindPose1.m[32]" "witch:bindPose1.p[33]";
+connectAttr "witch:bindPose1.m[33]" "witch:bindPose1.p[34]";
+connectAttr "witch:bindPose1.m[34]" "witch:bindPose1.p[35]";
+connectAttr "witch:bindPose1.m[35]" "witch:bindPose1.p[36]";
+connectAttr "witch:bindPose1.m[32]" "witch:bindPose1.p[37]";
+connectAttr "witch:bindPose1.m[37]" "witch:bindPose1.p[38]";
+connectAttr "witch:bindPose1.m[38]" "witch:bindPose1.p[39]";
+connectAttr "witch:bindPose1.m[39]" "witch:bindPose1.p[40]";
+connectAttr "witch:bindPose1.m[32]" "witch:bindPose1.p[41]";
+connectAttr "witch:bindPose1.m[41]" "witch:bindPose1.p[42]";
+connectAttr "witch:bindPose1.m[42]" "witch:bindPose1.p[43]";
+connectAttr "witch:bindPose1.m[43]" "witch:bindPose1.p[44]";
+connectAttr "witch:bindPose1.m[32]" "witch:bindPose1.p[45]";
+connectAttr "witch:bindPose1.m[45]" "witch:bindPose1.p[46]";
+connectAttr "witch:bindPose1.m[46]" "witch:bindPose1.p[47]";
+connectAttr "witch:bindPose1.m[47]" "witch:bindPose1.p[48]";
+connectAttr "witch:bindPose1.m[32]" "witch:bindPose1.p[49]";
+connectAttr "witch:bindPose1.m[49]" "witch:bindPose1.p[50]";
+connectAttr "witch:bindPose1.m[50]" "witch:bindPose1.p[51]";
+connectAttr "witch:bindPose1.m[51]" "witch:bindPose1.p[52]";
+connectAttr "witch:bindPose1.m[14]" "witch:bindPose1.p[53]";
+connectAttr "witch:bindPose1.m[14]" "witch:bindPose1.p[54]";
+connectAttr "witch:bindPose1.m[14]" "witch:bindPose1.p[55]";
+connectAttr "witch:bindPose1.m[55]" "witch:bindPose1.p[56]";
+connectAttr "witch:bindPose1.m[56]" "witch:bindPose1.p[57]";
+connectAttr "witch:bindPose1.m[57]" "witch:bindPose1.p[58]";
+connectAttr "witch:bindPose1.m[58]" "witch:bindPose1.p[59]";
+connectAttr "witch:bindPose1.m[59]" "witch:bindPose1.p[60]";
+connectAttr "witch:bindPose1.m[60]" "witch:bindPose1.p[61]";
+connectAttr "witch:bindPose1.m[58]" "witch:bindPose1.p[63]";
+connectAttr "witch:bindPose1.m[63]" "witch:bindPose1.p[64]";
+connectAttr "witch:bindPose1.m[64]" "witch:bindPose1.p[65]";
+connectAttr "witch:bindPose1.m[58]" "witch:bindPose1.p[67]";
+connectAttr "witch:bindPose1.m[67]" "witch:bindPose1.p[68]";
+connectAttr "witch:bindPose1.m[68]" "witch:bindPose1.p[69]";
+connectAttr "witch:bindPose1.m[58]" "witch:bindPose1.p[71]";
+connectAttr "witch:bindPose1.m[71]" "witch:bindPose1.p[72]";
+connectAttr "witch:bindPose1.m[72]" "witch:bindPose1.p[73]";
+connectAttr "witch:bindPose1.m[58]" "witch:bindPose1.p[75]";
+connectAttr "witch:bindPose1.m[75]" "witch:bindPose1.p[76]";
+connectAttr "witch:bindPose1.m[76]" "witch:bindPose1.p[77]";
+connectAttr "witch:bindPose1.m[1]" "witch:bindPose1.p[79]";
+connectAttr "witch:bindPose1.m[79]" "witch:bindPose1.p[80]";
+connectAttr "witch:bindPose1.m[80]" "witch:bindPose1.p[81]";
+connectAttr "witch:bindPose1.m[81]" "witch:bindPose1.p[82]";
+connectAttr "witch:bindPose1.w" "witch:bindPose1.p[87]";
+connectAttr "witch:bindPose1.w" "witch:bindPose1.p[88]";
+connectAttr "witch:bindPose1.w" "witch:bindPose1.p[89]";
+connectAttr "witch:bindPose1.m[4]" "witch:bindPose1.p[90]";
+connectAttr "witch:bindPose1.m[90]" "witch:bindPose1.p[91]";
+connectAttr "witch:bindPose1.m[90]" "witch:bindPose1.p[93]";
+connectAttr "witch:bindPose1.m[32]" "witch:bindPose1.p[95]";
+connectAttr "witch:bindPose1.m[31]" "witch:bindPose1.p[97]";
+connectAttr "witch:bindPose1.m[97]" "witch:bindPose1.p[98]";
+connectAttr "witch:bindPose1.m[95]" "witch:bindPose1.p[99]";
+connectAttr "witch:bindPose1.m[95]" "witch:bindPose1.p[100]";
+connectAttr "witch:bindPose1.m[95]" "witch:bindPose1.p[101]";
+connectAttr "witch:bindPose1.m[97]" "witch:bindPose1.p[102]";
+connectAttr "witch:bindPose1.m[5]" "witch:bindPose1.p[103]";
+connectAttr "witch:bindPose1.m[3]" "witch:bindPose1.p[106]";
+connectAttr "witch:bindPose1.m[2]" "witch:bindPose1.p[107]";
+connectAttr "witch:lf_hip_add_jnt.msg" "witch:bindPose1.p[108]";
+connectAttr "witch:bindPose1.m[106]" "witch:bindPose1.p[109]";
+connectAttr "witch:bindPose1.m[106]" "witch:bindPose1.p[110]";
+connectAttr "witch:bindPose1.m[107]" "witch:bindPose1.p[111]";
+connectAttr "witch:bindPose1.m[107]" "witch:bindPose1.p[112]";
+connectAttr "witch:bindPose1.w" "witch:bindPose1.p[113]";
+connectAttr "witch:bindPose1.m[113]" "witch:bindPose1.p[116]";
+connectAttr "witch:bindPose1.m[113]" "witch:bindPose1.p[117]";
+connectAttr "witch:bindPose1.m[82]" "witch:bindPose1.p[118]";
+connectAttr "witch:bindPose1.m[57]" "witch:bindPose1.p[119]";
+connectAttr "witch:bindPose1.m[81]" "witch:bindPose1.p[120]";
+connectAttr "witch:bindPose1.m[80]" "witch:bindPose1.p[121]";
+connectAttr "witch:bindPose1.m[79]" "witch:bindPose1.p[122]";
+connectAttr "witch:bindPose1.m[58]" "witch:bindPose1.p[123]";
+connectAttr "witch:bindPose1.w" "witch:bindPose1.p[124]";
+connectAttr "witch:bindPose1.m[120]" "witch:bindPose1.p[128]";
+connectAttr "witch:bindPose1.m[122]" "witch:bindPose1.p[129]";
+connectAttr "witch:bindPose1.m[122]" "witch:bindPose1.p[130]";
+connectAttr "witch:bindPose1.m[120]" "witch:bindPose1.p[131]";
+connectAttr "witch:bindPose1.m[121]" "witch:bindPose1.p[132]";
+connectAttr "witch:bindPose1.m[121]" "witch:bindPose1.p[133]";
+connectAttr "witch:bindPose1.m[122]" "witch:bindPose1.p[135]";
+connectAttr "witch:bindPose1.m[123]" "witch:bindPose1.p[137]";
+connectAttr "witch:bindPose1.m[119]" "witch:bindPose1.p[138]";
+connectAttr "witch:bindPose1.m[123]" "witch:bindPose1.p[139]";
+connectAttr "witch:bindPose1.m[123]" "witch:bindPose1.p[140]";
+connectAttr "witch:bindPose1.m[119]" "witch:bindPose1.p[141]";
+connectAttr "witch:bindPose1.m[124]" "witch:bindPose1.p[142]";
+connectAttr "witch:bindPose1.m[124]" "witch:bindPose1.p[145]";
+connectAttr "witch:pelvis_jnt.bps" "witch:bindPose1.wm[1]";
+connectAttr "witch:lf_hip_jnt.bps" "witch:bindPose1.wm[2]";
+connectAttr "witch:lf_knee_jnt.bps" "witch:bindPose1.wm[3]";
+connectAttr "witch:lf_ankle_jnt.bps" "witch:bindPose1.wm[4]";
+connectAttr "witch:lf_ball_jnt.bps" "witch:bindPose1.wm[5]";
+connectAttr "witch:lf_toe_jnt.bps" "witch:bindPose1.wm[6]";
+connectAttr "witch:spine_jnt1.bps" "witch:bindPose1.wm[12]";
+connectAttr "witch:spine_jnt2.bps" "witch:bindPose1.wm[13]";
+connectAttr "witch:spine_jnt3.bps" "witch:bindPose1.wm[14]";
+connectAttr "witch:neck_jnt1.bps" "witch:bindPose1.wm[15]";
+connectAttr "witch:head_jnt.bps" "witch:bindPose1.wm[16]";
+connectAttr "witch:lf_ear_ring_jnt.bps" "witch:bindPose1.wm[17]";
+connectAttr "witch:jaw_jnt.bps" "witch:bindPose1.wm[18]";
+connectAttr "witch:rt_ear_ring_jnt.bps" "witch:bindPose1.wm[19]";
+connectAttr "witch:hat_jnt1.bps" "witch:bindPose1.wm[20]";
+connectAttr "witch:hat_jnt2.bps" "witch:bindPose1.wm[21]";
+connectAttr "witch:hat_jnt3.bps" "witch:bindPose1.wm[22]";
+connectAttr "witch:hat_jnt4.bps" "witch:bindPose1.wm[23]";
+connectAttr "witch:feather_bot_jnt1.bps" "witch:bindPose1.wm[24]";
+connectAttr "witch:feather_bot_jnt2.bps" "witch:bindPose1.wm[25]";
+connectAttr "witch:feather_bot_jnt3.bps" "witch:bindPose1.wm[26]";
+connectAttr "witch:feather_top_jnt1.bps" "witch:bindPose1.wm[27]";
+connectAttr "witch:feather_top_jnt2.bps" "witch:bindPose1.wm[28]";
+connectAttr "witch:lf_clavicle_jnt.bps" "witch:bindPose1.wm[29]";
+connectAttr "witch:lf_shld_jnt.bps" "witch:bindPose1.wm[30]";
+connectAttr "witch:lf_elbow_jnt.bps" "witch:bindPose1.wm[31]";
+connectAttr "witch:lf_wrist_jnt.bps" "witch:bindPose1.wm[32]";
+connectAttr "witch:lf_thumb_jnt5.bps" "witch:bindPose1.wm[33]";
+connectAttr "witch:lf_thumb_jnt2.bps" "witch:bindPose1.wm[34]";
+connectAttr "witch:lf_thumb_jnt3.bps" "witch:bindPose1.wm[35]";
+connectAttr "witch:lf_thumb_jnt4.bps" "witch:bindPose1.wm[36]";
+connectAttr "witch:lf_index_jnt1.bps" "witch:bindPose1.wm[37]";
+connectAttr "witch:lf_index_jnt2.bps" "witch:bindPose1.wm[38]";
+connectAttr "witch:lf_index_jnt3.bps" "witch:bindPose1.wm[39]";
+connectAttr "witch:lf_index_jnt4.bps" "witch:bindPose1.wm[40]";
+connectAttr "witch:lf_ltl_jnt1.bps" "witch:bindPose1.wm[41]";
+connectAttr "witch:lf_ltl_jnt2.bps" "witch:bindPose1.wm[42]";
+connectAttr "witch:lf_ltl_jnt3.bps" "witch:bindPose1.wm[43]";
+connectAttr "witch:lf_ltl_jnt4.bps" "witch:bindPose1.wm[44]";
+connectAttr "witch:lf_middle_jnt1.bps" "witch:bindPose1.wm[45]";
+connectAttr "witch:lf_middle_jnt2.bps" "witch:bindPose1.wm[46]";
+connectAttr "witch:lf_middle_jnt3.bps" "witch:bindPose1.wm[47]";
+connectAttr "witch:lf_middle_jnt4.bps" "witch:bindPose1.wm[48]";
+connectAttr "witch:lf_ring_jnt1.bps" "witch:bindPose1.wm[49]";
+connectAttr "witch:lf_ring_jnt2.bps" "witch:bindPose1.wm[50]";
+connectAttr "witch:lf_ring_jnt3.bps" "witch:bindPose1.wm[51]";
+connectAttr "witch:lf_ring_jnt4.bps" "witch:bindPose1.wm[52]";
+connectAttr "witch:lf_chest_jnt.bps" "witch:bindPose1.wm[53]";
+connectAttr "witch:rt_chest_jnt.bps" "witch:bindPose1.wm[54]";
+connectAttr "witch:lf_ribbon_tape.bps" "witch:bindPose1.wm[87]";
+connectAttr "witch:rt_ribbon_tape.bps" "witch:bindPose1.wm[88]";
+connectAttr "witch:front_ribbon.bps" "witch:bindPose1.wm[89]";
+connectAttr "witch:lf_ankle_add_jnt.bps" "witch:bindPose1.wm[90]";
+connectAttr "witch:lf_wrist_add_jnt.bps" "witch:bindPose1.wm[95]";
+connectAttr "witch:lf_elbow_add_jnt.bps" "witch:bindPose1.wm[97]";
+connectAttr "witch:lf_ball_add_jnt.bps" "witch:bindPose1.wm[103]";
+connectAttr "witch:lf_knee_add_jnt.bps" "witch:bindPose1.wm[106]";
+connectAttr "witch:lf_hip_add_jnt.bps" "witch:bindPose1.wm[107]";
+connectAttr "witch:lf_shld_add_jnt.bps" "witch:bindPose1.wm[113]";
+connectAttr "witch:rt_ball_add_jnt.bps" "witch:bindPose1.wm[118]";
+connectAttr "witch:rt_elbow_add_jnt.bps" "witch:bindPose1.wm[119]";
+connectAttr "witch:rt_ankle_add_jnt.bps" "witch:bindPose1.wm[120]";
+connectAttr "witch:rt_knee_add_jnt.bps" "witch:bindPose1.wm[121]";
+connectAttr "witch:rt_hip_add_jnt.bps" "witch:bindPose1.wm[122]";
+connectAttr "witch:rt_wrist_add_jnt.bps" "witch:bindPose1.wm[123]";
+connectAttr "witch:rt_shld_add_jnt.bps" "witch:bindPose1.wm[124]";
+connectAttr "witch:skinCluster2GroupParts.og" "witch:skinCluster2.ip[0].ig";
+connectAttr "witch:ribbons_geoShapeOrig.o" "witch:skinCluster2.orggeom[0]";
+connectAttr "witch:pelvis_jnt.wm" "witch:skinCluster2.ma[0]";
+connectAttr "witch:lf_hip_jnt.wm" "witch:skinCluster2.ma[1]";
+connectAttr "witch:lf_knee_jnt.wm" "witch:skinCluster2.ma[2]";
+connectAttr "witch:lf_ankle_jnt.wm" "witch:skinCluster2.ma[3]";
+connectAttr "witch:lf_ball_jnt.wm" "witch:skinCluster2.ma[4]";
+connectAttr "witch:lf_toe_jnt.wm" "witch:skinCluster2.ma[5]";
+connectAttr "witch:spine_jnt1.wm" "witch:skinCluster2.ma[11]";
+connectAttr "witch:spine_jnt2.wm" "witch:skinCluster2.ma[12]";
+connectAttr "witch:spine_jnt3.wm" "witch:skinCluster2.ma[13]";
+connectAttr "witch:neck_jnt1.wm" "witch:skinCluster2.ma[14]";
+connectAttr "witch:head_jnt.wm" "witch:skinCluster2.ma[15]";
+connectAttr "witch:lf_ear_ring_jnt.wm" "witch:skinCluster2.ma[16]";
+connectAttr "witch:jaw_jnt.wm" "witch:skinCluster2.ma[17]";
+connectAttr "witch:rt_ear_ring_jnt.wm" "witch:skinCluster2.ma[18]";
+connectAttr "witch:hat_jnt1.wm" "witch:skinCluster2.ma[19]";
+connectAttr "witch:hat_jnt2.wm" "witch:skinCluster2.ma[20]";
+connectAttr "witch:hat_jnt3.wm" "witch:skinCluster2.ma[21]";
+connectAttr "witch:hat_jnt4.wm" "witch:skinCluster2.ma[22]";
+connectAttr "witch:feather_bot_jnt1.wm" "witch:skinCluster2.ma[23]";
+connectAttr "witch:feather_bot_jnt2.wm" "witch:skinCluster2.ma[24]";
+connectAttr "witch:feather_bot_jnt3.wm" "witch:skinCluster2.ma[25]";
+connectAttr "witch:feather_top_jnt1.wm" "witch:skinCluster2.ma[26]";
+connectAttr "witch:feather_top_jnt2.wm" "witch:skinCluster2.ma[27]";
+connectAttr "witch:lf_clavicle_jnt.wm" "witch:skinCluster2.ma[28]";
+connectAttr "witch:lf_shld_jnt.wm" "witch:skinCluster2.ma[29]";
+connectAttr "witch:lf_elbow_jnt.wm" "witch:skinCluster2.ma[30]";
+connectAttr "witch:lf_wrist_jnt.wm" "witch:skinCluster2.ma[31]";
+connectAttr "witch:lf_thumb_jnt5.wm" "witch:skinCluster2.ma[32]";
+connectAttr "witch:lf_thumb_jnt2.wm" "witch:skinCluster2.ma[33]";
+connectAttr "witch:lf_thumb_jnt3.wm" "witch:skinCluster2.ma[34]";
+connectAttr "witch:lf_thumb_jnt4.wm" "witch:skinCluster2.ma[35]";
+connectAttr "witch:lf_index_jnt1.wm" "witch:skinCluster2.ma[36]";
+connectAttr "witch:lf_index_jnt2.wm" "witch:skinCluster2.ma[37]";
+connectAttr "witch:lf_index_jnt3.wm" "witch:skinCluster2.ma[38]";
+connectAttr "witch:lf_index_jnt4.wm" "witch:skinCluster2.ma[39]";
+connectAttr "witch:lf_ltl_jnt1.wm" "witch:skinCluster2.ma[40]";
+connectAttr "witch:lf_ltl_jnt2.wm" "witch:skinCluster2.ma[41]";
+connectAttr "witch:lf_ltl_jnt3.wm" "witch:skinCluster2.ma[42]";
+connectAttr "witch:lf_ltl_jnt4.wm" "witch:skinCluster2.ma[43]";
+connectAttr "witch:lf_middle_jnt1.wm" "witch:skinCluster2.ma[44]";
+connectAttr "witch:lf_middle_jnt2.wm" "witch:skinCluster2.ma[45]";
+connectAttr "witch:lf_middle_jnt3.wm" "witch:skinCluster2.ma[46]";
+connectAttr "witch:lf_middle_jnt4.wm" "witch:skinCluster2.ma[47]";
+connectAttr "witch:lf_ring_jnt1.wm" "witch:skinCluster2.ma[48]";
+connectAttr "witch:lf_ring_jnt2.wm" "witch:skinCluster2.ma[49]";
+connectAttr "witch:lf_ring_jnt3.wm" "witch:skinCluster2.ma[50]";
+connectAttr "witch:lf_ring_jnt4.wm" "witch:skinCluster2.ma[51]";
+connectAttr "witch:lf_chest_jnt.wm" "witch:skinCluster2.ma[52]";
+connectAttr "witch:rt_chest_jnt.wm" "witch:skinCluster2.ma[53]";
+connectAttr "witch:lf_ribbon_tape.wm" "witch:skinCluster2.ma[81]";
+connectAttr "witch:rt_ribbon_tape.wm" "witch:skinCluster2.ma[82]";
+connectAttr "witch:front_ribbon.wm" "witch:skinCluster2.ma[83]";
+connectAttr "witch:pelvis_jnt.liw" "witch:skinCluster2.lw[0]";
+connectAttr "witch:lf_hip_jnt.liw" "witch:skinCluster2.lw[1]";
+connectAttr "witch:lf_knee_jnt.liw" "witch:skinCluster2.lw[2]";
+connectAttr "witch:lf_ankle_jnt.liw" "witch:skinCluster2.lw[3]";
+connectAttr "witch:lf_ball_jnt.liw" "witch:skinCluster2.lw[4]";
+connectAttr "witch:lf_toe_jnt.liw" "witch:skinCluster2.lw[5]";
+connectAttr "witch:spine_jnt1.liw" "witch:skinCluster2.lw[11]";
+connectAttr "witch:spine_jnt2.liw" "witch:skinCluster2.lw[12]";
+connectAttr "witch:spine_jnt3.liw" "witch:skinCluster2.lw[13]";
+connectAttr "witch:neck_jnt1.liw" "witch:skinCluster2.lw[14]";
+connectAttr "witch:head_jnt.liw" "witch:skinCluster2.lw[15]";
+connectAttr "witch:lf_ear_ring_jnt.liw" "witch:skinCluster2.lw[16]";
+connectAttr "witch:jaw_jnt.liw" "witch:skinCluster2.lw[17]";
+connectAttr "witch:rt_ear_ring_jnt.liw" "witch:skinCluster2.lw[18]";
+connectAttr "witch:hat_jnt1.liw" "witch:skinCluster2.lw[19]";
+connectAttr "witch:hat_jnt2.liw" "witch:skinCluster2.lw[20]";
+connectAttr "witch:hat_jnt3.liw" "witch:skinCluster2.lw[21]";
+connectAttr "witch:hat_jnt4.liw" "witch:skinCluster2.lw[22]";
+connectAttr "witch:feather_bot_jnt1.liw" "witch:skinCluster2.lw[23]";
+connectAttr "witch:feather_bot_jnt2.liw" "witch:skinCluster2.lw[24]";
+connectAttr "witch:feather_bot_jnt3.liw" "witch:skinCluster2.lw[25]";
+connectAttr "witch:feather_top_jnt1.liw" "witch:skinCluster2.lw[26]";
+connectAttr "witch:feather_top_jnt2.liw" "witch:skinCluster2.lw[27]";
+connectAttr "witch:lf_clavicle_jnt.liw" "witch:skinCluster2.lw[28]";
+connectAttr "witch:lf_shld_jnt.liw" "witch:skinCluster2.lw[29]";
+connectAttr "witch:lf_elbow_jnt.liw" "witch:skinCluster2.lw[30]";
+connectAttr "witch:lf_wrist_jnt.liw" "witch:skinCluster2.lw[31]";
+connectAttr "witch:lf_thumb_jnt5.liw" "witch:skinCluster2.lw[32]";
+connectAttr "witch:lf_thumb_jnt2.liw" "witch:skinCluster2.lw[33]";
+connectAttr "witch:lf_thumb_jnt3.liw" "witch:skinCluster2.lw[34]";
+connectAttr "witch:lf_thumb_jnt4.liw" "witch:skinCluster2.lw[35]";
+connectAttr "witch:lf_index_jnt1.liw" "witch:skinCluster2.lw[36]";
+connectAttr "witch:lf_index_jnt2.liw" "witch:skinCluster2.lw[37]";
+connectAttr "witch:lf_index_jnt3.liw" "witch:skinCluster2.lw[38]";
+connectAttr "witch:lf_index_jnt4.liw" "witch:skinCluster2.lw[39]";
+connectAttr "witch:lf_ltl_jnt1.liw" "witch:skinCluster2.lw[40]";
+connectAttr "witch:lf_ltl_jnt2.liw" "witch:skinCluster2.lw[41]";
+connectAttr "witch:lf_ltl_jnt3.liw" "witch:skinCluster2.lw[42]";
+connectAttr "witch:lf_ltl_jnt4.liw" "witch:skinCluster2.lw[43]";
+connectAttr "witch:lf_middle_jnt1.liw" "witch:skinCluster2.lw[44]";
+connectAttr "witch:lf_middle_jnt2.liw" "witch:skinCluster2.lw[45]";
+connectAttr "witch:lf_middle_jnt3.liw" "witch:skinCluster2.lw[46]";
+connectAttr "witch:lf_middle_jnt4.liw" "witch:skinCluster2.lw[47]";
+connectAttr "witch:lf_ring_jnt1.liw" "witch:skinCluster2.lw[48]";
+connectAttr "witch:lf_ring_jnt2.liw" "witch:skinCluster2.lw[49]";
+connectAttr "witch:lf_ring_jnt3.liw" "witch:skinCluster2.lw[50]";
+connectAttr "witch:lf_ring_jnt4.liw" "witch:skinCluster2.lw[51]";
+connectAttr "witch:lf_chest_jnt.liw" "witch:skinCluster2.lw[52]";
+connectAttr "witch:rt_chest_jnt.liw" "witch:skinCluster2.lw[53]";
+connectAttr "witch:lf_ribbon_tape.liw" "witch:skinCluster2.lw[81]";
+connectAttr "witch:rt_ribbon_tape.liw" "witch:skinCluster2.lw[82]";
+connectAttr "witch:front_ribbon.liw" "witch:skinCluster2.lw[83]";
+connectAttr "witch:pelvis_jnt.obcc" "witch:skinCluster2.ifcl[0]";
+connectAttr "witch:lf_hip_jnt.obcc" "witch:skinCluster2.ifcl[1]";
+connectAttr "witch:lf_knee_jnt.obcc" "witch:skinCluster2.ifcl[2]";
+connectAttr "witch:lf_ankle_jnt.obcc" "witch:skinCluster2.ifcl[3]";
+connectAttr "witch:lf_ball_jnt.obcc" "witch:skinCluster2.ifcl[4]";
+connectAttr "witch:lf_toe_jnt.obcc" "witch:skinCluster2.ifcl[5]";
+connectAttr "witch:spine_jnt1.obcc" "witch:skinCluster2.ifcl[11]";
+connectAttr "witch:spine_jnt2.obcc" "witch:skinCluster2.ifcl[12]";
+connectAttr "witch:spine_jnt3.obcc" "witch:skinCluster2.ifcl[13]";
+connectAttr "witch:neck_jnt1.obcc" "witch:skinCluster2.ifcl[14]";
+connectAttr "witch:head_jnt.obcc" "witch:skinCluster2.ifcl[15]";
+connectAttr "witch:lf_ear_ring_jnt.obcc" "witch:skinCluster2.ifcl[16]";
+connectAttr "witch:jaw_jnt.obcc" "witch:skinCluster2.ifcl[17]";
+connectAttr "witch:rt_ear_ring_jnt.obcc" "witch:skinCluster2.ifcl[18]";
+connectAttr "witch:hat_jnt1.obcc" "witch:skinCluster2.ifcl[19]";
+connectAttr "witch:hat_jnt2.obcc" "witch:skinCluster2.ifcl[20]";
+connectAttr "witch:hat_jnt3.obcc" "witch:skinCluster2.ifcl[21]";
+connectAttr "witch:hat_jnt4.obcc" "witch:skinCluster2.ifcl[22]";
+connectAttr "witch:feather_bot_jnt1.obcc" "witch:skinCluster2.ifcl[23]";
+connectAttr "witch:feather_bot_jnt2.obcc" "witch:skinCluster2.ifcl[24]";
+connectAttr "witch:feather_bot_jnt3.obcc" "witch:skinCluster2.ifcl[25]";
+connectAttr "witch:feather_top_jnt1.obcc" "witch:skinCluster2.ifcl[26]";
+connectAttr "witch:feather_top_jnt2.obcc" "witch:skinCluster2.ifcl[27]";
+connectAttr "witch:lf_clavicle_jnt.obcc" "witch:skinCluster2.ifcl[28]";
+connectAttr "witch:lf_shld_jnt.obcc" "witch:skinCluster2.ifcl[29]";
+connectAttr "witch:lf_elbow_jnt.obcc" "witch:skinCluster2.ifcl[30]";
+connectAttr "witch:lf_wrist_jnt.obcc" "witch:skinCluster2.ifcl[31]";
+connectAttr "witch:lf_thumb_jnt5.obcc" "witch:skinCluster2.ifcl[32]";
+connectAttr "witch:lf_thumb_jnt2.obcc" "witch:skinCluster2.ifcl[33]";
+connectAttr "witch:lf_thumb_jnt3.obcc" "witch:skinCluster2.ifcl[34]";
+connectAttr "witch:lf_thumb_jnt4.obcc" "witch:skinCluster2.ifcl[35]";
+connectAttr "witch:lf_index_jnt1.obcc" "witch:skinCluster2.ifcl[36]";
+connectAttr "witch:lf_index_jnt2.obcc" "witch:skinCluster2.ifcl[37]";
+connectAttr "witch:lf_index_jnt3.obcc" "witch:skinCluster2.ifcl[38]";
+connectAttr "witch:lf_index_jnt4.obcc" "witch:skinCluster2.ifcl[39]";
+connectAttr "witch:lf_ltl_jnt1.obcc" "witch:skinCluster2.ifcl[40]";
+connectAttr "witch:lf_ltl_jnt2.obcc" "witch:skinCluster2.ifcl[41]";
+connectAttr "witch:lf_ltl_jnt3.obcc" "witch:skinCluster2.ifcl[42]";
+connectAttr "witch:lf_ltl_jnt4.obcc" "witch:skinCluster2.ifcl[43]";
+connectAttr "witch:lf_middle_jnt1.obcc" "witch:skinCluster2.ifcl[44]";
+connectAttr "witch:lf_middle_jnt2.obcc" "witch:skinCluster2.ifcl[45]";
+connectAttr "witch:lf_middle_jnt3.obcc" "witch:skinCluster2.ifcl[46]";
+connectAttr "witch:lf_middle_jnt4.obcc" "witch:skinCluster2.ifcl[47]";
+connectAttr "witch:lf_ring_jnt1.obcc" "witch:skinCluster2.ifcl[48]";
+connectAttr "witch:lf_ring_jnt2.obcc" "witch:skinCluster2.ifcl[49]";
+connectAttr "witch:lf_ring_jnt3.obcc" "witch:skinCluster2.ifcl[50]";
+connectAttr "witch:lf_ring_jnt4.obcc" "witch:skinCluster2.ifcl[51]";
+connectAttr "witch:lf_chest_jnt.obcc" "witch:skinCluster2.ifcl[52]";
+connectAttr "witch:rt_chest_jnt.obcc" "witch:skinCluster2.ifcl[53]";
+connectAttr "witch:lf_ribbon_tape.obcc" "witch:skinCluster2.ifcl[81]";
+connectAttr "witch:rt_ribbon_tape.obcc" "witch:skinCluster2.ifcl[82]";
+connectAttr "witch:front_ribbon.obcc" "witch:skinCluster2.ifcl[83]";
+connectAttr "witch:bindPose1.msg" "witch:skinCluster2.bp";
+connectAttr "witch:head_jnt.msg" "witch:skinCluster2.ptt";
+connectAttr "witch:ribbons_geoShapeOrig.w" "witch:skinCluster2GroupParts.ig";
+connectAttr "witch:groupId2.id" "witch:skinCluster2GroupParts.gi";
+connectAttr "witch:broom_geoShapeOrig.w" "witch:skinCluster7GroupParts.ig";
+connectAttr "witch:groupId3.id" "witch:skinCluster7GroupParts.gi";
+connectAttr "witch:skinCluster5GroupParts.og" "witch:skinCluster5.ip[0].ig";
+connectAttr "witch:hat_geoShapeOrig.o" "witch:skinCluster5.orggeom[0]";
+connectAttr "witch:bindPose2.msg" "witch:skinCluster5.bp";
+connectAttr "witch:spine_jnt1.wm" "witch:skinCluster5.ma[0]";
+connectAttr "witch:spine_jnt2.wm" "witch:skinCluster5.ma[1]";
+connectAttr "witch:spine_jnt3.wm" "witch:skinCluster5.ma[2]";
+connectAttr "witch:neck_jnt1.wm" "witch:skinCluster5.ma[3]";
+connectAttr "witch:head_jnt.wm" "witch:skinCluster5.ma[4]";
+connectAttr "witch:lf_ear_ring_jnt.wm" "witch:skinCluster5.ma[5]";
+connectAttr "witch:jaw_jnt.wm" "witch:skinCluster5.ma[6]";
+connectAttr "witch:rt_ear_ring_jnt.wm" "witch:skinCluster5.ma[7]";
+connectAttr "witch:hat_jnt1.wm" "witch:skinCluster5.ma[8]";
+connectAttr "witch:hat_jnt2.wm" "witch:skinCluster5.ma[9]";
+connectAttr "witch:hat_jnt3.wm" "witch:skinCluster5.ma[10]";
+connectAttr "witch:hat_jnt4.wm" "witch:skinCluster5.ma[11]";
+connectAttr "witch:feather_bot_jnt1.wm" "witch:skinCluster5.ma[12]";
+connectAttr "witch:feather_bot_jnt2.wm" "witch:skinCluster5.ma[13]";
+connectAttr "witch:feather_bot_jnt3.wm" "witch:skinCluster5.ma[14]";
+connectAttr "witch:feather_top_jnt1.wm" "witch:skinCluster5.ma[15]";
+connectAttr "witch:feather_top_jnt2.wm" "witch:skinCluster5.ma[16]";
+connectAttr "witch:lf_clavicle_jnt.wm" "witch:skinCluster5.ma[17]";
+connectAttr "witch:lf_shld_jnt.wm" "witch:skinCluster5.ma[18]";
+connectAttr "witch:lf_elbow_jnt.wm" "witch:skinCluster5.ma[19]";
+connectAttr "witch:lf_wrist_jnt.wm" "witch:skinCluster5.ma[20]";
+connectAttr "witch:lf_thumb_jnt5.wm" "witch:skinCluster5.ma[21]";
+connectAttr "witch:lf_thumb_jnt2.wm" "witch:skinCluster5.ma[22]";
+connectAttr "witch:lf_thumb_jnt3.wm" "witch:skinCluster5.ma[23]";
+connectAttr "witch:lf_thumb_jnt4.wm" "witch:skinCluster5.ma[24]";
+connectAttr "witch:lf_index_jnt1.wm" "witch:skinCluster5.ma[25]";
+connectAttr "witch:lf_index_jnt2.wm" "witch:skinCluster5.ma[26]";
+connectAttr "witch:lf_index_jnt3.wm" "witch:skinCluster5.ma[27]";
+connectAttr "witch:lf_index_jnt4.wm" "witch:skinCluster5.ma[28]";
+connectAttr "witch:lf_ltl_jnt1.wm" "witch:skinCluster5.ma[29]";
+connectAttr "witch:lf_ltl_jnt2.wm" "witch:skinCluster5.ma[30]";
+connectAttr "witch:lf_ltl_jnt3.wm" "witch:skinCluster5.ma[31]";
+connectAttr "witch:lf_ltl_jnt4.wm" "witch:skinCluster5.ma[32]";
+connectAttr "witch:lf_middle_jnt1.wm" "witch:skinCluster5.ma[33]";
+connectAttr "witch:lf_middle_jnt2.wm" "witch:skinCluster5.ma[34]";
+connectAttr "witch:lf_middle_jnt3.wm" "witch:skinCluster5.ma[35]";
+connectAttr "witch:lf_middle_jnt4.wm" "witch:skinCluster5.ma[36]";
+connectAttr "witch:lf_ring_jnt1.wm" "witch:skinCluster5.ma[37]";
+connectAttr "witch:lf_ring_jnt2.wm" "witch:skinCluster5.ma[38]";
+connectAttr "witch:lf_ring_jnt3.wm" "witch:skinCluster5.ma[39]";
+connectAttr "witch:lf_ring_jnt4.wm" "witch:skinCluster5.ma[40]";
+connectAttr "witch:lf_chest_jnt.wm" "witch:skinCluster5.ma[41]";
+connectAttr "witch:rt_chest_jnt.wm" "witch:skinCluster5.ma[42]";
+connectAttr "witch:spine_jnt1.liw" "witch:skinCluster5.lw[0]";
+connectAttr "witch:spine_jnt2.liw" "witch:skinCluster5.lw[1]";
+connectAttr "witch:spine_jnt3.liw" "witch:skinCluster5.lw[2]";
+connectAttr "witch:neck_jnt1.liw" "witch:skinCluster5.lw[3]";
+connectAttr "witch:head_jnt.liw" "witch:skinCluster5.lw[4]";
+connectAttr "witch:lf_ear_ring_jnt.liw" "witch:skinCluster5.lw[5]";
+connectAttr "witch:jaw_jnt.liw" "witch:skinCluster5.lw[6]";
+connectAttr "witch:rt_ear_ring_jnt.liw" "witch:skinCluster5.lw[7]";
+connectAttr "witch:hat_jnt1.liw" "witch:skinCluster5.lw[8]";
+connectAttr "witch:hat_jnt2.liw" "witch:skinCluster5.lw[9]";
+connectAttr "witch:hat_jnt3.liw" "witch:skinCluster5.lw[10]";
+connectAttr "witch:hat_jnt4.liw" "witch:skinCluster5.lw[11]";
+connectAttr "witch:feather_bot_jnt1.liw" "witch:skinCluster5.lw[12]";
+connectAttr "witch:feather_bot_jnt2.liw" "witch:skinCluster5.lw[13]";
+connectAttr "witch:feather_bot_jnt3.liw" "witch:skinCluster5.lw[14]";
+connectAttr "witch:feather_top_jnt1.liw" "witch:skinCluster5.lw[15]";
+connectAttr "witch:feather_top_jnt2.liw" "witch:skinCluster5.lw[16]";
+connectAttr "witch:lf_clavicle_jnt.liw" "witch:skinCluster5.lw[17]";
+connectAttr "witch:lf_shld_jnt.liw" "witch:skinCluster5.lw[18]";
+connectAttr "witch:lf_elbow_jnt.liw" "witch:skinCluster5.lw[19]";
+connectAttr "witch:lf_wrist_jnt.liw" "witch:skinCluster5.lw[20]";
+connectAttr "witch:lf_thumb_jnt5.liw" "witch:skinCluster5.lw[21]";
+connectAttr "witch:lf_thumb_jnt2.liw" "witch:skinCluster5.lw[22]";
+connectAttr "witch:lf_thumb_jnt3.liw" "witch:skinCluster5.lw[23]";
+connectAttr "witch:lf_thumb_jnt4.liw" "witch:skinCluster5.lw[24]";
+connectAttr "witch:lf_index_jnt1.liw" "witch:skinCluster5.lw[25]";
+connectAttr "witch:lf_index_jnt2.liw" "witch:skinCluster5.lw[26]";
+connectAttr "witch:lf_index_jnt3.liw" "witch:skinCluster5.lw[27]";
+connectAttr "witch:lf_index_jnt4.liw" "witch:skinCluster5.lw[28]";
+connectAttr "witch:lf_ltl_jnt1.liw" "witch:skinCluster5.lw[29]";
+connectAttr "witch:lf_ltl_jnt2.liw" "witch:skinCluster5.lw[30]";
+connectAttr "witch:lf_ltl_jnt3.liw" "witch:skinCluster5.lw[31]";
+connectAttr "witch:lf_ltl_jnt4.liw" "witch:skinCluster5.lw[32]";
+connectAttr "witch:lf_middle_jnt1.liw" "witch:skinCluster5.lw[33]";
+connectAttr "witch:lf_middle_jnt2.liw" "witch:skinCluster5.lw[34]";
+connectAttr "witch:lf_middle_jnt3.liw" "witch:skinCluster5.lw[35]";
+connectAttr "witch:lf_middle_jnt4.liw" "witch:skinCluster5.lw[36]";
+connectAttr "witch:lf_ring_jnt1.liw" "witch:skinCluster5.lw[37]";
+connectAttr "witch:lf_ring_jnt2.liw" "witch:skinCluster5.lw[38]";
+connectAttr "witch:lf_ring_jnt3.liw" "witch:skinCluster5.lw[39]";
+connectAttr "witch:lf_ring_jnt4.liw" "witch:skinCluster5.lw[40]";
+connectAttr "witch:lf_chest_jnt.liw" "witch:skinCluster5.lw[41]";
+connectAttr "witch:rt_chest_jnt.liw" "witch:skinCluster5.lw[42]";
+connectAttr "witch:spine_jnt1.obcc" "witch:skinCluster5.ifcl[0]";
+connectAttr "witch:spine_jnt2.obcc" "witch:skinCluster5.ifcl[1]";
+connectAttr "witch:spine_jnt3.obcc" "witch:skinCluster5.ifcl[2]";
+connectAttr "witch:neck_jnt1.obcc" "witch:skinCluster5.ifcl[3]";
+connectAttr "witch:head_jnt.obcc" "witch:skinCluster5.ifcl[4]";
+connectAttr "witch:lf_ear_ring_jnt.obcc" "witch:skinCluster5.ifcl[5]";
+connectAttr "witch:jaw_jnt.obcc" "witch:skinCluster5.ifcl[6]";
+connectAttr "witch:rt_ear_ring_jnt.obcc" "witch:skinCluster5.ifcl[7]";
+connectAttr "witch:hat_jnt1.obcc" "witch:skinCluster5.ifcl[8]";
+connectAttr "witch:hat_jnt2.obcc" "witch:skinCluster5.ifcl[9]";
+connectAttr "witch:hat_jnt3.obcc" "witch:skinCluster5.ifcl[10]";
+connectAttr "witch:hat_jnt4.obcc" "witch:skinCluster5.ifcl[11]";
+connectAttr "witch:feather_bot_jnt1.obcc" "witch:skinCluster5.ifcl[12]";
+connectAttr "witch:feather_bot_jnt2.obcc" "witch:skinCluster5.ifcl[13]";
+connectAttr "witch:feather_bot_jnt3.obcc" "witch:skinCluster5.ifcl[14]";
+connectAttr "witch:feather_top_jnt1.obcc" "witch:skinCluster5.ifcl[15]";
+connectAttr "witch:feather_top_jnt2.obcc" "witch:skinCluster5.ifcl[16]";
+connectAttr "witch:lf_clavicle_jnt.obcc" "witch:skinCluster5.ifcl[17]";
+connectAttr "witch:lf_shld_jnt.obcc" "witch:skinCluster5.ifcl[18]";
+connectAttr "witch:lf_elbow_jnt.obcc" "witch:skinCluster5.ifcl[19]";
+connectAttr "witch:lf_wrist_jnt.obcc" "witch:skinCluster5.ifcl[20]";
+connectAttr "witch:lf_thumb_jnt5.obcc" "witch:skinCluster5.ifcl[21]";
+connectAttr "witch:lf_thumb_jnt2.obcc" "witch:skinCluster5.ifcl[22]";
+connectAttr "witch:lf_thumb_jnt3.obcc" "witch:skinCluster5.ifcl[23]";
+connectAttr "witch:lf_thumb_jnt4.obcc" "witch:skinCluster5.ifcl[24]";
+connectAttr "witch:lf_index_jnt1.obcc" "witch:skinCluster5.ifcl[25]";
+connectAttr "witch:lf_index_jnt2.obcc" "witch:skinCluster5.ifcl[26]";
+connectAttr "witch:lf_index_jnt3.obcc" "witch:skinCluster5.ifcl[27]";
+connectAttr "witch:lf_index_jnt4.obcc" "witch:skinCluster5.ifcl[28]";
+connectAttr "witch:lf_ltl_jnt1.obcc" "witch:skinCluster5.ifcl[29]";
+connectAttr "witch:lf_ltl_jnt2.obcc" "witch:skinCluster5.ifcl[30]";
+connectAttr "witch:lf_ltl_jnt3.obcc" "witch:skinCluster5.ifcl[31]";
+connectAttr "witch:lf_ltl_jnt4.obcc" "witch:skinCluster5.ifcl[32]";
+connectAttr "witch:lf_middle_jnt1.obcc" "witch:skinCluster5.ifcl[33]";
+connectAttr "witch:lf_middle_jnt2.obcc" "witch:skinCluster5.ifcl[34]";
+connectAttr "witch:lf_middle_jnt3.obcc" "witch:skinCluster5.ifcl[35]";
+connectAttr "witch:lf_middle_jnt4.obcc" "witch:skinCluster5.ifcl[36]";
+connectAttr "witch:lf_ring_jnt1.obcc" "witch:skinCluster5.ifcl[37]";
+connectAttr "witch:lf_ring_jnt2.obcc" "witch:skinCluster5.ifcl[38]";
+connectAttr "witch:lf_ring_jnt3.obcc" "witch:skinCluster5.ifcl[39]";
+connectAttr "witch:lf_ring_jnt4.obcc" "witch:skinCluster5.ifcl[40]";
+connectAttr "witch:lf_chest_jnt.obcc" "witch:skinCluster5.ifcl[41]";
+connectAttr "witch:rt_chest_jnt.obcc" "witch:skinCluster5.ifcl[42]";
+connectAttr "witch:hat_jnt1.msg" "witch:skinCluster5.ptt";
+connectAttr "witch:skeleton.msg" "witch:bindPose2.m[0]";
+connectAttr "witch:spine_jnt1.msg" "witch:bindPose2.m[1]";
+connectAttr "witch:spine_jnt2.msg" "witch:bindPose2.m[2]";
+connectAttr "witch:spine_jnt3.msg" "witch:bindPose2.m[3]";
+connectAttr "witch:neck_jnt1.msg" "witch:bindPose2.m[4]";
+connectAttr "witch:head_jnt.msg" "witch:bindPose2.m[5]";
+connectAttr "witch:lf_ear_ring_jnt.msg" "witch:bindPose2.m[6]";
+connectAttr "witch:jaw_jnt.msg" "witch:bindPose2.m[7]";
+connectAttr "witch:rt_ear_ring_jnt.msg" "witch:bindPose2.m[8]";
+connectAttr "witch:hat_jnt1.msg" "witch:bindPose2.m[9]";
+connectAttr "witch:hat_jnt2.msg" "witch:bindPose2.m[10]";
+connectAttr "witch:hat_jnt3.msg" "witch:bindPose2.m[11]";
+connectAttr "witch:hat_jnt4.msg" "witch:bindPose2.m[12]";
+connectAttr "witch:feather_bot_jnt1.msg" "witch:bindPose2.m[13]";
+connectAttr "witch:feather_bot_jnt2.msg" "witch:bindPose2.m[14]";
+connectAttr "witch:feather_bot_jnt3.msg" "witch:bindPose2.m[15]";
+connectAttr "witch:feather_top_jnt1.msg" "witch:bindPose2.m[16]";
+connectAttr "witch:feather_top_jnt2.msg" "witch:bindPose2.m[17]";
+connectAttr "witch:lf_clavicle_jnt.msg" "witch:bindPose2.m[18]";
+connectAttr "witch:lf_shld_jnt.msg" "witch:bindPose2.m[19]";
+connectAttr "witch:lf_elbow_jnt.msg" "witch:bindPose2.m[20]";
+connectAttr "witch:lf_wrist_jnt.msg" "witch:bindPose2.m[21]";
+connectAttr "witch:lf_thumb_jnt5.msg" "witch:bindPose2.m[22]";
+connectAttr "witch:lf_thumb_jnt2.msg" "witch:bindPose2.m[23]";
+connectAttr "witch:lf_thumb_jnt3.msg" "witch:bindPose2.m[24]";
+connectAttr "witch:lf_thumb_jnt4.msg" "witch:bindPose2.m[25]";
+connectAttr "witch:lf_index_jnt1.msg" "witch:bindPose2.m[26]";
+connectAttr "witch:lf_index_jnt2.msg" "witch:bindPose2.m[27]";
+connectAttr "witch:lf_index_jnt3.msg" "witch:bindPose2.m[28]";
+connectAttr "witch:lf_index_jnt4.msg" "witch:bindPose2.m[29]";
+connectAttr "witch:lf_ltl_jnt1.msg" "witch:bindPose2.m[30]";
+connectAttr "witch:lf_ltl_jnt2.msg" "witch:bindPose2.m[31]";
+connectAttr "witch:lf_ltl_jnt3.msg" "witch:bindPose2.m[32]";
+connectAttr "witch:lf_ltl_jnt4.msg" "witch:bindPose2.m[33]";
+connectAttr "witch:lf_middle_jnt1.msg" "witch:bindPose2.m[34]";
+connectAttr "witch:lf_middle_jnt2.msg" "witch:bindPose2.m[35]";
+connectAttr "witch:lf_middle_jnt3.msg" "witch:bindPose2.m[36]";
+connectAttr "witch:lf_middle_jnt4.msg" "witch:bindPose2.m[37]";
+connectAttr "witch:lf_ring_jnt1.msg" "witch:bindPose2.m[38]";
+connectAttr "witch:lf_ring_jnt2.msg" "witch:bindPose2.m[39]";
+connectAttr "witch:lf_ring_jnt3.msg" "witch:bindPose2.m[40]";
+connectAttr "witch:lf_ring_jnt4.msg" "witch:bindPose2.m[41]";
+connectAttr "witch:lf_chest_jnt.msg" "witch:bindPose2.m[42]";
+connectAttr "witch:rt_chest_jnt.msg" "witch:bindPose2.m[43]";
+connectAttr "witch:pelvis_jnt.msg" "witch:bindPose2.m[136]";
+connectAttr "witch:rt_clavicle_jnt.msg" "witch:bindPose2.m[137]";
+connectAttr "witch:rt_shld_jnt.msg" "witch:bindPose2.m[138]";
+connectAttr "witch:rt_elbow_jnt.msg" "witch:bindPose2.m[139]";
+connectAttr "witch:rt_wrist_jnt.msg" "witch:bindPose2.m[140]";
+connectAttr "witch:rt_thumb_jnt5.msg" "witch:bindPose2.m[141]";
+connectAttr "witch:rt_thumb_jnt2.msg" "witch:bindPose2.m[142]";
+connectAttr "witch:rt_thumb_jnt3.msg" "witch:bindPose2.m[143]";
+connectAttr "witch:rt_index_jnt1.msg" "witch:bindPose2.m[144]";
+connectAttr "witch:rt_middle_jnt1.msg" "witch:bindPose2.m[145]";
+connectAttr "witch:rt_index_jnt2.msg" "witch:bindPose2.m[146]";
+connectAttr "witch:rt_index_jnt3.msg" "witch:bindPose2.m[147]";
+connectAttr "witch:rt_ltl_jnt1.msg" "witch:bindPose2.m[148]";
+connectAttr "witch:rt_ltl_jnt2.msg" "witch:bindPose2.m[149]";
+connectAttr "witch:rt_ltl_jnt3.msg" "witch:bindPose2.m[150]";
+connectAttr "witch:rt_ring_jnt1.msg" "witch:bindPose2.m[151]";
+connectAttr "witch:rt_ring_jnt2.msg" "witch:bindPose2.m[152]";
+connectAttr "witch:rt_middle_jnt2.msg" "witch:bindPose2.m[153]";
+connectAttr "witch:rt_middle_jnt3.msg" "witch:bindPose2.m[154]";
+connectAttr "witch:rt_ring_jnt3.msg" "witch:bindPose2.m[155]";
+connectAttr "witch:lf_hip_jnt.msg" "witch:bindPose2.m[156]";
+connectAttr "witch:lf_knee_jnt.msg" "witch:bindPose2.m[157]";
+connectAttr "witch:lf_ankle_jnt.msg" "witch:bindPose2.m[158]";
+connectAttr "witch:lf_ball_jnt.msg" "witch:bindPose2.m[159]";
+connectAttr "witch:lf_knee_add_jnt.msg" "witch:bindPose2.m[160]";
+connectAttr "witch:lf_knee_add_b_jnt.msg" "witch:bindPose2.m[161]";
+connectAttr "witch:lf_knee_add_f_jnt.msg" "witch:bindPose2.m[162]";
+connectAttr "witch:lf_hip_add_jnt.msg" "witch:bindPose2.m[163]";
+connectAttr "witch:lf_hip_add_f_jnt.msg" "witch:bindPose2.m[164]";
+connectAttr "witch:lf_ankle_add_jnt.msg" "witch:bindPose2.m[165]";
+connectAttr "witch:lf_ankle_add_f_jnt.msg" "witch:bindPose2.m[166]";
+connectAttr "witch:lf_hip_add_b_jnt.msg" "witch:bindPose2.m[167]";
+connectAttr "witch:rt_hip_jnt.msg" "witch:bindPose2.m[168]";
+connectAttr "witch:rt_knee_jnt.msg" "witch:bindPose2.m[169]";
+connectAttr "witch:rt_ankle_jnt.msg" "witch:bindPose2.m[170]";
+connectAttr "witch:rt_ball_jnt.msg" "witch:bindPose2.m[171]";
+connectAttr "witch:lf_ankle_add_b_jnt.msg" "witch:bindPose2.m[172]";
+connectAttr "witch:lf_hip_add_l_jnt.msg" "witch:bindPose2.m[173]";
+connectAttr "witch:rt_ankle_add_jnt.msg" "witch:bindPose2.m[174]";
+connectAttr "witch:rt_ankle_add_f_jnt.msg" "witch:bindPose2.m[175]";
+connectAttr "witch:rt_knee_add_jnt.msg" "witch:bindPose2.m[176]";
+connectAttr "witch:rt_knee_add_f_jnt1.msg" "witch:bindPose2.m[177]";
+connectAttr "witch:rt_hip_add_jnt.msg" "witch:bindPose2.m[178]";
+connectAttr "witch:rt_hip_add_f_jnt.msg" "witch:bindPose2.m[179]";
+connectAttr "witch:rt_hip_add_r_jnt.msg" "witch:bindPose2.m[180]";
+connectAttr "witch:rt_ankle_add_b_jnt.msg" "witch:bindPose2.m[181]";
+connectAttr "witch:rt_knee_add_b_jnt.msg" "witch:bindPose2.m[182]";
+connectAttr "witch:rt_hip_add_b_jnt.msg" "witch:bindPose2.m[183]";
+connectAttr "witch:lf_wrist_add_jnt.msg" "witch:bindPose2.m[184]";
+connectAttr "witch:lf_wrist_add_u_jnt.msg" "witch:bindPose2.m[185]";
+connectAttr "witch:lf_elbow_add_jnt.msg" "witch:bindPose2.m[186]";
+connectAttr "witch:lf_elbow_add_f_jnt.msg" "witch:bindPose2.m[187]";
+connectAttr "witch:lf_shld_add_jnt.msg" "witch:bindPose2.m[188]";
+connectAttr "witch:lf_shld_add_u_jnt.msg" "witch:bindPose2.m[189]";
+connectAttr "witch:lf_wrist_add_f_jnt.msg" "witch:bindPose2.m[190]";
+connectAttr "witch:lf_wrist_add_d_jnt.msg" "witch:bindPose2.m[191]";
+connectAttr "witch:lf_elbow_add_b_jnt.msg" "witch:bindPose2.m[192]";
+connectAttr "witch:lf_shld_add_d_jnt.msg" "witch:bindPose2.m[193]";
+connectAttr "witch:rt_wrist_add_jnt.msg" "witch:bindPose2.m[194]";
+connectAttr "witch:rt_wrist_add_u_jnt.msg" "witch:bindPose2.m[195]";
+connectAttr "witch:rt_wrist_add_f_jnt.msg" "witch:bindPose2.m[196]";
+connectAttr "witch:rt_wrist_add_d_jnt.msg" "witch:bindPose2.m[197]";
+connectAttr "witch:rt_elbow_add_jnt.msg" "witch:bindPose2.m[198]";
+connectAttr "witch:rt_elbow_add_b_jnt.msg" "witch:bindPose2.m[199]";
+connectAttr "witch:rt_elbow_add_f_jnt.msg" "witch:bindPose2.m[200]";
+connectAttr "witch:rt_shld_add_jnt.msg" "witch:bindPose2.m[201]";
+connectAttr "witch:rt_shld_add_u_jnt.msg" "witch:bindPose2.m[202]";
+connectAttr "witch:rt_shld_add_d_jnt.msg" "witch:bindPose2.m[203]";
+connectAttr "witch:bindPose2.w" "witch:bindPose2.p[0]";
+connectAttr "witch:bindPose2.m[0]" "witch:bindPose2.p[1]";
+connectAttr "witch:bindPose2.m[1]" "witch:bindPose2.p[2]";
+connectAttr "witch:bindPose2.m[2]" "witch:bindPose2.p[3]";
+connectAttr "witch:bindPose2.m[3]" "witch:bindPose2.p[4]";
+connectAttr "witch:bindPose2.m[4]" "witch:bindPose2.p[5]";
+connectAttr "witch:bindPose2.m[5]" "witch:bindPose2.p[6]";
+connectAttr "witch:bindPose2.m[5]" "witch:bindPose2.p[7]";
+connectAttr "witch:bindPose2.m[5]" "witch:bindPose2.p[8]";
+connectAttr "witch:bindPose2.m[5]" "witch:bindPose2.p[9]";
+connectAttr "witch:bindPose2.m[9]" "witch:bindPose2.p[10]";
+connectAttr "witch:bindPose2.m[10]" "witch:bindPose2.p[11]";
+connectAttr "witch:bindPose2.m[11]" "witch:bindPose2.p[12]";
+connectAttr "witch:bindPose2.m[9]" "witch:bindPose2.p[13]";
+connectAttr "witch:bindPose2.m[13]" "witch:bindPose2.p[14]";
+connectAttr "witch:bindPose2.m[14]" "witch:bindPose2.p[15]";
+connectAttr "witch:bindPose2.m[9]" "witch:bindPose2.p[16]";
+connectAttr "witch:bindPose2.m[16]" "witch:bindPose2.p[17]";
+connectAttr "witch:bindPose2.m[3]" "witch:bindPose2.p[18]";
+connectAttr "witch:bindPose2.m[18]" "witch:bindPose2.p[19]";
+connectAttr "witch:bindPose2.m[19]" "witch:bindPose2.p[20]";
+connectAttr "witch:bindPose2.m[20]" "witch:bindPose2.p[21]";
+connectAttr "witch:bindPose2.m[21]" "witch:bindPose2.p[22]";
+connectAttr "witch:bindPose2.m[22]" "witch:bindPose2.p[23]";
+connectAttr "witch:bindPose2.m[23]" "witch:bindPose2.p[24]";
+connectAttr "witch:bindPose2.m[24]" "witch:bindPose2.p[25]";
+connectAttr "witch:bindPose2.m[21]" "witch:bindPose2.p[26]";
+connectAttr "witch:bindPose2.m[26]" "witch:bindPose2.p[27]";
+connectAttr "witch:bindPose2.m[27]" "witch:bindPose2.p[28]";
+connectAttr "witch:bindPose2.m[28]" "witch:bindPose2.p[29]";
+connectAttr "witch:bindPose2.m[21]" "witch:bindPose2.p[30]";
+connectAttr "witch:bindPose2.m[30]" "witch:bindPose2.p[31]";
+connectAttr "witch:bindPose2.m[31]" "witch:bindPose2.p[32]";
+connectAttr "witch:bindPose2.m[32]" "witch:bindPose2.p[33]";
+connectAttr "witch:bindPose2.m[21]" "witch:bindPose2.p[34]";
+connectAttr "witch:bindPose2.m[34]" "witch:bindPose2.p[35]";
+connectAttr "witch:bindPose2.m[35]" "witch:bindPose2.p[36]";
+connectAttr "witch:bindPose2.m[36]" "witch:bindPose2.p[37]";
+connectAttr "witch:bindPose2.m[21]" "witch:bindPose2.p[38]";
+connectAttr "witch:bindPose2.m[38]" "witch:bindPose2.p[39]";
+connectAttr "witch:bindPose2.m[39]" "witch:bindPose2.p[40]";
+connectAttr "witch:bindPose2.m[40]" "witch:bindPose2.p[41]";
+connectAttr "witch:bindPose2.m[3]" "witch:bindPose2.p[42]";
+connectAttr "witch:bindPose2.m[3]" "witch:bindPose2.p[43]";
+connectAttr "witch:bindPose2.m[3]" "witch:bindPose2.p[44]";
+connectAttr "witch:bindPose2.m[44]" "witch:bindPose2.p[45]";
+connectAttr "witch:bindPose2.m[45]" "witch:bindPose2.p[46]";
+connectAttr "witch:bindPose2.m[46]" "witch:bindPose2.p[47]";
+connectAttr "witch:bindPose2.m[47]" "witch:bindPose2.p[48]";
+connectAttr "witch:bindPose2.m[48]" "witch:bindPose2.p[49]";
+connectAttr "witch:bindPose2.m[49]" "witch:bindPose2.p[50]";
+connectAttr "witch:bindPose2.m[47]" "witch:bindPose2.p[52]";
+connectAttr "witch:bindPose2.m[52]" "witch:bindPose2.p[53]";
+connectAttr "witch:bindPose2.m[53]" "witch:bindPose2.p[54]";
+connectAttr "witch:bindPose2.m[47]" "witch:bindPose2.p[56]";
+connectAttr "witch:bindPose2.m[56]" "witch:bindPose2.p[57]";
+connectAttr "witch:bindPose2.m[57]" "witch:bindPose2.p[58]";
+connectAttr "witch:bindPose2.m[47]" "witch:bindPose2.p[60]";
+connectAttr "witch:bindPose2.m[60]" "witch:bindPose2.p[61]";
+connectAttr "witch:bindPose2.m[61]" "witch:bindPose2.p[62]";
+connectAttr "witch:bindPose2.m[47]" "witch:bindPose2.p[64]";
+connectAttr "witch:bindPose2.m[64]" "witch:bindPose2.p[65]";
+connectAttr "witch:bindPose2.m[65]" "witch:bindPose2.p[66]";
+connectAttr "witch:bindPose2.m[0]" "witch:bindPose2.p[136]";
+connectAttr "witch:bindPose2.m[3]" "witch:bindPose2.p[137]";
+connectAttr "witch:rt_clavicle_jnt.msg" "witch:bindPose2.p[138]";
+connectAttr "witch:rt_shld_jnt.msg" "witch:bindPose2.p[139]";
+connectAttr "witch:rt_elbow_jnt.msg" "witch:bindPose2.p[140]";
+connectAttr "witch:rt_wrist_jnt.msg" "witch:bindPose2.p[141]";
+connectAttr "witch:rt_thumb_jnt5.msg" "witch:bindPose2.p[142]";
+connectAttr "witch:rt_thumb_jnt2.msg" "witch:bindPose2.p[143]";
+connectAttr "witch:bindPose2.m[140]" "witch:bindPose2.p[144]";
+connectAttr "witch:bindPose2.m[140]" "witch:bindPose2.p[145]";
+connectAttr "witch:bindPose2.m[144]" "witch:bindPose2.p[146]";
+connectAttr "witch:rt_index_jnt2.msg" "witch:bindPose2.p[147]";
+connectAttr "witch:bindPose2.m[140]" "witch:bindPose2.p[148]";
+connectAttr "witch:rt_ltl_jnt1.msg" "witch:bindPose2.p[149]";
+connectAttr "witch:rt_ltl_jnt2.msg" "witch:bindPose2.p[150]";
+connectAttr "witch:bindPose2.m[140]" "witch:bindPose2.p[151]";
+connectAttr "witch:rt_ring_jnt1.msg" "witch:bindPose2.p[152]";
+connectAttr "witch:bindPose2.m[145]" "witch:bindPose2.p[153]";
+connectAttr "witch:rt_middle_jnt2.msg" "witch:bindPose2.p[154]";
+connectAttr "witch:bindPose2.m[152]" "witch:bindPose2.p[155]";
+connectAttr "witch:bindPose2.m[136]" "witch:bindPose2.p[156]";
+connectAttr "witch:lf_hip_jnt.msg" "witch:bindPose2.p[157]";
+connectAttr "witch:lf_knee_jnt.msg" "witch:bindPose2.p[158]";
+connectAttr "witch:lf_ankle_jnt.msg" "witch:bindPose2.p[159]";
+connectAttr "witch:bindPose2.m[157]" "witch:bindPose2.p[160]";
+connectAttr "witch:lf_knee_add_jnt.msg" "witch:bindPose2.p[161]";
+connectAttr "witch:bindPose2.m[160]" "witch:bindPose2.p[162]";
+connectAttr "witch:bindPose2.m[156]" "witch:bindPose2.p[163]";
+connectAttr "witch:lf_hip_add_jnt.msg" "witch:bindPose2.p[164]";
+connectAttr "witch:bindPose2.m[158]" "witch:bindPose2.p[165]";
+connectAttr "witch:lf_ankle_add_jnt.msg" "witch:bindPose2.p[166]";
+connectAttr "witch:bindPose2.m[163]" "witch:bindPose2.p[167]";
+connectAttr "witch:bindPose2.m[136]" "witch:bindPose2.p[168]";
+connectAttr "witch:rt_hip_jnt.msg" "witch:bindPose2.p[169]";
+connectAttr "witch:rt_knee_jnt.msg" "witch:bindPose2.p[170]";
+connectAttr "witch:rt_ankle_jnt.msg" "witch:bindPose2.p[171]";
+connectAttr "witch:bindPose2.m[165]" "witch:bindPose2.p[172]";
+connectAttr "witch:bindPose2.m[163]" "witch:bindPose2.p[173]";
+connectAttr "witch:bindPose2.m[170]" "witch:bindPose2.p[174]";
+connectAttr "witch:rt_ankle_add_jnt.msg" "witch:bindPose2.p[175]";
+connectAttr "witch:bindPose2.m[169]" "witch:bindPose2.p[176]";
+connectAttr "witch:rt_knee_add_jnt.msg" "witch:bindPose2.p[177]";
+connectAttr "witch:bindPose2.m[168]" "witch:bindPose2.p[178]";
+connectAttr "witch:rt_hip_add_jnt.msg" "witch:bindPose2.p[179]";
+connectAttr "witch:bindPose2.m[178]" "witch:bindPose2.p[180]";
+connectAttr "witch:bindPose2.m[174]" "witch:bindPose2.p[181]";
+connectAttr "witch:bindPose2.m[176]" "witch:bindPose2.p[182]";
+connectAttr "witch:bindPose2.m[178]" "witch:bindPose2.p[183]";
+connectAttr "witch:bindPose2.m[21]" "witch:bindPose2.p[184]";
+connectAttr "witch:lf_wrist_add_jnt.msg" "witch:bindPose2.p[185]";
+connectAttr "witch:bindPose2.m[20]" "witch:bindPose2.p[186]";
+connectAttr "witch:lf_elbow_add_jnt.msg" "witch:bindPose2.p[187]";
+connectAttr "witch:bindPose2.m[19]" "witch:bindPose2.p[188]";
+connectAttr "witch:lf_shld_add_jnt.msg" "witch:bindPose2.p[189]";
+connectAttr "witch:bindPose2.m[184]" "witch:bindPose2.p[190]";
+connectAttr "witch:bindPose2.m[184]" "witch:bindPose2.p[191]";
+connectAttr "witch:bindPose2.m[186]" "witch:bindPose2.p[192]";
+connectAttr "witch:bindPose2.m[188]" "witch:bindPose2.p[193]";
+connectAttr "witch:bindPose2.m[140]" "witch:bindPose2.p[194]";
+connectAttr "witch:rt_wrist_add_jnt.msg" "witch:bindPose2.p[195]";
+connectAttr "witch:bindPose2.m[194]" "witch:bindPose2.p[196]";
+connectAttr "witch:bindPose2.m[194]" "witch:bindPose2.p[197]";
+connectAttr "witch:bindPose2.m[139]" "witch:bindPose2.p[198]";
+connectAttr "witch:rt_elbow_add_jnt.msg" "witch:bindPose2.p[199]";
+connectAttr "witch:bindPose2.m[198]" "witch:bindPose2.p[200]";
+connectAttr "witch:bindPose2.m[138]" "witch:bindPose2.p[201]";
+connectAttr "witch:rt_shld_add_jnt.msg" "witch:bindPose2.p[202]";
+connectAttr "witch:bindPose2.m[201]" "witch:bindPose2.p[203]";
+connectAttr "witch:pelvis_jnt.bps" "witch:bindPose2.wm[136]";
+connectAttr "witch:rt_clavicle_jnt.bps" "witch:bindPose2.wm[137]";
+connectAttr "witch:rt_shld_jnt.bps" "witch:bindPose2.wm[138]";
+connectAttr "witch:rt_elbow_jnt.bps" "witch:bindPose2.wm[139]";
+connectAttr "witch:rt_wrist_jnt.bps" "witch:bindPose2.wm[140]";
+connectAttr "witch:rt_thumb_jnt5.bps" "witch:bindPose2.wm[141]";
+connectAttr "witch:rt_thumb_jnt2.bps" "witch:bindPose2.wm[142]";
+connectAttr "witch:rt_thumb_jnt3.bps" "witch:bindPose2.wm[143]";
+connectAttr "witch:rt_index_jnt1.bps" "witch:bindPose2.wm[144]";
+connectAttr "witch:rt_middle_jnt1.bps" "witch:bindPose2.wm[145]";
+connectAttr "witch:rt_index_jnt2.bps" "witch:bindPose2.wm[146]";
+connectAttr "witch:rt_index_jnt3.bps" "witch:bindPose2.wm[147]";
+connectAttr "witch:rt_ltl_jnt1.bps" "witch:bindPose2.wm[148]";
+connectAttr "witch:rt_ltl_jnt2.bps" "witch:bindPose2.wm[149]";
+connectAttr "witch:rt_ltl_jnt3.bps" "witch:bindPose2.wm[150]";
+connectAttr "witch:rt_ring_jnt1.bps" "witch:bindPose2.wm[151]";
+connectAttr "witch:rt_ring_jnt2.bps" "witch:bindPose2.wm[152]";
+connectAttr "witch:rt_middle_jnt2.bps" "witch:bindPose2.wm[153]";
+connectAttr "witch:rt_middle_jnt3.bps" "witch:bindPose2.wm[154]";
+connectAttr "witch:rt_ring_jnt3.bps" "witch:bindPose2.wm[155]";
+connectAttr "witch:lf_hip_jnt.bps" "witch:bindPose2.wm[156]";
+connectAttr "witch:lf_knee_jnt.bps" "witch:bindPose2.wm[157]";
+connectAttr "witch:lf_ankle_jnt.bps" "witch:bindPose2.wm[158]";
+connectAttr "witch:lf_ball_jnt.bps" "witch:bindPose2.wm[159]";
+connectAttr "witch:lf_knee_add_jnt.bps" "witch:bindPose2.wm[160]";
+connectAttr "witch:lf_knee_add_b_jnt.bps" "witch:bindPose2.wm[161]";
+connectAttr "witch:lf_knee_add_f_jnt.bps" "witch:bindPose2.wm[162]";
+connectAttr "witch:lf_hip_add_jnt.bps" "witch:bindPose2.wm[163]";
+connectAttr "witch:lf_hip_add_f_jnt.bps" "witch:bindPose2.wm[164]";
+connectAttr "witch:lf_ankle_add_jnt.bps" "witch:bindPose2.wm[165]";
+connectAttr "witch:lf_ankle_add_f_jnt.bps" "witch:bindPose2.wm[166]";
+connectAttr "witch:lf_hip_add_b_jnt.bps" "witch:bindPose2.wm[167]";
+connectAttr "witch:rt_hip_jnt.bps" "witch:bindPose2.wm[168]";
+connectAttr "witch:rt_knee_jnt.bps" "witch:bindPose2.wm[169]";
+connectAttr "witch:rt_ankle_jnt.bps" "witch:bindPose2.wm[170]";
+connectAttr "witch:rt_ball_jnt.bps" "witch:bindPose2.wm[171]";
+connectAttr "witch:lf_ankle_add_b_jnt.bps" "witch:bindPose2.wm[172]";
+connectAttr "witch:lf_hip_add_l_jnt.bps" "witch:bindPose2.wm[173]";
+connectAttr "witch:rt_ankle_add_jnt.bps" "witch:bindPose2.wm[174]";
+connectAttr "witch:rt_ankle_add_f_jnt.bps" "witch:bindPose2.wm[175]";
+connectAttr "witch:rt_knee_add_jnt.bps" "witch:bindPose2.wm[176]";
+connectAttr "witch:rt_knee_add_f_jnt1.bps" "witch:bindPose2.wm[177]";
+connectAttr "witch:rt_hip_add_jnt.bps" "witch:bindPose2.wm[178]";
+connectAttr "witch:rt_hip_add_f_jnt.bps" "witch:bindPose2.wm[179]";
+connectAttr "witch:rt_hip_add_r_jnt.bps" "witch:bindPose2.wm[180]";
+connectAttr "witch:rt_ankle_add_b_jnt.bps" "witch:bindPose2.wm[181]";
+connectAttr "witch:rt_knee_add_b_jnt.bps" "witch:bindPose2.wm[182]";
+connectAttr "witch:rt_hip_add_b_jnt.bps" "witch:bindPose2.wm[183]";
+connectAttr "witch:lf_wrist_add_jnt.bps" "witch:bindPose2.wm[184]";
+connectAttr "witch:lf_wrist_add_u_jnt.bps" "witch:bindPose2.wm[185]";
+connectAttr "witch:lf_elbow_add_jnt.bps" "witch:bindPose2.wm[186]";
+connectAttr "witch:lf_elbow_add_f_jnt.bps" "witch:bindPose2.wm[187]";
+connectAttr "witch:lf_shld_add_jnt.bps" "witch:bindPose2.wm[188]";
+connectAttr "witch:lf_shld_add_u_jnt.bps" "witch:bindPose2.wm[189]";
+connectAttr "witch:lf_wrist_add_f_jnt.bps" "witch:bindPose2.wm[190]";
+connectAttr "witch:lf_wrist_add_d_jnt.bps" "witch:bindPose2.wm[191]";
+connectAttr "witch:lf_elbow_add_b_jnt.bps" "witch:bindPose2.wm[192]";
+connectAttr "witch:lf_shld_add_d_jnt.bps" "witch:bindPose2.wm[193]";
+connectAttr "witch:rt_wrist_add_jnt.bps" "witch:bindPose2.wm[194]";
+connectAttr "witch:rt_wrist_add_u_jnt.bps" "witch:bindPose2.wm[195]";
+connectAttr "witch:rt_wrist_add_f_jnt.bps" "witch:bindPose2.wm[196]";
+connectAttr "witch:rt_wrist_add_d_jnt.bps" "witch:bindPose2.wm[197]";
+connectAttr "witch:rt_elbow_add_jnt.bps" "witch:bindPose2.wm[198]";
+connectAttr "witch:rt_elbow_add_b_jnt.bps" "witch:bindPose2.wm[199]";
+connectAttr "witch:rt_elbow_add_f_jnt.bps" "witch:bindPose2.wm[200]";
+connectAttr "witch:rt_shld_add_jnt.bps" "witch:bindPose2.wm[201]";
+connectAttr "witch:rt_shld_add_u_jnt.bps" "witch:bindPose2.wm[202]";
+connectAttr "witch:rt_shld_add_d_jnt.bps" "witch:bindPose2.wm[203]";
+connectAttr "witch:unitConversion1.o" "witch:lf_wrist_add_b_jnt_translateY.i";
+connectAttr "witch:lf_wrist_jnt.rz" "witch:unitConversion1.i";
+connectAttr "witch:unitConversion2.o" "witch:lf_wrist_add_f_jnt_translateY.i";
+connectAttr "witch:lf_wrist_jnt.rz" "witch:unitConversion2.i";
+connectAttr "witch:unitConversion3.o" "witch:lf_wrist_add_d_jnt_translateZ.i";
+connectAttr "witch:lf_wrist_jnt.ry" "witch:unitConversion3.i";
+connectAttr "witch:unitConversion4.o" "witch:lf_wrist_add_u_jnt_translateZ.i";
+connectAttr "witch:lf_wrist_jnt.ry" "witch:unitConversion4.i";
+connectAttr "witch:unitConversion9.o" "witch:lf_elbow_add_b_jnt_translateY.i";
+connectAttr "witch:lf_elbow_jnt.rz" "witch:unitConversion9.i";
+connectAttr "witch:unitConversion10.o" "witch:lf_elbow_add_f_jnt_translateY.i";
+connectAttr "witch:lf_elbow_jnt.rz" "witch:unitConversion10.i";
+connectAttr "witch:unitConversion13.o" "witch:lf_shld_add_f_jnt_translateY.i";
+connectAttr "witch:lf_shld_jnt.rz" "witch:unitConversion13.i";
+connectAttr "witch:unitConversion15.o" "witch:lf_shld_add_u_jnt_translateZ.i";
+connectAttr "witch:lf_shld_jnt.ry" "witch:unitConversion15.i";
+connectAttr "witch:unitConversion16.o" "witch:lf_shld_add_d_jnt_translateZ.i";
+connectAttr "witch:lf_shld_jnt.ry" "witch:unitConversion16.i";
+connectAttr "witch:unitConversion21.o" "witch:lf_ankle_add_f_jnt_translateY.i";
+connectAttr "witch:lf_ankle_jnt.rz" "witch:unitConversion21.i";
+connectAttr "witch:unitConversion22.o" "witch:lf_ankle_add_b_jnt_translateY.i";
+connectAttr "witch:lf_ankle_jnt.rz" "witch:unitConversion22.i";
+connectAttr "witch:unitConversion23.o" "witch:lf_ankle_add_l_jnt_translateZ.i";
+connectAttr "witch:lf_ankle_jnt.ry" "witch:unitConversion23.i";
+connectAttr "witch:unitConversion24.o" "witch:lf_ankle_add_r_jnt_translateZ.i";
+connectAttr "witch:lf_ankle_jnt.ry" "witch:unitConversion24.i";
+connectAttr "witch:unitConversion25.o" "witch:rt_ankle_add_f_jnt_translateY.i";
+connectAttr "witch:rt_ankle_jnt.rz" "witch:unitConversion25.i";
+connectAttr "witch:unitConversion26.o" "witch:rt_ankle_add_b_jnt_translateY.i";
+connectAttr "witch:rt_ankle_jnt.rz" "witch:unitConversion26.i";
+connectAttr "witch:rt_ankle_jnt.rz" "witch:unitConversion27.i";
+connectAttr "witch:unitConversion28.o" "witch:rt_ankle_add_r_jnt_translateZ.i";
+connectAttr "witch:rt_ankle_jnt.ry" "witch:unitConversion28.i";
+connectAttr "witch:unitConversion29.o" "witch:rt_ankle_add_l_jnt_translateZ.i";
+connectAttr "witch:rt_ankle_jnt.ry" "witch:unitConversion29.i";
+connectAttr "witch:unitConversion30.o" "witch:lf_knee_add_b_jnt_translateY.i";
+connectAttr "witch:lf_knee_jnt.rz" "witch:unitConversion30.i";
+connectAttr "witch:unitConversion31.o" "witch:lf_knee_add_f_jnt_translateY.i";
+connectAttr "witch:lf_knee_jnt.rz" "witch:unitConversion31.i";
+connectAttr "witch:unitConversion32.o" "witch:rt_knee_add_b_jnt_translateY.i";
+connectAttr "witch:rt_knee_jnt.rz" "witch:unitConversion32.i";
+connectAttr "witch:unitConversion33.o" "witch:rt_knee_add_f_jnt_translateY.i";
+connectAttr "witch:rt_knee_jnt.rz" "witch:unitConversion33.i";
+connectAttr "witch:unitConversion34.o" "witch:lf_hip_add_f_jnt_translateY.i";
+connectAttr "witch:lf_hip_jnt.rz" "witch:unitConversion34.i";
+connectAttr "witch:unitConversion35.o" "witch:lf_hip_add_b_jnt_translateY.i";
+connectAttr "witch:lf_hip_jnt.rz" "witch:unitConversion35.i";
+connectAttr "witch:unitConversion36.o" "witch:lf_hip_add_l_jnt_translateZ.i";
+connectAttr "witch:lf_hip_jnt.ry" "witch:unitConversion36.i";
+connectAttr "witch:unitConversion37.o" "witch:rt_hip_add_r_jnt_translateZ.i";
+connectAttr "witch:rt_hip_jnt.ry" "witch:unitConversion37.i";
+connectAttr "witch:unitConversion38.o" "witch:rt_hip_add_b_jnt_translateY.i";
+connectAttr "witch:rt_hip_jnt.rz" "witch:unitConversion38.i";
+connectAttr "witch:unitConversion39.o" "witch:rt_hip_add_f_jnt_translateY.i";
+connectAttr "witch:rt_hip_jnt.rz" "witch:unitConversion39.i";
+connectAttr "witch:skinCluster7GroupParts.og" "witch:skinCluster7.ip[0].ig";
+connectAttr "witch:broom_geoShapeOrig.o" "witch:skinCluster7.orggeom[0]";
+connectAttr "witch:bindPose3.msg" "witch:skinCluster7.bp";
+connectAttr "witch:broom_jnt1.wm" "witch:skinCluster7.ma[0]";
+connectAttr "witch:broom_leaf_jnt4.wm" "witch:skinCluster7.ma[4]";
+connectAttr "witch:broom_leaf_jnt5.wm" "witch:skinCluster7.ma[5]";
+connectAttr "witch:broom_leaf_jnt6.wm" "witch:skinCluster7.ma[6]";
+connectAttr "witch:broom_leaf_jnt7.wm" "witch:skinCluster7.ma[7]";
+connectAttr "witch:broom_leaf_jnt8.wm" "witch:skinCluster7.ma[8]";
+connectAttr "witch:broom_leaf_jnt9.wm" "witch:skinCluster7.ma[9]";
+connectAttr "witch:broom_bot_jnt.wm" "witch:skinCluster7.ma[10]";
+connectAttr "witch:broom_rod_jnt1.wm" "witch:skinCluster7.ma[11]";
+connectAttr "witch:broom_rod_jnt2.wm" "witch:skinCluster7.ma[12]";
+connectAttr "witch:broom_rod_jnt3.wm" "witch:skinCluster7.ma[13]";
+connectAttr "witch:broom_leaf_jnt1.wm" "witch:skinCluster7.ma[14]";
+connectAttr "witch:broom_leaf_jnt2.wm" "witch:skinCluster7.ma[15]";
+connectAttr "witch:broom_leaf_jnt23.wm" "witch:skinCluster7.ma[16]";
+connectAttr "witch:broom_jnt1.liw" "witch:skinCluster7.lw[0]";
+connectAttr "witch:broom_leaf_jnt4.liw" "witch:skinCluster7.lw[4]";
+connectAttr "witch:broom_leaf_jnt5.liw" "witch:skinCluster7.lw[5]";
+connectAttr "witch:broom_leaf_jnt6.liw" "witch:skinCluster7.lw[6]";
+connectAttr "witch:broom_leaf_jnt7.liw" "witch:skinCluster7.lw[7]";
+connectAttr "witch:broom_leaf_jnt8.liw" "witch:skinCluster7.lw[8]";
+connectAttr "witch:broom_leaf_jnt9.liw" "witch:skinCluster7.lw[9]";
+connectAttr "witch:broom_bot_jnt.liw" "witch:skinCluster7.lw[10]";
+connectAttr "witch:broom_rod_jnt1.liw" "witch:skinCluster7.lw[11]";
+connectAttr "witch:broom_rod_jnt2.liw" "witch:skinCluster7.lw[12]";
+connectAttr "witch:broom_rod_jnt3.liw" "witch:skinCluster7.lw[13]";
+connectAttr "witch:broom_leaf_jnt1.liw" "witch:skinCluster7.lw[14]";
+connectAttr "witch:broom_leaf_jnt2.liw" "witch:skinCluster7.lw[15]";
+connectAttr "witch:broom_leaf_jnt23.liw" "witch:skinCluster7.lw[16]";
+connectAttr "witch:broom_jnt1.obcc" "witch:skinCluster7.ifcl[0]";
+connectAttr "witch:broom_leaf_jnt4.obcc" "witch:skinCluster7.ifcl[4]";
+connectAttr "witch:broom_leaf_jnt5.obcc" "witch:skinCluster7.ifcl[5]";
+connectAttr "witch:broom_leaf_jnt6.obcc" "witch:skinCluster7.ifcl[6]";
+connectAttr "witch:broom_leaf_jnt7.obcc" "witch:skinCluster7.ifcl[7]";
+connectAttr "witch:broom_leaf_jnt8.obcc" "witch:skinCluster7.ifcl[8]";
+connectAttr "witch:broom_leaf_jnt9.obcc" "witch:skinCluster7.ifcl[9]";
+connectAttr "witch:broom_bot_jnt.obcc" "witch:skinCluster7.ifcl[10]";
+connectAttr "witch:broom_rod_jnt1.obcc" "witch:skinCluster7.ifcl[11]";
+connectAttr "witch:broom_rod_jnt2.obcc" "witch:skinCluster7.ifcl[12]";
+connectAttr "witch:broom_rod_jnt3.obcc" "witch:skinCluster7.ifcl[13]";
+connectAttr "witch:broom_leaf_jnt1.obcc" "witch:skinCluster7.ifcl[14]";
+connectAttr "witch:broom_leaf_jnt2.obcc" "witch:skinCluster7.ifcl[15]";
+connectAttr "witch:broom_leaf_jnt23.obcc" "witch:skinCluster7.ifcl[16]";
+connectAttr "witch:broom_skeleton.msg" "witch:bindPose3.m[0]";
+connectAttr "witch:broom_jnt1.msg" "witch:bindPose3.m[1]";
+connectAttr "witch:broom_leaf_jnt1.msg" "witch:bindPose3.m[2]";
+connectAttr "witch:broom_leaf_jnt2.msg" "witch:bindPose3.m[3]";
+connectAttr "witch:broom_leaf_jnt4.msg" "witch:bindPose3.m[5]";
+connectAttr "witch:broom_leaf_jnt5.msg" "witch:bindPose3.m[6]";
+connectAttr "witch:broom_leaf_jnt6.msg" "witch:bindPose3.m[7]";
+connectAttr "witch:broom_leaf_jnt7.msg" "witch:bindPose3.m[8]";
+connectAttr "witch:broom_leaf_jnt8.msg" "witch:bindPose3.m[9]";
+connectAttr "witch:broom_leaf_jnt9.msg" "witch:bindPose3.m[10]";
+connectAttr "witch:broom_bot_jnt.msg" "witch:bindPose3.m[11]";
+connectAttr "witch:broom_rod_jnt1.msg" "witch:bindPose3.m[12]";
+connectAttr "witch:broom_rod_jnt2.msg" "witch:bindPose3.m[13]";
+connectAttr "witch:broom_rod_jnt3.msg" "witch:bindPose3.m[14]";
+connectAttr "witch:broom_leaf_jnt23.msg" "witch:bindPose3.m[15]";
+connectAttr "witch:bindPose3.w" "witch:bindPose3.p[0]";
+connectAttr "witch:bindPose3.m[0]" "witch:bindPose3.p[1]";
+connectAttr "witch:bindPose3.m[1]" "witch:bindPose3.p[2]";
+connectAttr "witch:bindPose3.m[2]" "witch:bindPose3.p[3]";
+connectAttr "witch:bindPose3.m[1]" "witch:bindPose3.p[5]";
+connectAttr "witch:bindPose3.m[5]" "witch:bindPose3.p[6]";
+connectAttr "witch:bindPose3.m[6]" "witch:bindPose3.p[7]";
+connectAttr "witch:bindPose3.m[1]" "witch:bindPose3.p[8]";
+connectAttr "witch:bindPose3.m[8]" "witch:bindPose3.p[9]";
+connectAttr "witch:bindPose3.m[9]" "witch:bindPose3.p[10]";
+connectAttr "witch:bindPose3.m[1]" "witch:bindPose3.p[11]";
+connectAttr "witch:bindPose3.m[11]" "witch:bindPose3.p[12]";
+connectAttr "witch:bindPose3.m[11]" "witch:bindPose3.p[13]";
+connectAttr "witch:bindPose3.m[11]" "witch:bindPose3.p[14]";
+connectAttr "witch:bindPose3.m[3]" "witch:bindPose3.p[15]";
+connectAttr "witch:broom_jnt1.bps" "witch:bindPose3.wm[1]";
+connectAttr "witch:broom_leaf_jnt1.bps" "witch:bindPose3.wm[2]";
+connectAttr "witch:broom_leaf_jnt2.bps" "witch:bindPose3.wm[3]";
+connectAttr "witch:broom_leaf_jnt4.bps" "witch:bindPose3.wm[5]";
+connectAttr "witch:broom_leaf_jnt5.bps" "witch:bindPose3.wm[6]";
+connectAttr "witch:broom_leaf_jnt6.bps" "witch:bindPose3.wm[7]";
+connectAttr "witch:broom_leaf_jnt7.bps" "witch:bindPose3.wm[8]";
+connectAttr "witch:broom_leaf_jnt8.bps" "witch:bindPose3.wm[9]";
+connectAttr "witch:broom_leaf_jnt9.bps" "witch:bindPose3.wm[10]";
+connectAttr "witch:broom_bot_jnt.bps" "witch:bindPose3.wm[11]";
+connectAttr "witch:broom_rod_jnt1.bps" "witch:bindPose3.wm[12]";
+connectAttr "witch:broom_rod_jnt2.bps" "witch:bindPose3.wm[13]";
+connectAttr "witch:broom_rod_jnt3.bps" "witch:bindPose3.wm[14]";
+connectAttr "witch:broom_leaf_jnt23.bps" "witch:bindPose3.wm[15]";
+connectAttr "witch:unitConversion42.o" "witch:lf_ribbon_tape_rotateZ.i";
+connectAttr "witch:lf_hip_jnt.rz" "witch:unitConversion42.i";
+connectAttr "witch:unitConversion43.o" "witch:rt_ribbon_tape_rotateZ.i";
+connectAttr "witch:rt_hip_jnt.rz" "witch:unitConversion43.i";
+connectAttr "witch:lf_ball_add_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_ball_add_u_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_ball_add_d_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_ball_add_jnt_orientConstraint1.iog" "witch:lf_add_jnts.dsm"
+		 -na;
+connectAttr "witch:lf_knee_add_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_knee_add_f_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_knee_add_b_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_knee_add_jnt_orientConstraint1.iog" "witch:lf_add_jnts.dsm"
+		 -na;
+connectAttr "witch:lf_ankle_add_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_ankle_add_f_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_ankle_add_r_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_ankle_add_b_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_ankle_add_l_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_ankle_add_jnt_orientConstraint1.iog" "witch:lf_add_jnts.dsm"
+		 -na;
+connectAttr "witch:lf_hip_add_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_hip_add_f_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_hip_add_b_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_hip_add_l_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_hip_add_jnt_orientConstraint1.iog" "witch:lf_add_jnts.dsm"
+		 -na;
+connectAttr "witch:lf_elbow_add_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_elbow_add_b_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_elbow_add_f_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_elbow_add_jnt_orientConstraint1.iog" "witch:lf_add_jnts.dsm"
+		 -na;
+connectAttr "witch:lf_shld_add_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_shld_add_u_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_shld_add_f_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_shld_add_d_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_shld_add_jnt_orientConstraint1.iog" "witch:lf_add_jnts.dsm"
+		 -na;
+connectAttr "witch:lf_wrist_add_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_wrist_add_b_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_wrist_add_u_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_wrist_add_f_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_wrist_add_d_jnt.iog" "witch:lf_add_jnts.dsm" -na;
+connectAttr "witch:lf_wrist_add_jnt_orientConstraint1.iog" "witch:lf_add_jnts.dsm"
+		 -na;
+connectAttr "witch:lf_add_jnts.msg" "witch:add_jnts.dnsm" -na;
+connectAttr "witch:rt_add_jnts.msg" "witch:add_jnts.dnsm" -na;
+connectAttr "witch:rt_ankle_add_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_ankle_add_f_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_ankle_add_r_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_ankle_add_b_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_ankle_add_l_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_ankle_add_jnt_orientConstraint1.iog" "witch:rt_add_jnts.dsm"
+		 -na;
+connectAttr "witch:rt_ball_add_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_ball_add_u_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_ball_add_d_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_ball_add_jnt_orientConstraint1.iog" "witch:rt_add_jnts.dsm"
+		 -na;
+connectAttr "witch:rt_knee_add_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_knee_add_b_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_knee_add_f_jnt1.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_knee_add_jnt_orientConstraint1.iog" "witch:rt_add_jnts.dsm"
+		 -na;
+connectAttr "witch:rt_hip_add_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_hip_add_f_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_hip_add_b_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_hip_add_r_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_hip_add_jnt_orientConstraint1.iog" "witch:rt_add_jnts.dsm"
+		 -na;
+connectAttr "witch:rt_wrist_add_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_wrist_add_b_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_wrist_add_u_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_wrist_add_f_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_wrist_add_d_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_elbow_add_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_elbow_add_b_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_elbow_add_f_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_shld_add_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_shld_add_u_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_shld_add_f_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:rt_shld_add_d_jnt.iog" "witch:rt_add_jnts.dsm" -na;
+connectAttr "witch:lf_arm_switch_ctrl.ikFk" "witch:reverse1.ix";
+connectAttr "witch:rt_arm_switch_ctrl.ikFk" "witch:reverse2.ix";
+connectAttr "witch:body_geoShapeOrig.w" "witch:skinCluster9.ip[0].ig";
+connectAttr "witch:body_geoShapeOrig.o" "witch:skinCluster9.orggeom[0]";
+connectAttr "witch:pelvis_jnt.wm" "witch:skinCluster9.ma[0]";
+connectAttr "witch:rt_shld_jnt.wm" "witch:skinCluster9.ma[1]";
+connectAttr "witch:rt_clavicle_jnt.wm" "witch:skinCluster9.ma[2]";
+connectAttr "witch:rt_thumb_jnt3.wm" "witch:skinCluster9.ma[3]";
+connectAttr "witch:rt_index_jnt1.wm" "witch:skinCluster9.ma[4]";
+connectAttr "witch:rt_wrist_jnt.wm" "witch:skinCluster9.ma[5]";
+connectAttr "witch:rt_thumb_jnt2.wm" "witch:skinCluster9.ma[6]";
+connectAttr "witch:rt_elbow_jnt.wm" "witch:skinCluster9.ma[7]";
+connectAttr "witch:rt_thumb_jnt5.wm" "witch:skinCluster9.ma[8]";
+connectAttr "witch:rt_middle_jnt1.wm" "witch:skinCluster9.ma[9]";
+connectAttr "witch:rt_index_jnt3.wm" "witch:skinCluster9.ma[10]";
+connectAttr "witch:rt_ltl_jnt1.wm" "witch:skinCluster9.ma[11]";
+connectAttr "witch:rt_index_jnt2.wm" "witch:skinCluster9.ma[12]";
+connectAttr "witch:rt_ltl_jnt2.wm" "witch:skinCluster9.ma[13]";
+connectAttr "witch:rt_ltl_jnt3.wm" "witch:skinCluster9.ma[14]";
+connectAttr "witch:rt_ring_jnt2.wm" "witch:skinCluster9.ma[15]";
+connectAttr "witch:rt_middle_jnt2.wm" "witch:skinCluster9.ma[16]";
+connectAttr "witch:rt_middle_jnt3.wm" "witch:skinCluster9.ma[17]";
+connectAttr "witch:rt_ring_jnt1.wm" "witch:skinCluster9.ma[18]";
+connectAttr "witch:rt_ring_jnt3.wm" "witch:skinCluster9.ma[19]";
+connectAttr "witch:lf_knee_jnt.wm" "witch:skinCluster9.ma[20]";
+connectAttr "witch:lf_ankle_jnt.wm" "witch:skinCluster9.ma[21]";
+connectAttr "witch:lf_ball_jnt.wm" "witch:skinCluster9.ma[22]";
+connectAttr "witch:lf_hip_jnt.wm" "witch:skinCluster9.ma[23]";
+connectAttr "witch:lf_knee_add_b_jnt.wm" "witch:skinCluster9.ma[24]";
+connectAttr "witch:lf_knee_add_f_jnt.wm" "witch:skinCluster9.ma[25]";
+connectAttr "witch:lf_hip_add_f_jnt.wm" "witch:skinCluster9.ma[26]";
+connectAttr "witch:lf_ankle_add_f_jnt.wm" "witch:skinCluster9.ma[27]";
+connectAttr "witch:lf_hip_add_b_jnt.wm" "witch:skinCluster9.ma[28]";
+connectAttr "witch:rt_ball_jnt.wm" "witch:skinCluster9.ma[29]";
+connectAttr "witch:lf_ankle_add_b_jnt.wm" "witch:skinCluster9.ma[30]";
+connectAttr "witch:rt_knee_jnt.wm" "witch:skinCluster9.ma[31]";
+connectAttr "witch:rt_hip_jnt.wm" "witch:skinCluster9.ma[32]";
+connectAttr "witch:lf_hip_add_l_jnt.wm" "witch:skinCluster9.ma[33]";
+connectAttr "witch:rt_ankle_jnt.wm" "witch:skinCluster9.ma[34]";
+connectAttr "witch:rt_ankle_add_f_jnt.wm" "witch:skinCluster9.ma[35]";
+connectAttr "witch:rt_knee_add_f_jnt1.wm" "witch:skinCluster9.ma[36]";
+connectAttr "witch:rt_hip_add_f_jnt.wm" "witch:skinCluster9.ma[37]";
+connectAttr "witch:rt_hip_add_r_jnt.wm" "witch:skinCluster9.ma[38]";
+connectAttr "witch:rt_ankle_add_b_jnt.wm" "witch:skinCluster9.ma[39]";
+connectAttr "witch:rt_knee_add_b_jnt.wm" "witch:skinCluster9.ma[40]";
+connectAttr "witch:rt_hip_add_b_jnt.wm" "witch:skinCluster9.ma[41]";
+connectAttr "witch:jaw_jnt.wm" "witch:skinCluster9.ma[42]";
+connectAttr "witch:spine_jnt2.wm" "witch:skinCluster9.ma[43]";
+connectAttr "witch:lf_ear_ring_jnt.wm" "witch:skinCluster9.ma[44]";
+connectAttr "witch:spine_jnt1.wm" "witch:skinCluster9.ma[45]";
+connectAttr "witch:neck_jnt1.wm" "witch:skinCluster9.ma[46]";
+connectAttr "witch:spine_jnt3.wm" "witch:skinCluster9.ma[47]";
+connectAttr "witch:head_jnt.wm" "witch:skinCluster9.ma[48]";
+connectAttr "witch:rt_ear_ring_jnt.wm" "witch:skinCluster9.ma[49]";
+connectAttr "witch:lf_elbow_jnt.wm" "witch:skinCluster9.ma[50]";
+connectAttr "witch:lf_shld_jnt.wm" "witch:skinCluster9.ma[51]";
+connectAttr "witch:lf_clavicle_jnt.wm" "witch:skinCluster9.ma[52]";
+connectAttr "witch:lf_thumb_jnt3.wm" "witch:skinCluster9.ma[53]";
+connectAttr "witch:lf_index_jnt3.wm" "witch:skinCluster9.ma[54]";
+connectAttr "witch:lf_thumb_jnt2.wm" "witch:skinCluster9.ma[55]";
+connectAttr "witch:lf_thumb_jnt5.wm" "witch:skinCluster9.ma[56]";
+connectAttr "witch:lf_index_jnt2.wm" "witch:skinCluster9.ma[57]";
+connectAttr "witch:lf_wrist_jnt.wm" "witch:skinCluster9.ma[58]";
+connectAttr "witch:lf_index_jnt1.wm" "witch:skinCluster9.ma[59]";
+connectAttr "witch:lf_middle_jnt1.wm" "witch:skinCluster9.ma[60]";
+connectAttr "witch:lf_ltl_jnt1.wm" "witch:skinCluster9.ma[61]";
+connectAttr "witch:lf_middle_jnt3.wm" "witch:skinCluster9.ma[62]";
+connectAttr "witch:lf_ltl_jnt2.wm" "witch:skinCluster9.ma[63]";
+connectAttr "witch:lf_ltl_jnt3.wm" "witch:skinCluster9.ma[64]";
+connectAttr "witch:lf_middle_jnt2.wm" "witch:skinCluster9.ma[65]";
+connectAttr "witch:lf_ring_jnt3.wm" "witch:skinCluster9.ma[66]";
+connectAttr "witch:lf_wrist_add_u_jnt.wm" "witch:skinCluster9.ma[67]";
+connectAttr "witch:lf_ring_jnt1.wm" "witch:skinCluster9.ma[68]";
+connectAttr "witch:lf_ring_jnt2.wm" "witch:skinCluster9.ma[69]";
+connectAttr "witch:lf_elbow_add_f_jnt.wm" "witch:skinCluster9.ma[70]";
+connectAttr "witch:lf_shld_add_u_jnt.wm" "witch:skinCluster9.ma[71]";
+connectAttr "witch:lf_wrist_add_f_jnt.wm" "witch:skinCluster9.ma[72]";
+connectAttr "witch:lf_wrist_add_d_jnt.wm" "witch:skinCluster9.ma[73]";
+connectAttr "witch:lf_elbow_add_b_jnt.wm" "witch:skinCluster9.ma[74]";
+connectAttr "witch:lf_shld_add_d_jnt.wm" "witch:skinCluster9.ma[75]";
+connectAttr "witch:lf_chest_jnt.wm" "witch:skinCluster9.ma[76]";
+connectAttr "witch:rt_chest_jnt.wm" "witch:skinCluster9.ma[77]";
+connectAttr "witch:rt_wrist_add_u_jnt.wm" "witch:skinCluster9.ma[78]";
+connectAttr "witch:rt_wrist_add_f_jnt.wm" "witch:skinCluster9.ma[79]";
+connectAttr "witch:rt_wrist_add_d_jnt.wm" "witch:skinCluster9.ma[80]";
+connectAttr "witch:rt_elbow_add_b_jnt.wm" "witch:skinCluster9.ma[81]";
+connectAttr "witch:rt_elbow_add_f_jnt.wm" "witch:skinCluster9.ma[82]";
+connectAttr "witch:rt_shld_add_u_jnt.wm" "witch:skinCluster9.ma[83]";
+connectAttr "witch:rt_shld_add_d_jnt.wm" "witch:skinCluster9.ma[84]";
+connectAttr "witch:pelvis_jnt.liw" "witch:skinCluster9.lw[0]";
+connectAttr "witch:rt_shld_jnt.liw" "witch:skinCluster9.lw[1]";
+connectAttr "witch:rt_clavicle_jnt.liw" "witch:skinCluster9.lw[2]";
+connectAttr "witch:rt_thumb_jnt3.liw" "witch:skinCluster9.lw[3]";
+connectAttr "witch:rt_index_jnt1.liw" "witch:skinCluster9.lw[4]";
+connectAttr "witch:rt_wrist_jnt.liw" "witch:skinCluster9.lw[5]";
+connectAttr "witch:rt_thumb_jnt2.liw" "witch:skinCluster9.lw[6]";
+connectAttr "witch:rt_elbow_jnt.liw" "witch:skinCluster9.lw[7]";
+connectAttr "witch:rt_thumb_jnt5.liw" "witch:skinCluster9.lw[8]";
+connectAttr "witch:rt_middle_jnt1.liw" "witch:skinCluster9.lw[9]";
+connectAttr "witch:rt_index_jnt3.liw" "witch:skinCluster9.lw[10]";
+connectAttr "witch:rt_ltl_jnt1.liw" "witch:skinCluster9.lw[11]";
+connectAttr "witch:rt_index_jnt2.liw" "witch:skinCluster9.lw[12]";
+connectAttr "witch:rt_ltl_jnt2.liw" "witch:skinCluster9.lw[13]";
+connectAttr "witch:rt_ltl_jnt3.liw" "witch:skinCluster9.lw[14]";
+connectAttr "witch:rt_ring_jnt2.liw" "witch:skinCluster9.lw[15]";
+connectAttr "witch:rt_middle_jnt2.liw" "witch:skinCluster9.lw[16]";
+connectAttr "witch:rt_middle_jnt3.liw" "witch:skinCluster9.lw[17]";
+connectAttr "witch:rt_ring_jnt1.liw" "witch:skinCluster9.lw[18]";
+connectAttr "witch:rt_ring_jnt3.liw" "witch:skinCluster9.lw[19]";
+connectAttr "witch:lf_knee_jnt.liw" "witch:skinCluster9.lw[20]";
+connectAttr "witch:lf_ankle_jnt.liw" "witch:skinCluster9.lw[21]";
+connectAttr "witch:lf_ball_jnt.liw" "witch:skinCluster9.lw[22]";
+connectAttr "witch:lf_hip_jnt.liw" "witch:skinCluster9.lw[23]";
+connectAttr "witch:lf_knee_add_b_jnt.liw" "witch:skinCluster9.lw[24]";
+connectAttr "witch:lf_knee_add_f_jnt.liw" "witch:skinCluster9.lw[25]";
+connectAttr "witch:lf_hip_add_f_jnt.liw" "witch:skinCluster9.lw[26]";
+connectAttr "witch:lf_ankle_add_f_jnt.liw" "witch:skinCluster9.lw[27]";
+connectAttr "witch:lf_hip_add_b_jnt.liw" "witch:skinCluster9.lw[28]";
+connectAttr "witch:rt_ball_jnt.liw" "witch:skinCluster9.lw[29]";
+connectAttr "witch:lf_ankle_add_b_jnt.liw" "witch:skinCluster9.lw[30]";
+connectAttr "witch:rt_knee_jnt.liw" "witch:skinCluster9.lw[31]";
+connectAttr "witch:rt_hip_jnt.liw" "witch:skinCluster9.lw[32]";
+connectAttr "witch:lf_hip_add_l_jnt.liw" "witch:skinCluster9.lw[33]";
+connectAttr "witch:rt_ankle_jnt.liw" "witch:skinCluster9.lw[34]";
+connectAttr "witch:rt_ankle_add_f_jnt.liw" "witch:skinCluster9.lw[35]";
+connectAttr "witch:rt_knee_add_f_jnt1.liw" "witch:skinCluster9.lw[36]";
+connectAttr "witch:rt_hip_add_f_jnt.liw" "witch:skinCluster9.lw[37]";
+connectAttr "witch:rt_hip_add_r_jnt.liw" "witch:skinCluster9.lw[38]";
+connectAttr "witch:rt_ankle_add_b_jnt.liw" "witch:skinCluster9.lw[39]";
+connectAttr "witch:rt_knee_add_b_jnt.liw" "witch:skinCluster9.lw[40]";
+connectAttr "witch:rt_hip_add_b_jnt.liw" "witch:skinCluster9.lw[41]";
+connectAttr "witch:jaw_jnt.liw" "witch:skinCluster9.lw[42]";
+connectAttr "witch:spine_jnt2.liw" "witch:skinCluster9.lw[43]";
+connectAttr "witch:lf_ear_ring_jnt.liw" "witch:skinCluster9.lw[44]";
+connectAttr "witch:spine_jnt1.liw" "witch:skinCluster9.lw[45]";
+connectAttr "witch:neck_jnt1.liw" "witch:skinCluster9.lw[46]";
+connectAttr "witch:spine_jnt3.liw" "witch:skinCluster9.lw[47]";
+connectAttr "witch:head_jnt.liw" "witch:skinCluster9.lw[48]";
+connectAttr "witch:rt_ear_ring_jnt.liw" "witch:skinCluster9.lw[49]";
+connectAttr "witch:lf_elbow_jnt.liw" "witch:skinCluster9.lw[50]";
+connectAttr "witch:lf_shld_jnt.liw" "witch:skinCluster9.lw[51]";
+connectAttr "witch:lf_clavicle_jnt.liw" "witch:skinCluster9.lw[52]";
+connectAttr "witch:lf_thumb_jnt3.liw" "witch:skinCluster9.lw[53]";
+connectAttr "witch:lf_index_jnt3.liw" "witch:skinCluster9.lw[54]";
+connectAttr "witch:lf_thumb_jnt2.liw" "witch:skinCluster9.lw[55]";
+connectAttr "witch:lf_thumb_jnt5.liw" "witch:skinCluster9.lw[56]";
+connectAttr "witch:lf_index_jnt2.liw" "witch:skinCluster9.lw[57]";
+connectAttr "witch:lf_wrist_jnt.liw" "witch:skinCluster9.lw[58]";
+connectAttr "witch:lf_index_jnt1.liw" "witch:skinCluster9.lw[59]";
+connectAttr "witch:lf_middle_jnt1.liw" "witch:skinCluster9.lw[60]";
+connectAttr "witch:lf_ltl_jnt1.liw" "witch:skinCluster9.lw[61]";
+connectAttr "witch:lf_middle_jnt3.liw" "witch:skinCluster9.lw[62]";
+connectAttr "witch:lf_ltl_jnt2.liw" "witch:skinCluster9.lw[63]";
+connectAttr "witch:lf_ltl_jnt3.liw" "witch:skinCluster9.lw[64]";
+connectAttr "witch:lf_middle_jnt2.liw" "witch:skinCluster9.lw[65]";
+connectAttr "witch:lf_ring_jnt3.liw" "witch:skinCluster9.lw[66]";
+connectAttr "witch:lf_wrist_add_u_jnt.liw" "witch:skinCluster9.lw[67]";
+connectAttr "witch:lf_ring_jnt1.liw" "witch:skinCluster9.lw[68]";
+connectAttr "witch:lf_ring_jnt2.liw" "witch:skinCluster9.lw[69]";
+connectAttr "witch:lf_elbow_add_f_jnt.liw" "witch:skinCluster9.lw[70]";
+connectAttr "witch:lf_shld_add_u_jnt.liw" "witch:skinCluster9.lw[71]";
+connectAttr "witch:lf_wrist_add_f_jnt.liw" "witch:skinCluster9.lw[72]";
+connectAttr "witch:lf_wrist_add_d_jnt.liw" "witch:skinCluster9.lw[73]";
+connectAttr "witch:lf_elbow_add_b_jnt.liw" "witch:skinCluster9.lw[74]";
+connectAttr "witch:lf_shld_add_d_jnt.liw" "witch:skinCluster9.lw[75]";
+connectAttr "witch:lf_chest_jnt.liw" "witch:skinCluster9.lw[76]";
+connectAttr "witch:rt_chest_jnt.liw" "witch:skinCluster9.lw[77]";
+connectAttr "witch:rt_wrist_add_u_jnt.liw" "witch:skinCluster9.lw[78]";
+connectAttr "witch:rt_wrist_add_f_jnt.liw" "witch:skinCluster9.lw[79]";
+connectAttr "witch:rt_wrist_add_d_jnt.liw" "witch:skinCluster9.lw[80]";
+connectAttr "witch:rt_elbow_add_b_jnt.liw" "witch:skinCluster9.lw[81]";
+connectAttr "witch:rt_elbow_add_f_jnt.liw" "witch:skinCluster9.lw[82]";
+connectAttr "witch:rt_shld_add_u_jnt.liw" "witch:skinCluster9.lw[83]";
+connectAttr "witch:rt_shld_add_d_jnt.liw" "witch:skinCluster9.lw[84]";
+connectAttr "witch:pelvis_jnt.obcc" "witch:skinCluster9.ifcl[0]";
+connectAttr "witch:rt_shld_jnt.obcc" "witch:skinCluster9.ifcl[1]";
+connectAttr "witch:rt_clavicle_jnt.obcc" "witch:skinCluster9.ifcl[2]";
+connectAttr "witch:rt_thumb_jnt3.obcc" "witch:skinCluster9.ifcl[3]";
+connectAttr "witch:rt_index_jnt1.obcc" "witch:skinCluster9.ifcl[4]";
+connectAttr "witch:rt_wrist_jnt.obcc" "witch:skinCluster9.ifcl[5]";
+connectAttr "witch:rt_thumb_jnt2.obcc" "witch:skinCluster9.ifcl[6]";
+connectAttr "witch:rt_elbow_jnt.obcc" "witch:skinCluster9.ifcl[7]";
+connectAttr "witch:rt_thumb_jnt5.obcc" "witch:skinCluster9.ifcl[8]";
+connectAttr "witch:rt_middle_jnt1.obcc" "witch:skinCluster9.ifcl[9]";
+connectAttr "witch:rt_index_jnt3.obcc" "witch:skinCluster9.ifcl[10]";
+connectAttr "witch:rt_ltl_jnt1.obcc" "witch:skinCluster9.ifcl[11]";
+connectAttr "witch:rt_index_jnt2.obcc" "witch:skinCluster9.ifcl[12]";
+connectAttr "witch:rt_ltl_jnt2.obcc" "witch:skinCluster9.ifcl[13]";
+connectAttr "witch:rt_ltl_jnt3.obcc" "witch:skinCluster9.ifcl[14]";
+connectAttr "witch:rt_ring_jnt2.obcc" "witch:skinCluster9.ifcl[15]";
+connectAttr "witch:rt_middle_jnt2.obcc" "witch:skinCluster9.ifcl[16]";
+connectAttr "witch:rt_middle_jnt3.obcc" "witch:skinCluster9.ifcl[17]";
+connectAttr "witch:rt_ring_jnt1.obcc" "witch:skinCluster9.ifcl[18]";
+connectAttr "witch:rt_ring_jnt3.obcc" "witch:skinCluster9.ifcl[19]";
+connectAttr "witch:lf_knee_jnt.obcc" "witch:skinCluster9.ifcl[20]";
+connectAttr "witch:lf_ankle_jnt.obcc" "witch:skinCluster9.ifcl[21]";
+connectAttr "witch:lf_ball_jnt.obcc" "witch:skinCluster9.ifcl[22]";
+connectAttr "witch:lf_hip_jnt.obcc" "witch:skinCluster9.ifcl[23]";
+connectAttr "witch:lf_knee_add_b_jnt.obcc" "witch:skinCluster9.ifcl[24]";
+connectAttr "witch:lf_knee_add_f_jnt.obcc" "witch:skinCluster9.ifcl[25]";
+connectAttr "witch:lf_hip_add_f_jnt.obcc" "witch:skinCluster9.ifcl[26]";
+connectAttr "witch:lf_ankle_add_f_jnt.obcc" "witch:skinCluster9.ifcl[27]";
+connectAttr "witch:lf_hip_add_b_jnt.obcc" "witch:skinCluster9.ifcl[28]";
+connectAttr "witch:rt_ball_jnt.obcc" "witch:skinCluster9.ifcl[29]";
+connectAttr "witch:lf_ankle_add_b_jnt.obcc" "witch:skinCluster9.ifcl[30]";
+connectAttr "witch:rt_knee_jnt.obcc" "witch:skinCluster9.ifcl[31]";
+connectAttr "witch:rt_hip_jnt.obcc" "witch:skinCluster9.ifcl[32]";
+connectAttr "witch:lf_hip_add_l_jnt.obcc" "witch:skinCluster9.ifcl[33]";
+connectAttr "witch:rt_ankle_jnt.obcc" "witch:skinCluster9.ifcl[34]";
+connectAttr "witch:rt_ankle_add_f_jnt.obcc" "witch:skinCluster9.ifcl[35]";
+connectAttr "witch:rt_knee_add_f_jnt1.obcc" "witch:skinCluster9.ifcl[36]";
+connectAttr "witch:rt_hip_add_f_jnt.obcc" "witch:skinCluster9.ifcl[37]";
+connectAttr "witch:rt_hip_add_r_jnt.obcc" "witch:skinCluster9.ifcl[38]";
+connectAttr "witch:rt_ankle_add_b_jnt.obcc" "witch:skinCluster9.ifcl[39]";
+connectAttr "witch:rt_knee_add_b_jnt.obcc" "witch:skinCluster9.ifcl[40]";
+connectAttr "witch:rt_hip_add_b_jnt.obcc" "witch:skinCluster9.ifcl[41]";
+connectAttr "witch:jaw_jnt.obcc" "witch:skinCluster9.ifcl[42]";
+connectAttr "witch:spine_jnt2.obcc" "witch:skinCluster9.ifcl[43]";
+connectAttr "witch:lf_ear_ring_jnt.obcc" "witch:skinCluster9.ifcl[44]";
+connectAttr "witch:spine_jnt1.obcc" "witch:skinCluster9.ifcl[45]";
+connectAttr "witch:neck_jnt1.obcc" "witch:skinCluster9.ifcl[46]";
+connectAttr "witch:spine_jnt3.obcc" "witch:skinCluster9.ifcl[47]";
+connectAttr "witch:head_jnt.obcc" "witch:skinCluster9.ifcl[48]";
+connectAttr "witch:rt_ear_ring_jnt.obcc" "witch:skinCluster9.ifcl[49]";
+connectAttr "witch:lf_elbow_jnt.obcc" "witch:skinCluster9.ifcl[50]";
+connectAttr "witch:lf_shld_jnt.obcc" "witch:skinCluster9.ifcl[51]";
+connectAttr "witch:lf_clavicle_jnt.obcc" "witch:skinCluster9.ifcl[52]";
+connectAttr "witch:lf_thumb_jnt3.obcc" "witch:skinCluster9.ifcl[53]";
+connectAttr "witch:lf_index_jnt3.obcc" "witch:skinCluster9.ifcl[54]";
+connectAttr "witch:lf_thumb_jnt2.obcc" "witch:skinCluster9.ifcl[55]";
+connectAttr "witch:lf_thumb_jnt5.obcc" "witch:skinCluster9.ifcl[56]";
+connectAttr "witch:lf_index_jnt2.obcc" "witch:skinCluster9.ifcl[57]";
+connectAttr "witch:lf_wrist_jnt.obcc" "witch:skinCluster9.ifcl[58]";
+connectAttr "witch:lf_index_jnt1.obcc" "witch:skinCluster9.ifcl[59]";
+connectAttr "witch:lf_middle_jnt1.obcc" "witch:skinCluster9.ifcl[60]";
+connectAttr "witch:lf_ltl_jnt1.obcc" "witch:skinCluster9.ifcl[61]";
+connectAttr "witch:lf_middle_jnt3.obcc" "witch:skinCluster9.ifcl[62]";
+connectAttr "witch:lf_ltl_jnt2.obcc" "witch:skinCluster9.ifcl[63]";
+connectAttr "witch:lf_ltl_jnt3.obcc" "witch:skinCluster9.ifcl[64]";
+connectAttr "witch:lf_middle_jnt2.obcc" "witch:skinCluster9.ifcl[65]";
+connectAttr "witch:lf_ring_jnt3.obcc" "witch:skinCluster9.ifcl[66]";
+connectAttr "witch:lf_wrist_add_u_jnt.obcc" "witch:skinCluster9.ifcl[67]";
+connectAttr "witch:lf_ring_jnt1.obcc" "witch:skinCluster9.ifcl[68]";
+connectAttr "witch:lf_ring_jnt2.obcc" "witch:skinCluster9.ifcl[69]";
+connectAttr "witch:lf_elbow_add_f_jnt.obcc" "witch:skinCluster9.ifcl[70]";
+connectAttr "witch:lf_shld_add_u_jnt.obcc" "witch:skinCluster9.ifcl[71]";
+connectAttr "witch:lf_wrist_add_f_jnt.obcc" "witch:skinCluster9.ifcl[72]";
+connectAttr "witch:lf_wrist_add_d_jnt.obcc" "witch:skinCluster9.ifcl[73]";
+connectAttr "witch:lf_elbow_add_b_jnt.obcc" "witch:skinCluster9.ifcl[74]";
+connectAttr "witch:lf_shld_add_d_jnt.obcc" "witch:skinCluster9.ifcl[75]";
+connectAttr "witch:lf_chest_jnt.obcc" "witch:skinCluster9.ifcl[76]";
+connectAttr "witch:rt_chest_jnt.obcc" "witch:skinCluster9.ifcl[77]";
+connectAttr "witch:rt_wrist_add_u_jnt.obcc" "witch:skinCluster9.ifcl[78]";
+connectAttr "witch:rt_wrist_add_f_jnt.obcc" "witch:skinCluster9.ifcl[79]";
+connectAttr "witch:rt_wrist_add_d_jnt.obcc" "witch:skinCluster9.ifcl[80]";
+connectAttr "witch:rt_elbow_add_b_jnt.obcc" "witch:skinCluster9.ifcl[81]";
+connectAttr "witch:rt_elbow_add_f_jnt.obcc" "witch:skinCluster9.ifcl[82]";
+connectAttr "witch:rt_shld_add_u_jnt.obcc" "witch:skinCluster9.ifcl[83]";
+connectAttr "witch:rt_shld_add_d_jnt.obcc" "witch:skinCluster9.ifcl[84]";
+connectAttr "witch:bindPose2.msg" "witch:skinCluster9.bp";
+connectAttr "witch:pelvis_jnt.msg" "witch:skinCluster9.ptt";
+connectAttr "witch:unitConversion45.o" "witch:rt_shld_add_u_jnt_translateZ.i";
+connectAttr "witch:rt_shld_jnt.ry" "witch:unitConversion45.i";
+connectAttr "witch:unitConversion46.o" "witch:rt_shld_add_d_jnt_translateZ.i";
+connectAttr "witch:rt_shld_jnt.ry" "witch:unitConversion46.i";
+connectAttr "witch:unitConversion48.o" "witch:rt_elbow_add_b_jnt_translateY.i";
+connectAttr "witch:rt_elbow_jnt.rz" "witch:unitConversion48.i";
+connectAttr "witch:unitConversion49.o" "witch:rt_elbow_add_f_jnt_translateY1.i";
+connectAttr "witch:rt_elbow_jnt.rz" "witch:unitConversion49.i";
+connectAttr "witch:unitConversion50.o" "witch:rt_wrist_add_u_jnt_translateZ.i";
+connectAttr "witch:rt_wrist_jnt.ry" "witch:unitConversion50.i";
+connectAttr "witch:unitConversion51.o" "witch:rt_wrist_add_d_jnt_translateZ.i";
+connectAttr "witch:rt_wrist_jnt.ry" "witch:unitConversion51.i";
+connectAttr "witch:unitConversion52.o" "witch:rt_wrist_add_f_jnt_translateY.i";
+connectAttr "witch:rt_wrist_jnt.rz" "witch:unitConversion52.i";
+connectAttr "witch:unitConversion53.o" "witch:rt_wrist_add_b_jnt_translateY.i";
+connectAttr "witch:rt_wrist_jnt.rz" "witch:unitConversion53.i";
+connectAttr "witch:rt_arm_switch_ctrl.ikFk" "witch:reverse3.ix";
+connectAttr "witch:rt_arm_switch_ctrl.ikFk" "witch:reverse4.ix";
+connectAttr "witch:rt_arm_switch_ctrl.ikFk" "witch:reverse5.ix";
+connectAttr "witch:witch:U3DMeshSG.pa" ":renderPartition.st" -na;
+connectAttr "witch:witch:U3DMeshSG1.pa" ":renderPartition.st" -na;
+connectAttr "witch:witch:base_mtl.msg" ":defaultShaderList1.s" -na;
+connectAttr "witch:witch:place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na
 		;
-connectAttr "rt_elbow_poleLineShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
-		;
-connectAttr "reverse8.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn";
-connectAttr "rt_elbow_poleEndShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
-		;
-connectAttr "rt_elbow_poleEnd.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
-		;
-connectAttr "U3DMeshSG.pa" ":renderPartition.st" -na;
-connectAttr "U3DMeshSG1.pa" ":renderPartition.st" -na;
-connectAttr "base_mtl.msg" ":defaultShaderList1.s" -na;
-connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "unitConversion44.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "reverse1.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "reverse2.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "reverse3.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "reverse4.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "reverse5.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "reverse6.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "reverse7.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "reverse8.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "witch:unitConversion44.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "witch:reverse1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "witch:reverse2.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "witch:reverse3.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "witch:reverse4.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "witch:reverse5.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "texmap0.msg" ":defaultTextureList1.tx" -na;
-connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;
-// End of witch.ma
+connectAttr "witch:witch:texmap0.msg" ":defaultTextureList1.tx" -na;
+connectAttr "witch:ikRPsolver.msg" ":ikSystem.sol" -na;
+// End of hz.ma
